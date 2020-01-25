@@ -1,0 +1,122 @@
+/* 
+    Set default global styles for button elements:
+    <button></button>, input[type="submit"], btn btn-submit
+*/
+
+.button,
+button {
+    height: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0 $size-3;
+    border-radius: 999px;
+    text-decoration: none;
+    display: inline-flex;
+    cursor: pointer;
+    @extend %center-all;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        transition-duration: 150ms;
+    }
+
+    &.colored {
+
+        &.rosewood {
+            color: getColor(White);
+            background-color: getColor(Rosewood);
+
+            &:hover {
+                background-color: shade(getColor(Rosewood), 20);
+            }
+        }
+
+        &.matisse {
+            color: getColor(White);
+            background-color: getColor(Matisse);
+
+            &:hover {
+                background-color: shade(getColor(Matisse), 20);
+            }
+        }
+
+        &.teal {
+            color: getColor(White);
+            background-color: getColor(Teal);
+
+            &:hover {
+                background-color: shade(getColor(Teal), 20);
+            }
+        }
+
+    }
+
+    &.outline {
+        background: transparent;
+        border: 1px solid;
+
+        &.heavy {
+            border: 2px solid;
+        }
+
+        &.rosewood {
+            color: getColor(Rosewood);
+            border-color: getColor(Rosewood);
+
+            &:hover {
+                background-color: getColor(Rosewood);
+                color: getColor(White);
+            }
+        }
+
+        &.matisse {
+            color: getColor(Matisse);
+            border-color: getColor(Matisse);
+
+            &:hover {
+                background-color: getColor(Matisse);
+                color: getColor(White);
+            }
+        }
+
+        &.marigold {
+            color: getColor(Marigold);
+            border-color: getColor(Marigold);
+
+            &:hover {
+                background-color: getColor(Marigold);
+                color: shade(getColor(Marigold), 70);
+            }
+        }
+
+        &.white {
+            color: getColor(White);
+            border-color: getColor(White);
+
+            &:hover {
+                background-color: getColor(White);
+                color: getColor(Rosewood);
+            }
+        }
+
+        &.black {
+            color: getColor(Black);
+            border-color: getColor(Black);
+
+            &:hover {
+                background-color: getColor(Black);
+                color: getColor(White);
+            }
+        }
+
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+}

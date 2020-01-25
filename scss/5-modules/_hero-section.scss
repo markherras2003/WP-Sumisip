@@ -1,0 +1,631 @@
+.hero-section {
+    min-height: 820px;
+    max-height: 1080px;
+    max-width: 2160px;
+    margin: 0 auto;
+    height: calc(100% - 104px);
+    padding: 0 88px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 225px;
+
+    .loading-indicator {
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        content: ' ';
+        top: calc(50% - 125px);
+        left: calc(50% - 125px);
+        animation: loading-indicator 2s ease-in-out infinite both;
+        display: none;
+
+        @keyframes loading-indicator {
+
+            0%,
+            10% {
+                filter: grayscale(0%);
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                filter: grayscale(100%);
+                transform: scale(.98);
+                opacity: .5;
+            }
+
+            80%,
+            100% {
+                filter: grayscale(0%);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+
+    &.loading {
+        position: relative;
+
+        .upper-hero-grid {
+            display: none;
+        }
+
+        .lower-hero-grid {
+            display: none;
+        }
+
+        .loading-indicator {
+            display: block;
+        }
+    }
+
+    @include xxl {
+        padding-right: 0;
+        overflow: hidden;
+    }
+
+    @include lg {
+        min-height: auto;
+        height: auto;
+        max-height: none;
+        padding: 0 64px;
+        padding-right: 64px;
+        grid-template-rows: auto 250px;
+    }
+
+    @include md {
+        padding: 0 $size-3;
+    }
+
+    @include sm {
+        padding: 0 $size-2;
+    }
+
+}
+
+.upper-hero-grid {
+    display: grid;
+    grid-template-columns: auto 740px;
+    grid-template-rows: auto;
+
+    .hero-details {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: flex;
+        margin-right: $size-4;
+
+        .heading-group {
+            align-self: center;
+            margin-top: 117px;
+
+            span,
+            h1,
+            .lead,
+            a {
+                animation: flyInFromBottomMin 600ms cubic-bezier(0.140, 0.620, 0.155, 1) both;
+            }
+
+            h1 {
+                animation-delay: 100ms;
+            }
+
+            .lead {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                animation-delay: 200ms;
+
+                @include sm {
+                    -webkit-line-clamp: 6;
+                }
+            }
+
+            a {
+                animation-delay: 300ms;
+            }
+
+        }
+    }
+
+    .hero-preview {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: flex;
+        @extend %center-all;
+
+        .hero-preview-group {
+            position: relative;
+            height: 500px;
+            width: 100%;
+            display: none;
+
+            .preview-circle-wrapper {
+                position: absolute;
+
+                .preview-circle {
+                    position: relative;
+                    border-radius: 999px;
+
+                    .preview-wrapper {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 999px;
+                        overflow: hidden;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: center center;
+                        }
+                    }
+
+                    &::before {
+                        position: absolute;
+                        border-radius: 999px;
+                        background-position: center center;
+                        background-size: contain;
+                        content: ' ';
+                        z-index: -1;
+                    }
+
+                }
+
+                &.main {
+                    position: relative;
+                    z-index: 3;
+
+                    .preview-circle {
+                        height: 440px;
+                        width: 440px;
+                        background-color: getColor(Rosewood);
+                        z-index: 2;
+
+                        &::before {
+                            top: -32px;
+                            left: -32px;
+                            width: calc(100% + 64px);
+                            height: calc(100% + 64px);
+                            background-image: url('../../assets/images/svg/hero-pattern-1.svg');
+                        }
+                    }
+                }
+
+                &.secondary {
+                    z-index: 1;
+
+                    .preview-circle {
+                        height: 316px;
+                        width: 316px;
+                        background-color: getColor(Matisse);
+
+                        &::before {
+                            top: -22px;
+                            left: -22px;
+                            width: calc(100% + 44px);
+                            height: calc(100% + 44px);
+                            background-image: url('../../assets/images/svg/hero-pattern-2.svg');
+                        }
+                    }
+                }
+
+                &.tertiary {
+                    z-index: 2;
+
+                    .preview-circle {
+                        height: 220px;
+                        width: 220px;
+                        background-color: getColor(Teal);
+
+                        &::before {
+                            top: -16px;
+                            left: -16px;
+                            width: calc(100% + 32px);
+                            height: calc(100% + 32px);
+                            background-image: url('../../assets/images/svg/hero-pattern-3.svg');
+                        }
+                    }
+                }
+
+            }
+
+            &.group-1 {
+                .main {
+                    top: 30px;
+                    left: 40px;
+                }
+
+                .secondary {
+                    top: 195px;
+                    left: 440px;
+                }
+
+                .tertiary {
+                    top: -5px;
+                    left: 440px;
+                }
+
+            }
+
+            &.group-2 {
+                .main {
+                    top: 140px;
+                    left: 300px;
+                }
+
+                .secondary {
+                    top: 165px;
+                    left: 0;
+                }
+
+                .tertiary {
+                    top: 0px;
+                    left: 200px;
+                }
+            }
+
+            &.group-3 {
+                .main {
+                    top: -10px;
+                    left: 180px;
+                }
+
+                .secondary {
+                    top: 255px;
+                    left: -20px;
+                }
+
+                .tertiary {
+                    top: 330px;
+                    left: 531px;
+                }
+            }
+
+            &.transitioning {
+                display: block;
+
+                .secondary,
+                .tertiary,
+                .main {
+                    animation: visibility 800ms cubic-bezier(0.070, 1.215, 0.155, 1.345) both;
+
+                    @keyframes visibility {
+                        0% {
+                            opacity: 0;
+                            transform: scale(0.9);
+                        }
+
+                        100% {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+                    }
+
+                }
+
+                .secondary {
+                    animation-delay: 400ms;
+                }
+
+                .tertiary {
+                    animation-delay: 800ms;
+                }
+
+                .main {
+                    .preview-circle {
+                        &::before {
+                            animation: rotate 8s ease-out both;
+
+                            @keyframes rotate {
+                                0% {
+                                    transform: rotate(45deg);
+                                }
+
+                                100% {
+                                    transform: rotate(0deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .secondary,
+                .tertiary {
+                    .preview-circle {
+                        &::before {
+                            animation: rotateMin 8s ease-out both;
+
+                            @keyframes rotateMin {
+                                0% {
+                                    transform: rotate(15deg);
+                                }
+
+                                100% {
+                                    transform: rotate(0deg);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            @include md {
+
+                &.group-1,
+                &.group-2,
+                &.group-3 {
+
+                    .main {
+                        top: 30px;
+                        left: 0px;
+                    }
+
+                    .secondary {
+                        top: 195px;
+                        left: 370px;
+                    }
+
+                    .tertiary {
+                        top: -5px;
+                        left: 380px;
+                    }
+
+                }
+            }
+
+            @include sm {
+
+                &.group-1,
+                &.group-2,
+                &.group-3 {
+                    .main {
+                        left: -70px;
+                    }
+
+                    .secondary {
+                        left: 320px;
+                    }
+
+                    .tertiary {
+                        left: 300px;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    @include xxl {
+        grid-template-columns: auto 620px;
+    }
+
+    @include xl {
+        grid-template-columns: auto 550px;
+    }
+
+    @include lg {
+        grid-template-columns: auto;
+        grid-template-rows: 620px auto;
+
+        .hero-preview {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            margin-top: $size-2;
+        }
+
+        .hero-details {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            margin-right: 0;
+            margin-bottom: $size-4;
+
+            .heading-group {
+                margin-top: 0;
+            }
+        }
+
+    }
+
+    @include md {
+        grid-template-rows: 600px auto;
+    }
+
+    @include sm {
+        grid-template-rows: 580px auto;
+    }
+
+}
+
+.lower-hero-grid {
+    display: grid;
+    grid-template-columns: 65% auto 90px;
+    grid-template-rows: auto;
+
+    .preview-controller {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        user-select: none;
+
+        .hero-preview-controls {
+            display: none;
+
+            >ul {
+                list-style: none;
+                display: flex;
+
+                li {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    display: block;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    height: 165px;
+                    width: calc(75% / 6);
+                    opacity: .5;
+
+                    animation-name: flyInFromLeft;
+                    animation-duration: 800ms;
+                    animation-timing-function: cubic-bezier(0.200, 0.415, 0.055, 1.090);
+                    animation-fill-mode: both;
+
+                    @for $i from 1 through 6 {
+                        &:nth-child(#{$i}) {
+                            $delay: $i * 50;
+                            animation-delay: #{$delay}ms;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: $size-1;
+                    }
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-position: top center;
+                        object-fit: cover;
+                    }
+
+                    &.active {
+                        position: relative;
+                        opacity: 1 !important;
+                        width: 25%;
+
+                        &::after,
+                        &::before {
+                            position: absolute;
+                            content: ' ';
+                            width: calc(100% - 20px);
+                            border-radius: 999px;
+                            z-index: 2;
+                        }
+
+                        &::after {
+                            left: 12px;
+                            bottom: 12px;
+                            width: 0%;
+                            height: 3px;
+                            border-radius: 999px;
+                            background-color: getColor(Marigold);
+                            animation: heroSliderLoading 8s ease-in both;
+
+                            @keyframes heroSliderLoading {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: calc(100% - 24px);
+                                }
+                            }
+                        }
+
+                        &::before {
+                            left: 10px;
+                            bottom: 10px;
+                            height: 7px;
+                            border-radius: 999px;
+                            background-color: rgba(0, 0, 0, 0.5);
+                        }
+                    }
+
+                }
+            }
+
+            >.indicators {
+                display: flex;
+                justify-content: space-between;
+
+                >div {
+                    padding: $size-2 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: .7;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                .prev-indicator {
+                    svg {
+                        margin-right: $size-1;
+                    }
+                }
+
+                .number-indicator {
+                    text-align: center;
+                }
+
+                .next-indicator {
+                    svg {
+                        margin-left: $size-1;
+                    }
+                }
+            }
+
+            &.paused {
+                >ul {
+                    li {
+                        &.active {
+
+                            &::after,
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .hero-social {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    @include xxl {
+        grid-template-columns: 80% auto 90px;
+    }
+
+    @include xl {
+        grid-template-columns: 85% auto 90px;
+    }
+
+    @include lg {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        .preview-controller {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        .hero-social {
+            display: none;
+        }
+    }
+
+}

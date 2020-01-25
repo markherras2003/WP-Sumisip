@@ -1,0 +1,259 @@
+.history-section {
+    height: 100%;
+    // min-width: 720px;
+    @extend %center-all;
+
+    @include lg {
+        height: auto;
+    }
+    @include sm {
+        height: auto;
+    }
+
+    .display {
+        display: flex;
+
+        &-preview {
+            position: relative;
+            height: 400px;
+            width: 600px;
+            flex-shrink: 0;
+
+            .dp-photo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                padding: $size-1;
+                box-shadow: 0 1px 30px rgba(0, 0, 0, 0.15);
+                background-color: getColor(White);
+
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+
+                &.active {
+                    display: block;
+                    z-index: 2;
+                    transform: rotate(-2deg);
+                    animation: rotateActive 400ms cubic-bezier(0.100, 0.820, 0.385, 0.995) both;
+
+                    @keyframes rotateActive {
+                        0% {
+                            transform: rotate(2deg) scale(1);
+                        }
+
+                        100% {
+                            transform: rotate(-2deg) scale(1);
+                        }
+                    }
+                }
+
+                &.next {
+                    display: block;
+                    z-index: 1;
+                    transform: rotate(2deg);
+                    animation: enterNext 800ms cubic-bezier(0.100, 0.820, 0.385, 0.995) both;
+
+                    @keyframes enterNext {
+                        0% {
+                            opacity: 0;
+                            transform: rotate(4deg);
+                        }
+
+                        100% {
+                            opacity: 1;
+                            transform: rotate(2deg);
+                        }
+                    }
+                }
+
+                &.scale-hide {
+                    animation: scaleHide 400ms cubic-bezier(0.100, 0.820, 0.385, 0.995) both;
+
+                    @keyframes scaleHide {
+                        0% {
+                            transform: rotate(-2deg) scale(1);
+                            opacity: .7;
+                        }
+
+                        100% {
+                            transform: rotate(-10deg) scale(1.1);
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-details {
+            margin-left: 48px;
+            flex-grow: 1;
+
+            @include lg {
+                .paragraph-group{
+                    margin-bottom: $size-3;
+                }
+            }
+
+            p {
+                &:not(:last-child) {
+                    margin-bottom: $size-1;
+                }
+            }
+
+            button {
+                margin-top: $size-1;
+            }
+        }
+    }
+
+    .timeline {
+        display: flex;
+        margin-top: $size-10;
+        align-items: flex-end;
+        user-select: none;
+
+        @include sm {
+            margin-top: 0px;
+        }
+
+        .timeline-control-left {
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .timeline-control-right {
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .timeline-body {
+            position: relative;
+            flex-grow: 1;
+            display: flex;
+            margin: 0 $size-4;
+            height: 80px;
+
+            &::before {
+                position: absolute;
+                bottom: 14px;
+                left: 0;
+                border-radius: 999px;
+                height: 3px;
+                width: 100%;
+                content: ' ';
+                background-color: #F0F0F0;
+            }
+
+            .timeline-block {
+                position: relative;
+                flex-grow: 1;
+
+                > span {
+                    display: block;
+                    text-align: right;
+                    font-weight: 500;
+                    font-size: 21px;
+                    color: #F0F0F0;
+
+                    @include sm {
+                        display: none;
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    bottom: 14px;
+                    left: 0;
+                    border-radius: 999px;
+                    height: 3px;
+                    width: 100%;
+                    content: ' ';
+                }
+
+                .indicator {
+                    position: absolute;
+                    bottom: 3px;
+                    right: 0;
+                    content: '';
+                    cursor: pointer;
+                    height: 24px;
+                    width: 24px;
+                    
+                    span {
+                        position: relative;
+                        top: 3px;
+                        left: 8px;
+                        display: block;
+                        border-radius: 100%;
+                        height: 16px;
+                        width: 16px;
+                        background-color: #F0F0F0;
+                    }
+
+                    &:hover {
+                        span {
+                            background-color: getColor( Teal );
+                        }
+
+                        ~ span {
+                            color: getColor( Teal);
+                        }
+                    }
+
+                }
+
+                &.active {
+
+                    span {
+                        color: getColor(Teal);
+                    }
+
+                    .indicator {
+                        span {
+                            background-color: getColor(Teal);
+                        }
+                    }
+
+                    &::before {
+                        background-color: getColor(Teal);
+                    }
+
+                }
+
+                &:not(:last-child) {
+                    > span {
+                        position: relative;
+                        left: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include lg {
+        .display {
+            flex-direction: column;
+
+            &-preview {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            &-details {
+                margin: 0;
+                margin-top: $size-5;
+                width: 100%;
+            }
+        }
+    }
+}

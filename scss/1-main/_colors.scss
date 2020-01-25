@@ -1,0 +1,100 @@
+/* -- Variables / Definition -- */
+$colors: (Rosewood: #AA0952,
+    Matisse: #345995,
+    Marigold: #EAC435,
+    Rust: #7B4A00,
+    Teal: #0B928E,
+    Iris: #602DB2,
+    Plum: #AD2D95,
+    White: #FFFFFF,
+    Silver: #F8f8f8,
+    Ash: #949494,
+    Gray: #6E6E6E,
+    Clay: #484848,
+    Black: #353535,
+    Dark: #000000);
+
+/* -- Functions -- */
+@function getColor($name) {
+    @return map-get($colors, $name);
+}
+
+@function colorOpacity($color, $percentage) {
+    $opacity: $percentage / 100;
+    @return rgba($color, $opacity);
+}
+
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+.bg-rosewood {
+    background-color: getColor(Rosewood);
+}
+
+.bg-matisse {
+    background-color: getColor(Matisse);
+}
+
+.bg-marigold {
+    background-color: getColor(Marigold);
+}
+
+.bg-rust {
+    background-color: getColor(Rust);
+}
+
+.bg-white {
+    background-color: getColor(White);
+}
+
+.bg-silver {
+    background-color: getColor(Silver);
+}
+.bg-ash {
+    background-color: getColor(Ash);
+}
+
+.bg-gray {
+    background-color: getColor(Gray);
+}
+
+.bg-clay {
+    background-color: getColor(Clay);
+}
+
+.bg-black {
+    background-color: getColor(Black);
+}
+.bg-dark {
+    background-color: getColor(Dark);
+}
+
+
+.bg-coal {
+    background-color: #fcfcfc;
+}
+
+.bg-honey {
+    background-color: #FBB040;
+}
+
+.bg-ocean {
+    background-color: #115D8E;
+}
+
+.bg-plum {
+    background: getColor(Plum);
+}
+
+.bg-teal {
+    background-color: getColor(Teal);
+}
+
+.bg-iris {
+    background-color: getColor(Iris);
+}

@@ -1,0 +1,23 @@
+/* 
+    Set default global styles for paragraph elements:
+    e.g. p, .lead
+*/
+
+p, .p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: $size-1;
+        
+    @include md {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    &.lead {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: $size-2;
+    }
+
+}

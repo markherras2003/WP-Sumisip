@@ -1,0 +1,12 @@
+/* 
+    Set default global styles for link elements:
+    <a></a> 
+*/
+
+a {
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}

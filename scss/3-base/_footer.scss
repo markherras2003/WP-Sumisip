@@ -1,0 +1,252 @@
+/* 
+    Set default style for footer:
+    e.g. <footer></footer>, .footer
+*/
+
+
+.footer-section {
+    background-color: #1d1d1d;
+
+
+    ul,
+    li {
+        margin: 0;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+
+        &:not(:last-child) {
+            margin-bottom: $size-1;
+        }
+    }
+
+    a {
+        color: getColor(White);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    h4,
+    a,
+    span,
+    i,
+    p {
+        color: getColor(White)
+    }
+
+    .footer-wrapper {
+        padding: 0px $size-11;
+
+        @include lg {
+            padding: 0px $size-8;
+        }
+
+        @include md {
+            padding: 0px $size-7;
+        }
+
+        @include sm {
+            padding: 0px $size-4;
+        }
+
+        
+        &.section-padding {
+            padding-top: $size-12;
+            padding-bottom: $size-12;
+
+
+            @include xl {
+                padding-top: $size-10;
+                padding-bottom: $size-10;
+            }
+    
+            @include lg {
+                padding-top: $size-8;
+                padding-bottom: $size-8;
+            }
+            
+            @include md {
+                padding-top: $size-6;
+                padding-bottom: $size-6;
+            }
+            
+            @include sm {
+                padding-top: $size-5;
+                padding-bottom: $size-5;
+            }
+    
+            @include xs {
+                padding-top: $size-4;
+                padding-bottom: $size-4;
+            }
+
+            
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+
+            h4 {
+                margin-bottom: $size-2;
+            }
+
+            .seal-footer {
+                margin-right: $size-10;
+                margin-bottom: $size-8;
+
+                h4 {
+                    margin-bottom: $size-3;
+                }
+
+                .seal-wrapper {
+                    display: flex;
+
+
+                    img {
+                        width: 120px;
+                        height: auto;
+
+                        @include md {
+                            width: 130px;
+                        }
+
+                        @include ss {
+                            width: 100px;
+                        }
+                        @include xs {
+                            width: 80px;
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: $size-1;
+                        }
+
+                    }
+                }
+            }
+
+            .footer-flex {
+                display: flex;
+                flex-grow: 1;
+                flex-wrap: wrap;
+
+
+                .sumisip-about-footer {
+
+                    .visit-content {
+                        margin-bottom: $size-4;
+                        width: 230px;
+                        padding-right: $size-2;
+                    }
+
+                    .contact-list {
+                        margin-bottom: $size-5;
+
+                        li {
+                            display: flex;
+
+
+                            &:not(:last-child) {
+                                margin-bottom: $size-half;
+                            }
+
+                            .icon-wrapper {
+                                display: flex;
+                                @extend %center-all;
+                                width: 20px;
+                                margin-right: $size-1;
+                            }
+                        }
+                    }
+                }
+
+                .social-footer {
+                    width: 230px;
+                    margin-bottom: $size-4;
+
+                    @include sm {
+                        width: auto;
+                    }
+
+                    li {
+                        a {
+                            display: flex;
+                            align-items: center;
+
+                            &:not(:last-child) {
+                                margin-bottom: $size-half;
+                            }
+
+                            .icon-wrapper {
+                                display: flex;
+                                @extend %center-all;
+                                width: 20px;
+                                margin-right: $size-1;
+                            }
+                        }
+                    }
+                }
+
+                .links-footer {
+                    width: 230px;
+                    margin-bottom: $size-4;
+                }
+
+                .department-footer {
+                    width: 230px;
+                    // margin-bottom: $size-4;
+                }
+            }
+        }
+
+    }
+
+    .footer-pattern {
+        overflow: hidden;
+
+        .svg-wrapper {
+            display: flex;
+        }
+    }
+
+    .copyright-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $size-3 $size-11;
+        background-color: getColor(Rosewood);
+
+        p {
+            &:last-child {
+                text-transform: capitalize;
+            }
+        }
+        
+
+        @include ss {
+            flex-direction: column;
+        }
+
+
+        @include lg {
+            padding: $size-3 $size-8;
+        }
+
+        @include md {
+            padding: $size-3 $size-7;
+        }
+
+        @include sm {
+            padding: $size-3 $size-4;
+        }
+
+
+    }
+}

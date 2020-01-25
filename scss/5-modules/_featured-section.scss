@@ -1,0 +1,279 @@
+.featured-section {
+    height: 100%;
+    min-height: 720px;
+    max-height: 1080px;
+    background-color: getColor(Ash);
+    display: flex;
+
+    .featured-video {
+        position: relative;
+        width: 40%;
+        transition-duration: 300ms;
+        transition-timing-function: cubic-bezier(0.100, 0.820, 0.385, 0.995);
+        overflow: hidden;
+
+        .preview {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+
+            svg {
+                position: absolute;
+                left: calc(50% - 60px);
+                top: calc(50% - 60px);
+                height: 120px;
+                width: 120px;
+                fill: getColor(White);
+                opacity: .3;
+                transition-duration: .6s;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+
+
+            &:hover {
+                svg {
+                    opacity: .6;
+                }
+            }
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+
+    .featured-articles-wrapper {
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .featured-article {
+            position: relative;
+            width: 33.33%;
+            height: 50%;
+            overflow: hidden;
+
+            .featured-article-gallery {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                z-index: 1;
+
+                .fa-gallery-img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    z-index: 1;
+
+                    &.active {
+                        position: relative;
+                        z-index: 2;
+                        animation: slideIn 1s cubic-bezier(0.100, 0.820, 0.385, 0.995) both;
+
+                        @keyframes slideIn {
+                            0% {
+                                transform: translateX(-100%)
+                            }
+
+                            100% {
+                                transform: translateX(0%)
+                            }
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-fit: cover;
+                        object-position: top center;
+                    }
+
+                }
+
+            }
+
+            .featured-details {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                padding: $size-3;
+                color: getColor(White);
+                background-color: colorOpacity(#000000, 60);
+                z-index: 3;
+
+                h4 {
+                    margin-bottom: $size-1;
+                }
+
+                a {
+                    font-weight: 800;
+                    color: getColor(White);
+                    text-decoration: none;
+                }
+
+            }
+
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: ' ';
+                height: 100%;
+                width: 100%;
+                background-color: colorOpacity(#000000, 30);
+                z-index: 2;
+            }
+
+            &:hover {
+
+                .featured-details {
+                    background-color: colorOpacity(#000000, 30);
+                    transition-duration: .4s;
+                }
+
+                &::before {
+                    background-color: colorOpacity(#000000, 5);
+                    transition-duration: .4s;
+                }
+            }
+
+        }
+    }
+
+    &.video-mode {
+        background-color: getColor(Dark);
+        width: 100%;
+        overflow: hidden;
+
+        .featured-video {
+            width: 100%;
+            flex-shrink: 0;
+            transition-duration: 800ms;
+        }
+
+        .featured-articles-wrapper {
+            flex-shrink: 0;
+        }
+    }
+
+
+    @include xl {
+        height: 100%;
+        flex-direction: column;
+
+        .featured-video {
+            width: 100%;
+            height: 60%;
+        }
+
+        .featured-articles-wrapper {
+            width: 100%;
+            height: 40%;
+
+            .featured-article {
+
+                .featured-details {
+                    padding: $size-3;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    background-color: colorOpacity(#000000, 30);
+
+                    h4 {
+                        margin-bottom: 4px;
+                    }
+
+                }
+
+            }
+        }
+
+    }
+
+
+    @include md {
+        height: auto;
+
+        .featured-video {
+            height: 640px;
+        }
+
+        .featured-articles-wrapper {
+            height: 512px;
+
+            .featured-article {
+
+                .featured-details {
+                    padding: $size-3;
+
+                }
+
+            }
+        }
+
+    }
+
+    @include sm {
+
+        .featured-video {
+            height: 70vh;
+        }
+
+        .featured-articles-wrapper {
+            height: auto;
+
+            .featured-article {
+                width: 50%;
+                height: 200px;
+            }
+
+        }
+
+    }
+
+    @include ss {
+
+        .featured-articles-wrapper {
+
+            .featured-article {
+
+                .featured-details {
+                    padding: $size-2;
+
+                    p {
+                        line-clamp: 1;
+                    }
+
+                }
+
+            }
+        }
+
+
+    }
+
+}
