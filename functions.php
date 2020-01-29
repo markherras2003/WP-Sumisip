@@ -45,6 +45,116 @@ add_action( 'wp_enqueue_scripts', function(){
 } );
 
 
+
+//hook into the init action and call create_topics_nonhierarchical_taxonomy when it fires
+ 
+add_action( 'init', 'create_topics_nonhierarchical_taxonomy', 0 );
+ 
+function create_topics_nonhierarchical_taxonomy() {
+ 
+// Labels part for the GUI
+ 
+  $labels = array(
+    'name' => _x( 'Topics', 'taxonomy general name' ),
+    'singular_name' => _x( 'Topic', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Topics' ),
+    'popular_items' => __( 'Popular Topics' ),
+    'all_items' => __( 'All Topics' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Topic' ), 
+    'update_item' => __( 'Update Topic' ),
+    'add_new_item' => __( 'Add New Topic' ),
+    'new_item_name' => __( 'New Topic Name' ),
+    'separate_items_with_commas' => __( 'Separate topics with commas' ),
+    'add_or_remove_items' => __( 'Add or remove topics' ),
+    'choose_from_most_used' => __( 'Choose from the most used topics' ),
+    'menu_name' => __( 'Topics' ),
+  ); 
+ 
+// Now register the non-hierarchical taxonomy like tag
+ 
+  register_taxonomy('topics','post',array(
+    'hierarchical' => false,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'topic' ),
+  ));
+}
+
+
+function sm_custom_meta() {
+    add_meta_box( 'sm_meta', __( 'Featured Posts', 'sm-textdomain' ), 'sm_meta_callback', 'post' );
+}
+function sm_meta_callback( $post ) {
+    $featured = get_post_meta( $post->ID );
+    ?>
+	<p>
+    <div class="sm-row-content">
+        <label for="meta-checkbox">
+            <input type="checkbox" name="meta-checkbox" id="meta-checkbox" value="yes" <?php if ( isset ( $featured['meta-checkbox'] ) ) checked( $featured['meta-checkbox'][0], 'yes' ); ?> />
+            <?php _e( 'Featured this post', 'sm-textdomain' )?>
+        </label>  
+    </div>
+</p>
+ 
+    <?php
+}
+add_action( 'add_meta_boxes', 'sm_custom_meta' );
+
+/**
+ * Saves the custom meta input
+ */
+function sm_meta_save( $post_id ) {
+ 
+    // Checks save status
+    $is_autosave = wp_is_post_autosave( $post_id );
+    $is_revision = wp_is_post_revision( $post_id );
+    $is_valid_nonce = ( isset( $_POST[ 'sm_nonce' ] ) && wp_verify_nonce( $_POST[ 'sm_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
+ 
+    // Exits script depending on save status
+    if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
+        return;
+    }
+ 
+ // Checks for input and saves
+if( isset( $_POST[ 'meta-checkbox' ] ) ) {
+    update_post_meta( $post_id, 'meta-checkbox', 'yes' );
+} else {
+    update_post_meta( $post_id, 'meta-checkbox', '' );
+}
+ 
+}
+add_action( 'save_post', 'sm_meta_save' );
+
+
+function add_featured_image_display_settings( $content, $post_id ) {
+	$field_id    = 'show_featured_image';
+	$field_value = esc_attr( get_post_meta( $post_id, $field_id, true ) );
+	$field_text  = esc_html__( 'Show image.', 'generatewp' );
+	$field_state = checked( $field_value, 1, false);
+
+	$field_label = sprintf(
+	    '<p><label for="%1$s"><input type="checkbox" name="%1$s" id="%1$s" value="%2$s" %3$s> %4$s</label></p>',
+	    $field_id, $field_value, $field_state, $field_text
+	);
+
+	return $content .= $field_label;
+}
+add_filter( 'admin_post_thumbnail_html', 'add_featured_image_display_settings', 10, 2 );
+
+
+function save_featured_image_display_settings( $post_ID, $post, $update ) {
+	$field_id    = 'show_featured_image';
+	$field_value = isset( $_REQUEST[ $field_id ] ) ? 1 : 0;
+
+	update_post_meta( $post_ID, $field_id, $field_value );
+}
+add_action( 'save_post', 'save_featured_image_display_settings', 10, 3 );
+
 function sumisip_custom_mime_types( $mimes ) {
 
     $mimes['svg'] = 'image/svg+xml';
