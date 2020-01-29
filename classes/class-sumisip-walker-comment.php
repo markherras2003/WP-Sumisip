@@ -29,21 +29,28 @@ class Sumisip_Walker_Comment extends Walker_Comment {
 
 		?>
 		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
-			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body comment-flex-center"> 
+
+			<?php
+			
+			$comment_author_url = get_comment_author_url( $comment );
+			$comment_author     = get_comment_author( $comment );
+			$avatar             = get_avatar( $comment, $args['avatar_size'] );
+			if ( 0 != $args['avatar_size'] ) {
+				if ( empty( $comment_author_url ) ) {
+					echo $avatar;
+				} else {
+					printf( '<a href="%s" rel="external nofollow" class="url">', $comment_author_url );
+					echo $avatar;
+				}
+			}
+
+			?>
+
+			<div class="comment-details-wrapper">
 				<footer class="comment-meta">
 					<div class="comment-author vcard">
 						<?php
-						$comment_author_url = get_comment_author_url( $comment );
-						$comment_author     = get_comment_author( $comment );
-						$avatar             = get_avatar( $comment, $args['avatar_size'] );
-						if ( 0 != $args['avatar_size'] ) {
-							if ( empty( $comment_author_url ) ) {
-								echo $avatar;
-							} else {
-								printf( '<a href="%s" rel="external nofollow" class="url">', $comment_author_url );
-								echo $avatar;
-							}
-						}
 
 						/*
 						 * Using the `check` icon instead of `check_circle`, since we can't add a
@@ -56,7 +63,7 @@ class Sumisip_Walker_Comment extends Walker_Comment {
 						printf(
 							wp_kses(
 								/* translators: %s: Comment author link. */
-								__( '%s <span class="screen-reader-text says">says:</span>', 'sumisip' ),
+								__( '%s <span class="screen-reader-text says"></span>', 'sumisip' ),
 								array(
 									'span' => array(
 										'class' => array(),
@@ -107,22 +114,24 @@ class Sumisip_Walker_Comment extends Walker_Comment {
 					<?php comment_text(); ?>
 				</div><!-- .comment-content -->
 
-			</article><!-- .comment-body -->
+					<?php
+					comment_reply_link(
+						array_merge(
+							$args,
+							array(
+								'add_below' => 'div-comment',
+								'depth'     => $depth,
+								'max_depth' => $args['max_depth'],
+								'before'    => '<div class="comment-reply">',
+								'after'     => '</div>',
+							)
+						)
+					);
+					?>
 
-			<?php
-			comment_reply_link(
-				array_merge(
-					$args,
-					array(
-						'add_below' => 'div-comment',
-						'depth'     => $depth,
-						'max_depth' => $args['max_depth'],
-						'before'    => '<div class="comment-reply">',
-						'after'     => '</div>',
-					)
-				)
-			);
-			?>
+			</div>
+
+			</article><!-- .comment-body -->
 		<?php
 	}
 }

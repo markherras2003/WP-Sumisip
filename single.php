@@ -30,14 +30,10 @@ get_header();
 
         <div class="post-hero-wrapper">
             <div class="post-dir">
-                <!-- <a href="<?php the_category() ?></a>
-             -->
              <?php the_category() ?>
             </div>
 
             <h1 class="display-1"><?php the_title() ?></h1>
-
-            
             <div class="post-etc">
                 <a href="#">By <?php the_author(); ?></a>
                 <a href="#"><?php the_date(); ?></a>
@@ -71,10 +67,10 @@ get_header();
 
                 </div>
 
-                <div class="post-tags">
+                <div class="post-tags"> 
                     <h4>Tags</h4>
                     <div class="post-tag">
-                        <a href="#"><?php the_tags() ?></a>
+                        <a href="#"><?php the_tags('') ?></a>
                     </div>
                 </div>
 
