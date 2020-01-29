@@ -211,20 +211,21 @@ $(window).on('load', function() {
   // Hero Section;
 
   // Initialize first slide data;
+  var heroPrevGroup = $('.hero-preview-group');
   var firstHeroSlide = $('.hero-preview-controls .active');
+  var heroPrevControls = $('.hero-preview-controls');
   updatePreviewDetails(firstHeroSlide);
+  updatePreview(firstHeroSlide);
 
   // Remove Loading;
   $('.hero-section').removeClass('loading');
 
   // Initialize Transitioning on first entry;
-  var heroPrevGroup = $('.hero-preview-group');
   setTimeout(function() {
     heroPrevGroup.addClass('transitioning');
   }, 700);
 
   // Initialize Controls;
-  var heroPrevControls = $('.hero-preview-controls');
   heroPrevControls.show();
 
   var heroIntervalTimer = 8 * 1000;
@@ -351,8 +352,24 @@ $(window).on('load', function() {
     }, 100);
   }
 
-  // Hero
-  $('.hero-preview-controls li').on('click', function() {});
+  // Hero Controls
+  $('.hero-preview-controls li').on('click', function() {
+    // Update the preview and text;
+    var sourceElement = $(this);
+    updatePreview(sourceElement);
+    updatePreviewDetails(sourceElement);
+
+    // Clear the interval;
+    clearInterval(heroSlideInterval);
+
+    // Add Active to this control;
+    sourceElement.siblings().removeClass('active');
+    sourceElement.addClass('active');
+
+    heroSlideInterval = setInterval(function() {
+      nextActiveHero();
+    }, heroIntervalTimer);
+  });
 
   // Video Autoplay;
   $(document).scroll(function() {
