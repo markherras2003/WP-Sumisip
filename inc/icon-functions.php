@@ -10,7 +10,7 @@
 /**
  * Gets the SVG code for a given icon.
  */
-function tyreconnect_get_icon_svg( $icon, $size = 24 ) {
+function sumisip_get_icon_svg( $icon, $size = 24 ) {
 	return TyreConnect_SVG_Icons::get_svg( 'ui', $icon, $size );
 }
 
@@ -42,7 +42,7 @@ function tyreconnect_nav_menu_social_icons( $item_output, $item, $depth, $args )
 	if ( 'social' === $args->theme_location ) {
 		$svg = tyreconnect_get_social_link_svg( $item->url, 26 );
 		if ( empty( $svg ) ) {
-			$svg = tyreconnect_get_icon_svg( 'link' );
+			$svg = sumisip_get_icon_svg( 'link' );
 		}
 		$item_output = str_replace( $args->link_after, '</span>' . $svg, $item_output );
 	}

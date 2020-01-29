@@ -3,7 +3,7 @@
  * Custom comment walker for this theme
  *
  * @package WordPress
- * @subpackage TyreConnect
+ * @subpackage sumisip
  * @since 1.0.0
  */
 
@@ -12,7 +12,7 @@
  *
  * @since 1.0.0
  */
-class TwentyNineteen_Walker_Comment extends Walker_Comment {
+class Sumisip_Walker_Comment extends Walker_Comment {
 
 	/**
 	 * Outputs a comment in the HTML5 format.
@@ -49,14 +49,14 @@ class TwentyNineteen_Walker_Comment extends Walker_Comment {
 						 * Using the `check` icon instead of `check_circle`, since we can't add a
 						 * fill color to the inner check shape when in circle form.
 						 */
-						if ( tyreconnect_is_comment_by_post_author( $comment ) ) {
-							printf( '<span class="post-author-badge" aria-hidden="true">%s</span>', tyreconnect_get_icon_svg( 'check', 24 ) );
+						if ( sumisip_is_comment_by_post_author( $comment ) ) {
+							printf( '<span class="post-author-badge" aria-hidden="true">%s</span>', sumisip_get_icon_svg( 'check', 24 ) );
 						}
 
 						printf(
 							wp_kses(
 								/* translators: %s: Comment author link. */
-								__( '%s <span class="screen-reader-text says">says:</span>', 'tyreconnect' ),
+								__( '%s <span class="screen-reader-text says">says:</span>', 'sumisip' ),
 								array(
 									'span' => array(
 										'class' => array(),
@@ -76,24 +76,24 @@ class TwentyNineteen_Walker_Comment extends Walker_Comment {
 						<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
 							<?php
 								/* translators: 1: Comment date, 2: Comment time. */
-								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'tyreconnect' ), get_comment_date( '', $comment ), get_comment_time() );
+								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'sumisip' ), get_comment_date( '', $comment ), get_comment_time() );
 							?>
 							<time datetime="<?php comment_time( 'c' ); ?>" title="<?php echo $comment_timestamp; ?>">
 								<?php echo $comment_timestamp; ?>
 							</time>
 						</a>
 						<?php
-							$edit_comment_icon = tyreconnect_get_icon_svg( 'edit', 16 );
-							edit_comment_link( __( 'Edit', 'tyreconnect' ), '<span class="edit-link-sep">&mdash;</span> <span class="edit-link">' . $edit_comment_icon, '</span>' );
+							$edit_comment_icon = sumisip_get_icon_svg( 'edit', 16 );
+							edit_comment_link( __( 'Edit', 'sumisip' ), '<span class="edit-link-sep">&mdash;</span> <span class="edit-link">' . $edit_comment_icon, '</span>' );
 						?>
 					</div><!-- .comment-metadata -->
 
 					<?php
 					$commenter = wp_get_current_commenter();
 					if ( $commenter['comment_author_email'] ) {
-						$moderation_note = __( 'Your comment is awaiting moderation.', 'tyreconnect' );
+						$moderation_note = __( 'Your comment is awaiting moderation.', 'sumisip' );
 					} else {
-						$moderation_note = __( 'Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved.', 'tyreconnect' );
+						$moderation_note = __( 'Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved.', 'sumisip' );
 					}
 					?>
 

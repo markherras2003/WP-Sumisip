@@ -27,7 +27,7 @@ if ( ! function_exists( 'tyreconnect_posted_on' ) ) :
 
 		printf(
 			'<span class="posted-on">%1$s<a href="%2$s" rel="bookmark">%3$s</a></span>',
-			tyreconnect_get_icon_svg( 'watch', 16 ),
+			sumisip_get_icon_svg( 'watch', 16 ),
 			esc_url( get_permalink() ),
 			$time_string
 		);
@@ -42,7 +42,7 @@ if ( ! function_exists( 'tyreconnect_posted_by' ) ) :
 		printf(
 			/* translators: 1: SVG icon. 2: Post author, only visible to screen readers. 3: Author link. */
 			'<span class="byline">%1$s<span class="screen-reader-text">%2$s</span><span class="author vcard"><a class="url fn n" href="%3$s">%4$s</a></span></span>',
-			tyreconnect_get_icon_svg( 'person', 16 ),
+			sumisip_get_icon_svg( 'person', 16 ),
 			__( 'Posted by', 'tyreconnect' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_html( get_the_author() )
@@ -57,7 +57,7 @@ if ( ! function_exists( 'tyreconnect_comment_count' ) ) :
 	function tyreconnect_comment_count() {
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			echo tyreconnect_get_icon_svg( 'comment', 16 );
+			echo sumisip_get_icon_svg( 'comment', 16 );
 
 			/* translators: %s: Post title. Only visible to screen readers. */
 			comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'tyreconnect' ), get_the_title() ) );
@@ -88,7 +88,7 @@ if ( ! function_exists( 'tyreconnect_entry_footer' ) ) :
 				printf(
 					/* translators: 1: SVG icon. 2: Posted in label, only visible to screen readers. 3: List of categories. */
 					'<span class="cat-links">%1$s<span class="screen-reader-text">%2$s</span>%3$s</span>',
-					tyreconnect_get_icon_svg( 'archive', 16 ),
+					sumisip_get_icon_svg( 'archive', 16 ),
 					__( 'Posted in', 'tyreconnect' ),
 					$categories_list
 				); // WPCS: XSS OK.
@@ -100,7 +100,7 @@ if ( ! function_exists( 'tyreconnect_entry_footer' ) ) :
 				printf(
 					/* translators: 1: SVG icon. 2: Posted in label, only visible to screen readers. 3: List of tags. */
 					'<span class="tags-links">%1$s<span class="screen-reader-text">%2$s </span>%3$s</span>',
-					tyreconnect_get_icon_svg( 'tag', 16 ),
+					sumisip_get_icon_svg( 'tag', 16 ),
 					__( 'Tags:', 'tyreconnect' ),
 					$tags_list
 				); // WPCS: XSS OK.
@@ -126,7 +126,7 @@ if ( ! function_exists( 'tyreconnect_entry_footer' ) ) :
 				),
 				get_the_title()
 			),
-			'<span class="edit-link">' . tyreconnect_get_icon_svg( 'edit', 16 ),
+			'<span class="edit-link">' . sumisip_get_icon_svg( 'edit', 16 ),
 			'</span>'
 		);
 	}
@@ -226,13 +226,13 @@ if ( ! function_exists( 'tyreconnect_the_posts_navigation' ) ) :
 				'mid_size'  => 2,
 				'prev_text' => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
-					tyreconnect_get_icon_svg( 'chevron_left', 22 ),
+					sumisip_get_icon_svg( 'chevron_left', 22 ),
 					__( 'Newer posts', 'tyreconnect' )
 				),
 				'next_text' => sprintf(
 					'<span class="nav-next-text">%s</span> %s',
 					__( 'Older posts', 'tyreconnect' ),
-					tyreconnect_get_icon_svg( 'chevron_right', 22 )
+					sumisip_get_icon_svg( 'chevron_right', 22 )
 				),
 			)
 		);

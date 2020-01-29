@@ -26,7 +26,7 @@ if ( $has_responses ) {
 	}
 	?>
 	<p class="discussion-meta-info">
-		<?php echo tyreconnect_get_icon_svg( 'comment', 24 ); ?>
+		<?php echo sumisip_get_icon_svg( 'comment', 24 ); ?>
 		<span><?php echo esc_html( $meta_label ); ?></span>
 	</p>
 </div><!-- .discussion-meta -->

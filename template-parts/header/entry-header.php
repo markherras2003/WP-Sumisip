@@ -38,7 +38,7 @@ $discussion = ! is_page() && tyreconnect_can_show_post_thumbnail() ? tyreconnect
 				),
 				get_the_title()
 			),
-			'<span class="edit-link">' . tyreconnect_get_icon_svg( 'edit', 16 ),
+			'<span class="edit-link">' . sumisip_get_icon_svg( 'edit', 16 ),
 			'</span>'
 		);
 	?>

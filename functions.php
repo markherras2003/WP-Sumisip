@@ -488,3 +488,60 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 //require get_template_directory() . '/inc/customizer.php';
+
+/*
+    
+*/
+
+add_action( 'show_user_profile', 'extra_user_profile_fields' );
+add_action( 'edit_user_profile', 'extra_user_profile_fields' );
+
+function extra_user_profile_fields( $user ) { ?>
+    <h3 style="margin-top:40px"><?php _e("Extra profile information"); ?></h3>
+
+    <table class="form-table">
+    <tr>
+        <th><label for="facebook"><?php _e("Facebook"); ?></label></th>
+        <td>
+            <input type="text" name="facebook" id="facebook-link" value="<?php echo esc_attr( get_the_author_meta( 'facebook', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description"><?php _e("Please enter your facebook link."); ?></span>
+        </td>
+    </tr>
+    <tr>
+        <th><label for="instagram"><?php _e("Instagram"); ?></label></th>
+        <td>
+            <input type="text" name="instagram" id="instagram-link" value="<?php echo esc_attr( get_the_author_meta( 'instagram', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description"><?php _e("Please enter your instagram link."); ?></span>
+        </td>
+    </tr>
+    <tr>
+        <th><label for="twitter"><?php _e("Twitter"); ?></label></th>
+        <td>
+            <input type="text" name="twitter" id="twitter-link" value="<?php echo esc_attr( get_the_author_meta( 'twitter', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description"><?php _e("Please enter your twitter link."); ?></span>
+        </td>
+    </tr>
+    <tr>
+        <th><label for="email"><?php _e("E-mail"); ?></label></th>
+        <td>
+            <input type="text" name="email" id="email-link" value="<?php echo esc_attr( get_the_author_meta( 'email', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description"><?php _e("Please enter your email link."); ?></span>
+        </td>
+    </tr>
+    </table>
+<?php }
+
+add_action( 'personal_options_update', 'save_extra_user_profile_fields' );
+add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
+
+function save_extra_user_profile_fields( $user_id ) {
+    if ( !current_user_can( 'edit_user', $user_id ) ) { 
+        return false; 
+    }
+    update_user_meta( $user_id, 'facebook', $_POST['facebook'] );
+    update_user_meta( $user_id, 'instagram', $_POST['instagram'] );
+    update_user_meta( $user_id, 'twitter', $_POST['twitter'] );
+    update_user_meta( $user_id, 'email', $_POST['email'] );
+}
+
+
