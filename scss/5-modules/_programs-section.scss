@@ -1,4 +1,4 @@
-.programs-section {
+.sumisip-program-section {
     position: relative;
     min-height: 90vh;
     @extend %center-all;
@@ -18,7 +18,7 @@
         grid-row-gap: $size-2;
         justify-content: center;
         grid-template-columns: repeat(3, 300px);
-        grid-template-rows: repeat(2, 300px);
+        grid-template-rows: 300px;
 
         .program-box {
             padding: $size-4;
@@ -59,13 +59,8 @@
         }
 
         @include lg {
-            grid-template-columns: auto auto;
+            grid-template-columns: minmax(calc(50% - 16px), 350px) minmax(calc(50% - 16px), 350px);
             grid-template-rows: auto;
-
-            .program-box {
-                width: 100%;
-                max-width: 300px;
-            }
         }
 
         @include sm {
@@ -87,17 +82,23 @@
 
         }
 
+
         @include ss {
             grid-template-columns: 300px;
             grid-column-gap: 0;
 
             .program-box {
-                padding: $size-3;
                 height: 300px;
                 width: 300px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+
+                .program-content {
+                    p {
+                        -webkit-line-clamp: 3;
+                    }
+                }
 
             }
         }
@@ -124,7 +125,7 @@
         transition-duration: .6s;
     }
 
-    #autoplayVideo {
+    video {
         height: 100%;
         width: 100%;
         object-fit: cover;

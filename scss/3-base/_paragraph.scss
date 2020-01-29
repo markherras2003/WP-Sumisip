@@ -3,11 +3,13 @@
     e.g. p, .lead
 */
 
-p, .p {
+p,
+.p {
     margin: 0;
     padding: 0;
     margin-bottom: $size-1;
-        
+    font-size: 16px;
+
     @include md {
         font-size: 14px;
         line-height: 21px;

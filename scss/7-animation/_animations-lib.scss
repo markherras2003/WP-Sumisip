@@ -23,6 +23,17 @@
     }
 }
 
+@keyframes flyInFromLeftMin {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 
 @keyframes flyInFromBottomMin {
     0% {

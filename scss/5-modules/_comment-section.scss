@@ -92,7 +92,9 @@
 
 }
 
-.depth-3, .depth-4, .depth-5  {
+.depth-3,
+.depth-4,
+.depth-5 {
     width: 98%;
     margin: 0 auto;
     margin-right: 0px;
@@ -174,7 +176,7 @@
     display: flex;
     align-items: center;
     justify-items: flex-start;
-    
+
     input {
 
         &[type="checkbox"] {
@@ -183,6 +185,7 @@
         }
     }
 }
+
 .styled-separator.is-style-wide {
     display: none;
 }
@@ -192,13 +195,15 @@
     margin-top: $size-8;
     padding-top: $size-5;
     border-top: 1px solid getColor(Black);
-    
+
     .comment-form-comment {
         margin-top: $size-3;
+
         label {
             display: none;
         }
     }
+
     .form-submit {
         #submit {
             width: auto;
@@ -208,7 +213,7 @@
             font-weight: 300;
             padding: $size-2 $size-3;
             margin-top: $size-3;
-            
+
             &:hover {
                 background: getColor(Gray);
             }
