@@ -48,11 +48,6 @@
                     text-transform: uppercase;
                     font-size: 14px;
 
-                    &:not(:last-child) {
-                        &::after {
-                            content: ',';
-                        }
-                    }
                 }
             }
 

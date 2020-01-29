@@ -86,5 +86,20 @@
                 }
             }
         }
+        .post-categories {
+            list-style-type: none;
+            @extend %center-all;
+
+            li {
+                &:not(:last-child) {
+                    &:after {
+                        content: '/';
+                        color: getColor(White);
+                        margin-right: $size-1;
+                        margin-left: $size-1;
+                    }
+                }
+            }
+        }
     }
 }

@@ -70,3 +70,148 @@
         margin-bottom: $size-3;
     }
 }
+
+#comments {
+    margin-top: $size-5;
+
+    .comment-reply-title {
+        font-size: $size-3;
+    }
+}
+
+.depth-2 {
+    width: 78%;
+    margin: 0 auto;
+    margin-right: 0px;
+    padding-left: 30px;
+    border-left: 1px solid getColor(Gray);
+
+    img {
+        display: none;
+    }
+
+}
+
+.depth-3, .depth-4, .depth-5  {
+    width: 98%;
+    margin: 0 auto;
+    margin-right: 0px;
+    padding-left: 30px;
+    border-left: 1px solid getColor(Gray);
+
+    img {
+        display: none;
+    }
+
+}
+
+.comment-flex-center {
+    display: flex;
+    align-items: flex-start;
+    margin-top: $size-4;
+    margin-bottom: $size-5;
+
+    .comment-author.vcard {
+        display: flex;
+        align-items: flex-start;
+
+        .post-author-badge {
+            margin-right: $size-1;
+        }
+
+    }
+
+    img {
+        margin-right: $size-3;
+
+    }
+
+    .fn {
+        font-size: 24px;
+    }
+
+    .comment-content {
+        // margin-top: $size-1;
+        margin-bottom: $size-2;
+    }
+
+    .comment-metadata {
+
+        svg {
+            height: 14px;
+            fill: #949494
+        }
+
+        span {
+            color: #949494;
+
+        }
+
+
+        a {
+            color: #949494;
+            font-size: 14px;
+        }
+    }
+
+    .comment-reply {
+
+        a {
+            display: inline-block;
+            padding: 12px 32px;
+            color: #FFFFFF;
+            background-color: getColor(Clay);
+
+            &:hover {
+                text-decoration: none;
+                background-color: getColor(Gray);
+            }
+        }
+    }
+}
+
+.comment-form-cookies-consent {
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+    
+    input {
+
+        &[type="checkbox"] {
+            width: auto;
+            margin-right: $size-1;
+        }
+    }
+}
+.styled-separator.is-style-wide {
+    display: none;
+}
+
+
+#respond {
+    margin-top: $size-8;
+    padding-top: $size-5;
+    border-top: 1px solid getColor(Black);
+    
+    .comment-form-comment {
+        margin-top: $size-3;
+        label {
+            display: none;
+        }
+    }
+    .form-submit {
+        #submit {
+            width: auto;
+            background: getColor(Clay);
+            border: none;
+            color: getColor(White);
+            font-weight: 300;
+            padding: $size-2 $size-3;
+            margin-top: $size-3;
+            
+            &:hover {
+                background: getColor(Gray);
+            }
+        }
+    }
+}
