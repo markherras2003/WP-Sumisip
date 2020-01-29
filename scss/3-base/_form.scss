@@ -2,3 +2,64 @@
     Set default global styles for form elements:
     e.g. textarea, radio, checkbox, label
 */
+form {
+    
+    textarea {
+        border: 1px solid #b9b9b9;
+        padding: 12px;
+        width: 100%;
+        height: 200px;
+        resize: none;
+
+        &::placeholder {
+            color: #bdbdbd;
+            font-weight: 300;
+        }
+    }
+
+    &.comment-form {
+
+        input {
+
+            &:not(:last-child) {
+                margin-bottom: $size-1;
+            }
+
+            &[type="checkbox"] {
+                width: auto;
+            }
+
+            &[type="submit"] {
+                width: auto;
+                color: getColor(White);
+                background: getColor(Clay);
+                border: none;
+                padding: 20px 24px;
+
+                &:hover {
+                    background: getColor(Gray);
+                }
+            }
+        }
+
+        textarea {
+            margin-bottom: $size-1;
+        }
+
+        p {
+            color: #b9b9b9;
+            text-transform: uppercase;
+            margin-top: $size-4;
+            margin-bottom: $size-4;
+        }
+
+        label {
+            color: #b9b9b9;
+
+        }
+
+
+
+    }
+
+}

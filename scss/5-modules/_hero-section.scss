@@ -148,7 +148,7 @@
                 position: absolute;
 
                 .preview-circle {
-                    position: relative;
+                    position: absolute;
                     border-radius: 999px;
 
                     .preview-wrapper {
@@ -297,7 +297,7 @@
                     @keyframes visibility {
                         0% {
                             opacity: 0;
-                            transform: scale(0.9);
+                            transform: scale(0.95);
                         }
 
                         100% {

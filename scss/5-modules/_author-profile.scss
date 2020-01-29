@@ -1,0 +1,37 @@
+.author-profile {
+    background: getColor(Silver);
+    @extend %center-all;
+    padding: $size-3;
+    margin-bottom: $size-8;
+
+
+    .author-details {
+        h4 {
+            font-size: 22px;
+        }
+
+        span {
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        p {
+            margin: 0px;
+        }
+    }
+
+    .author-img {
+        flex-shrink: 0;
+        width: 150px;
+        height: 150px;
+        margin-right: $size-4;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+
+}

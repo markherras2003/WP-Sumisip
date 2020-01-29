@@ -1,0 +1,98 @@
+.sumisip-posts {
+
+
+    .heading-category-post {
+        display: flex;
+        align-items: center;
+        margin-bottom: $size-8;
+        justify-content: space-between;
+
+        h3 {
+            font-weight: 500;
+        }
+
+        .category-post {
+            a {
+                color: #707070;
+
+                &:hover {
+                    color: getColor(Black);
+                }
+                &:not(:last-child) {
+                    &:after {
+                        content: '/';
+                        margin-left: $size-2;
+                        margin-right: $size-1;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    a {
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    .posts-item {
+        @extend %center-all;
+        flex-direction: column;
+
+        .post-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:not(:last-child) {
+                margin-bottom: $size-5;
+            }
+
+            .post-details {
+
+                .post-title {
+                    font-size: 24px;
+                    color: #707070;
+                }
+                .post-etc {
+                    display: flex;
+                    margin-bottom: $size-half;
+
+                    a {
+                        font-size: 16px;
+                        color: getColor(Ash);
+
+                        &:not(:last-child) {
+                            &::after {
+                                content: '|';
+                                margin-left: $size-2;
+                                margin-right: $size-2;
+                            }
+                        }
+                    }
+                }
+                .post-context {
+                    font-size: 20px;
+                    color: #707070;
+                }
+            }
+
+
+            .post-img {
+                height: 180px;
+                width: 180px;
+                flex-shrink: 0;
+                margin-right: $size-3;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+        }
+    }
+}

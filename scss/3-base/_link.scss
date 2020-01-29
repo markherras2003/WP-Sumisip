@@ -5,6 +5,7 @@
 
 a {
     text-decoration: none;
+    color: getColor(Black);
     
     &:hover {
         text-decoration: underline;

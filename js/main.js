@@ -349,7 +349,6 @@ $(window).on('load', function() {
     setTimeout(function() {
       heroDetails.show();
     }, 100);
-
   }
 
   // Hero

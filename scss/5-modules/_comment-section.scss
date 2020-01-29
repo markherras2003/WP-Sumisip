@@ -1,0 +1,72 @@
+.comment-section {
+    padding-top: $size-8;
+    padding-bottom: $size-8;
+    border-bottom: 1px solid getColor(Clay);
+
+    h4 {
+        padding-bottom: $size-5;
+    }
+
+    .comment-wrapper {
+        display: flex;
+        align-items: flex-start;
+
+        &:not(:last-child) {
+            margin-bottom: $size-8;
+        }
+
+
+
+        .comment-profile-img {
+            width: 150px;
+            height: 150px;
+            margin-right: $size-4;
+            flex-shrink: 0;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+
+        .comment-etc-wrapper {
+            h4 {
+                padding: 0px;
+            }
+
+            span {
+                color: getColor(Ash);
+                font-size: 14px;
+                ;
+            }
+
+            p {
+                margin-bottom: $size-2;
+            }
+
+            a {
+                display: inline-block;
+                // font-size: 12px;
+                padding: 12px $size-4;
+                color: getColor(White);
+                background-color: getColor(Clay);
+
+                &:hover {
+                    text-decoration: none;
+                    background: getColor(Gray);
+                }
+            }
+        }
+
+    }
+}
+
+.user-comment {
+    padding-top: $size-8;
+
+    h4 {
+        margin-bottom: $size-3;
+    }
+}
