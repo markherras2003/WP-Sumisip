@@ -988,6 +988,16 @@ ul, li, ol {
     Set default global styles for: 
     Images, Videos, iFrame, SVG assets, Figures 
 */
+img.align-center-center {
+  -o-object-position: center center !important;
+     object-position: center center !important;
+}
+
+img.align-left-center {
+  -o-object-position: left center !important;
+     object-position: left center !important;
+}
+
 /* 
     Set default global styles for: 
     Navigation <nav></nav>
@@ -4179,7 +4189,7 @@ p.lead, .p.lead {
 }
 
 .upper-hero-grid .hero-preview .hero-preview-group .preview-circle-wrapper .preview-circle {
-  position: relative;
+  position: absolute;
   border-radius: 999px;
 }
 
@@ -4323,8 +4333,8 @@ p.lead, .p.lead {
 @-webkit-keyframes visibility {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
   }
   100% {
     opacity: 1;
@@ -4336,8 +4346,8 @@ p.lead, .p.lead {
 @keyframes visibility {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
   }
   100% {
     opacity: 1;
@@ -5993,8 +6003,8 @@ p.lead, .p.lead {
 @-webkit-keyframes flyInFromBottomMin {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -6006,8 +6016,8 @@ p.lead, .p.lead {
 @keyframes flyInFromBottomMin {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     opacity: 1;
