@@ -337,15 +337,15 @@ nav {
         }
 
         &:not(:first-child) {
-            padding-left: $size-5;
-            margin-left: $size-5;
+            padding-left: $size-4;
+            margin-left: $size-4;
 
             ul {
                 position: relative;
 
                 &::after {
                     position: absolute;
-                    left: -40px;
+                    left: -32px;
                     top: 0;
                     height: 100%;
                     width: 1px;
@@ -358,7 +358,7 @@ nav {
 
         &.main {
             width: 100%;
-            max-width: 300px;
+            max-width: 350px;
 
             .thumb-wrapper {
                 width: 100%;
@@ -377,6 +377,10 @@ nav {
 
             h5 {
                 margin-bottom: $size-half;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
 
             p {
@@ -396,6 +400,61 @@ nav {
                 }
 
             }
+        }
+
+        &.mini-box {
+            width: 100%;
+            max-width: 320px;
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: $size-1;
+                }
+            }
+
+            .thumb-wrapper {
+                width: 90px;
+                height: 90px;
+                border-radius: 5px;
+                overflow: hidden;
+                margin-right: $size-2;
+                flex-shrink: 0;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: top center;
+                }
+            }
+
+            p {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            h5 {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            a {
+                display: flex;
+
+                &:hover {
+                    text-decoration: none;
+
+                    h5 {
+                        text-decoration: underline;
+                    }
+
+                }
+            }
+
         }
     }
 

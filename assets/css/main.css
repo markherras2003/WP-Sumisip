@@ -773,6 +773,15 @@ h6.light {
   font-weight: 300;
 }
 
+h1.uppercase,
+h2.uppercase,
+h3.uppercase,
+h4.uppercase,
+h5.uppercase,
+h6.uppercase {
+  text-transform: uppercase;
+}
+
 .display-1 {
   font-size: 56px;
   line-height: 64px;
@@ -822,8 +831,9 @@ h5 {
   line-height: 26px;
 }
 
-h5.uppercase {
-  text-transform: uppercase;
+h6 {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .section-heading {
@@ -1328,8 +1338,8 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 }
 
 .mega-menu .mega-menu-group:not(:first-child) {
-  padding-left: 40px;
-  margin-left: 40px;
+  padding-left: 32px;
+  margin-left: 32px;
 }
 
 .mega-menu .mega-menu-group:not(:first-child) ul {
@@ -1338,7 +1348,7 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 
 .mega-menu .mega-menu-group:not(:first-child) ul::after {
   position: absolute;
-  left: -40px;
+  left: -32px;
   top: 0;
   height: 100%;
   width: 1px;
@@ -1348,7 +1358,7 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 
 .mega-menu .mega-menu-group.main {
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .mega-menu .mega-menu-group.main .thumb-wrapper {
@@ -1370,6 +1380,10 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 
 .mega-menu .mega-menu-group.main h5 {
   margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .mega-menu .mega-menu-group.main p {
@@ -1384,6 +1398,62 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 }
 
 .mega-menu .mega-menu-group.main a:hover h5 {
+  text-decoration: underline;
+}
+
+.mega-menu .mega-menu-group.mini-box {
+  width: 100%;
+  max-width: 320px;
+}
+
+.mega-menu .mega-menu-group.mini-box li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.mega-menu .mega-menu-group.mini-box .thumb-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.mega-menu .mega-menu-group.mini-box .thumb-wrapper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+
+.mega-menu .mega-menu-group.mini-box p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mega-menu .mega-menu-group.mini-box h5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mega-menu .mega-menu-group.mini-box a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mega-menu .mega-menu-group.mini-box a:hover {
+  text-decoration: none;
+}
+
+.mega-menu .mega-menu-group.mini-box a:hover h5 {
   text-decoration: underline;
 }
 
@@ -1446,8 +1516,8 @@ p.lead,
 
 p.sm,
 .p.sm {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 13px;
+  line-height: 19px;
 }
 
 /* 
