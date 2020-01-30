@@ -62,7 +62,7 @@ get_header();
                 </div>
 
                 <div class="post-content">
-                    <h4><?php the_title(); ?></h4>
+                    <h2><?php the_title(); ?></h2>
                     <p><?php the_content(); ?></p>
 
                 </div>
@@ -70,7 +70,7 @@ get_header();
                 <div class="post-tags"> 
                     <h4>Tags</h4>
                     <div class="post-tag">
-                        <a href="#"><?php the_tags('') ?></a>
+                       <?php the_tags('') ?>
                     </div>
                 </div>
 
@@ -91,67 +91,14 @@ get_header();
 
                 <div class="post-social-media">
                     <div class="social-wrapper">
-                        <a href="<?= $userMeta['facebook'][0] ?> "><i class="fa fa-facebook"></i></a>
-                        <a href="<?= $userMeta['instagram'][0] ?> "><i class="fa fa-instagram"></i></a>
-                        <a href="<?= $userMeta['twitter'][0] ?> "><i class="fa fa-twitter"></i></a>
-                        <a href="<?= $userMeta['email'][0] ?> "><i class="fa fa-envelope"></i></a>
+                        <a href="<?= $userMeta['facebook'][0] ? $userMeta['facebook'][0] : '#' ?> "><i class="fa fa-facebook"></i></a>
+                        <a href="<?= $userMeta['instagram'][0] ? $userMeta['instagram'][0] : '#' ?> "><i class="fa fa-instagram"></i></a>
+                        <a href="<?= $userMeta['twitter'][0] ? $userMeta['twitter'][0] : '#' ?> "><i class="fa fa-twitter"></i></a>
+                        <a href="<?= $userMeta['email'][0] ? $userMeta['email'][0] : '#' ?> "><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
-
-
-
-                <?php
-                
-                ?>
-
-                
-                <div class="comment-section">
-                    <h4>Comments</h4>
-
-                    <div class="comment-wrapper">
-                        <div class="comment-profile-img">
-                            <img src="<?= get_template_directory_uri(); ?>/assets/images/men.jpg">
-                        </div>
-                        <div class="comment-etc-wrapper">
-                            <h4>Admin</h4>
-                            <span>Dec. 19, 2019</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas quidem
-                                rerum reprehenderit officia consectetur debitis.</p>
-                            <a href="#">Reply</a>
-                        </div>
-                    </div>
-
-                    <div class="comment-wrapper">
-                        <div class="comment-profile-img">
-                            <img src="<?= get_template_directory_uri(); ?>/assets/images/men.jpg">
-                        </div>
-                        <div class="comment-etc-wrapper">
-                            <h4>Admin</h4>
-                            <span>Dec. 19, 2019</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas quidem
-                                rerum reprehenderit officia consectetur debitis.</p>
-                            <a href="#">Reply</a>
-                        </div>
-                    </div>
-
-                    <div class="comment-wrapper">
-                        <div class="comment-profile-img">
-                            <img src="<?= get_template_directory_uri(); ?>/assets/images/men.jpg">
-                        </div>
-                        <div class="comment-etc-wrapper">
-                            <h4>Admin</h4>
-                            <span>Dec. 19, 2019</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae voluptas quidem
-                                rerum reprehenderit officia consectetur debitis.</p>
-                            <a href="#">Reply</a>
-                        </div>
-                    </div>
-                </div>
-
 
                 <?php comments_template() ?>
-
-
 
             </div>
 
