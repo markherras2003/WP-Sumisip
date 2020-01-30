@@ -92,7 +92,7 @@ textarea {
 }
 
 .button,
-button, .footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li .icon-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .social-footer li a .icon-wrapper, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .upper-hero-grid .hero-preview, .history-section, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .search-sidebar, .search-sidebar .search-icon-wrapper, .sumisip-posts .posts-item, .author-profile {
+button, .footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li .icon-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .social-footer li a .icon-wrapper, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .upper-hero-grid .hero-preview, .history-section, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .search-sidebar, .search-sidebar .search-icon-wrapper, .author-profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5641,6 +5641,13 @@ p.sm,
   text-decoration: none;
 }
 
+.popular-sidebar .popular-posts li a .post-item.excerpt p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .popular-sidebar .popular-posts li a .post-item span {
   font-size: 14px;
   color: #949494;
@@ -5756,6 +5763,15 @@ p.sm,
 }
 
 .sumisip-posts .posts-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -5790,12 +5806,12 @@ p.sm,
   margin-bottom: 4px;
 }
 
-.sumisip-posts .posts-item .post-item .post-details .post-etc a {
+.sumisip-posts .posts-item .post-item .post-details .post-etc span {
   font-size: 16px;
   color: #949494;
 }
 
-.sumisip-posts .posts-item .post-item .post-details .post-etc a:not(:last-child)::after {
+.sumisip-posts .posts-item .post-item .post-details .post-etc span:not(:last-child)::after {
   content: '|';
   margin-left: 16px;
   margin-right: 16px;
@@ -5804,6 +5820,13 @@ p.sm,
 .sumisip-posts .posts-item .post-item .post-details .post-context {
   font-size: 20px;
   color: #707070;
+}
+
+.sumisip-posts .posts-item .post-item .excerpt p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .sumisip-posts .posts-item .post-item .post-img {

@@ -26,11 +26,12 @@
 
             <div class="post-hero-wrapper">
                 <?php
-                    the_archive_title( '<h1 class="display-1">', '</h1>', false );
+                    single_tag_title( '<h1 class="display-1">Tag: ', '</h1>', false );
                 ?>
             </div>
         </section>
     <?php
+
 
             get_template_part( 'partials/posts/post', 'excerpt' );
         else: 

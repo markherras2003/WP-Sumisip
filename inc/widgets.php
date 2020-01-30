@@ -56,7 +56,7 @@ public function widget( $args, $instance ) {
          if( have_posts() ): while ( have_posts() ) : the_post(); 
             echo '<li>';
                         echo '<a href="'.get_permalink().'">';
-                            echo '<div class="post-item">';
+                            echo '<div class="post-item excerpt">';
                                     // tHe();
                                     the_content();
 
@@ -115,7 +115,7 @@ public function widget( $args, $instance ) {
         echo '<ul class="category-lists">';
             foreach ( get_categories() as $key) {
                 echo '<li>';
-                    echo '<a href="'.get_permalink().'">';
+                    echo '<a href="'.get_category_link($key).'">';
                         echo'<span>'; 
                                 echo $key->name ;
                         echo '</span>';
@@ -163,17 +163,18 @@ public function widget( $args, $instance ) {
     echo '<div class="cloud-tags">';
         echo __( '<h4>Tags</h4>' );
         echo '<ul class="tags-list">';
-            foreach ( get_tags() as $key) {
-                echo '<li>';
-                    echo '<a href="'.get_permalink().'">';
-                        echo'<span>'; 
-                                echo $key->name ;
-                        echo '</span>';
-                    echo '</a>';
-                echo '</li>';
-            }
+            echo '<li>';
+                // echo '<a href="'.get_tag_link($key).'">';
+                    echo'<span>'; 
+                            // echo $key->name ;
+                            print_r(wp_get_post_tags());
+                    echo '</span>';
+                // echo '</a>';
+            echo '</li>';
         echo '</ul>';
     echo '</div>';
+
+    // print_r(get_the_tags());
         // This is where you run the code and display the output
     }
 } // Class wpb_widget ends here

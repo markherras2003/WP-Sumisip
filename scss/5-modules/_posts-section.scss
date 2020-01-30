@@ -1,6 +1,5 @@
 .sumisip-posts {
 
-
     .heading-category-post {
         display: flex;
         align-items: center;
@@ -27,7 +26,6 @@
                 }
             }
         }
-
     }
 
 
@@ -38,7 +36,9 @@
     }
 
     .posts-item {
-        @extend %center-all;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
         flex-direction: column;
 
         .post-item {
@@ -56,11 +56,12 @@
                     font-size: 24px;
                     color: #707070;
                 }
+
                 .post-etc {
                     display: flex;
                     margin-bottom: $size-half;
 
-                    a {
+                    span {
                         font-size: 16px;
                         color: getColor(Ash);
 
@@ -76,6 +77,17 @@
                 .post-context {
                     font-size: 20px;
                     color: #707070;
+
+                }
+            }
+
+            .excerpt {
+
+                p {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;  
+                    overflow: hidden;
                 }
             }
 

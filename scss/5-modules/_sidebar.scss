@@ -77,6 +77,16 @@
 
                 .post-item {
 
+                    &.excerpt {
+
+                        p {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;  
+                            overflow: hidden;
+                        }
+                    }
+
                     span {
                         font-size: 14px;
                         color: getColor(Ash);
