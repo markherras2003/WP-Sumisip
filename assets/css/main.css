@@ -3968,7 +3968,7 @@ p.sm,
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .featured-section .featured-articles-wrapper .featured-article .featured-details p {
@@ -4308,6 +4308,7 @@ p.sm,
 
 .upper-hero-grid .hero-preview .hero-preview-group .preview-circle-wrapper {
   position: absolute;
+  width: auto;
 }
 
 .upper-hero-grid .hero-preview .hero-preview-group .preview-circle-wrapper .preview-circle {
@@ -4341,7 +4342,7 @@ p.sm,
 }
 
 .upper-hero-grid .hero-preview .hero-preview-group .preview-circle-wrapper.main {
-  position: relative;
+  position: absolute;
   z-index: 3;
 }
 
@@ -4424,21 +4425,6 @@ p.sm,
 .upper-hero-grid .hero-preview .hero-preview-group.group-2 .tertiary {
   top: 0px;
   left: 200px;
-}
-
-.upper-hero-grid .hero-preview .hero-preview-group.group-3 .main {
-  top: -10px;
-  left: 180px;
-}
-
-.upper-hero-grid .hero-preview .hero-preview-group.group-3 .secondary {
-  top: 255px;
-  left: -20px;
-}
-
-.upper-hero-grid .hero-preview .hero-preview-group.group-3 .tertiary {
-  top: 330px;
-  left: 531px;
 }
 
 .upper-hero-grid .hero-preview .hero-preview-group.transitioning {
