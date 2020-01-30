@@ -217,10 +217,9 @@ $(window).on('load', function() {
   updatePreviewDetails(firstHeroSlide);
   updatePreview(firstHeroSlide);
 
-  // Remove Loading;
-  setTimeout(() => {
+
     $('.hero-section').removeClass('loading');
-  }, 500);
+
 
 
   // Initialize Transitioning on first entry;
@@ -414,9 +413,8 @@ $(window).on('load', function() {
   updatePreview(firstHeroSlide);
 
   // Remove Loading;
-  setTimeout(() => {
     $('.hero-section').removeClass('loading');
-  }, 500);
+
 
 
   // Initialize Transitioning on first entry;
