@@ -1,16 +1,7 @@
 .history-section {
     position: relative;
     height: 100%;
-    // min-width: 720px;
     @extend %center-all;
-
-    @include lg {
-        height: auto;
-    }
-
-    @include sm {
-        height: auto;
-    }
 
     .display {
         display: flex;
@@ -116,6 +107,13 @@
         &-details {
             margin-left: 48px;
             flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .heading-group {
+                margin-bottom: 0;
+            }
 
             @include lg {
                 .paragraph-group {
@@ -124,13 +122,19 @@
             }
 
             p {
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+
                 &:not(:last-child) {
                     margin-bottom: $size-1;
                 }
             }
 
-            button {
-                margin-top: $size-1;
+            .button {
+                place-self: flex-start;
+                margin-bottom: $size-2;
             }
         }
     }
@@ -275,8 +279,11 @@
     }
 
     @include lg {
+        height: auto;
+
         .display {
             flex-direction: column;
+            margin-top: $size-4;
 
             &-preview {
                 width: 100%;
@@ -288,7 +295,16 @@
                 margin: 0;
                 margin-top: $size-5;
                 width: 100%;
+
+                p {
+                    -webkit-line-clamp: unset;
+                }
             }
         }
     }
+
+    @include sm {
+        height: auto;
+    }
+
 }
