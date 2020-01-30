@@ -25,10 +25,11 @@ nav {
             background-color: getColor(White);
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
             @extend %center-all;
+            overflow: hidden;
 
             img {
-                height: 80%;
-                width: 80%;
+                height: 130%;
+                width: 130%;
                 object-fit: contain;
                 object-position: top center;
             }
