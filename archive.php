@@ -5,50 +5,40 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Nineteen
+ * @subpackage Sumisip
  * @since 1.0.0
  */
 
-get_header();
-?>
+ get_header(); 
+ 
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+ 
+ 
+ ?>
 
-		<?php if ( have_posts() ) : ?>
+    <?php if( have_posts() ) : 
+    ?>
+        <section class="post-hero-section">
+            <div class="post-hero-background">
+                <img src="<?= get_template_directory_uri(); ?>/assets/images/hero/wonder1.jpg">
+            </div>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-				?>
-			</header><!-- .page-header -->
 
-			<?php
-			// Start the Loop.
-			while ( have_posts() ) :
-				the_post();
+            <div class="post-hero-wrapper">
+                <?php
+                    the_archive_title( '<h1 class="display-1">', '</h1>', false );
+                ?>
+            </div>
+        </section>
+    <?php
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				// get_template_part( 'template-parts/content/content', 'excerpt' );
+            get_template_part( 'partials/posts/post', 'excerpt' );
+        else: 
+            get_template_part( 'partials/posts/post', 'none' );
 
-				// End the loop.
-			endwhile;
+        endif;
 
-			// Previous/next page navigation.
-			// sumisip_the_posts_navigation();
+        
+    ?>
 
-			// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'template-parts/content/content', 'none' );
-
-		endif;
-		?>
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_footer();
+    <?php get_footer(); ?>
