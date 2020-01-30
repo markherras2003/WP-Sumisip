@@ -35,14 +35,13 @@
             .program-content {
 
                 p {
-
                     display: -webkit-box;
                     -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                 }
 
-                h5 {
+                h4 {
                     width: 170px;
                     margin-bottom: $size-1;
                 }
