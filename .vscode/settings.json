@@ -4,6 +4,7 @@
   "editor.minimap.enabled": false,
   "window.zoomLevel": 0,
   "liveServer.settings.donotShowInfoMsg": true,
+  "liveSassCompile.settings.generateMap": false,
   "liveSassCompile.settings.formats": [
       // This is Default.
       {
@@ -11,8 +12,13 @@
           "extensionName": ".css",
           "savePath": "./assets/css",
       },
+      // This is Default.
+      {
+          "format": "compressed",
+          "extensionName": ".min.css",
+          "savePath": "./assets/css",
+      },
   ],
-  "liveSassCompile.settings.generateMap": false,
   "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
