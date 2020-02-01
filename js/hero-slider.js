@@ -1,5 +1,4 @@
 $(window).on('load', function() {
-
   // Initialize first slide data;
   var heroPrevGroup = $('.hero-preview-group');
   var firstHeroSlide = $('.hero-preview-controls .active');
@@ -158,6 +157,10 @@ $(window).on('load', function() {
     heroSlideInterval = setInterval(function() {
       nextActiveHero();
     }, heroIntervalTimer);
+
+    // Update indicator;
+    $('#hero-preview-number-indicator').text( sourceElement.index() + 1 );
+
   });
 
 });
@@ -166,7 +169,6 @@ $(window).on('elementor/frontend/init', function() {
   elementorFrontend.hooks.addAction(
     'frontend/element_ready/sumisip-featured-section.default',
     function($scope, $) {
-
       // Initialize first slide data;
       var heroPrevGroup = $('.hero-preview-group');
       var firstHeroSlide = $('.hero-preview-controls .active');
