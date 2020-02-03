@@ -10,7 +10,8 @@
  * @subpackage tyreconnect
  * @since 1.0.0
  */
-?><!doctype html>
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -19,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
 <nav class="rosewood">
