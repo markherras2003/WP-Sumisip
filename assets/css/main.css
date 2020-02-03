@@ -1644,8 +1644,8 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
   .mega-menu {
     position: relative;
     top: 0;
-    -webkit-box-shadow: 6px 10px rgba(0, 0, 0, 0.05);
-            box-shadow: 6px 10px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 1px 25px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 1px 25px rgba(0, 0, 0, 0.08);
     border-top: 1px solid #F8f8f8;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
