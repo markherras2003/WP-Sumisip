@@ -41,6 +41,7 @@
     }
 
     .footer-wrapper {
+        @extend %center-all;
         padding: 0px $size-11;
 
         @include lg {

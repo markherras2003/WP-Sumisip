@@ -92,7 +92,7 @@ textarea {
 }
 
 .button,
-button, .footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li .icon-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .social-footer li a .icon-wrapper, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .upper-hero-grid .hero-preview, .history-section, .history-section .timeline .timeline-control-left,
+button, .footer-section .footer-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li .icon-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .social-footer li a .icon-wrapper, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .upper-hero-grid .hero-preview, .history-section, .history-section .timeline .timeline-control-left,
 .history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .author-profile {
   display: -webkit-box;
   display: -ms-flexbox;
