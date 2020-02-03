@@ -93,7 +93,7 @@ textarea {
 
 .button,
 button, .footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li .icon-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .social-footer li a .icon-wrapper, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .upper-hero-grid .hero-preview, .history-section, .history-section .timeline .timeline-control-left,
-.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .search-sidebar, .search-sidebar .search-icon-wrapper, .author-profile {
+.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .author-profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -573,6 +573,10 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
 }
 
 .footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li:not(:last-child) {
@@ -584,7 +588,13 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   width: 20px;
-  margin-right: 8px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li .icon-wrapper svg {
+  height: 100%;
+  width: 100%;
 }
 
 .footer-section .footer-wrapper .footer-container .footer-flex .social-footer {
@@ -616,7 +626,13 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   width: 20px;
+  height: 16px;
   margin-right: 8px;
+}
+
+.footer-section .footer-wrapper .footer-container .footer-flex .social-footer li a .icon-wrapper svg {
+  height: 100%;
+  width: 100%;
 }
 
 .footer-section .footer-wrapper .footer-container .footer-flex .links-footer {
@@ -5803,16 +5819,23 @@ p.sm,
   font-size: 14px;
 }
 
-.post-body-section .global-wrapper .post-main-body .post-tags a:not(:last-child)::after {
-  content: ',';
-}
-
 .post-body-section .global-wrapper .post-main-body .post-social-media {
   border-bottom: 1px solid #484848;
   padding-bottom: 40px;
 }
 
+.post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper .icon-wrapper {
+  height: 24px;
+  width: 24px;
+}
+
+.post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper .icon-wrapper svg {
+  height: 100%;
+  width: 100%;
+}
+
 .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper a {
+  display: inline-block;
   color: #484848;
   font-size: 24px;
 }
@@ -6588,3 +6611,4 @@ p.sm,
             transform: translateY(0px);
   }
 }
+/*# sourceMappingURL=main.css.map */
