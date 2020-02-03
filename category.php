@@ -15,7 +15,7 @@
         <div class="global-wrapper section-padding">
 
             <div class="heading-category-post">
-                <h3>All</h3>
+                <h3><?php single_cat_title(); ?></h3>
                 <div class="category-post">
                     <a href="#">Places</a>
                     <a href="#">News</a>
