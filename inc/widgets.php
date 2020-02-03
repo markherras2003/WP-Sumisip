@@ -1,4 +1,4 @@
-<?php 
+/<?php 
 
 function sumisip_widgets_post() {
 
@@ -130,54 +130,61 @@ public function widget( $args, $instance ) {
 
 
 
-add_action( 'widgets_init', 'wpb_load_widget_tags' );
+// add_action( 'widgets_init', 'wpb_load_widget_tags' );
 
-// Register and load the widget
-function wpb_load_widget_tags() {
-    register_widget( 'wpb_load_widget_tags' );
-}
+// // Register and load the widget
+// function wpb_load_widget_tags() {
+//     register_widget( 'wpb_load_widget_tags' );
+// }
  
-// Creating the widget 
-class wpb_load_widget_tags extends WP_Widget {
+// // Creating the widget 
+// class wpb_load_widget_tags extends WP_Widget {
  
-function __construct() {
-parent::__construct(
+// function __construct() {
+// parent::__construct(
  
 // Base ID of your widget
-'wpb_load_widget_tags', 
+// 'wpb_load_widget_tags', 
  
 // Widget name will appear in UI
-__('Sumisip Tags'), 
+// __('Sumisip Tags'), 
  
 // Widget description
-    array( 'description' => __( 'Sumisip Tags' ), ) 
-    );
-}
+    // array( 'description' => __( 'Sumisip Tags' ), ) 
+    // );
+// }
  
 // Creating widget front-end
  
-public function widget( $args, $instance ) {
+// public function widget( $args, $instance ) {
     // $title = apply_filters( 'widget_title', $instance['title'] );
     
-    // before and after widget arguments are defined by themes
-    echo '<div class="cloud-tags">';
-        echo __( '<h4>Tags</h4>' );
-        echo '<ul class="tags-list">';
-            echo '<li>';
-                // echo '<a href="'.get_tag_link($key).'">';
-                    echo'<span>'; 
-                            // echo $key->name ;
-                            print_r(wp_get_post_tags());
-                    echo '</span>';
-                // echo '</a>';
-            echo '</li>';
-        echo '</ul>';
-    echo '</div>';
 
-    // print_r(get_the_tags());
-        // This is where you run the code and display the output
-    }
-} // Class wpb_widget ends here
+    // global $post;
+    // before and after widget arguments are defined by themes
+    // echo '<div class="cloud-tags">';
+        // echo __( '<h4>Tags</h4>' );
+        // echo '<ul class="tags-list">';
+            // echo '<li>';
+                // echo '<a href="'.get_tag_link($key).'">';
+                    // echo'<span>'; 
+                            // echo $key->name ;
+                            // echo '<pre>';
+                    // echo '</span>';
+                // echo '</a>';
+            // echo '</li>';
+        // echo '</ul>';
+    // echo '</div>';
+
+    // if(have_posts()) {
+    //     while(have_posts()){
+    //         // print_r(the_post());
+    //         the_content();
+    //     }
+    // }
+
+    // }
+// } // Class wpb_widget ends here
 
 
 

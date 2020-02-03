@@ -649,7 +649,7 @@ nav {
     @media screen and (max-width: 664px) {
         position: relative;
         top: 0;
-        box-shadow: 6px 10px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 25px rgba(0, 0, 0, 0.08);
         border-top: 1px solid getColor(Silver);
         flex-wrap: wrap;
 

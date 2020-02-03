@@ -6,7 +6,7 @@
         </div>
 
         <div class="post-hero-wrapper">
-            <h1 class="display-1">Sumisip Posts</h1>
+            <h1 class="display-1">News and Articles</h1>
         </div>
     </section>
 
@@ -15,7 +15,7 @@
         <div class="global-wrapper section-padding">
 
             <div class="heading-category-post">
-                <h3>All</h3>
+                <h3><?php single_cat_title(); ?></h3>
                 <div class="category-post">
                     <a href="#">Places</a>
                     <a href="#">News</a>
@@ -36,9 +36,9 @@
                             <p class="post-title">The standard Lorem Ipsum passage, used since the 1500s</p>
                         </a>
                         <div class="post-etc">
-                            <a href="#">John Doe</a>
-                            <a href="#">Dec. 19, 2019</a>
-                            <a href="#">Uncategorized</a>
+                            <span href="#">John Doe</span>
+                            <span href="#">Dec. 19, 2019</span>
+                            <span href="#">Uncategorized</span>
                         </div>
                         <p class="post-context">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -60,9 +60,9 @@
                             <p class="post-title">The standard Lorem Ipsum passage, used since the 1500s</p>
                         </a>
                         <div class="post-etc">
-                            <a href="#">John Doe</a>
-                            <a href="#">Dec. 19, 2019</a>
-                            <a href="#">Uncategorized</a>
+                            <span href="#">John Doe</span>
+                            <span href="#">Dec. 19, 2019</span>
+                            <span href="#">Uncategorized</span>
                         </div>
                         <p class="post-context">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -82,9 +82,9 @@
                             <p class="post-title">The standard Lorem Ipsum passage, used since the 1500s</p>
                         </a>
                         <div class="post-etc">
-                            <a href="#">John Doe</a>
-                            <a href="#">Dec. 19, 2019</a>
-                            <a href="#">Uncategorized</a>
+                            <span href="#">John Doe</span>
+                            <span href="#">Dec. 19, 2019</span>
+                            <span href="#">Uncategorized</span>
                         </div>
                         <p class="post-context">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -104,9 +104,9 @@
                             <p class="post-title">The standard Lorem Ipsum passage, used since the 1500s</p>
                         </a>
                         <div class="post-etc">
-                            <a href="#">John Doe</a>
-                            <a href="#">Dec. 19, 2019</a>
-                            <a href="#">Uncategorized</a>
+                            <span href="#">John Doe</span>
+                            <span href="#">Dec. 19, 2019</span>
+                            <span href="#">Uncategorized</span>
                         </div>
                         <p class="post-context">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

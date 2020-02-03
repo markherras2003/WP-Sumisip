@@ -372,7 +372,6 @@ function sumisip_scripts() {
 	//wp_enqueue_style( 'sumisip-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'sumisip-style', get_template_directory_uri().'/assets/css/main.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'editor-style', get_template_directory_uri().'/style.css', array(), wp_get_theme()->get( 'Version' ) );
-    wp_enqueue_style( 'fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', wp_get_theme()->get( 'Version' ) );
     //wp_enqueue_style( 'sumisip-ui-library', get_template_directory_uri().'/css/ui-library.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	wp_style_add_data( 'sumisip-style', 'rtl', 'replace' );
