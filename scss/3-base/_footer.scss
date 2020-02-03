@@ -151,17 +151,25 @@
 
                         li {
                             display: flex;
+                            align-items: center;
+                            color: getColor(White);
 
 
                             &:not(:last-child) {
                                 margin-bottom: $size-half;
                             }
-
+                            
                             .icon-wrapper {
                                 display: flex;
                                 @extend %center-all;
                                 width: 20px;
-                                margin-right: $size-1;
+                                height: 16px;
+                                margin-right: 10px;
+                                
+                                svg {
+                                    height: 100%;
+                                    width: 100%;
+                                }
                             }
                         }
                     }
@@ -188,7 +196,13 @@
                                 display: flex;
                                 @extend %center-all;
                                 width: 20px;
+                                height: 16px;
                                 margin-right: $size-1;
+
+                                svg {
+                                    height: 100%;
+                                    width: 100%;
+                                }
                             }
                         }
                     }

@@ -42,12 +42,6 @@
                     color: getColor(Gray);
                     text-transform: uppercase;
                     font-size: 14px;
-
-                    &:not(:last-child) {
-                        &::after {
-                            content: ',';
-                        }
-                    }
                 }
             }
 
@@ -57,7 +51,21 @@
                 padding-bottom: $size-5;
 
                 .social-wrapper {
+                    @extend %center-all;
+
+                    .icon-wrapper {
+                        height: 24px;
+                        width: 24px;
+
+                        svg {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+
                     a {
+                        display: inline-block;
                         color: getColor(Clay);
                         font-size: 24px;
 
