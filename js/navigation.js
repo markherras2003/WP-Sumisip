@@ -6,6 +6,7 @@ $(() => {
       $(this).removeClass('close');
     } else {
       launchNavigation();
+
       $(this).addClass('close');
     }
   });
@@ -34,6 +35,13 @@ $(() => {
     }
 
     navItem.siblings().removeClass('show-mega-menu');
+  }
+
+  function removeAllMegaMenu() {
+    var navItems = $('.nav-item');
+    navItems.removeClass('show-mega-menu');
 
   }
+
+
 });
