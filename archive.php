@@ -25,9 +25,7 @@
 
 
             <div class="post-hero-wrapper">
-                <?php
-                    the_archive_title( '<h1 class="display-1">', '</h1>', false );
-                ?>
+                <h1>Archive Posts</h1>
             </div>
         </section>
     <?php
