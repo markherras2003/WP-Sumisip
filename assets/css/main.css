@@ -5869,8 +5869,14 @@ p.sm,
 }
 
 .search-sidebar .search-icon-wrapper {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
+  padding: 0px;
+}
+
+.search-sidebar .search-icon-wrapper svg {
+  height: 100%;
+  width: 100%;
 }
 
 .category-sidebar {
