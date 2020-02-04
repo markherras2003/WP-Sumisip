@@ -575,4 +575,3 @@ function save_extra_user_profile_fields( $user_id ) {
     update_user_meta( $user_id, 'email', $_POST['email'] );
 }
 
-
