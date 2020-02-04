@@ -5670,6 +5670,7 @@ p.sm,
   padding: 0px 32px;
   background-color: #ececec;
   position: relative;
+  z-index: 5;
 }
 
 .post-hero-section .post-hero-background {
