@@ -1,4 +1,4 @@
-/<?php 
+<?php 
 
 function sumisip_widgets_post() {
 
