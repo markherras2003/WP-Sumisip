@@ -20,9 +20,14 @@
 
     .search-icon-wrapper {
         @extend %center-all;
-        width: 40px;
-        height: 40px;
+        width: $size-3;
+        height: $size-3;
+        padding: 0px;
 
+        svg {
+            height: 100%;
+            width: 100%;
+        }
     }
 }
 
