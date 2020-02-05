@@ -46,6 +46,10 @@
             .post-content {
                 margin-bottom: $size-5;
 
+                h2 {
+                    margin-bottom: $size-1;
+                }
+
                 p {
                     color: getColor(Gray);
                 }

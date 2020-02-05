@@ -5839,6 +5839,10 @@ p.sm,
   margin-bottom: 40px;
 }
 
+.post-body-section .global-wrapper .post-main-body .post-content h2 {
+  margin-bottom: 8px;
+}
+
 .post-body-section .global-wrapper .post-main-body .post-content p {
   color: #6E6E6E;
 }

@@ -74,12 +74,11 @@ get_header();
 
                 <div class="post-content">
                     <h2><?php the_subtitle(); ?></h2>
-                    <p><?php the_content(); ?></p>
-
+                    <?php the_content(); ?>
 
                     <div class="sub-content">
                         <div class="sub-post-content">
-                            <?php cc_featured_image_caption(); ?>
+                            <?php cc_featured_image_caption() ? cc_featured_image_caption() : '' ; ?>
                         </div>
                         <div class="sub-img-content">
                     <?php 
@@ -91,11 +90,10 @@ get_header();
                         }
 
                         ?>
-                            <img src="<?= $featured_images[0]['full'];?>">
+                        <img src="<?= $featured_images ? $featured_images[0]['full'] : get_template_directory_uri(); ?>/assets/images/no-available.png">
 
                         </div>
                     </div>
-
                 </div>
 
                 <div class="post-tags"> 
