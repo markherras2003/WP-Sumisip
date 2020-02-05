@@ -48,33 +48,34 @@ public function widget( $args, $instance ) {
         echo __( '<h4>Recent Posts</h4>' );
 
         // echo the_post();
-         query_posts( array(
-            'posts_per_page' => 4,
-         )); 
+        //  query_posts( array(
+        //     'posts_per_page' => 4,
+        //  )); 
          
-         echo '<ul class="popular-posts">';
-         if( have_posts() ): while ( have_posts() ) : the_post(); 
-            echo '<li>';
-                        echo '<a href="'.get_permalink().'">';
-                            echo '<div class="post-item excerpt">';
-                                    // tHe();
-                                    the_content();
+        //  echo '<ul class="popular-posts">';
+        //  if( have_posts() ): while ( have_posts() ) : the_post(); 
+        //     echo '<li>';
+        //                 echo '<a href="'.get_permalink().'">';
+        //                     echo '<div class="post-item excerpt">';
+        //                             // tHe();
+        //                             the_content();
 
-                                    echo'<span>'; 
-                                        echo get_the_category()[0]->cat_name;
-                                    echo '</span>';
+        //                             echo'<span>'; 
+        //                                 echo get_the_category()[0]->cat_name;
+        //                             echo '</span>';
 
-                                    echo'<span>'; 
-                                        echo get_the_date();
-                                    echo '</span>';
-                            echo '</div>';
-                        echo '</a>';
-                        echo '</li>';
-                    endwhile; 
-                endif; 
-            echo '</ul>';
+        //                             echo'<span>'; 
+        //                                 echo get_the_date();
+        //                             echo '</span>';
+        //                     echo '</div>';
+        //                 echo '</a>';
+        //                 echo '</li>';
+        //             endwhile; 
+        //         endif; 
+        //     echo '</ul>';
          
-        echo '</div>';
+        // echo '</div>';
+        // print_r(get_post());
         // This is where you run the code and display the output
     }
 } // Class wpb_widget ends here
@@ -108,14 +109,16 @@ __('Sumisip Categories'),
  
 public function widget( $args, $instance ) {
     // $title = apply_filters( 'widget_title', $instance['title'] );
+    $categ = get_categories(array( 'hide_empty' => false,
+    'number'  => 5  ));
     
     // before and after widget arguments are defined by themes
     echo '<div class="category-sidebar">';
         echo __( '<h4>Categories</h4>' );
         echo '<ul class="category-lists">';
-            foreach ( get_categories() as $key) {
+            foreach ( $categ as $key) {
                 echo '<li>';
-                    echo '<a href="'.get_category_link($key).'">';
+                    echo '<a href="'.get_category_link($key->term_id).'">';
                         echo'<span>'; 
                                 echo $key->name ;
                         echo '</span>';
@@ -124,67 +127,63 @@ public function widget( $args, $instance ) {
             }
         echo '</ul>';
     echo '</div>';
+
         // This is where you run the code and display the output
     }
 } // Class wpb_widget ends here
 
 
 
-// add_action( 'widgets_init', 'wpb_load_widget_tags' );
+add_action( 'widgets_init', 'wpb_load_widget_tags' );
 
-// // Register and load the widget
-// function wpb_load_widget_tags() {
-//     register_widget( 'wpb_load_widget_tags' );
-// }
+// Register and load the widget
+function wpb_load_widget_tags() {
+    register_widget( 'wpb_load_widget_tags' );
+}
  
-// // Creating the widget 
-// class wpb_load_widget_tags extends WP_Widget {
+// Creating the widget 
+class wpb_load_widget_tags extends WP_Widget {
  
-// function __construct() {
-// parent::__construct(
+function __construct() {
+parent::__construct(
  
 // Base ID of your widget
-// 'wpb_load_widget_tags', 
+'wpb_load_widget_tags', 
  
 // Widget name will appear in UI
-// __('Sumisip Tags'), 
+__('Sumisip Tags'), 
  
 // Widget description
-    // array( 'description' => __( 'Sumisip Tags' ), ) 
-    // );
-// }
+    array( 'description' => __( 'Sumisip Tags' ), ) 
+    );
+}
  
 // Creating widget front-end
  
-// public function widget( $args, $instance ) {
-    // $title = apply_filters( 'widget_title', $instance['title'] );
+public function widget( $args, $instance ) {
     
+    $tags = get_tags(array(
+        'hide_empty' => false,
+        'number'  => 5
+      ));
 
-    // global $post;
-    // before and after widget arguments are defined by themes
-    // echo '<div class="cloud-tags">';
-        // echo __( '<h4>Tags</h4>' );
-        // echo '<ul class="tags-list">';
-            // echo '<li>';
-                // echo '<a href="'.get_tag_link($key).'">';
-                    // echo'<span>'; 
-                            // echo $key->name ;
-                            // echo '<pre>';
-                    // echo '</span>';
-                // echo '</a>';
-            // echo '</li>';
-        // echo '</ul>';
-    // echo '</div>';
+      echo '<div class="cloud-tags">';
+        echo __( '<h4>Tags</h4>' );
+            echo '<ul class="tags-list">';
+                foreach($tags as $tag) {
+                    echo '<li>';
+                        echo '<a href="'.get_tag_link($tag->term_id).'">';
+                            echo'<span>'; 
+                                echo $tag->name;
+                            echo '</span>';
+                        echo '</a>';
+                    echo '</li>';
+                }
+        echo '</ul>';
+    echo '</div>';
 
-    // if(have_posts()) {
-    //     while(have_posts()){
-    //         // print_r(the_post());
-    //         the_content();
-    //     }
-    // }
-
-    // }
-// } // Class wpb_widget ends here
+    }
+} // Class wpb_widget ends here
 
 
 
@@ -268,6 +267,21 @@ public function widget( $args, $instance ) {
     // before and after widget arguments are defined by themes
     get_search_form();
         // This is where you run the code and display the output
+
+    // $custom_query_args = array( 
+    //     'post_status' => 'any',
+    //     'post_type'   => 'attachment'
+    //     // 'post_per_page' => 5
+    // );
+
+    // $custom_query = new WP_Query($custom_query_args);
+    // echo '<pre>';
+    // print_r($custom_query);
+//   echo '<ul>';
+//   foreach ($tags as $tag) {
+//     echo '<li>' . $tag->name . '</li>';
+//   }
+//   echo '</ul>';
         
     }
 } // Class wpb_widget ends here
