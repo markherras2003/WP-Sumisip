@@ -2,11 +2,11 @@
 
     .news-boxes {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: repeat(3, 33.33%);
         justify-content: center;
 
         @include lg {
-            grid-template-columns: auto auto;
+            grid-template-columns: repeat(2, 50%);
         }
 
         @include md {

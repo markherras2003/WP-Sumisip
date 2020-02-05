@@ -5538,8 +5538,8 @@ p.sm,
 .news-section .news-boxes {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: (33.33%)[3];
+      grid-template-columns: repeat(3, 33.33%);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -5547,8 +5547,8 @@ p.sm,
 
 @media (max-width: 992px) {
   .news-section .news-boxes {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
   }
 }
 
