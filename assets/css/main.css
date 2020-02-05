@@ -6079,6 +6079,16 @@ p.sm,
   text-decoration: none;
 }
 
+.sumisip-posts .global-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  justify-self: flex-start;
+}
+
 .sumisip-posts .heading-category-post {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6134,12 +6144,12 @@ p.sm,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .sumisip-posts .posts-item .post-item:not(:last-child) {
@@ -6147,7 +6157,7 @@ p.sm,
 }
 
 .sumisip-posts .posts-item .post-item .post-details .post-title {
-  font-size: 24px;
+  font-size: 20px;
   color: #707070;
 }
 
@@ -6170,7 +6180,6 @@ p.sm,
 }
 
 .sumisip-posts .posts-item .post-item .post-details .post-context {
-  font-size: 20px;
   color: #707070;
 }
 
