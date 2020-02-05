@@ -164,13 +164,19 @@
 
         a {
             display: inline-block;
-            padding: 12px 32px;
-            color: #FFFFFF;
-            background-color: getColor(Clay);
-
+            padding: $size-half 20px;
+            color: getColor(White);
+            border: 1px solid  getColor(Clay);
+            color: getColor(Clay);
+            font-size: 13px;
+            font-weight: 400;
+            border-radius: 9999999px;
+            transition: 200ms;
+    
             &:hover {
                 text-decoration: none;
-                background-color: getColor(Gray);
+                background: getColor(Clay);
+                color: #fff
             }
         }
     }
@@ -211,15 +217,17 @@
     .form-submit {
         #submit {
             width: auto;
-            background: getColor(Clay);
             border: none;
-            color: getColor(White);
-            font-weight: 300;
-            padding: $size-2 $size-3;
-            margin-top: $size-3;
-
+            padding: 20px 24px;
+            color: getColor(Clay);
+            border: 1px solid getColor(Clay);
+            transition: 200ms;
+            border-radius: 999999px;
+            font-size: 20px;
+            
             &:hover {
-                background: getColor(Gray);
+                color: getColor(White);
+                background: getColor(Clay);
             }
         }
     }
