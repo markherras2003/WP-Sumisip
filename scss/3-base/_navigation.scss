@@ -609,6 +609,10 @@ nav {
         padding-bottom: $size-6;
     }
 
+    @include xl {
+        top: 90px;
+    }
+
     @include lg {
         top: 80px;
         padding: $size-4;

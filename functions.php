@@ -511,6 +511,27 @@ function excerpt($limit) {
 	return $excerpt;
   }
 
+  add_filter('the_content', 'remove_empty_tags_recursive', 20, 1);
+  function remove_empty_tags_recursive ($str, $repto = NULL) {
+		   $str = force_balance_tags($str);
+		   //** Return if string not given or empty.
+		   if (!is_string ($str)
+		   || trim ($str) == '')
+		  return $str;
+  
+		  //** Recursive empty HTML tags.
+		 return preg_replace (
+  
+				//** Pattern written by Junaid Atari.
+				'/<([^<\/>]*)>([\s]*?|(?R))<\/\1>/imsU',
+  
+			   //** Replace with nothing if string empty.
+			   !is_string ($repto) ? '' : $repto,
+  
+			  //** Source string
+			 $str
+  );}
+
 add_action( 'init', 'wpse4936_init', 100 /* Something high, to make sure all post types are registered */ );
 function wpse4936_init()
 {
