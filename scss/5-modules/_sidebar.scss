@@ -7,6 +7,12 @@
         list-style-type: none;
     }
 
+    div {
+        &:not(:last-child) {
+            margin-bottom: $size-5;
+        }
+    }
+
 }
 
 .search-sidebar {
@@ -27,12 +33,15 @@
         svg {
             height: 100%;
             width: 100%;
+            
+            path {
+                fill: getColor(Ash);
+            }
         }
     }
 }
 
 .category-sidebar {
-    margin-bottom: $size-5;
 
     h4 {
         margin-bottom: $size-2;
@@ -60,7 +69,6 @@
 }
 
 .popular-sidebar {
-    margin-bottom: $size-5;
 
     h4 {
         margin-bottom: $size-2;
@@ -111,7 +119,6 @@
 }
 
 .cloud-tags {
-    margin-bottom: $size-5;
 
     h4 {
         margin-bottom: $size-2;
