@@ -33,7 +33,7 @@
             </div>
             <div class="nav-list">
                 <div class="nav-item active">
-                    <a href="">
+                    <a href="<?= get_home_url(); ?>">
                         <span>Sumisip</span>
                         <span>Home</span>
                     </a>
