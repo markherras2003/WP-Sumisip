@@ -1,6 +1,6 @@
 .comment-section {
-    padding-top: $size-8;
-    padding-bottom: $size-8;
+    padding-top: $size-5;
+    padding-bottom: $size-5;
     border-bottom: 1px solid getColor(Clay);
 
     h4 {
@@ -12,10 +12,8 @@
         align-items: flex-start;
 
         &:not(:last-child) {
-            margin-bottom: $size-8;
+            margin-bottom: $size-3;
         }
-
-
 
         .comment-profile-img {
             width: 150px;
@@ -34,12 +32,13 @@
         .comment-etc-wrapper {
             h4 {
                 padding: 0px;
+                font-size: 18px;
+                line-height: 18px;
             }
 
             span {
                 color: getColor(Ash);
-                font-size: 14px;
-                ;
+                font-size: 12px;
             }
 
             p {
@@ -48,14 +47,19 @@
 
             a {
                 display: inline-block;
-                // font-size: 12px;
-                padding: 12px $size-4;
+                padding: $size-half 20px;
                 color: getColor(White);
-                background-color: getColor(Clay);
+                border: 1px solid  getColor(Clay);
+                color: getColor(Clay);
+                font-size: 13px;
+                font-weight: 400;
+                border-radius: 9999999px;
+                transition: 200ms;
 
                 &:hover {
                     text-decoration: none;
-                    background: getColor(Gray);
+                    background: getColor(Clay);
+                    color: #fff
                 }
             }
         }
