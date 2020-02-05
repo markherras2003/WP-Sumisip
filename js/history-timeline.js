@@ -306,4 +306,182 @@ $(window).on('load', function() {
     link.attr('href', pLink);
   }
 */
+
+
+$(window).on('elementor/frontend/init', function() {
+  elementorFrontend.hooks.addAction(
+    'frontend/element_ready/sumisip-history-timeline.default',
+    function($scope, $) {
+
+
+      // Remove Loading;
+  $('.history-section').removeClass('loading');
+
+  // Initialize first timeline entry;
+  var firstTimelineBlock = $('.timeline .active');
+  updateTimelineDetails(
+    firstTimelineBlock.attr('overline'),
+    firstTimelineBlock.attr('title'),
+    firstTimelineBlock.attr('contents'),
+    firstTimelineBlock.attr('link')
+  );
+
+  // When clicking next;
+  $('.timeline-control-right').click(function() {
+    if (!$(this).hasClass('disabled')) {
+      nextTimeline();
+    }
+  });
+
+  // When clicking prev;
+  $('.timeline-control-left').click(function() {
+    if (!$(this).hasClass('disabled')) {
+      prevTimeline();
+    }
+  });
+
+  // When clicking the timeline block;
+  $('.indicator').on('click', function() {
+    var timelineBlocks = $('.timeline-body .timeline-block');
+    var timelineBlock = $(this).parent();
+    var targetIndex = timelineBlock.index();
+
+    // Changing Photo;
+    var allPhotos = $('.display-preview .dp-photo');
+    var firstPhoto = $('.display-preview .dp-photo').first();
+    allPhotos.removeClass('active');
+    allPhotos.removeClass('next');
+
+    var targetPhoto = $(allPhotos[targetIndex]);
+    var nextPhoto = targetPhoto.next();
+    if (nextPhoto.length <= 0) {
+      nextPhoto = firstPhoto;
+    }
+
+    targetPhoto.addClass('active');
+    nextPhoto.addClass('next');
+
+    // Changing Timelineblock;
+    timelineBlock.addClass('active');
+    var timelineBlocksPrevs = timelineBlock.prevAll();
+    var timelineBlocksNexts = timelineBlock.nextAll();
+    timelineBlocksPrevs.addClass('active');
+    timelineBlocksNexts.removeClass('active');
+
+    updateTimelineDetails(
+      timelineBlock.attr('overline'),
+      timelineBlock.attr('title'),
+      timelineBlock.attr('contents'),
+      timelineBlock.attr('link')
+    );
+
+    if (targetIndex >= 1) {
+      enableTimelineControl('left');
+    } else {
+      disableTimelineControl('left');
+    }
+
+    if (targetIndex >= timelineBlocks.length - 1) {
+      disableTimelineControl('right');
+    } else {
+      enableTimelineControl('right');
+    }
+  });
+
+  function updateTimelineDetails(pOverline, pTitle, pContents, pLink) {
+    var overline = $('#h-overline');
+    var title = $('#h-title');
+    var contents = $('#h-contents');
+    var link = $('#h-link');
+    overline.text(pOverline);
+    title.text(pTitle);
+    contents.text(pContents);
+    link.attr('href', pLink);
+  }
+
+  function nextTimeline() {
+    // Changing the photo;
+    var curActivePhoto = $('.display-preview .dp-photo.active');
+    var nextPhoto = $('.display-preview .dp-photo.next');
+    var nextNext = nextPhoto.next();
+
+    nextPhoto.removeClass('next');
+    nextPhoto.addClass('active');
+    nextNext.addClass('next');
+
+    curActivePhoto.addClass('scale-hide');
+    setTimeout(() => {
+      curActivePhoto.removeClass('active');
+      curActivePhoto.removeClass('scale-hide');
+    }, 401);
+
+    // Changing Timeline Indicator;
+    var timelineBlocks = $('.timeline-body .timeline-block');
+    var curActiveTimeline = $('.timeline-body .active').last();
+    var nextActiveTimeline = curActiveTimeline.next();
+
+    nextActiveTimeline.addClass('active');
+
+    updateTimelineDetails(
+      nextActiveTimeline.attr('overline'),
+      nextActiveTimeline.attr('title'),
+      nextActiveTimeline.attr('contents'),
+      nextActiveTimeline.attr('link')
+    );
+
+    // Disable / Enable timeline blocks;
+    enableTimelineControl('left');
+    if (timelineBlocks.length == curActiveTimeline.index() + 2) {
+      disableTimelineControl('right');
+    }
+  }
+
+  function prevTimeline() {
+    // Changing the photo;
+    var curActivePhoto = $('.display-preview .dp-photo.active');
+    var curNextPhoto = $('.display-preview .dp-photo.next');
+    var prevActivePhoto = curActivePhoto.prev();
+
+    curNextPhoto.removeClass('next');
+
+    curActivePhoto.addClass('next');
+    curActivePhoto.removeClass('active');
+
+    prevActivePhoto.addClass('active');
+
+    // Changing timeline indicators;
+    var timelineBlocks = $('.timeline-body .timeline-block');
+    var curActiveTimeline = $('.timeline-body .timeline-block.active').last();
+    var prevActiveTimeline = curActiveTimeline.prev();
+
+    curActiveTimeline.removeClass('active');
+    prevActiveTimeline.addClass('active');
+
+    updateTimelineDetails(
+      prevActiveTimeline.attr('overline'),
+      prevActiveTimeline.attr('title'),
+      prevActiveTimeline.attr('contents'),
+      prevActiveTimeline.attr('link')
+    );
+
+    // Disable / Enable timeline blocks;
+    enableTimelineControl('right');
+    if (curActiveTimeline.index() == 1) {
+      disableTimelineControl('left');
+    }
+  }
+
+  function enableTimelineControl(controlDirection) {
+    $('.timeline-control-' + controlDirection).removeClass('disabled');
+  }
+
+  function disableTimelineControl(controlDirection) {
+    $('.timeline-control-' + controlDirection).addClass('disabled');
+  }
+
+ 
+  });
+});
+
+
 });

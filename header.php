@@ -151,66 +151,71 @@
                             <h4>Latest Post</h4>
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <?php   $arg = array(
+                                               'post_type' => 'post',
+                                               'posts_per_page' => 1,
+                                                 );
+                                                 $featured = new \WP_Query($arg);
+                                                 while($featured->have_posts()): $featured->the_post(); 
+                                                 //$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                                                 global $dynamic_featured_image;
+
+                                            ?>
+                                    <a href="<?= get_permalink(); ?>">
+                                    <?php 
+                $key=0;
+                $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                foreach($featured_images as $featured_image) {
+                    $key=$key+1; 
+                     if ($key===1) {?>
                                         <div class="thumb-wrapper">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/12.jpg" alt="Main Mega Menu Thumb">
+                                            <img src="<?= $featured_image['full']; ?>" alt="Main Mega Menu Thumb">
                                         </div>
-                                        <h5 class="light">Kalasiglasigan 2020</h5>
-                                        <p class="sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vero
-                                            autem quo similique, temporibus amet. Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Dolorem possimus fuga eos eaque fugiat unde ipsum optio,
-                                            voluptatum laudantium error, eum dicta rerum vero repellendus porro suscipit
-                                            ullam aut similique!</p>
+                     <?php }
+            
+                } ?>
+                                        <h5 class="light"><?= get_the_title(); ?></h5>
+                                        <div class="p-sm"><?= the_content(); ?></div>
                                     </a>
+                                <?php endwhile; ?> 
                                 </li>
                                 <li class="more-cta"><a href="#">Show More</a></li>
                             </ul>
                         </div>
                         <div class="mini-box mega-menu-group">
                             <h4>Trending Articles</h4>
-                            <ul>
+                            <ul>    
+                                <?php   $arg = array(
+                                               'post_type' => 'post',
+                                               'posts_per_page' => 3,
+                                                 );
+                                                 $featured = new \WP_Query($arg);
+                                                 while($featured->have_posts()): $featured->the_post(); 
+                                                 //$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                                                 global $dynamic_featured_image;
+
+                                ?>
                                 <li>
-                                    <a href="#">
+                                                <?php 
+                                $key=0;
+                                $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                                foreach($featured_images as $featured_image) {
+                                    $key=$key+1; 
+                                    if ($key===1) {?>
                                         <div class="thumb-wrapper">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/1.jpg" alt="Mini Box Thumb">
+                                            <img src="<?= $featured_image['thumb']; ?>" alt="Main Mega Menu Thumb">
                                         </div>
+                                    <?php }
+                            
+                                } ?>
                                         <div class="details">
-                                            <h5 class="light">Motorace Event</h5>
-                                            <p class="sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-                                                quisquam est
-                                                ipsam similique quaerat dolorem! Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Magnam, doloribus?</p>
+                                            <h5 class="light"><?= get_the_title(); ?></h5>
+                                            <div class="p-sm"><?= the_content(); ?></div>
                                         </div>
                                     </a>
+                                   
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="thumb-wrapper">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/2.jpg" alt="Mini Box Thumb">
-                                        </div>
-                                        <div class="details">
-                                            <h5 class="light">Lorem ipsum dolor sit, amet consectetur adipisicing.</h5>
-                                            <p class="sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-                                                quisquam est
-                                                ipsam similique quaerat dolorem! Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Magnam, doloribus?</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="thumb-wrapper">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/3.jpg" alt="Mini Box Thumb">
-                                        </div>
-                                        <div class="details">
-                                            <h5 class="light">Motorace Event</h5>
-                                            <p class="sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-                                                quisquam est
-                                                ipsam similique quaerat dolorem! Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Magnam, doloribus?</p>
-                                        </div>
-                                    </a>
-                                </li>
+                                <?php endwhile; ?> 
                             </ul>
                         </div>
                         <div class="mini-box mega-menu-group">
