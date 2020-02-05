@@ -10,11 +10,6 @@ p,
     margin-bottom: $size-1;
     font-size: 16px;
 
-    // @include md {
-    //     font-size: 14px;
-    //     line-height: 21px;
-    // }
-
     &.lead {
         font-weight: 300;
         font-size: 18px;
@@ -27,4 +22,12 @@ p,
         line-height: 19px;
     }
 
+}
+
+
+.p-sm {
+    p {
+        font-size: 13px;
+        line-height: 19px;
+    }
 }
