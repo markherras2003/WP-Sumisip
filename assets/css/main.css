@@ -433,7 +433,7 @@ button:hover {
 }
 
 .footer-section .footer-wrapper {
-  padding: 0px 88px;
+  padding: 0px 48px;
 }
 
 @media (max-width: 992px) {
@@ -507,7 +507,7 @@ button:hover {
 }
 
 .footer-section .footer-wrapper .footer-container .seal-footer {
-  margin-right: 80px;
+  margin-right: 40px;
   margin-bottom: 64px;
 }
 
@@ -664,7 +664,7 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 24px 88px;
+  padding: 24px 48px;
   background-color: #AA0952;
 }
 

@@ -42,7 +42,7 @@
 
     .footer-wrapper {
         @extend %center-all;
-        padding: 0px $size-11;
+        padding: 0px $size-6;
 
         @include lg {
             padding: 0px $size-8;
@@ -99,7 +99,7 @@
             }
 
             .seal-footer {
-                margin-right: $size-10;
+                margin-right: $size-5;
                 margin-bottom: $size-8;
 
                 h4 {
@@ -235,7 +235,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: $size-3 $size-11;
+        padding: $size-3 $size-6;
         background-color: getColor(Rosewood);
 
         p {
