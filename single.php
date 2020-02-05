@@ -47,6 +47,17 @@ get_header();
 
             <div class="post-main-body">
 
+                <div class="breadcrumbs">
+                    <a href="<?= get_home_url(); ?>">Home</a>
+
+                    <?php foreach(get_the_category() as $key){
+                        ?>
+                        <a href="<?= get_category_link( $key->term_id ) ?>"><?= $key->name ?></a> 
+                    <?php
+                    }; ?>
+
+
+                </div>
 
                 <div class="post-img-wrapper">
                     <?php
@@ -62,17 +73,36 @@ get_header();
                 </div>
 
                 <div class="post-content">
-                    <h2><?php the_title(); ?></h2>
-                    <p><?php the_content(); ?></p>
+                    <h2><?php the_subtitle(); ?></h2>
+                    <?php the_content(); ?>
 
+                    <div class="sub-content">
+                        <div class="sub-post-content">
+                            <?php cc_featured_image_caption() ? cc_featured_image_caption() : '' ; ?>
+                        </div>
+                        <div class="sub-img-content">
+                    <?php 
+
+                        if( class_exists('Dynamic_Featured_Image') ) {
+                            global $dynamic_featured_image;
+                            global $post;
+                            $featured_images = $dynamic_featured_image->get_featured_images( $post->id );
+                        }
+
+                        ?>
+                        <img src="<?= $featured_images ? $featured_images[0]['full'] : get_template_directory_uri(); ?>/assets/images/no-available.png">
+
+                        </div>
+                    </div>
                 </div>
 
                 <div class="post-tags"> 
-                    <h4>Tags</h4>
+                    <h4>Tags:</h4>
                     <div class="post-tag">
                        <?php the_tags('') ?>
                     </div>
                 </div>
+
 
 
                 <div class="author-profile">

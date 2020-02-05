@@ -25,7 +25,7 @@
 
 <nav class="rosewood">
             <div class="branding-wrapper">
-                <a href="./">
+                <a href="<?= get_home_url(); ?>">
                     <div class="branding-body">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/svg/branding-official.svg" alt="Branding">
                     </div>
@@ -33,7 +33,7 @@
             </div>
             <div class="nav-list">
                 <div class="nav-item active">
-                    <a href="./">
+                    <a href="">
                         <span>Sumisip</span>
                         <span>Home</span>
                     </a>
@@ -196,6 +196,7 @@
 
                                 ?>
                                 <li>
+                                <a href="<?= get_permalink(); ?>">
                                                 <?php 
                                 $key=0;
                                 $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
@@ -209,8 +210,8 @@
                             
                                 } ?>
                                         <div class="details">
-                                            <h5 class="light"><?= get_the_title(); ?></h5>
-                                            <div class="p-sm"><?= the_content(); ?></div>
+                                            <h5 class="light"><?= the_title(); ?></h5>
+                                            <span class="p-sm"><?= the_content(); ?></span>
                                         </div>
                                     </a>
                                    
@@ -220,49 +221,39 @@
                         </div>
                         <div class="mini-box mega-menu-group">
                             <h4>Hot Topics</h4>
-                            <ul>
+                            <ul>    
+                                <?php   $arg = array(
+                                               'post_type' => 'post',
+                                               'posts_per_page' => 3,
+                                                 );
+                                                 $featured = new \WP_Query($arg);
+                                                 while($featured->have_posts()): $featured->the_post(); 
+                                                 //$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                                                 global $dynamic_featured_image;
+
+                                ?>
                                 <li>
-                                    <a href="#">
+                                <a href="<?= get_permalink(); ?>">
+                                                <?php 
+                                $key=0;
+                                $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                                foreach($featured_images as $featured_image) {
+                                    $key=$key+1; 
+                                    if ($key===1) {?>
                                         <div class="thumb-wrapper">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/4.jpg" alt="Mini Box Thumb">
+                                            <img src="<?= $featured_image['thumb']; ?>" alt="Main Mega Menu Thumb">
                                         </div>
+                                    <?php }
+                            
+                                } ?>
                                         <div class="details">
-                                            <h5 class="light">Motorace Event</h5>
-                                            <p class="sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-                                                quisquam est
-                                                ipsam similique quaerat dolorem! Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Magnam, doloribus?</p>
+                                            <h5 class="light"><?= the_title(); ?></h5>
+                                            <span class="p-sm"><?= the_content(); ?></span>
                                         </div>
                                     </a>
+                                   
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="thumb-wrapper">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/5.jpg" alt="Mini Box Thumb">
-                                        </div>
-                                        <div class="details">
-                                            <h5 class="light">Lorem ipsum dolor sit, amet consectetur adipisicing.</h5>
-                                            <p class="sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-                                                quisquam est
-                                                ipsam similique quaerat dolorem! Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Magnam, doloribus?</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="thumb-wrapper">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/6.jpg" alt="Mini Box Thumb">
-                                        </div>
-                                        <div class="details">
-                                            <h5 class="light">Motorace Event</h5>
-                                            <p class="sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-                                                quisquam est
-                                                ipsam similique quaerat dolorem! Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Magnam, doloribus?</p>
-                                        </div>
-                                    </a>
-                                </li>
+                                <?php endwhile; ?> 
                             </ul>
                         </div>
                     </div>  
