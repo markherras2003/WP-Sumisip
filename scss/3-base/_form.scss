@@ -5,16 +5,19 @@
 form {
     
     textarea {
-        border: 1px solid #b9b9b9;
+        border-radius: 5px;
+        border: 1px solid getColor(Clay);
         padding: 12px;
         width: 100%;
         height: 200px;
         resize: none;
+        outline: none;
 
         &::placeholder {
             color: #bdbdbd;
             font-weight: 300;
         }
+
     }
 
     &.comment-form {
@@ -31,13 +34,17 @@ form {
 
             &[type="submit"] {
                 width: auto;
-                color: getColor(White);
-                background: getColor(Clay);
                 border: none;
                 padding: 20px 24px;
-
+                color: getColor(Clay);
+                border: 1px solid getColor(Clay);
+                transition: 200ms;
+                border-radius: 999999px;
+                font-size: 20px;
+                
                 &:hover {
-                    background: getColor(Gray);
+                    color: getColor(White);
+                    background: getColor(Clay);
                 }
             }
         }
