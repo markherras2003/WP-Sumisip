@@ -11,7 +11,7 @@
 
 .search-sidebar {
     @extend %center-all;
-    border-bottom: 1px solid #b9b9b9;
+    border-bottom: 1px solid getColor(Clay);
     margin-bottom: $size-4;
 
     input {
@@ -43,7 +43,7 @@
 
         li {
 
-            border-bottom: 1px solid #b9b9b9;
+            border-bottom: 1px solid getColor(Clay);
 
             a {
                 display: block;
@@ -69,7 +69,7 @@
     .popular-posts {
 
         li {
-            border-bottom: 1px solid #b9b9b9;
+            border-bottom: 1px solid getColor(Clay);
 
             a {
                 display: block;
@@ -132,10 +132,13 @@
 
             a {
                 display: inline-block;
-                border: 1px solid getColor(Black);
-                color: getColor(Clay);
+                border: 1px solid getColor(Gray);
+                color: getColor(Gray);
+                text-transform: uppercase;
+                font-size: 12px;
                 padding: 6px $size-2;
                 transition: 200ms;
+                border-radius: 5px;
 
                 &:hover {
                     text-decoration: none;
@@ -155,7 +158,7 @@
         flex-direction: column;
 
         li {
-            border-bottom: 1px solid #b9b9b9;
+            border-bottom: 1px solid getColor(Clay);
 
             a {
                 display: block;
