@@ -382,11 +382,13 @@ function sumisip_scripts() {
 	}
 
     wp_enqueue_script( 'sumisip-main', get_template_directory_uri().'/js/main.js' , array(), '20181231', true );
-    wp_enqueue_script( 'history-featured', get_template_directory_uri().'/js/history-featured.js' , array(), '20181231', true );
+    //wp_enqueue_script( 'history-featured', get_template_directory_uri().'/js/history-featured.js' , array(), '20181231', true );
     wp_enqueue_script( 'hero-slider', get_template_directory_uri().'/js/hero-slider.js' , array(), '20181231', true );
-    wp_enqueue_script( 'hero-video', get_template_directory_uri().'/js/hero-video-autoplay.js' , array(), '20181231', true );
+    wp_enqueue_script( 'hero-video', get_template_directory_uri().'/js/hero-featured.js' , array(), '20181231', true );
     wp_enqueue_script( 'history-timeline', get_template_directory_uri().'/js/history-timeline.js' , array(), '20181231', true );
-    wp_enqueue_script( 'navigation', get_template_directory_uri().'/js/navigation.js' , array(), '20181231', true );
+	wp_enqueue_script( 'navigation', get_template_directory_uri().'/js/navigation.js' , array(), '20181231', true );
+	
+	
     //wp_enqueue_script( 'sumisip-swiper', get_template_directory_uri() . '/js/swiper.min.js' , array(), '20181231', true );
 	//wp_enqueue_style( 'sumisip-print-style', get_template_directory_uri() . '/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
@@ -574,5 +576,4 @@ function save_extra_user_profile_fields( $user_id ) {
     update_user_meta( $user_id, 'twitter', $_POST['twitter'] );
     update_user_meta( $user_id, 'email', $_POST['email'] );
 }
-
 

@@ -23,11 +23,8 @@
                 <img src="<?= get_template_directory_uri(); ?>/assets/images/hero/wonder1.jpg">
             </div>
 
-
             <div class="post-hero-wrapper">
-                <?php
-                    single_tag_title( '<h1 class="display-1">Tag: ', '</h1>', false );
-                ?>
+                <h1>Article Posts</h1>
             </div>
         </section>
     <?php

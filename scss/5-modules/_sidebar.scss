@@ -7,11 +7,17 @@
         list-style-type: none;
     }
 
+    div {
+        &:not(:last-child) {
+            margin-bottom: $size-5;
+        }
+    }
+
 }
 
 .search-sidebar {
     @extend %center-all;
-    border-bottom: 1px solid #b9b9b9;
+    border-bottom: 1px solid getColor(Clay);
     margin-bottom: $size-4;
 
     input {
@@ -20,14 +26,22 @@
 
     .search-icon-wrapper {
         @extend %center-all;
-        width: 40px;
-        height: 40px;
+        width: $size-3;
+        height: $size-3;
+        padding: 0px;
 
+        svg {
+            height: 100%;
+            width: 100%;
+            
+            path {
+                fill: getColor(Ash);
+            }
+        }
     }
 }
 
 .category-sidebar {
-    margin-bottom: $size-5;
 
     h4 {
         margin-bottom: $size-2;
@@ -38,7 +52,7 @@
 
         li {
 
-            border-bottom: 1px solid #b9b9b9;
+            border-bottom: 1px solid getColor(Clay);
 
             a {
                 display: block;
@@ -55,7 +69,6 @@
 }
 
 .popular-sidebar {
-    margin-bottom: $size-5;
 
     h4 {
         margin-bottom: $size-2;
@@ -64,7 +77,7 @@
     .popular-posts {
 
         li {
-            border-bottom: 1px solid #b9b9b9;
+            border-bottom: 1px solid getColor(Clay);
 
             a {
                 display: block;
@@ -106,7 +119,6 @@
 }
 
 .cloud-tags {
-    margin-bottom: $size-5;
 
     h4 {
         margin-bottom: $size-2;
@@ -127,10 +139,13 @@
 
             a {
                 display: inline-block;
-                border: 1px solid getColor(Black);
-                color: getColor(Clay);
+                border: 1px solid getColor(Gray);
+                color: getColor(Gray);
+                text-transform: uppercase;
+                font-size: 12px;
                 padding: 6px $size-2;
                 transition: 200ms;
+                border-radius: 5px;
 
                 &:hover {
                     text-decoration: none;
@@ -150,7 +165,7 @@
         flex-direction: column;
 
         li {
-            border-bottom: 1px solid #b9b9b9;
+            border-bottom: 1px solid getColor(Clay);
 
             a {
                 display: block;

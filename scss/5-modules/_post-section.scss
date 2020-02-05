@@ -9,6 +9,22 @@
             flex-shrink: 1;
             margin-right: $size-5;
 
+            .breadcrumbs {
+                margin-bottom: $size-2;
+
+                a {
+                    &:not(:last-child) {
+                        margin-right: $size-2;
+
+                        &::after {
+                            position: absolute;
+                            content: '/';
+                            margin-left: $size-1;
+                        }
+                    }
+                }
+            }
+
             .post-img-wrapper {
                 width: 100%;
                 height: 450px;
@@ -28,20 +44,52 @@
                 p {
                     color: getColor(Gray);
                 }
+
+                .sub-content {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-items: flex-start;
+                    margin-top: $size-2;
+
+                    .sub-post-content {
+                        width: 50%;
+                    }
+
+                    .sub-img-content {
+                        width: 50%;
+                        height: 350px;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: center center;
+                        }
+                    }
+
+
+                }
+
             }
 
             .post-tags {
                 margin-bottom: $size-5;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
 
                 h4 {
-                    font-weight: 300;
+                    font-weight: 800;
+                    font-size: 16px;
+                    margin-right: $size-1;
                     margin-bottom: $size-half;
                 }
 
                 a {
                     color: getColor(Gray);
-                    text-transform: uppercase;
+                    text-transform: lowercase;
                     font-size: 14px;
+
                 }
             }
 
