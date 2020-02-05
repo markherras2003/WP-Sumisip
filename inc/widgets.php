@@ -47,34 +47,34 @@ public function widget( $args, $instance ) {
         echo '<div class="popular-sidebar">';
         echo __( '<h4>Recent Posts</h4>' );
 
-        // echo the_post();
-        //  query_posts( array(
-        //     'posts_per_page' => 4,
-        //  )); 
+        echo the_post();
+         query_posts( array(
+            // 'posts_per_page' => ,
+         )); 
          
-        //  echo '<ul class="popular-posts">';
-        //  if( have_posts() ): while ( have_posts() ) : the_post(); 
-        //     echo '<li>';
-        //                 echo '<a href="'.get_permalink().'">';
-        //                     echo '<div class="post-item excerpt">';
-        //                             // tHe();
-        //                             the_content();
+         echo '<ul class="popular-posts">';
+         if( have_posts() ): while ( have_posts() ) : the_post(); 
+            echo '<li>';
+                        echo '<a href="'.get_permalink().'">';
+                            echo '<div class="post-item excerpt">';
+                                    // tHe();
+                                    the_content();
 
-        //                             echo'<span>'; 
-        //                                 echo get_the_category()[0]->cat_name;
-        //                             echo '</span>';
+                                    echo'<span>'; 
+                                        echo get_the_category()[0]->cat_name;
+                                    echo '</span>';
 
-        //                             echo'<span>'; 
-        //                                 echo get_the_date();
-        //                             echo '</span>';
-        //                     echo '</div>';
-        //                 echo '</a>';
-        //                 echo '</li>';
-        //             endwhile; 
-        //         endif; 
-        //     echo '</ul>';
+                                    echo'<span>'; 
+                                        echo get_the_date();
+                                    echo '</span>';
+                            echo '</div>';
+                        echo '</a>';
+                        echo '</li>';
+                    endwhile; 
+                endif; 
+            echo '</ul>';
          
-        // echo '</div>';
+        echo '</div>';
         // print_r(get_post());
         // This is where you run the code and display the output
     }
