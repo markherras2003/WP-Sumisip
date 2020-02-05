@@ -1633,6 +1633,12 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
   }
 }
 
+@media (max-width: 1200px) {
+  .mega-menu {
+    top: 90px;
+  }
+}
+
 @media (max-width: 992px) {
   .mega-menu {
     top: 80px;
@@ -1726,6 +1732,11 @@ p.lead,
 
 p.sm,
 .p.sm {
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.p-sm p {
   font-size: 13px;
   line-height: 19px;
 }
@@ -6776,4 +6787,3 @@ p.sm,
             transform: translateY(0px);
   }
 }
-/*# sourceMappingURL=main.css.map */
