@@ -1,5 +1,9 @@
 .sumisip-posts {
 
+    .ccfic {
+        display: none;
+    }
+
     .global-wrapper {
         display: flex;
         align-items: flex-start;
@@ -8,6 +12,7 @@
         width: 90%;
         max-width: none;
     }
+
 
 
     .heading-category-post {
@@ -21,6 +26,8 @@
         }
 
         .category-post {
+
+
             a {
                 color: #707070;
 
@@ -52,16 +59,18 @@
         justify-content: flex-start;
         flex-direction: column;
         margin-right: $size-4;
-
+        
+        .search-title {
+            margin-bottom: $size-3;
+        }
         .post-item {
             display: grid;
 
             &.first {
-                grid-template-areas: 
-                'title title title'
-                'img img img'
-                'content content content'!important
-                ;
+                grid-template-areas:
+                    'title title title'
+                    'img img img'
+                    'content content content' !important;
                 grid-template-rows: auto 400px auto;
 
                 .post-img {
@@ -69,7 +78,32 @@
                     width: 100%;
                     margin-right: 0px;
                 }
-                
+
+                .post-content-group {
+                    grid-area: content;
+
+                    p {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        margin-top: $size-2;
+                        margin-bottom: $size-2;
+                    }
+                }
+
+                .post-content-group {
+                    grid-area: content;
+                    p {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        margin-top: $size-2;
+                        margin-bottom: $size-2;
+                    }
+                }
+
                 .post-title-group {
                     h3 {
                         font-size: 32px;
@@ -80,27 +114,27 @@
                         margin-bottom: $size-2;
                     }
                 }
+
                 .post-context {
                     margin-top: $size-2;
                     display: -webkit-box;
-                    -webkit-line-clamp: 10!important;
+                    -webkit-line-clamp: 10 !important;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                 }
-                
             }
 
-            &:not(:last-child){
-                grid-template-areas: 
-                'img title title'
-                'img content content'
-                'img content content'
+            &:not(:last-child) {
+                grid-template-areas:
+                    'img title title'
+                    'img content content'
+                    'img content content'
                 ;
                 margin-bottom: $size-4;
                 padding-bottom: $size-4;
                 border-bottom: 1px solid getColor(Silver);
 
-                
+
                 .post-context {
                     color: #707070;
                     display: -webkit-box;
@@ -118,7 +152,7 @@
 
             .post-title-group {
                 grid-area: title;
-                
+
 
                 h3 {
                     font-size: 20px;
@@ -145,6 +179,14 @@
             .post-content-group {
                 grid-area: content;
 
+                p {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    margin-top: $size-half;
+                    margin-bottom: $size-2;
+                }
 
                 a {
                     display: inline-block;
