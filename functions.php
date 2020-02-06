@@ -537,9 +537,7 @@ function wpse4936_init()
 {
     remove_post_type_support( 'post', 'thumbnail' );
     // Or remove it for all registerd types
-    foreach ( get_post_types() as $post_type ) {
-        remove_post_type_support( $post_type, 'thumbnail' );
-    }
+  
 }
 
 require get_template_directory() . '/inc/widgets.php';
