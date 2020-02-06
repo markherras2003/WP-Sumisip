@@ -55,8 +55,6 @@ get_header();
                         <a href="<?= get_category_link( $key->term_id ) ?>"><?= $key->name ?></a> 
                     <?php
                     }; ?>
-
-
                 </div>
 
                 <div class="post-img-wrapper">
@@ -90,7 +88,18 @@ get_header();
                         }
 
                         ?>
-                        <img src="<?= $featured_images ? $featured_images[0]['full'] : get_template_directory_uri(); ?>/assets/images/no-available.png">
+                        <?php
+                        if ( $featured_images ) {
+                            ?>
+                            <img src="<?=  $featured_images[0]['full'] ?>">
+                            <?php
+                        }else {
+                            ?>
+                            <img src="<?=  get_template_directory_uri(); ?>/assets/images/no-available.png">
+                            <?php
+                        }     
+                        
+                        ?>
 
                         </div>
                     </div>
@@ -132,7 +141,7 @@ get_header();
 
             </div>
 
-            <?php get_sidebar(); ?>
+            <?php get_sidebar('sumisip_sidebar'); ?>
 
         </div>
     </section>
