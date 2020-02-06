@@ -27,7 +27,7 @@ Template Name: Search Page
 
             <div class="post-sidebar">
                 <?php dynamic_sidebar('sidebar_list'); ?>
-            </div>>
+            </div>
 
         </div>
     </div>

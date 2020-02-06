@@ -74,35 +74,7 @@ get_header();
                     <h2><?php the_subtitle(); ?></h2>
                     <?php the_content(); ?>
 
-                    <div class="sub-content">
-                        <div class="sub-post-content">
-                            <?php cc_featured_image_caption() ? cc_featured_image_caption() : '' ; ?>
-                        </div>
-                        <div class="sub-img-content">
-                    <?php 
-
-                        if( class_exists('Dynamic_Featured_Image') ) {
-                            global $dynamic_featured_image;
-                            global $post;
-                            $featured_images = $dynamic_featured_image->get_featured_images( $post->id );
-                        }
-
-                        ?>
-                        <?php
-                        if ( $featured_images ) {
-                            ?>
-                            <img src="<?=  $featured_images[0]['full'] ?>">
-                            <?php
-                        }else {
-                            ?>
-                            <img src="<?=  get_template_directory_uri(); ?>/assets/images/no-available.png">
-                            <?php
-                        }     
-                        
-                        ?>
-
-                        </div>
-                    </div>
+                   
                 </div>
 
                 <div class="post-tags"> 
