@@ -12,7 +12,19 @@ function sumisip_widgets_post() {
         'after_title' =>  '</h2>',
     ]);
 
+    register_sidebar([
+        'name'          =>  __('List of Posts Sidebar'),
+        'id'            =>  'sidebar_list',
+        'description'   =>  __('Sidebar for List of Posts'),
+        'before_widget' =>  '<div>',
+        'after_widget' =>  '</div>',
+        'before_title' =>  '<h2>',
+        'after_title' =>  '</h2>',
+    ]);
+
+
 }
+
 
 add_action( 'widgets_init', 'wpb_load_widget' );
 
