@@ -644,3 +644,20 @@ function __search_by_title_only( $search,  $wp_query ){
 
 
 
+
+	function custom_post_single( $atts ) {
+		$a = shortcode_atts( array(
+		   'description' => 'lorem ipsum dolor',
+		   'images' => 'test.jpg'
+		), $atts );
+		return '<div class="sub-content">
+		<div class="sub-post-content">
+		' . $a['description'] . '</div>
+		<div class="sub-img-content">
+		<img src="'.$a['images'].'"/></div>
+		</div>';
+	}
+
+	 add_shortcode( 'singlepost', 'custom_post_single' );
+
+
