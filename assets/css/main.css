@@ -5783,6 +5783,14 @@ p.sm,
   margin-left: 8px;
 }
 
+.no-item {
+  width: 100%;
+}
+
+.no-item .pagination {
+  display: none;
+}
+
 .post-body-section .global-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6104,6 +6112,10 @@ p.sm,
   text-decoration: none;
 }
 
+.sumisip-posts .ccfic {
+  display: none;
+}
+
 .sumisip-posts .global-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6168,13 +6180,17 @@ p.sm,
   margin-right: 32px;
 }
 
+.sumisip-posts .posts-item .search-title {
+  margin-bottom: 24px;
+}
+
 .sumisip-posts .posts-item .post-item {
   display: -ms-grid;
   display: grid;
 }
 
 .sumisip-posts .posts-item .post-item.first {
-      grid-template-areas: "title title title" "img img img" "content content content" !important;
+      grid-template-areas: 'title title title' 'img img img' 'content content content' !important;
   -ms-grid-rows: auto 400px auto;
       grid-template-rows: auto 400px auto;
 }
@@ -6183,6 +6199,40 @@ p.sm,
   height: 100%;
   width: 100%;
   margin-right: 0px;
+}
+
+.sumisip-posts .posts-item .post-item.first .post-content-group {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: content;
+}
+
+.sumisip-posts .posts-item .post-item.first .post-content-group p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.sumisip-posts .posts-item .post-item.first .post-content-group {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: content;
+}
+
+.sumisip-posts .posts-item .post-item.first .post-content-group p {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .sumisip-posts .posts-item .post-item.first .post-title-group h3 {
@@ -6259,6 +6309,15 @@ p.sm,
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: content;
+}
+
+.sumisip-posts .posts-item .post-item .post-content-group p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 4px;
+  margin-bottom: 16px;
 }
 
 .sumisip-posts .posts-item .post-item .post-content-group a {
