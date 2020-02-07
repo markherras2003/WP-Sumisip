@@ -175,11 +175,11 @@
             
                 } ?>
                                         <h5 class="light"><?= get_the_title(); ?></h5>
-                                        <div class="p-sm"><?= the_content(); ?></div>
+                                        <div class="p-sm"><?= the_excerpt(); ?></div>
                                     </a>
                                 <?php endwhile; ?> 
                                 </li>
-                                <li class="more-cta"><a href="#">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_permalink(); ?>">Show More</a></li>
                             </ul>
                         </div>
                         <div class="mini-box mega-menu-group">
@@ -211,7 +211,7 @@
                                 } ?>
                                         <div class="details">
                                             <h5 class="light"><?= the_title(); ?></h5>
-                                            <span class="p-sm"><?= the_content(); ?></span>
+                                            <span class="p-sm"><?= the_excerpt(); ?></span>
                                         </div>
                                     </a>
                                    
@@ -248,7 +248,7 @@
                                 } ?>
                                         <div class="details">
                                             <h5 class="light"><?= the_title(); ?></h5>
-                                            <span class="p-sm"><?= the_content(); ?></span>
+                                            <span class="p-sm"><?= the_excerpt(); ?></span>
                                         </div>
                                     </a>
                                    

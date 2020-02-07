@@ -540,9 +540,7 @@ function wpse4936_init()
 {
     remove_post_type_support( 'post', 'thumbnail' );
     // Or remove it for all registerd types
-    foreach ( get_post_types() as $post_type ) {
-        remove_post_type_support( $post_type, 'thumbnail' );
-    }
+  
 }
 
 require get_template_directory() . '/inc/widgets.php';
@@ -645,5 +643,22 @@ function __search_by_title_only( $search,  $wp_query ){
 
     add_filter('posts_search', '__search_by_title_only', 500, 2);
 
+
+
+
+	function custom_post_single( $atts ) {
+		$a = shortcode_atts( array(
+		   'description' => 'lorem ipsum dolor',
+		   'images' => 'test.jpg'
+		), $atts );
+		return '<div class="sub-content">
+		<div class="sub-post-content">
+		' . $a['description'] . '</div>
+		<div class="sub-img-content">
+		<img src="'.$a['images'].'"/></div>
+		</div>';
+	}
+
+	 add_shortcode( 'singlepost', 'custom_post_single' );
 
 
