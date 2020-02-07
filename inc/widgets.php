@@ -129,8 +129,7 @@ __('Sumisip Categories'),
  
 public function widget( $args, $instance ) {
     // $title = apply_filters( 'widget_title', $instance['title'] );
-    $categ = get_categories(array( 'hide_empty' => false,
-    'number'  => 5  ));
+    $categ = get_categories(array( 'hide_empty' => false,));
     
     // before and after widget arguments are defined by themes
     echo '<div class="category-sidebar">';
