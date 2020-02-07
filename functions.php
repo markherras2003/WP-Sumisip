@@ -661,4 +661,14 @@ function __search_by_title_only( $search,  $wp_query ){
 
 	 add_shortcode( 'singlepost', 'custom_post_single' );
 
+	 //Exclude pages from WordPress Search
+if (!is_admin()) {
+	function wpb_search_filter($query) {
+	if ($query->is_search) {
+	$query->set('post_type', 'post');
+	}
+	return $query;
+	}
+	add_filter('pre_get_posts','wpb_search_filter');
+}
 
