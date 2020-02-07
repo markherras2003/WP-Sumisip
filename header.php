@@ -211,7 +211,7 @@
                                 } ?>
                                         <div class="details">
                                             <h5 class="light"><?= the_title(); ?></h5>
-                                            <span class="p-sm"><?= the_content(); ?></span>
+                                            <span class="p-sm"><?= the_excerpt(); ?></span>
                                         </div>
                                     </a>
                                    
