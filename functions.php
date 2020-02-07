@@ -212,6 +212,9 @@ if ( ! function_exists( 'sumisip_setup' ) ) :
 			)
 		);
 
+    register_nav_menu('links', __('Quick Links'));
+    register_nav_menu('department', __('Department Links'));
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
