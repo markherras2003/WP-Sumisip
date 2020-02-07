@@ -4,7 +4,7 @@
 ?>
     
     <div class="posts-item">
-    <h1 class="search-title">Search Results for: <?php the_search_query(); ?></h1>
+
     <?php while( have_posts() ) :  ?>
         <?php the_post(); ?>
         <div class="post-item">
