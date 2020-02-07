@@ -41,6 +41,8 @@
         @extend %center-all;
         flex-direction: column;
 
+
+
         .post-dir {
             margin-bottom: $size-2;
 
@@ -102,5 +104,13 @@
                 }
             }
         }
+    }
+}
+
+.no-item {
+    width: 100%;
+
+    .pagination {
+        display: none;
     }
 }

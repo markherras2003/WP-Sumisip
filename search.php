@@ -3,17 +3,33 @@
 Template Name: Search Page
 */
 ?>
-<?php
-get_header(); ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-            <h1>Search Results for: <?php the_search_query(); ?></h1>
-			<?php get_search_form(); ?>
-			<h1>Test</h1>
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
+<?php get_header(); ?>
 
-<?php get_footer();
+    <section class="post-hero-section">
+        <div class="post-hero-background">
+            <img src="<?= get_template_directory_uri() ?>/assets/images/hero/wonder1.jpg">
+        </div>
+
+        <div class="post-hero-wrapper">
+            <h1 class="display-1">Search</h1>
+        </div>
+    </section>
+
+    <div class="sumisip-posts">
+			<div class="global-wrapper section-padding">
+				
+            <?php  if( have_posts() ) {
+                get_template_part( 'partials/posts/post', 'search' );
+            }else {
+                get_template_part( 'partials/posts/post', 'none' );
+            } ?>
+
+            <div class="post-sidebar">
+                <?php dynamic_sidebar('sidebar_list'); ?>
+            </div>
+
+        </div>
+    </div>
+
+<?php get_footer(); ?>

@@ -70,28 +70,33 @@
 
                     <div class="links-footer">
                         <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#">Our History</a></li>
-                            <li><a href="#">Explore Sumisip</a></li>
-                            <li><a href="#">About Sumisip</a></li>
-                            <li><a href="#">News and Updates</a></li>
-                            <li><a href="#">Local Department</a></li>
-                        </ul>
+                            <?php  
+                                if(has_nav_menu('links')){
+                                wp_nav_menu([
+                                    'theme_location'      => 'links',
+                                    'container'           => false,
+                                    'fallback_cb'         => false,
+                                    'depth'               => 0,
+                                    // 'walker'              => new JU_Custom_Nav_Walker()
+                                ]);
+                                }
+                            ?>
                     </div>
 
                     <div class="department-footer">
                         <h4>Local Department</h4>
-                        <ul>
-                            <li><a href="#">Economic Development</a></li>
-                            <li><a href="#">Fiscal Managementt</a></li>
-                            <li><a href="#">Infastructuret</a></li>
-                            <li><a href="#">Public Administrationt</a></li>
-                            <li><a href="#">Social Servicest</a></li>
-                        </ul>
+                            <?php  
+                                if(has_nav_menu('department')){
+                                wp_nav_menu([
+                                    'theme_location'      => 'department',
+                                    'container'           => false,
+                                    'fallback_cb'         => false,
+                                    'depth'               => 0,
+                                    // 'walker'              => new JU_Custom_Nav_Walker()
+                                ]);
+                                }
+                            ?>
                     </div>
-
-
-
                 </div>
             </div>
         </div>

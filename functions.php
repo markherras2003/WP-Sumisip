@@ -212,6 +212,9 @@ if ( ! function_exists( 'sumisip_setup' ) ) :
 			)
 		);
 
+    register_nav_menu('links', __('Quick Links'));
+    register_nav_menu('department', __('Department Links'));
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -537,11 +540,8 @@ function wpse4936_init()
 {
     remove_post_type_support( 'post', 'thumbnail' );
     // Or remove it for all registerd types
-    foreach ( get_post_types() as $post_type ) {
-        remove_post_type_support( $post_type, 'thumbnail' );
-    }
+  
 }
-
 
 require get_template_directory() . '/inc/widgets.php';
 add_action('widgets_init', 'sumisip_widgets_post');
@@ -596,5 +596,79 @@ function save_extra_user_profile_fields( $user_id ) {
     update_user_meta( $user_id, 'instagram', $_POST['instagram'] );
     update_user_meta( $user_id, 'twitter', $_POST['twitter'] );
     update_user_meta( $user_id, 'email', $_POST['email'] );
+}
+
+// SEARCH ONLY TITLE OF THE POST - PAGE
+
+function __search_by_title_only( $search,  $wp_query ){
+
+  global $wpdb;
+
+  if(empty($search)) {
+
+     return $search; // skip processing - no search term in query
+
+  }
+
+  $q = $wp_query->query_vars;
+
+  $n = !empty($q['exact']) ? '' : '%';
+
+  $search = '';
+
+  $searchand = '';
+
+  foreach ((array)$q['search_terms'] as $term) {
+
+     $term = esc_sql($wpdb->esc_like($term));
+
+     $search .= "{$searchand}($wpdb->posts.post_title LIKE '{$n}{$term}{$n}')";
+
+     $searchand = ' AND ';
+
+ }
+
+  if (!empty($search)) {
+
+     $search = " AND ({$search}) ";
+
+     if (!is_user_logged_in())
+         $search .= " AND ($wpdb->posts.post_password = '') ";
+
+ }
+
+    return $search;
+
+ }
+
+    add_filter('posts_search', '__search_by_title_only', 500, 2);
+
+
+
+
+	function custom_post_single( $atts ) {
+		$a = shortcode_atts( array(
+		   'description' => 'lorem ipsum dolor',
+		   'images' => 'test.jpg'
+		), $atts );
+		return '<div class="sub-content">
+		<div class="sub-post-content">
+		' . $a['description'] . '</div>
+		<div class="sub-img-content">
+		<img src="'.$a['images'].'"/></div>
+		</div>';
+	}
+
+	 add_shortcode( 'singlepost', 'custom_post_single' );
+
+	 //Exclude pages from WordPress Search
+if (!is_admin()) {
+	function wpb_search_filter($query) {
+	if ($query->is_search) {
+	$query->set('post_type', 'post');
+	}
+	return $query;
+	}
+	add_filter('pre_get_posts','wpb_search_filter');
 }
 

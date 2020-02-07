@@ -5,6 +5,8 @@
     
     <div class="posts-item">
 
+    <h1 class="search-title">Search Results for: <?php the_search_query(); ?></h1>
+
     <?php while( have_posts() ) :  ?>
         <?php the_post(); ?>
         <div class="post-item">
@@ -27,7 +29,7 @@
                 <div class="post-etc">
                     <span><?= get_user_meta($author_ID)['first_name'][0]?></span>
                     <span><?= get_the_date(); ?></span>
-                    <span><?= get_the_category()[0]->name ?></span>
+                    <span><?=  get_the_category()[0]->name ?></span>
                 </div>
             </div>
 

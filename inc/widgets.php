@@ -6,13 +6,25 @@ function sumisip_widgets_post() {
         'name'          =>  __('Post Sidebar'),
         'id'            =>  'sumisip_sidebar',
         'description'   =>  __('Sidebar for post'),
-        'before_widget' =>  '<div>',
+        'before_widget' =>  '<div class="post-sidebar">',
         'after_widget' =>  '</div>',
         'before_title' =>  '<h2>',
         'after_title' =>  '</h2>',
     ]);
 
+    register_sidebar([
+        'name'          =>  __('List of Posts Sidebar'),
+        'id'            =>  'sidebar_list',
+        'description'   =>  __('Sidebar for List of Posts'),
+        'before_widget' =>  '<div class="post-sidebar">',
+        'after_widget' =>  '</div>',
+        'before_title' =>  '<h2>',
+        'after_title' =>  '</h2>',
+    ]);
+
+
 }
+
 
 add_action( 'widgets_init', 'wpb_load_widget' );
 
@@ -45,34 +57,42 @@ public function widget( $args, $instance ) {
     
     // before and after widget arguments are defined by themes
         echo '<div class="popular-sidebar">';
-        echo __( '<h4>Recent Posts</h4>' );
 
-        echo the_post();
-         query_posts( array(
-            // 'posts_per_page' => ,
-         )); 
-         
+        global $post;
+
+        $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
+
+        if ($related) {
+            echo __( '<h4>Related Posts</h4>' );
+        } else {
+            echo __( '<h4>No Related Posts</h4>' );
+        }
+
+        if( $related )  foreach( $related as $post ) {
+        setup_postdata($post); 
+
+             
          echo '<ul class="popular-posts">';
-         if( have_posts() ): while ( have_posts() ) : the_post(); 
-            echo '<li>';
-                        echo '<a href="'.get_permalink().'">';
-                            echo '<div class="post-item excerpt">';
-                                    // tHe();
-                                    the_content();
+         echo '<li>';
+             echo '<a href="'.get_permalink().'">';
+                 echo '<div class="post-item excerpt">';
+                         // tHe();
+                         the_content();
 
-                                    echo'<span>'; 
-                                        echo get_the_category()[0]->cat_name;
-                                    echo '</span>';
+                         echo'<span>'; 
+                             echo get_the_category()[0]->cat_name;
+                         echo '</span>';
 
-                                    echo'<span>'; 
-                                        echo get_the_date();
-                                    echo '</span>';
-                            echo '</div>';
-                        echo '</a>';
-                        echo '</li>';
-                    endwhile; 
-                endif; 
-            echo '</ul>';
+                         echo'<span>'; 
+                             echo get_the_date();
+                         echo '</span>';
+                 echo '</div>';
+             echo '</a>';
+             echo '</li>';
+         echo '</ul>';
+        } 
+        wp_reset_postdata(); 
+        
          
         echo '</div>';
         // print_r(get_post());
@@ -109,8 +129,7 @@ __('Sumisip Categories'),
  
 public function widget( $args, $instance ) {
     // $title = apply_filters( 'widget_title', $instance['title'] );
-    $categ = get_categories(array( 'hide_empty' => false,
-    'number'  => 5  ));
+    $categ = get_categories(array( 'hide_empty' => false,));
     
     // before and after widget arguments are defined by themes
     echo '<div class="category-sidebar">';

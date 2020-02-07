@@ -2,29 +2,28 @@
 
     <section class="post-hero-section">
         <div class="post-hero-background">
-            <img src="<?= get_template_directory_uri(); ?>/assets/images/hero/wonder1.jpg">
+            <img src="<?= get_template_directory_uri() ?>/assets/images/hero/wonder1.jpg">
         </div>
 
         <div class="post-hero-wrapper">
-            <h1 class="display-1">News and Articles</h1>
+            <h1 class="display-1"><?= single_cat_title(); ?></h1>
         </div>
     </section>
-
 
     <div class="sumisip-posts">
         <div class="global-wrapper section-padding">
 
-            <div class="posts-item">
+            <?php  if( have_posts() ) {
+                get_template_part( 'partials/posts/post', 'excerpt' );
+            }else {
+                get_template_part( 'partials/posts/post', 'none' );
+            } ?>
 
-
-            <?php
-                if(have_posts()) {
-                    get_template_part( 'partials/posts/post', 'excerpt' );
-                }
-            ?>
-              
+            <div class="post-sidebar">
+                <?php dynamic_sidebar('sidebar_list'); ?>
             </div>
+
         </div>
     </div>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
