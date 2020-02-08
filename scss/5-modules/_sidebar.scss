@@ -18,10 +18,11 @@
 
 .search-sidebar {
     @extend %center-all;
-    border-bottom: 1px solid getColor(Clay);
     margin-bottom: $size-4;
+    border-bottom: 1px solid shade(getColor(Silver), 10);
 
     input {
+        position: relative;
         font-weight: 300;
     }
 
@@ -30,12 +31,19 @@
         width: $size-3;
         height: $size-3;
         padding: 0px;
+        cursor: pointer;
 
         svg {
             height: 100%;
             width: 100%;
-            
+
             path {
+                fill: tint(getColor(Ash), 30);
+            }
+        }
+
+        &:hover {
+            svg path {
                 fill: getColor(Ash);
             }
         }
@@ -52,8 +60,7 @@
         list-style-type: none;
 
         li {
-
-            border-bottom: 1px solid getColor(Clay);
+            border-bottom: 1px solid shade(getColor(Silver), 10);
 
             a {
                 display: block;
@@ -78,7 +85,7 @@
     .popular-posts {
 
         li {
-            border-bottom: 1px solid getColor(Clay);
+            border-bottom: 1px solid shade(getColor(Silver), 10);
 
             a {
                 display: block;
@@ -96,7 +103,7 @@
                         p {
                             display: -webkit-box;
                             -webkit-line-clamp: 3;
-                            -webkit-box-orient: vertical;  
+                            -webkit-box-orient: vertical;
                             overflow: hidden;
                         }
                     }
@@ -132,10 +139,10 @@
         flex-wrap: wrap;
 
         li {
-            margin-bottom: $size-2;
+            margin-bottom: $size-1;
 
             &:not(:last-child) {
-                margin-right: $size-2;
+                margin-right: $size-1;
             }
 
             a {
@@ -143,7 +150,7 @@
                 border: 1px solid getColor(Gray);
                 color: getColor(Gray);
                 text-transform: uppercase;
-                font-size: 12px;
+                font-size: 14px;
                 padding: 6px $size-2;
                 transition: 200ms;
                 border-radius: 5px;
@@ -166,7 +173,7 @@
         flex-direction: column;
 
         li {
-            border-bottom: 1px solid getColor(Clay);
+            border-bottom: 1px solid shade(getColor(Silver), 10);
 
             a {
                 display: block;
