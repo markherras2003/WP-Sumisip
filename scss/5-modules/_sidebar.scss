@@ -1,7 +1,8 @@
 .post-sidebar {
-    width: 35%;
+    width: 100%;
+    max-width: 320px;
     flex-shrink: 0;
-    margin-left: $size-5;
+    margin-left: $size-3;
 
     ul {
         list-style-type: none;
