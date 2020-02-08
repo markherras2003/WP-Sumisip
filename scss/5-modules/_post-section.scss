@@ -27,19 +27,16 @@
 
             .post-img-wrapper {
                 width: 100%;
-                height: 450px;
+                height: 380px;
                 margin-bottom: $size-3;
 
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    object-position: center center;
-                    padding: 8px;
-                    -webkit-box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, .16);
-                    -moz-box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, .16);
-                    box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, .16);
-                    transform: rotate(-1deg);
+
+                &.landscape {
+
+                }
+
+                &.portrait {
+
                 }
             }
 
@@ -50,45 +47,12 @@
                     margin-bottom: $size-1;
                 }
 
-                p {
-                    color: getColor(Gray);
+                img {
+                    max-width: 60%;
+                    margin: $size-3;
+                    float: right;
                 }
-
-                .sub-content {
-                    display: flex;
-                    align-items: flex-start;
-                    justify-items: flex-start;
-                    margin-top: $size-2;
-
-                    .sub-post-content {
-                        width: 50%;
-                        margin-right: $size-1;
-
-                        span {
-                            color: getColor(Gray);
-                        }
-                    }
-
-                    .sub-img-content {
-                        width: 50%;
-                        margin-left: $size-1;
-
-                        img {
-                            height: 100%;
-                            width: 100%;
-                            object-fit: cover;
-                            object-position: center center;
-                            padding: 8px;
-                            -webkit-box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, .16);
-                            -moz-box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, .16);
-                            box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, .16);
-                            transform: rotate(1deg);
-                        }
-                    }
-
-
-                }
-
+                
             }
 
             .post-tags {
