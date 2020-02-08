@@ -32,7 +32,7 @@
             </div>
 
             <div class="post-content-group">
-                <?php the_content(); ?>
+                <?php the_excerpt(); ?>
 
                 <a href="<?= get_permalink();?>" class="read-more">Read Story</a>
             </div>

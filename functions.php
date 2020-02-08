@@ -662,3 +662,4 @@ function __search_by_title_only( $search,  $wp_query ){
 	 add_shortcode( 'singlepost', 'custom_post_single' );
 
 
+	 
