@@ -4,30 +4,27 @@
 */
 
 input {
-    
+    border-radius: 5px;
+    border: 1px solid shade(getColor(Silver), 20);
+    padding: 14px;
+    width: 100%;
+
     &:active,
     &:focus {
         outline: none;
+        border-color: shade(getColor(Silver), 50);
     }
-    
-
-    border-radius: 5px;
-    border: 1px solid getColor(Clay);
-    padding: 14px;
-    width: 100%;
 
     &::placeholder {
         color: #bdbdbd;
         font-weight: 300;
     }
 
-
     &.search {
         border: none;
         padding-left: 0px;
     }
 }
-
 
 .container {
     display: block;
