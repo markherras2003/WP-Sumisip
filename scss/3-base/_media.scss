@@ -6,11 +6,30 @@
 
 img {
 
-    &.align-center-center {
-        object-position: center center !important;
+    // &.align-center-center {
+    //     object-position: center center !important;
+    // }
+
+    // &.align-left-center {
+    //     object-position: left center !important;
+    // }
+
+
+    &.photo-effect {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+        padding: 8px;
+        box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, .16);
     }
 
-    &.align-left-center {
-        object-position: left center !important;
+    &.tilt-left {
+        transform: rotate(-1deg);
     }
+
+    &.tilt-right {
+        transform: rotate(1deg);
+    }
+
 }
