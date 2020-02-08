@@ -71,7 +71,7 @@ get_header();
                 </div>
 
                 <div class="post-content">
-                    <h2><?php the_title(); ?></h2>
+                       <h2><?php the_title(); ?></h2>
                     <?php the_content(); ?>
 
                    
