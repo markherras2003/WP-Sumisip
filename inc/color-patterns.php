@@ -10,7 +10,7 @@
 /**
  * Generate the CSS for the current primary color.
  */
-function tyreconnect_custom_colors_css() {
+function sumisip_custom_colors_css() {
 
 	$primary_color = 199;
 	if ( 'default' !== get_theme_mod( 'primary_color', 'default' ) ) {
