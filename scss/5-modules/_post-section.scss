@@ -112,9 +112,9 @@
             }
 
             .post-social-media {
-                border-bottom: 1px solid getColor(Clay);
-                @extend %center-all;
                 padding-bottom: $size-5;
+                border-bottom: 1px solid shade(getColor(Silver), 10);
+                @extend %center-all;
 
                 .social-wrapper {
                     @extend %center-all;
