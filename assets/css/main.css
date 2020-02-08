@@ -5539,7 +5539,7 @@ p.sm,
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: 33.33% 33.33% 33.33%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

@@ -20,7 +20,7 @@ Template Name: Search Page
 			<div class="global-wrapper section-padding">
 				
             <?php  if( have_posts() ) {
-                get_template_part( 'partials/posts/post', 'excerpt' );
+                get_template_part( 'partials/posts/post', 'search' );
             }else {
                 get_template_part( 'partials/posts/post', 'none' );
             } ?>

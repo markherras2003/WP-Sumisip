@@ -142,7 +142,7 @@
                     </div>
                 </div>
                 <div class="nav-item">
-                    <a href="#">
+                    <a href="https://lgu-sumisip.com/category/article_news/">
                         <span>News and</span>
                         <span>Articles</span>
                     </a>

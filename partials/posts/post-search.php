@@ -4,6 +4,7 @@
 ?>
     
     <div class="posts-item">
+
     <h1 class="search-title">Search Results for: <?php the_search_query(); ?></h1>
 
     <?php while( have_posts() ) :  ?>
@@ -41,6 +42,20 @@
 
             <!-- </div> -->
         </div>
+
+
+
     <?php  endwhile; ?>
 
+<div class="pagination">
+    <a href="#" class="previous-pagination">Previous</a>
+    <div class="numeric-pagination">
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+    </div>
+    <a href="#" class="next-pagination">Next</a>
+</div>
 </div>
