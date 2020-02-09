@@ -60,7 +60,7 @@ get_header();
                 <div class="post-img-wrapper">
                     <?php
                         if( has_post_thumbnail()) {
-                            the_post_thumbnail();
+                            the_post_thumbnail('',array('class'=> 'photo-effect tilt-left'));
                         } else {
                             ?>
                             <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">
@@ -71,10 +71,8 @@ get_header();
                 </div>
 
                 <div class="post-content">
-                       <h2><?php the_title(); ?></h2>
+                <h3 class="post-title margin-bottom-3"><?php the_title(); ?></h3>
                     <?php the_content(); ?>
-
-                   
                 </div>
 
                 <div class="post-tags"> 
@@ -85,14 +83,14 @@ get_header();
                 </div>
 
 
-
+    
                 <div class="author-profile">
                     <div class="author-img">
                         <?= get_avatar($author_ID); ?>
                     </div>
                     <div class="author-details">
                         <h4>About the Author</h4>
-                        <span><?= $current_user->roles[0]?></span>
+                        <span><?= get_author_role($author_ID); ?></span>
                         <?php
                             $userMeta = get_user_meta($author_ID);
                             ?>
@@ -100,6 +98,7 @@ get_header();
                     </div>
                 </div>
 
+                
                 <div class="post-social-media">
                     <div class="social-wrapper">
                         <a href="<?= $userMeta['facebook'][0] ? $userMeta['facebook'][0] : '#' ?> "><div class="icon-wrapper"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></div></a>
@@ -109,7 +108,8 @@ get_header();
                     </div>
                 </div>
 
-                <?php comments_template() ?>
+                <?php comments_template(); ?>
+            
 
             </div>
 
@@ -119,6 +119,5 @@ get_header();
     </section>
 
 <?php
-
 get_footer();
 ?>

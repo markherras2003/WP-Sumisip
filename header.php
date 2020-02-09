@@ -23,7 +23,16 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<nav class="rosewood">
+<?php   
+if(is_home()) {
+    echo '<nav class="rosewood">'; 
+}
+elseif(is_single()) {
+    echo '<nav class="matisse">'; 
+} else{
+    echo '<nav class="rosewood">';
+}
+?>
             <div class="branding-wrapper">
                 <a href="<?= get_home_url(); ?>">
                     <div class="branding-body">

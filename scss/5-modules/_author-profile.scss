@@ -1,8 +1,10 @@
 .author-profile {
     background: getColor(Silver);
-    @extend %center-all;
     padding: $size-3;
     margin-bottom: $size-8;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
 
     .author-details {
