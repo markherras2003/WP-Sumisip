@@ -672,4 +672,12 @@ if (!is_admin()) {
 	add_filter('pre_get_posts','wpb_search_filter');
 }
 
-	 
+function get_author_role()
+{
+    global $authordata;
+
+    $author_roles = $authordata->roles;
+    $author_role = array_shift($author_roles);
+
+    return $author_role;
+}
