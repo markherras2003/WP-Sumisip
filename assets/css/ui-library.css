@@ -219,15 +219,6 @@
   margin-bottom: 16px;
 }
 
-.bg-white span,
-.bg-silver span {
-  color: #949494;
-}
-
-.bg-ash span,
-.bg-clay span,
-.bg-gray span,
-.bg-black span,
-.bg-dark span {
-  color: #ffffff;
+.bg-neutral-1 {
+  background-color: #F8f8f8;
 }

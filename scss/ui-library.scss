@@ -104,7 +104,6 @@
         padding: $size-4;
     }
 
-
 }
 
 .color-boxes {
@@ -146,19 +145,6 @@
 
 }
 
-
-.bg-white,
-.bg-silver  {
-    span {
-        color: getColor(Ash);
-    }
-}
-.bg-ash,
-.bg-clay,
-.bg-gray,
-.bg-black,
-.bg-dark {
-    span {
-        color: #ffffff;
-    }
+.bg-neutral-1 {
+    background-color: getColor(Silver);
 }

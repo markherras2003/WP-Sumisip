@@ -52,6 +52,33 @@ button {
                 background-color: shade(getColor(Teal), 20);
             }
         }
+        
+        &.marigold {
+            color: getColor(Rust);
+            background-color: getColor(Marigold);
+
+            &:hover {
+                background-color: shade(getColor(Marigold), 10);
+            }
+        }
+
+        &.iris {
+            color: getColor(White);
+            background-color: getColor(Iris);
+
+            &:hover {
+                background-color: shade(getColor(Iris), 20);
+            }
+        }
+
+        &.plum {
+            color: getColor(White);
+            background-color: getColor(Plum);
+
+            &:hover {
+                background-color: shade(getColor(Plum), 20);
+            }
+        }
 
     }
 
@@ -82,6 +109,16 @@ button {
                 color: getColor(White);
             }
         }
+        
+        &.teal {
+            color: getColor(Teal);
+            border-color: getColor(Teal);
+
+            &:hover {
+                background-color: getColor(Teal);
+                color: getColor(White);
+            }
+        }
 
         &.marigold {
             color: getColor(Marigold);
@@ -89,7 +126,27 @@ button {
 
             &:hover {
                 background-color: getColor(Marigold);
-                color: shade(getColor(Marigold), 70);
+                color: getColor(Rust);
+            }
+        }
+        
+        &.iris {
+            color: getColor(Iris);
+            border-color: getColor(Iris);
+
+            &:hover {
+                background-color: getColor(Iris);
+                color: getColor(White);
+            }
+        }
+        
+        &.plum {
+            color: getColor(Plum);
+            border-color: getColor(Plum);
+
+            &:hover {
+                background-color: getColor(Plum);
+                color: getColor(White);
             }
         }
 
