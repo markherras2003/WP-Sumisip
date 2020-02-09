@@ -9,3 +9,8 @@ main.min.css
 
 assets/
 
+assets/css/main.css
+assets/css/main.min.css
+*.css
+*.css
+*.css
