@@ -777,42 +777,8 @@ button:hover {
     Set default global styles for form elements:
     e.g. textarea, radio, checkbox, label
 */
-form textarea {
-  border-radius: 5px;
-  border: 1px solid #c6c6c6;
-  padding: 12px;
-  width: 100%;
-  height: 200px;
-  resize: none;
-  outline: none;
-}
-
-form textarea::-webkit-input-placeholder {
-  color: #bdbdbd;
-  font-weight: 300;
-}
-
-form textarea:-ms-input-placeholder {
-  color: #bdbdbd;
-  font-weight: 300;
-}
-
-form textarea::-ms-input-placeholder {
-  color: #bdbdbd;
-  font-weight: 300;
-}
-
-form textarea::placeholder {
-  color: #bdbdbd;
-  font-weight: 300;
-}
-
-form textarea:focus {
-  border: 1px solid #7c7c7c;
-}
-
 form.comment-form input:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 form.comment-form input[type="checkbox"] {
@@ -824,7 +790,7 @@ form.comment-form input[type="submit"] {
 }
 
 form.comment-form textarea {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 form.comment-form p {
@@ -962,6 +928,7 @@ h6 {
     Set default global styles for inputs elements:
     e.g. select, input[type="text"], input[type="email"], input[type="number"]
 */
+textarea,
 input {
   border-radius: 5px;
   border: 1px solid #c6c6c6;
@@ -969,34 +936,47 @@ input {
   width: 100%;
 }
 
-input:active, input:focus {
+textarea:active, textarea:focus,
+input:active,
+input:focus {
   outline: none;
   border-color: #7c7c7c;
 }
 
+textarea::-webkit-input-placeholder,
 input::-webkit-input-placeholder {
   color: #bdbdbd;
   font-weight: 300;
 }
 
+textarea:-ms-input-placeholder,
 input:-ms-input-placeholder {
   color: #bdbdbd;
   font-weight: 300;
 }
 
+textarea::-ms-input-placeholder,
 input::-ms-input-placeholder {
   color: #bdbdbd;
   font-weight: 300;
 }
 
+textarea::placeholder,
 input::placeholder {
   color: #bdbdbd;
   font-weight: 300;
 }
 
+textarea.search,
 input.search {
   border: none;
   padding-left: 0px;
+}
+
+textarea {
+  min-height: 200px;
+  resize: none;
+  outline: none;
 }
 
 .input-group label {
@@ -1146,6 +1126,7 @@ img.photo-effect {
   -o-object-position: center center;
      object-position: center center;
   padding: 8px;
+  background-color: #FFFFFF;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, 0.16);
           box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, 0.16);
 }
@@ -6360,17 +6341,6 @@ p.sm,
   margin-bottom: 8px;
 }
 
-.sumisip-posts .post-item:first-child .post-details .post-content {
-  margin-top: 16px;
-}
-
-.sumisip-posts .post-item:first-child .post-details .post-content p {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 .sumisip-posts .post-item:first-child .post-details .button {
   margin-top: 8px;
 }
@@ -6383,10 +6353,6 @@ p.sm,
 
 .sumisip-posts .post-item:not(:first-child):not(:last-child) {
   margin-bottom: 24px;
-}
-
-.sumisip-posts .post-item:not(:first-child) .post-etc {
-  margin-bottom: 8px;
 }
 
 .sumisip-posts .post-item:not(:first-child) .post-title {
@@ -6423,6 +6389,14 @@ p.sm,
 .sumisip-posts .post-item:not(:first-child) .post-details .post-title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sumisip-posts .post-item:not(:first-child) .post-details .post-content p {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -7021,3 +6995,4 @@ p.sm,
             transform: translateY(0px);
   }
 }
+/*# sourceMappingURL=main.css.map */
