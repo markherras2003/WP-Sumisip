@@ -681,3 +681,9 @@ function get_author_role()
 
     return $author_role;
 }
+
+function nddt_add_class_to_images($class){
+    $class .= ' photo-effect';
+    return $class;
+}
+add_filter('get_image_tag_class','nddt_add_class_to_images');

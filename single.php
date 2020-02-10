@@ -75,6 +75,8 @@ get_header();
                     <?php the_content(); ?>
                 </div>
 
+                <div style="display: block; clear: both;"></div>
+
                 <div class="post-tags"> 
                     <h4>Tags:</h4>
                     <div class="post-tag">
