@@ -2,11 +2,24 @@
   display: flex;
 
   .preview {
+    width: 50%;
     margin-right: $size-2;
   }
 
   .details {
+    width: 50%;
     margin-left: $size-2;
+
+    &.align-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      button {
+        align-self: flex-start;
+      }
+
+    }
   }
 
   &.inverted {
@@ -31,6 +44,7 @@
     &.inverted .details {
       margin-left: 0;
       margin-right: 0;
+      width: 100%;
     }
 
 
@@ -51,6 +65,5 @@
     }
 
   }
-
 
 }
