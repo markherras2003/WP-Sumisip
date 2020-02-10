@@ -216,12 +216,12 @@
         #submit {
             width: auto;
             border: none;
-            padding: 20px 24px;
+            padding: 10px 24px;
             color: getColor(Clay);
             border: 1px solid getColor(Clay);
             transition: 200ms;
             border-radius: 999999px;
-            font-size: 20px;
+            font-size: 14px;
             
             &:hover {
                 color: getColor(White);
