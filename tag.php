@@ -6,23 +6,20 @@
         </div>
 
         <div class="post-hero-wrapper">
-            <h1 class="display-1">Tags</h1>
+            <h1 class="display-1"><?= single_cat_title(); ?></h1>
         </div>
     </section>
 
     <div class="sumisip-posts">
         <div class="global-wrapper section-padding">
-
             <?php  if( have_posts() ) {
                 get_template_part( 'partials/posts/post', 'excerpt' );
             }else {
                 get_template_part( 'partials/posts/post', 'none' );
             } ?>
-
-            <div class="post-sidebar">
+            <aside>
                 <?php dynamic_sidebar('sidebar_list'); ?>
-            </div>
-
+            </aside>
         </div>
     </div>
 
