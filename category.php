@@ -12,17 +12,16 @@
 
     <div class="sumisip-posts">
         <div class="global-wrapper section-padding">
-
-            <?php  if( have_posts() ) {
-                get_template_part( 'partials/posts/post', 'excerpt' );
-            }else {
-                get_template_part( 'partials/posts/post', 'none' );
-            } ?>
-
-            <div class="post-sidebar">
-                <?php dynamic_sidebar('sidebar_list'); ?>
+            <div class="global-layout">
+                <?php  if( have_posts() ) {
+                    get_template_part( 'partials/posts/post', 'excerpt' );
+                }else {
+                    get_template_part( 'partials/posts/post', 'none' );
+                } ?>
+                <aside>
+                    <?php dynamic_sidebar('sidebar_list'); ?>
+                </aside>
             </div>
-
         </div>
     </div>
 

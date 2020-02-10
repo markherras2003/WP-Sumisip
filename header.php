@@ -29,6 +29,9 @@ if(is_home()) {
 }
 elseif(is_single()) {
     echo '<nav class="matisse">'; 
+} 
+elseif(is_category()) {
+    echo '<nav class="teal">'; 
 } else{
     echo '<nav class="rosewood">';
 }

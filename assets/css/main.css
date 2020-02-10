@@ -6378,8 +6378,7 @@ p.sm,
           flex-direction: column;
 }
 
-.sumisip-posts .post-item:not(:first-child) .post-details .post-title,
-.sumisip-posts .post-item:not(:first-child) .post-details .post-content {
+.sumisip-posts .post-item:not(:first-child) .post-details .post-title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -7009,3 +7008,4 @@ p.sm,
             transform: translateY(0px);
   }
 }
+/*# sourceMappingURL=main.css.map */
