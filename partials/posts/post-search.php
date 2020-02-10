@@ -23,7 +23,7 @@
             </div>
             <!-- <div class="post-details"> -->
 
-            <div class="post-details">
+            <div class="post-details search-content">
                 <a href="<?= get_permalink();?>">
                     <h3 class="post-title"><?php the_title() ?></h3>
                 </a>
@@ -35,7 +35,7 @@
 
                 <?php the_excerpt(); ?>
 
-                <a href="<?= get_permalink();?>" class="read-more">Read Story</a>
+                <a href="<?= get_permalink();?>" class="button outline black">Read Story</a>
             </div>
             
 

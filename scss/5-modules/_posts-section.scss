@@ -91,12 +91,12 @@
                 }
 
                 .post-content {
-                    
+
                     p {
                         margin-bottom: $size-2;
                         display: -webkit-box;
                         -webkit-line-clamp: 2;
-                        -webkit-box-orient: vertical;  
+                        -webkit-box-orient: vertical;
                         overflow: hidden;
                     }
                 }
@@ -135,7 +135,19 @@
             }
         }
     }
+
     .search-title {
         margin-bottom: $size-3;
+    }
+
+    .search-content {
+        
+        p {
+            margin-bottom: $size-2;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     }
 }

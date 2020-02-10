@@ -6515,6 +6515,14 @@ p.sm,
   margin-bottom: 24px;
 }
 
+.sumisip-posts .search-content p {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .comment-section {
   padding-top: 40px;
   padding-bottom: 40px;
