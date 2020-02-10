@@ -1,8 +1,4 @@
 .post-sidebar {
-    width: 100%;
-    max-width: 320px;
-    flex-shrink: 0;
-    margin-left: $size-3;
 
     ul {
         list-style-type: none;
@@ -13,7 +9,6 @@
             margin-bottom: $size-5;
         }
     }
-
 }
 
 .search-sidebar {
@@ -58,89 +53,74 @@
     }
 }
 
-.category-sidebar {
+.category-lists {
+    list-style-type: none;
 
-    h4 {
-        margin-bottom: $size-2;
+    li {
+        border-bottom: 1px solid shade(getColor(Silver), 10);
+
+        a {
+            display: block;
+            padding: 14px 0;
+            color: getColor(Black);
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 
-    .category-lists {
-        list-style-type: none;
+}
 
-        li {
-            border-bottom: 1px solid shade(getColor(Silver), 10);
+.popular-posts {
 
-            a {
-                display: block;
-                padding: 14px 0;
-                color: getColor(Black);
+    li {
+        border-bottom: 1px solid shade(getColor(Silver), 10);
 
-                &:hover {
-                    text-decoration: none;
+        a {
+            display: block;
+            padding: $size-2 0px;
+            color: getColor(Black);
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            .post-item {
+
+                &.excerpt {
+
+                    p {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+
+                span {
+                    font-size: 14px;
+                    color: getColor(Ash);
+
+                    &:not(:last-child) {
+                        &::after {
+                            content: '-';
+                            margin-left: 6px;
+                        }
+                    }
                 }
             }
         }
 
     }
 }
-
-.popular-sidebar {
-
-    h4 {
-        margin-bottom: $size-2;
-    }
-
-    .popular-posts {
-
-        li {
-            border-bottom: 1px solid shade(getColor(Silver), 10);
-
-            a {
-                display: block;
-                padding: $size-2 0px;
-                color: getColor(Black);
-
-                &:hover {
-                    text-decoration: none;
-                }
-
-                .post-item {
-
-                    &.excerpt {
-
-                        p {
-                            display: -webkit-box;
-                            -webkit-line-clamp: 3;
-                            -webkit-box-orient: vertical;
-                            overflow: hidden;
-                        }
-                    }
-
-                    span {
-                        font-size: 14px;
-                        color: getColor(Ash);
-
-                        &:not(:last-child) {
-                            &::after {
-                                content: '-';
-                                margin-left: 6px;
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-    }
-}
-
 
 .cloud-tags {
     display: flex;
     align-items: flex-start;
     justify-items: center;
     flex-wrap: wrap;
-    
+
     li {
         list-style-type: none;
         margin-bottom: $size-1;
@@ -169,24 +149,21 @@
     }
 }
 
-.archive-sidebar {
+.archive-list {
+    display: flex;
+    flex-direction: column;
 
-    .archive-list {
-        display: flex;
-        flex-direction: column;
+    li {
+        border-bottom: 1px solid shade(getColor(Silver), 10);
 
-        li {
-            border-bottom: 1px solid shade(getColor(Silver), 10);
+        a {
+            display: block;
+            padding-bottom: $size-2;
+            padding-top: $size-2;
+            color: getColor(Black);
 
-            a {
-                display: block;
-                padding-bottom: $size-2;
-                padding-top: $size-2;
-                color: getColor(Black);
-
-                &:hover {
-                    text-decoration: none;
-                }
+            &:hover {
+                text-decoration: none;
             }
         }
     }
