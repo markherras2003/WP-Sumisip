@@ -1,9 +1,5 @@
 .sumisip-posts {
 
-    .ccfic {
-        display: none;
-    }
-
     .post-item {
         width: 100%;
 
@@ -64,13 +60,8 @@
                 .button {
                     margin-top: $size-1;
                 }
-
             }
-
-
-
         }
-
 
         &:not(:first-child) {
             display: flex;
@@ -115,7 +106,6 @@
                 .button {
                     align-self: baseline;
                 }
-
             }
 
             @include md {
@@ -145,49 +135,6 @@
                     margin-left: 0;
                 }
             }
-
-        }
-
-    }
-
-    .heading-category-post {
-        display: flex;
-        align-items: center;
-        margin-bottom: $size-8;
-        justify-content: space-between;
-
-        h3 {
-            // font-weight: 500;
-        }
-
-        .category-post {
-
-
-            a {
-                color: #707070;
-
-                &:hover {
-                    color: getColor(Black);
-                }
-
-                &:not(:last-child) {
-                    &:after {
-                        content: '/';
-                        margin-left: $size-2;
-                        margin-right: $size-1;
-                    }
-                }
-            }
         }
     }
-
-    .posts-item {
-        // flex-grow: 1;
-        // margin-right: $size-3;
-
-
-
-
-    }
-
 }
