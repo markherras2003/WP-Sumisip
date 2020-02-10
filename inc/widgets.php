@@ -77,7 +77,7 @@ public function widget( $args, $instance ) {
              echo '<a href="'.get_permalink().'">';
                  echo '<div class="post-item excerpt">';
                          // tHe();
-                         the_content();
+                         the_excerpt();
 
                          echo'<span>'; 
                              echo get_the_category()[0]->cat_name;
@@ -132,9 +132,9 @@ public function widget( $args, $instance ) {
     $categ = get_categories(array( 'hide_empty' => false,));
     
     // before and after widget arguments are defined by themes
-    echo '<div class="category-sidebar">';
-        echo __( '<h4>Categories</h4>' );
-        echo '<ul class="category-lists">';
+    echo '<section>'; 
+        echo __( '<h4 class="widget-heading">Categories</h4>' );
+        echo '<ul class="lined-list">';
             foreach ( $categ as $key) {
                 echo '<li>';
                     echo '<a href="'.get_category_link($key->term_id).'">';
@@ -145,7 +145,7 @@ public function widget( $args, $instance ) {
                 echo '</li>';
             }
         echo '</ul>';
-    echo '</div>';
+    echo '</section>';
 
         // This is where you run the code and display the output
     }
@@ -186,20 +186,18 @@ public function widget( $args, $instance ) {
         'number'  => 5
       ));
 
-      echo '<div class="cloud-tags">';
-        echo __( '<h4>Tags</h4>' );
-            echo '<ul class="tags-list">';
+      echo '<section>';
+        echo __( '<h4 class="widget-heading">Tags</h4>' );
+            echo '<ul class="cloud-tags">';
                 foreach($tags as $tag) {
                     echo '<li>';
-                        echo '<a href="'.get_tag_link($tag->term_id).'">';
-                            echo'<span>'; 
-                                echo $tag->name;
-                            echo '</span>';
+                        echo '<a href="'.get_tag_link($tag->term_id).'" class="button outline black">';
+                            echo $tag->name;
                         echo '</a>';
                     echo '</li>';
                 }
         echo '</ul>';
-    echo '</div>';
+    echo '</section>';
 
     }
 } // Class wpb_widget ends here
@@ -238,12 +236,12 @@ public function widget( $args, $instance ) {
     // $title = apply_filters( 'widget_title', $instance['title'] );
     
     // before and after widget arguments are defined by themes
-    echo '<div class="archive-sidebar">';
-        echo __( '<h4>Archive</h4>' );
-        echo '<ul class="archive-list">';
+    echo '<section>';
+        echo __( '<h4 class="widget-heading">Archive</h4>' );
+        echo '<ul class="lined-list">';
             wp_get_archives();
         echo '</ul>';
-    echo '</div>';
+    echo '</section>';
         // This is where you run the code and display the output
         
     }
@@ -286,22 +284,6 @@ public function widget( $args, $instance ) {
     // before and after widget arguments are defined by themes
     get_search_form();
         // This is where you run the code and display the output
-
-    // $custom_query_args = array( 
-    //     'post_status' => 'any',
-    //     'post_type'   => 'attachment'
-    //     // 'post_per_page' => 5
-    // );
-
-    // $custom_query = new WP_Query($custom_query_args);
-    // echo '<pre>';
-    // print_r($custom_query);
-//   echo '<ul>';
-//   foreach ($tags as $tag) {
-//     echo '<li>' . $tag->name . '</li>';
-//   }
-//   echo '</ul>';
-        
     }
 } // Class wpb_widget ends here
 
