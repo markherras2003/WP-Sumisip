@@ -60,10 +60,12 @@ get_header();
     }; ?>
 </div>
 
+<h1 class="post-title margin-bottom-3"><?= the_title(); ?></h1>
+
 <div class="post-img-wrapper">
     <?php
         if( has_post_thumbnail()) {
-            the_post_thumbnail('',array('class'=> 'photo-effect tilt-left'));
+            the_post_thumbnail('',array('class'=> 'photo-effect'));
         } else {
             ?>
             <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">
@@ -74,7 +76,6 @@ get_header();
 </div>
 
 <div class="post-content">
-<h3 class="post-title margin-bottom-3"><?php the_title(); ?></h3>
     <?php the_content(); ?>
 </div>
 
