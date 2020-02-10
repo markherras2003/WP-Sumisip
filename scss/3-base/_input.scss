@@ -43,8 +43,9 @@ input {
             height: 21px;
             width: 21px;
 
-            svg, svg path {
-                fill: getColor( Black );
+            svg,
+            svg path {
+                fill: getColor(Black);
                 width: 100%;
                 height: 100%;
             }
@@ -52,6 +53,20 @@ input {
 
         input {
             padding-left: 42px;
+        }
+
+        &.icon-right {
+
+            .icon-wrapper {
+                left: auto;
+                right: 12px;
+            }
+
+            input {
+                padding-left: 14px;
+                padding-right: 42px;
+            }
+
         }
     }
 }

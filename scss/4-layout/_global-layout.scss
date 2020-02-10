@@ -1,0 +1,71 @@
+.global-layout {
+  display: flex;
+  width: 100%;
+
+  main {
+    flex-grow: 1;
+    margin-right: $size-3;
+  }
+
+  aside {
+    margin-left: $size-3;
+    max-width: 320px;
+    width: 100%;
+    flex-shrink: 0;
+
+    section {
+
+      .widget-heading {
+        margin-bottom: $size-3;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: $size-4;
+      }
+    }
+
+  }
+
+
+  &.extended-aside {
+    aside {
+      max-width: 450px;
+    }
+  }
+
+
+  &.inverted {
+    main {
+      margin-left: $size-3;
+      margin-right: 0;
+      order: 2;
+    }
+
+    aside {
+      margin-left: 0;
+      margin-right: $size-3;
+      order: 1;
+    }
+  }
+
+
+  @include lg {
+    flex-direction: column;
+
+    main {
+      margin-right: 0;
+    }
+
+    aside {
+      margin-left: 0;
+      margin-top: $size-2;
+      max-width: none;
+    }
+
+  }
+
+
+
+
+
+}

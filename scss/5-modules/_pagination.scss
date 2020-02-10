@@ -1,7 +1,12 @@
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .pagination {
     margin-top: $size-5;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     flex-shrink: 0;
     width: 100%;

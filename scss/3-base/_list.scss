@@ -7,3 +7,25 @@ ul, li, ol {
     margin: 0;
     padding: 0;
 }
+
+
+.lined-list {
+    li {
+        list-style: none;
+        border-bottom: 1px solid shade( getColor( Silver ), 20);
+        
+        a {
+            display: block;
+            padding: $size-2 0;
+        }
+
+        &:first-child {
+            a {
+                padding-top: 0;
+            }
+        }
+
+    }
+
+    
+}
