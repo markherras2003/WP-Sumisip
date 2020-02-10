@@ -17,7 +17,7 @@
           <div class="heading-group">
             <div class="post-title">
                 <a href="<?= get_permalink();?>">
-                    <h3 class="post-title"> <?php the_title() ?></h3>
+                    <h2 class="post-title"> <?php the_title() ?></h2>
                 </a>
                 <div class="post-etc">
                     <span><?= strtoupper(get_author_role($author_ID)); ?><?php //get_user_meta($author_ID)['first_name'][0]?></span>
