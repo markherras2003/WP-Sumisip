@@ -146,6 +146,16 @@
 
 }
 
+.photo-effect-wrapper {
+    height: 300px;
+    // width: 300px;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
 .bg-neutral-1 {
     background-color: getColor(Silver);
 }

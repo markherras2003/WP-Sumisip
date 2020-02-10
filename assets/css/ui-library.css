@@ -4423,6 +4423,15 @@ html {
   margin-bottom: 16px;
 }
 
+.photo-effect-wrapper {
+  height: 300px;
+}
+
+.photo-effect-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+
 .bg-neutral-1 {
   background-color: #F8f8f8;
 }
