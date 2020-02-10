@@ -8,18 +8,6 @@
 
             .breadcrumbs {
                 margin-bottom: $size-2;
-
-                a {
-                    &:not(:last-child) {
-                        margin-right: $size-2;
-
-                        &::after {
-                            position: absolute;
-                            content: '/';
-                            margin-left: $size-1;
-                        }
-                    }
-                }
             }
 
             .post-img-wrapper {
@@ -28,13 +16,9 @@
                 margin-bottom: $size-3;
 
 
-                &.landscape {
+                &.landscape {}
 
-                }
-
-                &.portrait {
-
-                }
+                &.portrait {}
             }
 
             .post-content {
@@ -49,7 +33,7 @@
                     margin: $size-3;
                     float: right;
                 }
-                
+
             }
 
             .post-tags {
