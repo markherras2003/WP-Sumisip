@@ -93,7 +93,7 @@ textarea {
 
 .button,
 button, .footer-section .footer-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li .icon-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .social-footer li a .icon-wrapper, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .upper-hero-grid .hero-preview, .history-section, .history-section .timeline .timeline-control-left,
-.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper {
+.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .page-404, .page-404 .global-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1155,6 +1155,10 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+a.dark {
+  font-weight: 800;
 }
 
 /* 
@@ -6737,13 +6741,13 @@ p.sm,
 #respond .form-submit #submit {
   width: auto;
   border: none;
-  padding: 20px 24px;
+  padding: 10px 24px;
   color: #484848;
   border: 1px solid #484848;
   -webkit-transition: 200ms;
   transition: 200ms;
   border-radius: 999999px;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 #respond .form-submit #submit:hover {
@@ -6966,6 +6970,30 @@ p.sm,
   background-color: #353535;
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.page-404 .global-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.page-404 .text-404 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.page-404 .sumisip-brand {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.page-404 .sumisip-brand img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.3;
 }
 
 /* Custom Directory */
