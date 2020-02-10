@@ -6479,6 +6479,9 @@ p.sm,
 .sumisip-posts .post-item:not(:first-child) .post-details .post-content {
   margin-top: 8px;
   margin-bottom: 16px;
+}
+
+.sumisip-posts .post-item:not(:first-child) .post-details .post-content p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
