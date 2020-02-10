@@ -22,7 +22,8 @@
             ?>
             </div>
             <!-- <div class="post-details"> -->
-            <div class="post-title-group">
+
+            <div class="post-details">
                 <a href="<?= get_permalink();?>">
                     <h3 class="post-title"><?php the_title() ?></h3>
                 </a>
@@ -31,9 +32,7 @@
                     <span><?= get_the_date(); ?></span>
                     <span><?=  get_the_category()[0]->name ?></span>
                 </div>
-            </div>
 
-            <div class="post-content-group">
                 <?php the_excerpt(); ?>
 
                 <a href="<?= get_permalink();?>" class="read-more">Read Story</a>

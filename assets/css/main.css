@@ -6433,6 +6433,10 @@ p.sm,
 .sumisip-posts .post-item:not(:first-child) .post-img img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 
 .sumisip-posts .post-item:not(:first-child) .post-details {
@@ -6505,6 +6509,10 @@ p.sm,
   .sumisip-posts .post-item:not(:first-child) .post-details {
     margin-left: 0;
   }
+}
+
+.sumisip-posts .search-title {
+  margin-bottom: 24px;
 }
 
 .comment-section {
