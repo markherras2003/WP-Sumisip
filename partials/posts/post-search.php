@@ -28,9 +28,9 @@
                     <h3 class="post-title"><?php the_title() ?></h3>
                 </a>
                 <div class="post-etc">
-                    <span><?= get_user_meta($author_ID)['first_name'][0]?></span>
+                    <span><?= strtoupper(get_author_role($author_ID));?></span>
                     <span><?= get_the_date(); ?></span>
-                    <span><?=  get_the_category()[0]->name ?></span>
+                    <span><?= get_the_category()[0]->name ?></span>
                 </div>
 
                 <?php the_excerpt(); ?>
