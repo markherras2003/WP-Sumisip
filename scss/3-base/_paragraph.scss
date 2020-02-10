@@ -22,7 +22,13 @@ p,
         line-height: 19px;
     }
 
+    @include md {
+        font-size: 14px;
+    }
+
 }
+
+
 
 
 .p-sm {
