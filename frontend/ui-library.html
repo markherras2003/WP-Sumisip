@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script type="text/javascrip" src="../js/main.js?version=1.0.0"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+    <!-- <script type="text/javascript" src="../js/main.js?version=1.0.0"></script> -->
+    <script src="../js/photo-stack.js"></script>
 
     <link rel="stylesheet" href="../assets/css/main.css?version=1.2">
     <link rel="stylesheet" href="../assets/css/ui-library.css?version=1.0.0">
@@ -316,20 +318,61 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <h2 class="light margin-bottom-2">Photo Stacks</h2>
-
-                    <div class="photo-stacks">
-                        <div class="photo-stack-display">
-                            <img src="../assets/images/history/1.jpg" alt="Photo Stack">
+                    <h2 class="light margin-bottom-3">Photo Stacks</h2>
+                    <div class="photo-stacks extended">
+                        <div class="photo-stack-display lg loading">
+                            <div class="main-stack">
+                                <img src="" alt="Photo Stack">
+                            </div>
+                            <div class="bg-stack">
+                                <img src="" alt="Photo Stack">
+                            </div>
                         </div>
                         <div class="controls">
                             <ul>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
+                                <li class="active" src="../assets/images/history/1.jpg"></li>
+                                <li src="../assets/images/history/2.jpg"></li>
+                                <li src="../assets/images/history/3.jpg"></li>
+                                <li src="../assets/images/history/4.jpg"></li>
+                                <li src="../assets/images/history/5.jpg"></li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="side-by-side margin-top-8">
+                        <div class="preview">
+                            <div class="photo-stacks">
+                                <div class="photo-stack-display loading">
+                                    <div class="main-stack">
+                                        <img src="" alt="Photo Stack">
+                                    </div>
+                                    <div class="bg-stack">
+                                        <img src="" alt="Photo Stack">
+                                    </div>
+                                </div>
+                                <div class="controls">
+                                    <ul>
+                                        <li class="active" src="../assets/images/history/3.jpg"></li>
+                                        <li src="../assets/images/history/4.jpg"></li>
+                                        <li src="../assets/images/history/5.jpg"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="details align-center">
+                            <div class="heading-group">
+                                <h2>Lorem, ipsum dolor.</h2>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores officia saepe
+                                voluptates.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus atque sapiente
+                                voluptate autem dolor beatae repellendus nesciunt vitae eveniet id repudiandae
+                                asperiores, obcaecati assumenda aliquid deserunt dolores culpa, placeat minima. Sunt,
+                                inventore?
+                            </p>
+                            <button class="margin-top-2 margin-bottom-5 outline black">Read Story</button>
                         </div>
                     </div>
                 </div>
@@ -340,7 +383,6 @@
     <section>
         <div class="global-wrapper section-padding">
             <h1 class="margin-bottom-3">Layout Rules</h1>
-
             <h2 class="light margin-bottom-2">Global Layout</h2>
             <div class="global-layout">
                 <main>
@@ -367,9 +409,7 @@
                     </section>
                 </aside>
             </div>
-
             <h2 class="margin-bottom-2 margin-top-4 light">Side by Side</h2>
-
             <div class="side-by-side">
                 <div class="preview">
                     <div class="heading-group">
@@ -388,7 +428,6 @@
                     <button class="margin-top-1 outline">Read Story</button>
                 </div>
             </div>
-            
             <div class="side-by-side margin-top-4 inverted">
                 <div class="details">
                     <div class="heading-group">
@@ -407,10 +446,8 @@
                     <button class="margin-top-1 outline">Read Story</button>
                 </div>
             </div>
-
         </div>
     </section>
-
 
 </body>
 

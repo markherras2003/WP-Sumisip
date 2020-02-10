@@ -1,0 +1,162 @@
+.photo-stacks {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 550px;
+
+  .photo-stack-display {
+    position: relative;
+    width: 100%;
+    height: 380px;
+
+    .main-stack,
+    .bg-stack {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+
+      &.fly-out {
+        animation: flyOutImage 600ms ease-out both;
+
+        @keyframes flyOutImage {
+          0% {
+            opacity: 1;
+            transform: rotate(-1deg) scale(1);
+          }
+
+          100% {
+            opacity: 0;
+            transform: rotate(-4deg) scale(1.05);
+          }
+        }
+
+      }
+
+      &.to-active {
+        animation: rotateToActive 600ms ease-out both;
+
+        @keyframes rotateToActive {
+          0% {
+            transform: rotate(1deg);
+          }
+
+          100% {
+            transform: rotate(-1deg);
+          }
+        }
+
+      }
+
+    }
+
+    .main-stack {
+      z-index: 2;
+      transform: rotate(-1deg);
+    }
+
+    .bg-stack {
+      top: 0;
+      z-index: 1;
+      animation: scaleBGStack 600ms ease-out both;
+
+      @keyframes scaleBGStack {
+        0% {
+          opacity: 0;
+          transform: rotate(4deg);
+        }
+
+        100% {
+          opacity: 1;
+          transform: rotate(1deg);
+        }
+      }
+
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      @extend %photo-effect;
+    }
+
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: $size-3;
+
+    ul {
+      display: flex;
+
+      li {
+        list-style: none;
+        display: block;
+        height: 12px;
+        width: 12px;
+        border-radius: 999px;
+        background-color: getColor(Ash);
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: $size-1;
+        }
+
+        &:hover {
+          background-color: colorOpacity(getColor(Ash), 50);
+        }
+
+        &.active {
+          background-color: getColor(Teal);
+        }
+
+      }
+    }
+  }
+
+  &.extended {
+    max-width: 720px;
+
+    .photo-stack-display {
+      height: 440px;
+    }
+  }
+
+  @include md {
+    .photo-stack-display {
+      height: 340px;
+    }
+
+    &.extended {
+      .photo-stack-display {
+        height: 340px;
+      }
+    }
+  }
+
+  @include sm {
+    .photo-stack-display {
+      height: 300px;
+    }
+
+    &.extended {
+      .photo-stack-display {
+        height: 300px;
+      }
+    }
+  }
+
+  @include xs {
+    .photo-stack-display {
+      height: 250px;
+    }
+
+    &.extended {
+      .photo-stack-display {
+        height: 250px;
+      }
+    }
+  }
+
+}
