@@ -46,17 +46,6 @@
                     margin-bottom: $size-1;
                 }
 
-                .post-content {
-                    margin-top: $size-2;
-                    
-                    p {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 3;
-                        -webkit-box-orient: vertical;  
-                        overflow: hidden;
-                    }
-                }
-
                 .button {
                     margin-top: $size-1;
                 }
@@ -68,10 +57,6 @@
 
             &:not(:last-child) {
                 margin-bottom: $size-3;
-            }
-
-            .post-etc {
-                margin-bottom: $size-1;
             }
 
             .post-title {
@@ -86,6 +71,8 @@
                 img {
                     height: 100%;
                     width: 100%;
+                    object-fit: cover;
+                    object-position: center center;
                 }
             }
 
@@ -101,6 +88,17 @@
                     -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
+                }
+
+                .post-content {
+
+                    p {
+                        margin-bottom: $size-2;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
                 }
 
                 .button {
@@ -135,6 +133,21 @@
                     margin-left: 0;
                 }
             }
+        }
+    }
+
+    .search-title {
+        margin-bottom: $size-3;
+    }
+
+    .search-content {
+        
+        p {
+            margin-bottom: $size-2;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
     }
 }
