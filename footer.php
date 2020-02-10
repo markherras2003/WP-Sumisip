@@ -139,8 +139,26 @@
             </div>
         </div>
         <div class="copyright-footer">
-            <p>Ⓒ Sumisip, Basilan Philippines.</p>
-            <p>All rights reserved. 2020</p>
+        <?php if(get_theme_mod('ju_footer_sumisip_copyright')) {
+            ?>
+             <p><?= get_theme_mod('ju_footer_sumisip_copyright') ?></p>
+            <?php
+        } else {?> 
+        <p>Ⓒ Sumisip, Basilan Philippines.</p>
+        <?php 
+        }
+        ?>
+
+        <?php if(get_theme_mod('ju_footer_sumisip_allrights')) {
+            ?>
+            <p><?= get_theme_mod('ju_footer_sumisip_allrights') ?></p>
+            <?php
+        } else {
+            ?>
+                <p>All rights reserved. 2020</p>
+            <?php
+            
+        } ?>
         </div>
 
     </footer>

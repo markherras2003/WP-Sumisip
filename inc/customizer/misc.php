@@ -12,6 +12,14 @@
             'default'   => ''
         ]);
 
+        $wp_customize->add_setting('ju_footer_sumisip_copyright',[
+            'default'   => ''
+        ]);
+
+        $wp_customize->add_setting('ju_footer_sumisip_allrights',[
+            'default'   => ''
+        ]);
+
         $wp_customize->add_setting('ju_footer_official_logo',[
 
         ]);
@@ -25,6 +33,26 @@
                 'section'           =>  'ju_misc_section',
                 'settings'          =>  'ju_footer_sumisip_description',
                 'type'              => 'textarea'
+            )
+        ));
+        $wp_customize->add_control( new WP_Customize_Control(
+            $wp_customize,
+            'ju_footer_sumisip_copyright_input',
+            array(
+                'label'             =>  __('Sumisip Copyright'),
+                'section'           =>  'ju_misc_section',
+                'settings'          =>  'ju_footer_sumisip_copyright',
+            )
+        ));
+
+
+        $wp_customize->add_control( new WP_Customize_Control(
+            $wp_customize,
+            'ju_footer_sumisip_rights_input',
+            array(
+                'label'             =>  __('Sumisip Rights Reserved'),
+                'section'           =>  'ju_misc_section',
+                'settings'          =>  'ju_footer_sumisip_allrights',
             )
         ));
 
