@@ -208,12 +208,13 @@ if ( ! function_exists( 'sumisip_setup' ) ) :
 				'menu-1' => __( 'Primary', 'sumisip' ),
 				'right_menu-1' => __( 'RightPrimary', 'sumisip' ),
 				'footer' => __( 'Footer Menu', 'sumisip' ),
-				'social' => __( 'Social Links Menu', 'sumisip' ),
 			)
 		);
 
     register_nav_menu('links', __('Quick Links'));
     register_nav_menu('department', __('Department Links'));
+    register_nav_menu('contact-menu', __('Contact Menu'));
+    register_nav_menu('social-menu', __('Social Menu'));
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -687,3 +688,8 @@ function nddt_add_class_to_images($class){
     return $class;
 }
 add_filter('get_image_tag_class','nddt_add_class_to_images');
+
+// Theme Options
+add_action('customize_register', 'ju_customize_register'); // Social
+include( get_theme_file_path('/inc/theme-customizer.php')); // Custom file theme
+include( get_theme_file_path('/inc/customizer/misc.php')); // Social
