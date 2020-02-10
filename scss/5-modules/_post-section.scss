@@ -43,6 +43,13 @@
             .post-content {
                 margin-bottom: $size-5;
 
+                p {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
                 h2 {
                     margin-bottom: $size-1;
                 }

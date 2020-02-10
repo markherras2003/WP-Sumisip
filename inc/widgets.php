@@ -77,7 +77,7 @@ public function widget( $args, $instance ) {
              echo '<a href="'.get_permalink().'">';
                  echo '<div class="post-item excerpt">';
                          // tHe();
-                         the_content();
+                         the_excerpt();
 
                          echo'<span>'; 
                              echo get_the_category()[0]->cat_name;
@@ -192,9 +192,7 @@ public function widget( $args, $instance ) {
                 foreach($tags as $tag) {
                     echo '<li>';
                         echo '<a href="'.get_tag_link($tag->term_id).'" class="button outline black">';
-                            echo'<span>'; 
-                                echo $tag->name;
-                            echo '</span>';
+                            echo $tag->name;
                         echo '</a>';
                     echo '</li>';
                 }
