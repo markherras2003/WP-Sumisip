@@ -52,7 +52,7 @@ $(() => {
       mainStack.removeClass('fly-out');
       mainStack.addClass('bg-stack');
 
-    }, 601);
+    }, 301);
 
   });
 });
