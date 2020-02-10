@@ -4186,6 +4186,10 @@ p.sm,
       flex-shrink: 0;
 }
 
+.global-layout aside section .widget-heading {
+  margin-bottom: 24px;
+}
+
 .global-layout aside section:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -4225,10 +4229,6 @@ p.sm,
     margin-top: 16px;
     max-width: none;
   }
-}
-
-.widget-heading {
-  margin-bottom: 24px;
 }
 
 /*  Modules Directory  */
