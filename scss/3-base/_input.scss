@@ -26,6 +26,39 @@ input {
     }
 }
 
+.input-group {
+
+    label {
+        display: block;
+        margin-bottom: $size-half;
+    }
+
+    &.w-icon {
+        position: relative;
+
+        .icon-wrapper {
+            position: absolute;
+            left: 12px;
+            bottom: 14px;
+            height: 21px;
+            width: 21px;
+
+            svg, svg path {
+                fill: getColor( Black );
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        input {
+            padding-left: 42px;
+        }
+    }
+}
+
+
+
+
 .container {
     display: block;
     position: relative;

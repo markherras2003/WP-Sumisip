@@ -1,0 +1,36 @@
+.tag-list {
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: $size-half;
+      margin-bottom: $size-1;
+    }
+
+    a {
+      font-size: 14px;
+      display: inline-block;
+      border: 1px solid getColor(Black);
+      padding: $size-1 $size-2;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+
+    &:hover {
+      a {
+        &:hover {
+          background-color: getColor( Black );
+          color: getColor( White );
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+}
