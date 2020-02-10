@@ -4186,10 +4186,6 @@ p.sm,
       flex-shrink: 0;
 }
 
-.global-layout aside section .widget-heading {
-  margin-bottom: 24px;
-}
-
 .global-layout aside section:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -4229,6 +4225,10 @@ p.sm,
     margin-top: 16px;
     max-width: none;
   }
+}
+
+.widget-heading {
+  margin-bottom: 24px;
 }
 
 /*  Modules Directory  */
@@ -6120,7 +6120,14 @@ p.sm,
 
 .search-sidebar {
   margin-bottom: 32px;
-  border-bottom: 1px solid #dfdfdf;
+}
+
+.search-sidebar .input-group {
+  width: 100%;
+}
+
+.search-sidebar .input-group .icon-wrapper {
+  z-index: 9999;
 }
 
 .search-sidebar input {
@@ -6206,11 +6213,7 @@ p.sm,
   margin-left: 6px;
 }
 
-.cloud-tags h4 {
-  margin-bottom: 16px;
-}
-
-.cloud-tags ul {
+.cloud-tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6222,15 +6225,16 @@ p.sm,
       flex-wrap: wrap;
 }
 
-.cloud-tags ul li {
+.cloud-tags li {
+  list-style-type: none;
   margin-bottom: 8px;
 }
 
-.cloud-tags ul li:not(:last-child) {
+.cloud-tags li:not(:last-child) {
   margin-right: 8px;
 }
 
-.cloud-tags ul li a {
+.cloud-tags li a {
   display: inline-block;
   border: 1px solid #6E6E6E;
   color: #6E6E6E;
@@ -6242,7 +6246,7 @@ p.sm,
   border-radius: 5px;
 }
 
-.cloud-tags ul li a:hover {
+.cloud-tags li a:hover {
   text-decoration: none;
   background: #353535;
   color: #FFFFFF;
@@ -6272,10 +6276,6 @@ p.sm,
 
 .archive-sidebar .archive-list li a:hover {
   text-decoration: none;
-}
-
-.sumisip-posts .ccfic {
-  display: none;
 }
 
 .sumisip-posts .post-item {
@@ -6432,33 +6432,6 @@ p.sm,
   .sumisip-posts .post-item:not(:first-child) .post-details {
     margin-left: 0;
   }
-}
-
-.sumisip-posts .heading-category-post {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 64px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.sumisip-posts .heading-category-post .category-post a {
-  color: #707070;
-}
-
-.sumisip-posts .heading-category-post .category-post a:hover {
-  color: #353535;
-}
-
-.sumisip-posts .heading-category-post .category-post a:not(:last-child):after {
-  content: '/';
-  margin-left: 16px;
-  margin-right: 8px;
 }
 
 .comment-section {
