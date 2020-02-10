@@ -64,7 +64,6 @@
 
         }
 
-
         &:not(:first-child) {
             display: flex;
 
@@ -172,15 +171,6 @@
                 }
             }
         }
-    }
-
-    .posts-item {
-        // flex-grow: 1;
-        // margin-right: $size-3;
-
-
-
-
     }
 
 }

@@ -8,6 +8,7 @@
     object-fit: cover;
     object-position: center center;
     padding: 8px;
+    background-color: getColor( White );
     box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, .16);
 
     @include sm {
