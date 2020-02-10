@@ -2,6 +2,7 @@
     global $post;
     $author_ID = $post->post_author;
 ?>
+<main>
     <?php 
         $i=0;
         while( have_posts() ) :  ?>
@@ -78,3 +79,5 @@
         </div>
         <a href="#" class="next-pagination">Next</a>
 </div>
+
+            </main>
