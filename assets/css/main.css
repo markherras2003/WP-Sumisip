@@ -6329,6 +6329,13 @@ p.sm,
   margin-top: 16px;
 }
 
+.sumisip-posts .post-item:first-child .post-details .post-content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .sumisip-posts .post-item:first-child .post-details .button {
   margin-top: 8px;
 }
