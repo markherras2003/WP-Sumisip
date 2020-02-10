@@ -16,7 +16,7 @@
       width: 100%;
 
       &.fly-out {
-        animation: flyOutImage 600ms ease-out both;
+        animation: flyOutImage 200ms ease-out both;
 
         @keyframes flyOutImage {
           0% {
@@ -33,7 +33,7 @@
       }
 
       &.to-active {
-        animation: rotateToActive 600ms ease-out both;
+        animation: rotateToActive 300ms ease-out both;
 
         @keyframes rotateToActive {
           0% {
@@ -57,7 +57,7 @@
     .bg-stack {
       top: 0;
       z-index: 1;
-      animation: scaleBGStack 600ms ease-out both;
+      animation: scaleBGStack 200ms ease-out both;
 
       @keyframes scaleBGStack {
         0% {
