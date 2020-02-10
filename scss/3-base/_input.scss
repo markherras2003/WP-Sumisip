@@ -3,6 +3,7 @@
     e.g. select, input[type="text"], input[type="email"], input[type="number"]
 */
 
+textarea,
 input {
     border-radius: 5px;
     border: 1px solid shade(getColor(Silver), 20);
@@ -24,6 +25,12 @@ input {
         border: none;
         padding-left: 0px;
     }
+}
+
+textarea {
+    min-height: 200px;
+    resize: none;
+    outline: none;
 }
 
 .input-group {
@@ -70,9 +77,6 @@ input {
         }
     }
 }
-
-
-
 
 .container {
     display: block;

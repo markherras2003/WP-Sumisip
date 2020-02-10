@@ -3,33 +3,13 @@
     e.g. textarea, radio, checkbox, label
 */
 form {
-    
-    textarea {
-        border-radius: 5px;
-        border: 1px solid shade(getColor(Silver), 20);
-        padding: 12px;
-        width: 100%;
-        height: 200px;
-        resize: none;
-        outline: none;
-
-        &::placeholder {
-            color: #bdbdbd;
-            font-weight: 300;
-        }
-
-        &:focus {
-            border: 1px solid shade(getColor(Silver), 50);
-        }
-
-    }
 
     &.comment-form {
 
         input {
 
             &:not(:last-child) {
-                margin-bottom: $size-1;
+                margin-bottom: $size-2;
             }
 
             &[type="checkbox"] {
@@ -38,23 +18,11 @@ form {
 
             &[type="submit"] {
                 width: auto;
-                // border: none;
-                // padding: 20px 24px;
-                // color: getColor(Clay);
-                // border: 1px solid getColor(Clay);
-                // transition: 200ms;
-                // border-radius: 999999px;
-                // font-size: 20px;
-                
-                // &:hover {
-                //     color: getColor(White);
-                //     background: getColor(Clay);
-                // }
             }
         }
 
         textarea {
-            margin-bottom: $size-1;
+            margin-bottom: $size-2;
         }
 
         p {

@@ -1,0 +1,56 @@
+.side-by-side {
+  display: flex;
+
+  .preview {
+    margin-right: $size-2;
+  }
+
+  .details {
+    margin-left: $size-2;
+  }
+
+  &.inverted {
+    .preview {
+      margin-right: 0;
+      margin-left: $size-2;
+    }
+
+    .details {
+      margin-left: 0;
+      margin-right: $size-2;
+    }
+  }
+
+
+  @include lg {
+    flex-direction: column;
+
+    .preview,
+    .details,
+    &.inverted .preview,
+    &.inverted .details {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+
+    .details {
+      margin-top: $size-2;
+    }
+
+    &.inverted {
+
+      .preview {
+        order: 1;
+      }
+
+      .details {
+        order: 2
+      }
+
+    }
+
+  }
+
+
+}
