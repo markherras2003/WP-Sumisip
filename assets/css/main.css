@@ -1188,7 +1188,7 @@ ul, li, ol {
     Set default global styles for: 
     Images, Videos, iFrame, SVG assets, Figures 
 */
-img.photo-effect {
+img.photo-effect, .photo-stacks .photo-stack-display img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
@@ -1200,7 +1200,7 @@ img.photo-effect {
 }
 
 @media (max-width: 576px) {
-  img.photo-effect {
+  img.photo-effect, .photo-stacks .photo-stack-display img {
     padding: 6px;
   }
 }
@@ -1921,6 +1921,13 @@ p.sm,
 .p.sm {
   font-size: 13px;
   line-height: 19px;
+}
+
+@media (max-width: 768px) {
+  p,
+  .p {
+    font-size: 14px;
+  }
 }
 
 .p-sm p {
@@ -4287,11 +4294,31 @@ p.sm,
 }
 
 .side-by-side .preview {
+  width: 50%;
   margin-right: 16px;
 }
 
 .side-by-side .details {
+  width: 50%;
   margin-left: 16px;
+}
+
+.side-by-side .details.align-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.side-by-side .details.align-center button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .side-by-side.inverted .preview {
@@ -4317,6 +4344,7 @@ p.sm,
   .side-by-side.inverted .details {
     margin-left: 0;
     margin-right: 0;
+    width: 100%;
   }
   .side-by-side .details {
     margin-top: 16px;
@@ -6458,7 +6486,8 @@ p.sm,
   overflow: hidden;
 }
 
-.sumisip-posts .post-item:not(:first-child) .post-details .post-content p {
+.sumisip-posts .post-item:not(:first-child) .post-details .post-content {
+  margin-top: 8px;
   margin-bottom: 16px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -6996,6 +7025,206 @@ p.sm,
   opacity: 0.3;
 }
 
+.photo-stacks {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 550px;
+}
+
+.photo-stacks .photo-stack-display {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+
+.photo-stacks .photo-stack-display .main-stack,
+.photo-stacks .photo-stack-display .bg-stack {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.photo-stacks .photo-stack-display .main-stack.fly-out,
+.photo-stacks .photo-stack-display .bg-stack.fly-out {
+  -webkit-animation: flyOutImage 200ms ease-out both;
+          animation: flyOutImage 200ms ease-out both;
+}
+
+@-webkit-keyframes flyOutImage {
+  0% {
+    opacity: 1;
+    -webkit-transform: rotate(-1deg) scale(1);
+            transform: rotate(-1deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(-4deg) scale(1.05);
+            transform: rotate(-4deg) scale(1.05);
+  }
+}
+
+@keyframes flyOutImage {
+  0% {
+    opacity: 1;
+    -webkit-transform: rotate(-1deg) scale(1);
+            transform: rotate(-1deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(-4deg) scale(1.05);
+            transform: rotate(-4deg) scale(1.05);
+  }
+}
+
+.photo-stacks .photo-stack-display .main-stack.to-active,
+.photo-stacks .photo-stack-display .bg-stack.to-active {
+  -webkit-animation: rotateToActive 300ms ease-out both;
+          animation: rotateToActive 300ms ease-out both;
+}
+
+@-webkit-keyframes rotateToActive {
+  0% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  100% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+}
+
+@keyframes rotateToActive {
+  0% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  100% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+}
+
+.photo-stacks .photo-stack-display .main-stack {
+  z-index: 2;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+}
+
+.photo-stacks .photo-stack-display .bg-stack {
+  top: 0;
+  z-index: 1;
+  -webkit-animation: scaleBGStack 200ms ease-out both;
+          animation: scaleBGStack 200ms ease-out both;
+}
+
+@-webkit-keyframes scaleBGStack {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+}
+
+@keyframes scaleBGStack {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+}
+
+.photo-stacks .photo-stack-display img {
+  height: 100%;
+  width: 100%;
+}
+
+.photo-stacks .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 24px;
+}
+
+.photo-stacks .controls ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.photo-stacks .controls ul li {
+  list-style: none;
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 999px;
+  background-color: #949494;
+  cursor: pointer;
+}
+
+.photo-stacks .controls ul li:not(:last-child) {
+  margin-right: 8px;
+}
+
+.photo-stacks .controls ul li:hover {
+  background-color: rgba(148, 148, 148, 0.5);
+}
+
+.photo-stacks .controls ul li.active {
+  background-color: #0B928E;
+}
+
+.photo-stacks.extended {
+  max-width: 720px;
+}
+
+.photo-stacks.extended .photo-stack-display {
+  height: 440px;
+}
+
+@media (max-width: 768px) {
+  .photo-stacks .photo-stack-display {
+    height: 340px;
+  }
+  .photo-stacks.extended .photo-stack-display {
+    height: 340px;
+  }
+}
+
+@media (max-width: 576px) {
+  .photo-stacks .photo-stack-display {
+    height: 300px;
+  }
+  .photo-stacks.extended .photo-stack-display {
+    height: 300px;
+  }
+}
+
+@media (max-width: 376px) {
+  .photo-stacks .photo-stack-display {
+    height: 250px;
+  }
+  .photo-stacks.extended .photo-stack-display {
+    height: 250px;
+  }
+}
+
 /* Custom Directory */
 /*  Animations Library */
 @-webkit-keyframes dropFadeMin {
@@ -7096,4 +7325,3 @@ p.sm,
             transform: translateY(0px);
   }
 }
-/*# sourceMappingURL=main.css.map */
