@@ -1,0 +1,23 @@
+.page-404 {
+    @extend %center-all;    
+
+    .global-wrapper {
+        @extend %center-all;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .text-404 {
+        flex-grow: 1;
+    }
+    
+    .sumisip-brand {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 600px;
+
+        img {
+            filter: grayscale(100%);
+            opacity: 0.3;
+        }
+    }
+}
