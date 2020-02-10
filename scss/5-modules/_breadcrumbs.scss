@@ -1,0 +1,26 @@
+.breadcrumbs {
+  
+  a {
+    font-size: 14px;
+
+    &:not(:last-child) {
+      margin-right: $size-2;
+
+      &::after {
+        position: absolute;
+        margin-left: $size-1;
+        content: '/';
+        opacity: .5;
+      }
+    }
+
+
+    &:last-child {
+      opacity: .4;
+      user-select: none;
+      text-decoration: none;
+    }
+
+  }
+
+}

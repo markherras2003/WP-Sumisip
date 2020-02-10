@@ -688,8 +688,13 @@ function nddt_add_class_to_images($class){
     return $class;
 }
 add_filter('get_image_tag_class','nddt_add_class_to_images');
+<<<<<<< HEAD
 
 // Theme Options
 add_action('customize_register', 'ju_customize_register'); // Social
 include( get_theme_file_path('/inc/theme-customizer.php')); // Custom file theme
 include( get_theme_file_path('/inc/customizer/misc.php')); // Social
+=======
+// This will add a filter on `excerpt_more` that returns an empty string.
+add_filter( 'excerpt_more', '__return_empty_string' ); 
+>>>>>>> cc7d850c70d9d82bb7b8000746ddac660e164185

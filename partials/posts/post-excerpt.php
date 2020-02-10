@@ -3,24 +3,21 @@
     $author_ID = $post->post_author;
 ?>
 <main>
+    <div class="posts-item">
     <?php 
         $i=0;
         while( have_posts() ) :  ?>
         <?php 
         the_post(); ?>
         <div class="post-item">
-            <div class="post-img">
             <?php
-                if( has_post_thumbnail()) {
+           
                     if ($i+1 === 1) {
-
-               
                     ?>
-
-            <div class="post-details">
+          <div class="heading-group">
             <div class="post-title">
                 <a href="<?= get_permalink();?>">
-                    <h3 class="post-title"> <?php the_title() ?></h3>
+                    <h2 class="post-title"> <?php the_title() ?></h2>
                 </a>
                 <div class="post-etc">
                     <span><?= strtoupper(get_author_role($author_ID)); ?><?php //get_user_meta($author_ID)['first_name'][0]?></span>
@@ -28,10 +25,13 @@
                     <span><?= get_the_category()[0]->name ?></span>
                 </div>
             </div>
-                    
-            <?php } ?>
-                    
-                    
+          </div>
+                 <?php
+                    }
+                     if( has_post_thumbnail()) {
+                     ?>
+                     <div class="post-img"> 
+  
                   <?=  ( ($i+1) === 1 )? the_post_thumbnail('',array('class'=> 'photo-effect')): the_post_thumbnail()?>
             <?php } else {
                     ?>
@@ -39,11 +39,12 @@
                     <?php
                 }
                 $i++;
+            
             ?>
             </div>
-
+            <div class="post-details">
             <?php if ($i > 1) { ?>
-        <div class="post-details">
+  
             <div class="post-title">
                 <a href="<?= get_permalink();?>">
                     <h3 class="post-title"><?php the_title() ?></h3>
@@ -66,7 +67,7 @@
 
     </div>
 
-    <?php  endwhile; ?>
+    <?php    endwhile; ?>
 
     <div class="pagination">
         <a href="#" class="previous-pagination">Previous</a>
@@ -79,5 +80,7 @@
         </div>
         <a href="#" class="next-pagination">Next</a>
 </div>
+
+            </div>
 
             </main>
