@@ -687,3 +687,5 @@ function nddt_add_class_to_images($class){
     return $class;
 }
 add_filter('get_image_tag_class','nddt_add_class_to_images');
+// This will add a filter on `excerpt_more` that returns an empty string.
+add_filter( 'excerpt_more', '__return_empty_string' ); 
