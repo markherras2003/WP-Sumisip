@@ -12,3 +12,4 @@ assets/css/main.min.css
 *.css
 *.css
 *.css
+.vscode/settings.json
