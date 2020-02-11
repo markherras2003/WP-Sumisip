@@ -21,7 +21,7 @@ get_header();
 
         <div class="post-hero-background">
             <?php
-                if( has_post_thumbnail()) {
+           
                     $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
                     //the_post_thumbnail();
                     foreach($featured_images as $featured_image) { 
@@ -35,15 +35,14 @@ get_header();
                   ?>
                         <img src="<?= $featured_image['full']; ?>" alt="Article Image">        
                 <?php  }
+
+                    if($i===0) {          
                   ?>
-                
-                  <?php
-                } else {
-                    ?>
                     <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">
                     <?php
-                }
-            ?>
+                        }
+                    ?>
+   
         </div>
 
         <div class="post-hero-wrapper">
@@ -84,29 +83,23 @@ get_header();
 
 <?php
 $i=0;
-                if( has_post_thumbnail()) {
                     $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
                     //the_post_thumbnail();
-                    foreach($featured_images as $featured_image) { 
-                        $i++;
-                        if($i===2) {  ?>
+                    foreach($featured_images as $featured_image) {  
+                        $i++; 
+                        if($i===1) {  ?>
                         <img src="<?= $featured_image['full']; ?>" class="photo-effect" alt="Article Image">            
-                <?php    } ?>
-                            
+                <?php    
+                        } 
+                         ?>   
                   <?php  }
-                   if($i===1) {
+                        if($i===0) {              
                   ?>
-                        <img src="<?= $featured_image['full']; ?>" class="photo-effect" alt="Article Image">        
-                <?php  }
-                  ?>
-                
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">
                   <?php
-                } else {
+                        }
                     ?>
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">
-                    <?php
-                }
-            ?>
+                  
 
 </div>
 
