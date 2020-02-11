@@ -626,9 +626,6 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -672,8 +669,7 @@ button:hover {
 }
 
 .footer-section .footer-wrapper .footer-container .footer-flex .social-footer {
-  width: 100%;
-  max-width: 220px;
+  width: 220px;
   margin-bottom: 32px;
 }
 

@@ -135,7 +135,6 @@
 
             .footer-flex {
                 display: flex;
-                flex-grow: 1;
                 flex-wrap: wrap;
 
 
@@ -177,8 +176,7 @@
                 }
 
                 .social-footer {
-                    width: 100%;
-                    max-width: 220px;
+                    width: 220px;
                     margin-bottom: $size-4;
 
                     @include sm {
