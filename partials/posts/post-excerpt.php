@@ -32,12 +32,13 @@
                      <div class="post-img"> 
                     <?php     
                     $x=0;
+                    $b=0;
                     $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
                     foreach($featured_images as $featured_image) { 
                     $x++;
                         if($x===1) {?>
 
-                        <img src="<?= $featured_image['full']; ?>" class="photo-effect" alt="Article Image">    
+                        <img src="<?= $featured_image['full']; ?>" class="<?=  ( $i > 0   )? '': 'photo-effect' ?>" alt="Article Image">    
 
                     <?php   } ?>                
                     <?php }
