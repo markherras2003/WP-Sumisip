@@ -9,11 +9,11 @@ get_header();
         $i=0;
         $featured_images="";
         $author_ID = $post->post_author;
+        global $dynamic_featured_image;
 
             if(have_posts()) {
                 while( have_posts()) {
                     the_post();
-                    global $dynamic_featured_image;
                 }
             }
         ?>
