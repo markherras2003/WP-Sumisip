@@ -6,11 +6,14 @@ get_header();
         <?php 
 
         global $post;
+        $i=0;
+        $featured_images="";
         $author_ID = $post->post_author;
 
             if(have_posts()) {
                 while( have_posts()) {
                     the_post();
+                    global $dynamic_featured_image;
                 }
             }
         ?>
@@ -19,7 +22,22 @@ get_header();
         <div class="post-hero-background">
             <?php
                 if( has_post_thumbnail()) {
-                    the_post_thumbnail();
+                    $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                    //the_post_thumbnail();
+                    foreach($featured_images as $featured_image) { 
+                        $i++;
+                        if($i===2) {  ?>
+                        <img src="<?= $featured_image['full']; ?>" alt="Article Image">            
+                <?php    } ?>
+                            
+                  <?php  }
+                   if($i===1) {
+                  ?>
+                        <img src="<?= $featured_image['full']; ?>" alt="Article Image">        
+                <?php  }
+                  ?>
+                
+                  <?php
                 } else {
                     ?>
                     <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">
@@ -63,15 +81,32 @@ get_header();
 <h1 class="post-title margin-bottom-3"><?= the_title(); ?></h1>
 
 <div class="post-img-wrapper">
-    <?php
-        if( has_post_thumbnail()) {
-            the_post_thumbnail('',array('class'=> 'photo-effect'));
-        } else {
+
+<?php
+$i=0;
+                if( has_post_thumbnail()) {
+                    $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                    //the_post_thumbnail();
+                    foreach($featured_images as $featured_image) { 
+                        $i++;
+                        if($i===2) {  ?>
+                        <img src="<?= $featured_image['full']; ?>" class="photo-effect" alt="Article Image">            
+                <?php    } ?>
+                            
+                  <?php  }
+                   if($i===1) {
+                  ?>
+                        <img src="<?= $featured_image['full']; ?>" class="photo-effect" alt="Article Image">        
+                <?php  }
+                  ?>
+                
+                  <?php
+                } else {
+                    ?>
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">
+                    <?php
+                }
             ?>
-            <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">
-            <?php
-        }
-    ?>
 
 </div>
 
