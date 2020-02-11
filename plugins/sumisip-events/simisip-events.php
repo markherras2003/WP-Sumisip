@@ -14,7 +14,7 @@ add_action( 'activate_plugin', 'check_current_theme', 10, 2 );
 
 function check_current_theme( $plugin, $network_wide )
 {
-    if (THEME_REQUIRED != wp_get_theme()) {
+    if (THEME_REQUIRED != wp_get_theme() && $plugin == 'sumisip-events/simisip-events.php' ) {
         add_action('plugins_loaded', 'admin_notice');
         function admin_notice()
         {

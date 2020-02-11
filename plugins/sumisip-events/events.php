@@ -12,7 +12,7 @@ if( !function_exists('sumisip_events_post_type') ){
             'public' => true,
             'hierarchical' => false,
             'menu_position' => 5,
-            'supports' => array( 'thumbnail', 'title', 'editor', 'excerpt' ),
+            'supports' => array( 'title', 'editor', 'excerpt' ),
             'show_ui' => true
 
         ];
@@ -68,3 +68,24 @@ function prefix_send_email_to_admin() {
     wp_redirect(admin_url('/admin.php?page=notifier'));
 }
 add_action( 'admin_post_notifier_end_point', 'prefix_send_email_to_admin' );
+
+
+/**
+ * Register 'event_location' field in rest api response
+ */
+add_action( 'rest_api_init', function($d) {
+
+    register_rest_field( 'events',
+        'thumbnail',
+        array(
+            'get_callback'    => 'slug_get_featured_image_post_meta_cb',
+            'schema'          => null,
+        )
+    );
+});
+
+function slug_get_featured_image_post_meta_cb( $object, $field_name, $request ) {
+    global $dynamic_featured_image;
+    $featured_images = $dynamic_featured_image->get_featured_images( $object['id'] );
+    return $featured_images;
+}
