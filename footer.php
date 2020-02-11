@@ -19,7 +19,7 @@
             <div class="footer-container">
 
                 <div class="seal-footer">
-                    <h4>Government Seal</h4>
+                    <h4 class="footer-heading">Government Seal</h4>
                     <div class="seal-wrapper">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/seal.png">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/s_arm.png">
@@ -31,7 +31,7 @@
 
                     <div class="sumisip-about-footer">
                         <div class="visit-content">
-                            <h4>Visit Us</h4>
+                            <h4 class="footer-heading">Visit Us</h4>
 
                             <?php  if(get_theme_mod('ju_footer_sumisip_description')) {
                                 ?>
@@ -63,7 +63,7 @@
                         ?>
 
                         <div class="contact-list">
-                            <h4>Contact Us</h4>
+                            <h4 class="footer-heading">Contact Us</h4>
                             <ul>
                                 <li>
                                     <div class="icon-wrapper"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg></div><span><?= array_key_exists(0, $contactNav) ? $contactNav[0]->post_title : 'No Contact Number' ?></span> 
@@ -94,7 +94,7 @@
 
 
                     <div class="social-footer">
-                        <h4>Social Media</h4>
+                        <h4 class="footer-heading">Social Media</h4>
                         <ul>
                             <li><a href="<?= array_key_exists(1, $socialNav) ? $socialNav[0]->url  : 'www.facebook.com'?>">
                                     <div class="icon-wrapper"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></div>
@@ -112,7 +112,7 @@
                     </div>
 
                     <div class="links-footer">
-                        <h4>Quick Links</h4>
+                        <h4 class="footer-heading">Quick Links</h4>
                             <?php  
                                 if(has_nav_menu('links')){
                                 wp_nav_menu([
@@ -127,7 +127,7 @@
                     </div>
 
                     <div class="department-footer">
-                        <h4>Local Department</h4>
+                        <h4 class="footer-heading">Local Department</h4>
                             <?php  
                                 if(has_nav_menu('department')){
                                 wp_nav_menu([

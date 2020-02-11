@@ -94,7 +94,7 @@
             display: flex;
             flex-wrap: wrap;
 
-            h4 {
+            .footer-heading {
                 margin-bottom: $size-2;
             }
 
@@ -108,11 +108,14 @@
 
                 .seal-wrapper {
                     display: flex;
+                    max-width: 385px;
+                    flex-wrap: wrap;
 
 
                     img {
                         width: 120px;
                         height: auto;
+                        margin-bottom: $size-1;
 
                         @include md {
                             width: 130px;
