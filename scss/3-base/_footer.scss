@@ -177,7 +177,8 @@
                 }
 
                 .social-footer {
-                    width: 230px;
+                    width: 100%;
+                    max-width: 220px;
                     margin-bottom: $size-4;
 
                     @include sm {
@@ -187,7 +188,8 @@
                     li {
                         a {
                             display: flex;
-                            align-items: center;
+                            align-items: flex-start;
+                            justify-content: flex-start;
 
                             &:not(:last-child) {
                                 margin-bottom: $size-half;
@@ -201,6 +203,7 @@
                                 margin-right: $size-1;
 
                                 svg {
+                                    margin-top: 12px;
                                     height: 100%;
                                     width: 100%;
                                 }
