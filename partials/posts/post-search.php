@@ -15,7 +15,7 @@
     $arg = array(
      'post_type' => 'post',
      'title_filter' => $searching,
-     'posts_per_page' => 3,
+     'posts_per_page' => 4,
      'paged' => $oncurrentPage
     );
      $post_excerpt = new \WP_Query($arg);
