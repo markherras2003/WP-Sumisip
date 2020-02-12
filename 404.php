@@ -8,7 +8,7 @@
                 <a href="<?= get_home_url(); ?>" class="dark">Go Home</a>
             </div>
             <div class="sumisip-brand">
-                <img src="<?= get_template_directory_uri(); ?>/assets/images/svg/branding-symbol.svg">
+                <img src="<?= get_template_directory_uri(); ?>/assets/images/svg/broken-seal.svg">
             </div>
         </div>
     </section>
