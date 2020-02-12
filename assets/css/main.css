@@ -7213,6 +7213,18 @@ p.sm,
   text-decoration: none;
 }
 
+.composition:nth-child(even) p img {
+  float: left !important;
+}
+
+.composition:nth-child(odd) p img {
+  float: right !important;
+}
+
+.composition:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 /* Custom Directory */
 /*  Animations Library */
 @-webkit-keyframes dropFadeMin {

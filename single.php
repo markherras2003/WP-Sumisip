@@ -96,7 +96,7 @@ $i=0;
                   <?php  }
                         if($i===0) {              
                   ?>
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png" class="photo-effect">
                   <?php
                         }
                     ?>

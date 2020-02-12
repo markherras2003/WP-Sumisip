@@ -1,0 +1,22 @@
+.composition {
+
+    &:nth-child(even) {
+        p {
+            img {
+                float: left!important;
+            }
+        }
+    }
+
+    &:nth-child(odd) {
+        p {
+            img {
+                float: right!important;
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: $size-3;
+    }
+}

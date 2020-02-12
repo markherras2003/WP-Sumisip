@@ -650,24 +650,6 @@ function __search_by_title_only( $search,  $wp_query ){
 
     add_filter('posts_search', '__search_by_title_only', 500, 2);
 
-
-
-
-	function custom_post_single( $atts ) {
-		$a = shortcode_atts( array(
-		   'description' => 'lorem ipsum dolor',
-		   'images' => 'test.jpg'
-		), $atts );
-		return '<div class="sub-content">
-		<div class="sub-post-content">
-		' . $a['description'] . '</div>
-		<div class="sub-img-content">
-		<img src="'.$a['images'].'"/></div>
-		</div>';
-	}
-
-	 add_shortcode( 'singlepost', 'custom_post_single' );
-
 	 //Exclude pages from WordPress Search
 if (!is_admin()) {
 	function wpb_search_filter($query) {
@@ -713,3 +695,34 @@ add_action( 'pre_get_posts', function($q) {
     }
     return;
 });
+
+
+
+
+function opening_composition_shortcode( $atts ) {
+	return '<div class="composition">';
+}
+
+function closing_composition_shortcode( $atts ) {
+	return '</div>';
+}
+
+
+function change_mce_options($init){
+    $init["forced_root_block"] = false;
+    $init["force_br_newlines"] = true;
+    $init["force_p_newlines"] = false;
+    $init["convert_newlines_to_brs"] = true;
+    return $init;       
+}
+add_filter('tiny_mce_before_init','change_mce_options');
+
+
+
+ add_shortcode( 'opening_composition', 'opening_composition_shortcode' );
+ add_shortcode( 'closing_composition', 'closing_composition_shortcode' );
+
+
+
+
+include( get_theme_file_path('/inc/swp-btnquotecu.php'));
