@@ -93,7 +93,7 @@ textarea {
 
 .button,
 button, .footer-section .footer-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li .icon-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .social-footer li a .icon-wrapper, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .upper-hero-grid .hero-preview, .history-section, .history-section .timeline .timeline-control-left,
-.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .page-404, .page-404 .global-wrapper {
+.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .pagination, .page-404, .page-404 .global-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6838,63 +6838,21 @@ p.sm,
 }
 
 .pagination {
+  list-style-type: none;
   margin-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  width: 100%;
 }
 
-.pagination a {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: #707070;
+.pagination li a {
+  display: block;
+  padding: 8px 16px;
 }
 
-.pagination a:hover {
-  color: #353535;
-}
-
-.pagination a.previous-pagination {
-  padding-right: 16px;
-}
-
-.pagination a.next-pagination {
-  padding-left: 16px;
-}
-
-.pagination .numeric-pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.pagination .numeric-pagination a {
-  padding-left: 16px;
-  padding-right: 16px;
-  color: #707070;
-}
-
-.pagination .numeric-pagination a:hover {
-  color: #353535;
-}
-
-.pagination .numeric-pagination a.active {
+.pagination li a.active {
   border: 1px solid #353535;
+}
+
+.pagination li a.active:hover {
+  text-decoration: none;
 }
 
 .loading {
