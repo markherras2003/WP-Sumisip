@@ -75,6 +75,7 @@ get_header();
         <a href="<?= get_category_link( $key->term_id ) ?>"><?= $key->name ?></a> 
     <?php
     }; ?>
+        <a href="./"><?php the_title(); ?> </a>
 </div>
 
 <h1 class="post-title margin-bottom-3"><?= the_title(); ?></h1>
