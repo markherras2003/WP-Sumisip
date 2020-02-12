@@ -707,6 +707,18 @@ function closing_composition_shortcode( $atts ) {
 	return '</div>';
 }
 
+
 add_shortcode( 'opening_composition', 'opening_composition_shortcode' );
 add_shortcode( 'closing_composition', 'closing_composition_shortcode' );
 include( get_theme_file_path('/inc/swp-btnquotecu.php'));
+
+function title_filter( $where, $wp_query ){
+	global $wpdb;
+	if( $search_term = $wp_query->get( 'title_filter' ) ) :
+	$search_term = $wpdb->esc_like( $search_term );
+	$search_term = ' \'%' . $search_term . '%\'';
+	$title_filter_relation = ( strtoupper( $wp_query->get( 'title_filter_relation' ) ) == 'OR' ? 'OR' : 'AND' );
+	$where .= ' '.$title_filter_relation.' ' . $wpdb->posts . '.post_title LIKE ' . $search_term;
+	endif;
+	return $where;
+   }
