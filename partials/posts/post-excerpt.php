@@ -25,8 +25,6 @@
     <div class="posts-item" id="contentInner">
     <?php 
         $i=0;
-        echo $oncurrentPage;
-        echo $post_excerpt->max_num_pages;
         while($post_excerpt->have_posts()): $post_excerpt->the_post();  ?>
         <div class="post-item">
             <?php
