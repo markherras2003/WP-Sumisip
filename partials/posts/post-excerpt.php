@@ -1,5 +1,6 @@
 <?php 
     global $post;
+    global $dynamic_featured_image;
     $author_ID = $post->post_author;
 ?>
 <main>
@@ -27,24 +28,29 @@
             </div>
           </div>
                  <?php
-                    }
-                     if( has_post_thumbnail()) {
-                     ?>
+                    } ?>
                      <div class="post-img"> 
-  
-                  <?=  ( ($i+1) === 1 )? the_post_thumbnail('',array('class'=> 'photo-effect')): the_post_thumbnail()?>
-            <?php } else {
-                    ?>
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png" class="photo-effect">
+                    <?php     
+                    $x=0;
+                    $b=0;
+                    $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                    foreach($featured_images as $featured_image) { 
+                    $x++;
+                        if($x===1) {?>
+
+                        <img src="<?= $featured_image['full']; ?>" class="<?=  ( $i > 0   )? '': 'photo-effect' ?>" alt="Article Image">    
+
+                    <?php   } ?>                
+                    <?php }
+                        if($x===0) {    
+                    ?>    
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">
                     <?php
-                }
-                $i++;
-            
-            ?>
-            </div>
+                        }
+                    $i++;?>
+                    </div>
             <div class="post-details">
             <?php if ($i > 1) { ?>
-  
             <div class="post-title">
                 <a href="<?= get_permalink();?>">
                     <h3 class="post-title"><?php the_title() ?></h3>
