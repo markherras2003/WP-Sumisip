@@ -1,0 +1,31 @@
+.countdown-event {
+    position: relative;
+    z-index: 99;
+    color: getColor(White);
+
+    .display-1 {
+        margin-bottom: $size-4;
+    }
+
+    .countdown-time {
+        display: flex;
+        justify-content: center;
+    }
+
+    .count {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &:not(:first-child) {
+            margin-left: $size-4;
+        }
+        &:not(:last-child) {
+            margin-right: $size-4;
+        }
+        
+        p {
+            opacity: 0.6;
+        }
+    }
+}
