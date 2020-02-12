@@ -25,8 +25,6 @@
     <div class="posts-item" id="contentInner">
     <?php 
         $i=0;
-        echo $oncurrentPage;
-        echo $post_excerpt->max_num_pages;
         while($post_excerpt->have_posts()): $post_excerpt->the_post();  ?>
         <div class="post-item">
             <?php
@@ -94,13 +92,6 @@
     <div class="pagination-wrapper">
         <?php previous_posts_link('') ?>
         <ul class="pagination" id="page-navigation">
-
-           <!-- <a href="#">1</a>
-            <a href="#" class="active">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-           -->
            <?php foreach ( $pagination as $key => $page_link ) : ?>
 						<li class="<?php if ( strpos( $page_link, 'current' ) !== false ) { echo 'active'; } ?>"><?php echo $page_link ?></li>
 		   <?php endforeach ?>
