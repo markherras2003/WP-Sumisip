@@ -6973,13 +6973,15 @@ p.sm,
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
+  margin-left: 40px;
 }
 
 .page-404 .sumisip-brand img {
+  height: auto;
+  width: 400px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  opacity: 0.3;
 }
 
 .photo-stacks {

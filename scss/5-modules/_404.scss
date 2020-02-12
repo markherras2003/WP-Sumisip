@@ -13,11 +13,13 @@
     .sumisip-brand {
         flex-shrink: 0;
         width: 100%;
-        max-width: 600px;
+        max-width: 400px;
+        margin-left: $size-5;
 
         img {
+            height: auto;
+            width: 400px;
             filter: grayscale(100%);
-            opacity: 0.3;
         }
     }
 }
