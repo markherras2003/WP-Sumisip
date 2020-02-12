@@ -707,22 +707,6 @@ function closing_composition_shortcode( $atts ) {
 	return '</div>';
 }
 
-
-function change_mce_options($init){
-    $init["forced_root_block"] = false;
-    $init["force_br_newlines"] = true;
-    $init["force_p_newlines"] = false;
-    $init["convert_newlines_to_brs"] = true;
-    return $init;       
-}
-add_filter('tiny_mce_before_init','change_mce_options');
-
-
-
- add_shortcode( 'opening_composition', 'opening_composition_shortcode' );
- add_shortcode( 'closing_composition', 'closing_composition_shortcode' );
-
-
-
-
+add_shortcode( 'opening_composition', 'opening_composition_shortcode' );
+add_shortcode( 'closing_composition', 'closing_composition_shortcode' );
 include( get_theme_file_path('/inc/swp-btnquotecu.php'));

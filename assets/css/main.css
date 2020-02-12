@@ -6154,10 +6154,6 @@ p.sm,
   margin-bottom: 40px;
 }
 
-.post-body-section .global-wrapper .post-main-body .post-content h2 {
-  margin-bottom: 8px;
-}
-
 .post-body-section .global-wrapper .post-main-body .post-content img {
   max-width: 60%;
   margin: 24px;
@@ -7213,6 +7209,14 @@ p.sm,
   text-decoration: none;
 }
 
+.composition h2, .composition h3, .composition h4, .composition h5 {
+  margin-bottom: 8px;
+}
+
+.composition p:not(:last-child) {
+  margin-bottom: 4px;
+}
+
 .composition:nth-child(even) p img {
   float: left !important;
 }
@@ -7222,7 +7226,7 @@ p.sm,
 }
 
 .composition:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 /* Custom Directory */

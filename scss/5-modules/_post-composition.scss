@@ -1,5 +1,14 @@
 .composition {
 
+    h2,h3,h4,h5 {
+        margin-bottom: $size-1
+    }
+    p {
+        &:not(:last-child) {
+            margin-bottom: $size-half;
+        }
+    }
+
     &:nth-child(even) {
         p {
             img {
@@ -17,6 +26,7 @@
     }
 
     &:not(:last-child) {
-        margin-bottom: $size-3;
+        margin-bottom: $size-2;
     }
+
 }
