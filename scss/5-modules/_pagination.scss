@@ -21,6 +21,10 @@
 
         }
 
+        .current {
+            padding: $size-1 $size-2;
+        }
+
         a {
             display: block;
             padding: $size-1 $size-2;
