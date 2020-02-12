@@ -44,6 +44,12 @@ add_action( 'wp_enqueue_scripts', function(){
     wp_enqueue_script('my_ajax_script');
 } );
 
+function sumisip_theme_customization() {
+wp_enqueue_script('customizer_script', get_theme_file_uri( '/js/customizer_script.js', array('jquery') ));
+}
+add_action( 'admin_enqueue_scripts'  , 'sumisip_theme_customization' );
+
+
 
 
 //hook into the init action and call create_topics_nonhierarchical_taxonomy when it fires
