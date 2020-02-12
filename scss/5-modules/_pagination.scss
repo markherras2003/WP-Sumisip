@@ -10,17 +10,21 @@
 
     li {
 
-        a {
-            display: block;
-            padding: $size-1 $size-2;
+        &.active {
+            border: 1px solid getColor(Black);
 
-            &.active {
-                border: 1px solid getColor(Black);
-
+            a {
                 &:hover {
                     text-decoration: none;
                 }
             }
+
+        }
+
+        a {
+            display: block;
+            padding: $size-1 $size-2;
+
         }
 
     }
