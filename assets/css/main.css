@@ -6842,17 +6842,17 @@ p.sm,
   margin-top: 40px;
 }
 
-.pagination li a {
-  display: block;
-  padding: 8px 16px;
-}
-
-.pagination li a.active {
+.pagination li.active {
   border: 1px solid #353535;
 }
 
-.pagination li a.active:hover {
+.pagination li.active a:hover {
   text-decoration: none;
+}
+
+.pagination li a {
+  display: block;
+  padding: 8px 16px;
 }
 
 .loading {
