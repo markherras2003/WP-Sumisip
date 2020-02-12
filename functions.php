@@ -695,3 +695,15 @@ include( get_theme_file_path('/inc/theme-customizer.php')); // Custom file theme
 include( get_theme_file_path('/inc/customizer/misc.php')); // Social
 // This will add a filter on `excerpt_more` that returns an empty string.
 add_filter( 'excerpt_more', '__return_empty_string' ); 
+
+add_action( 'pre_get_posts', function($q) {
+    if (!is_admin() && $q->is_main_query() && $q->is_category()) {
+        if ($q->is_category( array(1,2) )) {
+            $q->set('posts_per_page', 3);
+        }
+        if ($q->is_category( array(3,4) )) {
+            $q->set('posts_per_page', 3);
+        }
+    }
+    return;
+});

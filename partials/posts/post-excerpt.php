@@ -1,18 +1,35 @@
 <?php 
-    global $post;
+    //global $post;
     global $dynamic_featured_image;
     $author_ID = $post->post_author;
+    $oncurrentPage = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $arg = array(
+        'post_type' => 'post',
+        'posts_per_page' => 3,
+        'paged' => $oncurrentPage
+         
+    );
+    $post_excerpt = new \WP_Query($arg);
+
+    $pagination = paginate_links( array(
+        'base' => str_replace( PHP_INT_MAX, '%#%', esc_url( get_pagenum_link( PHP_INT_MAX ) ) ),
+        'format' => '?paged=%#%',
+        'current' => $oncurrentPage,
+        'total' => $post_excerpt->max_num_pages,
+        'type' => 'array',
+        'prev_text' => 'Previous',
+        'next_text' => 'Next',
+    ) );
 ?>
-<main>
-    <div class="posts-item">
+<main id="mainContent">
+    <div class="posts-item" id="contentInner">
     <?php 
         $i=0;
-        while( have_posts() ) :  ?>
-        <?php 
-        the_post(); ?>
+        echo $oncurrentPage;
+        echo $post_excerpt->max_num_pages;
+        while($post_excerpt->have_posts()): $post_excerpt->the_post();  ?>
         <div class="post-item">
             <?php
-           
                     if ($i+1 === 1) {
                     ?>
           <div class="heading-group">
@@ -72,20 +89,43 @@
         </div>
 
     </div>
-
     <?php    endwhile; ?>
 
     <div class="pagination">
-        <a href="#" class="previous-pagination">Previous</a>
-        <div class="numeric-pagination">
-            <a href="#">1</a>
+        <?php previous_posts_link('') ?>
+        <ul class="numeric-pagination" id="page-navigation">
+
+           <!-- <a href="#">1</a>
             <a href="#" class="active">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a>
-        </div>
-        <a href="#" class="next-pagination">Next</a>
-</div>
+           -->
+           <?php foreach ( $pagination as $key => $page_link ) : ?>
+						<li class="<?php if ( strpos( $page_link, 'current' ) !== false ) { echo ' active'; } ?>"><?php echo $page_link ?></li>
+		   <?php endforeach ?>
+    
+        </ul>
+       <?php next_posts_link('', $post_excerpt->max_num_pages) ?>
+
+    </div>
+
+<script type="text/javascript" charset="utf-8">
+    $(window).on('load', function() {
+        $('body').on('click', '#page-navigation a',  function(e) {
+        e.preventDefault();
+        var link = jQuery(this).attr('href');
+            jQuery('#mainContent').html('');
+            jQuery('#mainContent').addClass('loading');
+            setTimeout(() => {
+            jQuery('#mainContent').removeClass('loading');
+            jQuery('#mainContent').load(link+' #contentInner'); 
+            }, 500);
+    });
+    
+    });
+  </script>
+
 
             </div>
 
