@@ -6851,6 +6851,7 @@ p.sm,
 }
 
 .pagination li .current {
+  display: block;
   padding: 8px 16px;
 }
 
