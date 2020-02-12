@@ -91,9 +91,9 @@
     </div>
     <?php    endwhile; ?>
 
-    <div class="pagination">
+    <div class="pagination-wrapper">
         <?php previous_posts_link('') ?>
-        <ul class="numeric-pagination" id="page-navigation">
+        <ul class="pagination" id="page-navigation">
 
            <!-- <a href="#">1</a>
             <a href="#" class="active">2</a>
@@ -102,7 +102,7 @@
             <a href="#">5</a>
            -->
            <?php foreach ( $pagination as $key => $page_link ) : ?>
-						<li class="<?php if ( strpos( $page_link, 'current' ) !== false ) { echo ' active'; } ?>"><?php echo $page_link ?></li>
+						<li class="<?php if ( strpos( $page_link, 'current' ) !== false ) { echo 'active'; } ?>"><?php echo $page_link ?></li>
 		   <?php endforeach ?>
     
         </ul>
