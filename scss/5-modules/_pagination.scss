@@ -4,48 +4,26 @@
 }
 
 .pagination {
+    @extend %center-all;
+    list-style-type: none;
     margin-top: $size-5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: 100%;
 
-    a {
-        padding-top: $size-1;
-        padding-bottom: $size-1;
-        color: #707070;
-
-        &:hover {
-            color: getColor(Black);
-        }
-
-        &.previous-pagination {
-            padding-right: $size-2;
-        }
-        &.next-pagination {
-            padding-left: $size-2;
-        }
-    }
-
-    .numeric-pagination {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    li {
 
         a {
-            padding-left: $size-2;
-            padding-right: $size-2;
-            color: #707070;
-
-            &:hover {
-                color: getColor(Black);
-            }
+            display: block;
+            padding: $size-1 $size-2;
 
             &.active {
                 border: 1px solid getColor(Black);
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
+
     }
+
 
 }
