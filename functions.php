@@ -721,4 +721,15 @@ function title_filter( $where, $wp_query ){
 	$where .= ' '.$title_filter_relation.' ' . $wpdb->posts . '.post_title LIKE ' . $search_term;
 	endif;
 	return $where;
-   }
+}
+
+
+add_filter( 'rest_authentication_errors', 'sumisip_api_request_ips_allowed' );
+function sumisip_api_request_ips_allowed( $errors ){
+    $allowed_ips = array( 'localhost', '192.168.0.251', '45.13.132.15' );
+    $request_server = $_SERVER['REMOTE_ADDR'];
+    if( ! in_array( $request_server, $allowed_ips ) )
+        return new WP_Error( 'forbidden_access', 'Access denied', array( 'status' => 403 ) );
+    return $errors;
+
+}
