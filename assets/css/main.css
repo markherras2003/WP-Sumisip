@@ -7576,6 +7576,7 @@ p:not(:last-child),
       -ms-flex-pack: end;
           justify-content: flex-end;
   text-decoration: none;
+  overflow: hidden;
 }
 
 .event-group .event-item .event-details {
@@ -7587,7 +7588,7 @@ p:not(:last-child),
 
 .event-group .event-item .event-details .event-title {
   margin-bottom: 4px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .event-group .event-item img {
@@ -7609,6 +7610,18 @@ p:not(:last-child),
 
 .event-group .event-item:not(:last-child) {
   margin-bottom: 4px;
+}
+
+.event-group .event-item:hover .event-details .event-title {
+  margin-bottom: 4px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.event-group .event-item:hover img {
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+  -webkit-transform: rotate(1deg) scale(1.05);
+          transform: rotate(1deg) scale(1.05);
 }
 
 /* Custom Directory */

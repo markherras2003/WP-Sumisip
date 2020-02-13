@@ -12,16 +12,17 @@
     align-items: center;
     justify-content: flex-end;
     text-decoration: none;
+    overflow: hidden;
 
     .event-details {
       position: relative;
       z-index: 2;
       text-align: right;
-      color: getColor( White );
+      color: getColor(White);
 
       .event-title {
-          margin-bottom: $size-half;
-          color: colorOpacity( getColor( White ), 60);
+        margin-bottom: $size-half;
+        color: colorOpacity(getColor(White), 50);
       }
     }
 
@@ -42,6 +43,20 @@
 
     &:not(:last-child) {
       margin-bottom: $size-half;
+    }
+
+    &:hover {
+      .event-details {
+        .event-title {
+          margin-bottom: $size-half;
+          color: colorOpacity(getColor(White), 85);
+        }
+      }
+
+      img {
+        transition-duration: 150ms;
+        transform: rotate(1deg) scale(1.05);
+      }
     }
   }
 }
