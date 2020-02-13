@@ -1,31 +1,21 @@
-.countdown-event {
-    position: relative;
-    z-index: 99;
-    color: getColor(White);
+.countdown-timer {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  color: getColor(Marigold);
 
-    .display-1 {
-        margin-bottom: $size-4;
+  .count {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .display-3 {
+      font-weight: 300;
     }
 
-    .countdown-time {
-        display: flex;
-        justify-content: center;
+    p {
+      opacity: 0.5;
     }
+  }
 
-    .count {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        &:not(:first-child) {
-            margin-left: $size-4;
-        }
-        &:not(:last-child) {
-            margin-right: $size-4;
-        }
-        
-        p {
-            opacity: 0.6;
-        }
-    }
 }

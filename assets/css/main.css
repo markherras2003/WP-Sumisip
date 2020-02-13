@@ -7481,26 +7481,18 @@ p:not(:last-child),
   }
 }
 
-.countdown-event {
-  position: relative;
-  z-index: 99;
-  color: #FFFFFF;
-}
-
-.countdown-event .display-1 {
-  margin-bottom: 32px;
-}
-
-.countdown-event .countdown-time {
+.countdown-timer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 220px;
+  color: #EAC435;
 }
 
-.countdown-event .count {
+.countdown-timer .count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7513,16 +7505,12 @@ p:not(:last-child),
           flex-direction: column;
 }
 
-.countdown-event .count:not(:first-child) {
-  margin-left: 32px;
+.countdown-timer .count .display-3 {
+  font-weight: 300;
 }
 
-.countdown-event .count:not(:last-child) {
-  margin-right: 32px;
-}
-
-.countdown-event .count p {
-  opacity: 0.6;
+.countdown-timer .count p {
+  opacity: 0.5;
 }
 
 .page {

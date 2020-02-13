@@ -85,6 +85,7 @@
         }
       }
     }
+
     .post-categories {
       list-style-type: none;
       @extend %center-all;
@@ -100,12 +101,12 @@
         }
       }
     }
+    
   }
 
   @include md {
     min-height: 400px;
   }
-
 }
 
 .no-item {
@@ -114,5 +115,4 @@
   .pagination {
     display: none;
   }
-  
 }
