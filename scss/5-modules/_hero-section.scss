@@ -69,7 +69,7 @@
                 animation-delay: 200ms;
 
                 @include sm {
-                    -webkit-line-clamp: 6;
+                    -webkit-line-clamp: 3;
                 }
             }
 
@@ -77,6 +77,16 @@
                 animation-delay: 300ms;
             }
 
+        }
+
+        &.transition {
+            opacity: 0;
+
+            .heading-group {
+                span, h1, .lead, a {
+                    animation: none;
+                }
+            }
         }
     }
 
@@ -355,6 +365,7 @@
             grid-row-start: 1;
             grid-row-end: 2;
             margin-top: $size-2;
+            // height: 828px;
         }
 
         .hero-details {
@@ -364,6 +375,7 @@
             grid-row-end: 3;
             margin-right: 0;
             margin-bottom: $size-4;
+            // height: 268px;
 
             .heading-group {
                 margin-top: 0;
@@ -455,7 +467,7 @@
                             height: 3px;
                             border-radius: 999px;
                             background-color: getColor(Marigold);
-                            animation: heroSliderLoading 8s ease-in both;
+                            animation: heroSliderLoading 7.8s ease-in both;
 
                             @keyframes heroSliderLoading {
                                 0% {

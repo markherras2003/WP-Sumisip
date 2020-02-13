@@ -1,6 +1,6 @@
 $(window).on('load', function() {
   // Remove Loading;
-  $('.history-section').removeClass('loading');
+  $('.history-section .global-wrapper').removeClass('loading');
 
   // Initialize first timeline entry;
   var firstTimelineBlock = $('.timeline .active');

@@ -4423,7 +4423,7 @@ p.sm,
       align-self: flex-start;
 }
 
-.side-by-side.inverted .preview {
+.side-by-side.reverse .preview {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -4431,17 +4431,23 @@ p.sm,
   margin-left: 16px;
 }
 
-.side-by-side.inverted .preview.blurry-preview {
+.side-by-side.reverse .preview.blurry-preview {
   margin-right: 0;
   margin-left: 40px;
 }
 
-.side-by-side.inverted .details {
+.side-by-side.reverse .details {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   margin-left: 0;
   margin-right: 16px;
+}
+
+.side-by-side.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 992px) {
@@ -4453,8 +4459,8 @@ p.sm,
   }
   .side-by-side .preview,
   .side-by-side .details,
-  .side-by-side.inverted .preview,
-  .side-by-side.inverted .details {
+  .side-by-side.reverse .preview,
+  .side-by-side.reverse .details {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
@@ -4462,12 +4468,12 @@ p.sm,
   .side-by-side .details {
     margin-top: 16px;
   }
-  .side-by-side.inverted .preview {
+  .side-by-side.reverse .preview {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  .side-by-side.inverted .details {
+  .side-by-side.reverse .details {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -4871,13 +4877,22 @@ p.sm,
 
 @media (max-width: 576px) {
   .upper-hero-grid .hero-details .heading-group .lead {
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 3;
   }
 }
 
 .upper-hero-grid .hero-details .heading-group a {
   -webkit-animation-delay: 300ms;
           animation-delay: 300ms;
+}
+
+.upper-hero-grid .hero-details.transition {
+  opacity: 0;
+}
+
+.upper-hero-grid .hero-details.transition .heading-group span, .upper-hero-grid .hero-details.transition .heading-group h1, .upper-hero-grid .hero-details.transition .heading-group .lead, .upper-hero-grid .hero-details.transition .heading-group a {
+  -webkit-animation: none;
+          animation: none;
 }
 
 .upper-hero-grid .hero-preview {
@@ -5327,8 +5342,8 @@ p.sm,
   height: 3px;
   border-radius: 999px;
   background-color: #EAC435;
-  -webkit-animation: heroSliderLoading 8s ease-in both;
-          animation: heroSliderLoading 8s ease-in both;
+  -webkit-animation: heroSliderLoading 7.8s ease-in both;
+          animation: heroSliderLoading 7.8s ease-in both;
 }
 
 @-webkit-keyframes heroSliderLoading {
@@ -7103,7 +7118,7 @@ p.sm,
 .photo-stacks .photo-stack-display {
   position: relative;
   width: 100%;
-  height: 380px;
+  height: 340px;
 }
 
 .photo-stacks .photo-stack-display .main-stack,
@@ -7127,8 +7142,8 @@ p.sm,
   }
   100% {
     opacity: 0;
-    -webkit-transform: rotate(-4deg) scale(1.05);
-            transform: rotate(-4deg) scale(1.05);
+    -webkit-transform: rotate(-6deg) scale(1.05);
+            transform: rotate(-6deg) scale(1.05);
   }
 }
 
@@ -7140,8 +7155,8 @@ p.sm,
   }
   100% {
     opacity: 0;
-    -webkit-transform: rotate(-4deg) scale(1.05);
-            transform: rotate(-4deg) scale(1.05);
+    -webkit-transform: rotate(-6deg) scale(1.05);
+            transform: rotate(-6deg) scale(1.05);
   }
 }
 
@@ -7189,8 +7204,8 @@ p.sm,
 @-webkit-keyframes scaleBGStack {
   0% {
     opacity: 0;
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
   }
   100% {
     opacity: 1;
@@ -7202,8 +7217,8 @@ p.sm,
 @keyframes scaleBGStack {
   0% {
     opacity: 0;
-    -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
   }
   100% {
     opacity: 1;
@@ -7255,7 +7270,19 @@ p.sm,
 }
 
 .photo-stacks .controls ul li.active {
+  background-color: #353535;
+}
+
+.photo-stacks .controls.teal ul li.active {
   background-color: #0B928E;
+}
+
+.photo-stacks .controls.matisse ul li.active {
+  background-color: #345995;
+}
+
+.photo-stacks .controls.rosewood ul li.active {
+  background-color: #AA0952;
 }
 
 .photo-stacks.extended {
@@ -7268,7 +7295,7 @@ p.sm,
 
 @media (max-width: 768px) {
   .photo-stacks .photo-stack-display {
-    height: 340px;
+    height: 330px;
   }
   .photo-stacks.extended .photo-stack-display {
     height: 340px;
@@ -7286,7 +7313,7 @@ p.sm,
 
 @media (max-width: 376px) {
   .photo-stacks .photo-stack-display {
-    height: 250px;
+    height: 220px;
   }
   .photo-stacks.extended .photo-stack-display {
     height: 250px;
@@ -7381,22 +7408,6 @@ p.sm,
   opacity: 0.6;
 }
 
-.page.tour .side-by-side {
-  margin-top: 104px;
-}
-
-.page.tour .side-by-side:first-child {
-  margin-top: 40px;
-}
-
-.page.countdown .side-by-side {
-  margin-top: 104px;
-}
-
-.page.countdown .side-by-side:first-child {
-  margin-top: 0px;
-}
-
 .page .page-heading-wrapper .section-padding {
   padding-bottom: 0;
 }
@@ -7415,6 +7426,14 @@ p.sm,
 
 .page .side-by-side {
   margin-top: 64px;
+}
+
+.page.countdown .side-by-side {
+  margin-top: 104px;
+}
+
+.page.countdown .side-by-side:first-child {
+  margin-top: 0px;
 }
 
 .event .section-padding {
@@ -7653,4 +7672,3 @@ p.sm,
             transform: translateY(0px);
   }
 }
-/*# sourceMappingURL=main.css.map */

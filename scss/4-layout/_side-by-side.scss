@@ -105,7 +105,7 @@
     }
   }
 
-  &.inverted {
+  &.reverse {
 
     .preview {
       order: 2;
@@ -127,14 +127,18 @@
 
   }
 
+  &.align-items-center {
+    align-items: center;
+  }
+
 
   @include lg {
     flex-direction: column;
 
     .preview,
     .details,
-    &.inverted .preview,
-    &.inverted .details {
+    &.reverse .preview,
+    &.reverse .details {
       margin-left: 0;
       margin-right: 0;
       width: 100%;
@@ -145,7 +149,7 @@
       margin-top: $size-2;
     }
 
-    &.inverted {
+    &.reverse {
 
       .preview {
         order: 1;

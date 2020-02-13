@@ -1,4 +1,5 @@
-$(window).on('load', function() {
+$(document).ready(function() {
+
   // Initialize first slide data;
   var heroPrevGroup = $('.hero-preview-group');
   var firstHeroSlide = $('.hero-preview-controls .active');
@@ -13,7 +14,7 @@ $(window).on('load', function() {
     heroPrevGroup.addClass('transitioning');
   }, 700);
 
-  // Initialize Controls;
+// Initialize Controls;
   heroPrevControls.show();
 
   var heroIntervalTimer = 8 * 1000;
@@ -128,7 +129,7 @@ $(window).on('load', function() {
     var link = $('.hero-details a');
 
     var heroDetails = $('.hero-details');
-    heroDetails.hide();
+    heroDetails.addClass('transition');
 
     overline.text(overlineData);
     heading.text(headingData);
@@ -136,7 +137,7 @@ $(window).on('load', function() {
     link.attr('href', hrefData);
 
     setTimeout(function() {
-      heroDetails.show();
+      heroDetails.removeClass('transition');
     }, 100);
   }
 
@@ -159,8 +160,6 @@ $(window).on('load', function() {
     }, heroIntervalTimer);
 
     // Update indicator;
-    $('#hero-preview-number-indicator').text( sourceElement.index() + 1 );
-
+    $('#hero-preview-number-indicator').text(sourceElement.index() + 1);
   });
-
 });
