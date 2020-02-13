@@ -46,16 +46,22 @@
     }
   }
 
+  .button,
   button {
     margin-top: $size-2;
   }
 
+  &.text-center {
+    text-align: center;
+  }
+
   @include md {
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
       margin-bottom: $size-1;
     }
-
-
+    .button,
     button {
       margin-top: $size-1;
     }

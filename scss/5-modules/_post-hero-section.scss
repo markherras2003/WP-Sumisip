@@ -1,116 +1,117 @@
 .post-hero-section {
-    min-height: 500px;
-    padding: 0px $size-4;
-    background-color: #ececec;
+  min-height: 500px;
+  padding: 0px $size-4;
+  background-color: #ececec;
+  position: relative;
+  z-index: 5;
+  @extend %center-all;
+
+  .post-hero-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: getColor(Dark);
+      opacity: 0.6;
+    }
+  }
+
+  .post-hero-wrapper {
     position: relative;
-    z-index: 5;
-
-    .post-hero-background {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0px;
-        top: 0px;
-        z-index: 1;
-
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position:  center center;
-        }
-
-        &:after {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            content: '';
-            background: getColor(Dark);
-            opacity: 0.6;
-        }
-    }
-
-
+    z-index: 100000;
     @extend %center-all;
+    flex-direction: column;
 
-    .post-hero-wrapper {
-        position: relative;
-        z-index: 100000;
-        @extend %center-all;
-        flex-direction: column;
+    .post-dir {
+      margin-bottom: $size-2;
 
+      a {
+        color: getColor(White);
 
-
-        .post-dir {
-            margin-bottom: $size-2;
-
-            a {
-                color: getColor(White);
-
-                &:not(:last-child) {
-                    &::after {
-                        content: '/';
-                        margin-left: $size-1;
-                    }
-                }
-
-                &:hover {
-                    text-decoration: none;
-                }
-            }
+        &:not(:last-child) {
+          &::after {
+            content: '/';
+            margin-left: $size-1;
+          }
         }
 
-        h1 {
-            font-weight: 300;
-            text-align: center;
-            color: getColor(White);
+        &:hover {
+          text-decoration: none;
         }
-
-        .post-etc {
-            margin-top: $size-2;
-
-            a {
-                color: getColor(White);
-                position: relative;
-
-                &:hover {
-                    text-decoration: none;
-                }
-
-                &:not(:last-child) {
-                    &::after {
-                        content: '|';
-                        margin-left: $size-1;
-                        // margin-right: $size-1;
-                        margin-right: 5px;
-                    }
-                }
-            }
-        }
-        .post-categories {
-            list-style-type: none;
-            @extend %center-all;
-
-            li {
-                &:not(:last-child) {
-                    &:after {
-                        content: '/';
-                        color: getColor(White);
-                        margin-right: $size-1;
-                        margin-left: $size-1;
-                    }
-                }
-            }
-        }
+      }
     }
+
+    h1 {
+      font-weight: 300;
+      text-align: center;
+      color: getColor(White);
+    }
+
+    .post-etc {
+      margin-top: $size-2;
+
+      a {
+        color: getColor(White);
+        position: relative;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:not(:last-child) {
+          &::after {
+            content: '|';
+            margin-left: $size-1;
+            // margin-right: $size-1;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .post-categories {
+      list-style-type: none;
+      @extend %center-all;
+
+      li {
+        &:not(:last-child) {
+          &:after {
+            content: '/';
+            color: getColor(White);
+            margin-right: $size-1;
+            margin-left: $size-1;
+          }
+        }
+      }
+    }
+  }
+
+  @include md {
+    min-height: 400px;
+  }
+
 }
 
 .no-item {
-    width: 100%;
+  width: 100%;
 
-    .pagination {
-        display: none;
-    }
+  .pagination {
+    display: none;
+  }
 }
