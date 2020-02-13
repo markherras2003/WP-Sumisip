@@ -3,34 +3,43 @@
     Images, Videos, iFrame, SVG assets, Figures 
 */
 
-
 %photo-effect {
-    object-fit: cover;
-    object-position: center center;
-    padding: 8px;
-    background-color: getColor( White );
-    box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, .16);
+  object-fit: cover;
+  object-position: center center;
+  padding: 8px;
+  background-color: getColor(White);
+  box-shadow: 0px 0px 30px 0px rgba(53, 53, 53, 0.16);
 
-    @include sm {
-        padding: 6px;
-    }
+  @include sm {
+    padding: 6px;
+  }
 }
 
 img {
 
-    &.photo-effect {
-        height: 100%;
-        width: 100%;
-        max-height: 350px;
-        @extend %photo-effect;
-    }
+  &.photo-effect {
+    height: 100%;
+    width: 100%;
+    max-height: 350px;
+    @extend %photo-effect;
+  }
 
+  &.tilt-left {
+    transform: rotate(-1deg);
+  }
+
+  &.tilt-right {
+    transform: rotate(1deg);
+  }
+
+  @include lg {
     &.tilt-left {
-        transform: rotate(-1deg);
+      transform: rotate(0deg);
     }
 
     &.tilt-right {
-        transform: rotate(1deg);
+      transform: rotate(0deg);
     }
+  }
 
 }

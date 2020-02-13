@@ -3,12 +3,23 @@
   h3,
   h4,
   h5 {
-    margin-bottom: $size-1;
+    margin-bottom: $size-2;
   }
 
   p {
     &:not(:last-child) {
       margin-bottom: $size-1;
+    }
+  }
+
+  ul {
+    margin: $size-2 0;
+    margin-left: $size-3;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: $size-1;
+      }
     }
   }
 
@@ -64,6 +75,10 @@
     .button,
     button {
       margin-top: $size-1;
+    }
+
+    &.text-center {
+      text-align: left;
     }
   }
 }

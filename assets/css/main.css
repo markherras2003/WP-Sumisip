@@ -1226,6 +1226,17 @@ img.tilt-right {
           transform: rotate(1deg);
 }
 
+@media (max-width: 992px) {
+  img.tilt-left {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  img.tilt-right {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 /* 
     Set default global styles for: 
     Navigation <nav></nav>
@@ -1919,6 +1930,10 @@ p.lead,
   font-weight: 300;
   font-size: 18px;
   line-height: 28px;
+}
+
+p.lead:not(:last-child),
+.p.lead:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -2005,11 +2020,68 @@ p:not(:last-child),
   }
 }
 
-@media (max-width: 376px) {
-  .global-wrapper.section-padding {
-    padding-top: 32px;
-    padding-bottom: 32px;
+.global-wrapper.section-padding.no-padding-top {
+  padding-top: 0;
+}
+
+.global-wrapper.section-padding.no-padding-bottom {
+  padding-top: 0;
+}
+
+.global-wrapper.content-padding {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.global-wrapper.content-padding:first-child {
+  padding-top: 96px;
+}
+
+.global-wrapper.content-padding:last-child {
+  padding-bottom: 96px;
+}
+
+@media (max-width: 1200px) {
+  .global-wrapper.content-padding:first-child {
+    padding-top: 80px;
   }
+  .global-wrapper.content-padding:last-child {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .global-wrapper.content-padding {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .global-wrapper.content-padding:first-child {
+    padding-top: 64px;
+  }
+  .global-wrapper.content-padding:last-child {
+    padding-bottom: 64px;
+  }
+}
+
+@media (max-width: 576px) {
+  .global-wrapper.content-padding {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .global-wrapper.content-padding:first-child {
+    padding-top: 40px;
+  }
+  .global-wrapper.content-padding:last-child {
+    padding-bottom: 40px;
+  }
+}
+
+.global-wrapper.content-padding.no-padding-top {
+  padding-top: 0;
+}
+
+.global-wrapper.content-padding.no-padding-bottom {
+  padding-top: 0;
 }
 
 .section-wrapper {
@@ -7347,10 +7419,19 @@ p:not(:last-child),
 .post-composition h3,
 .post-composition h4,
 .post-composition h5 {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .post-composition p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.post-composition ul {
+  margin: 16px 0;
+  margin-left: 24px;
+}
+
+.post-composition ul li:not(:last-child) {
   margin-bottom: 8px;
 }
 
@@ -7394,6 +7475,9 @@ p:not(:last-child),
   .page-composition .button,
   .page-composition button {
     margin-top: 8px;
+  }
+  .page-composition.text-center {
+    text-align: left;
   }
 }
 
