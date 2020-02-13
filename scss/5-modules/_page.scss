@@ -1,0 +1,48 @@
+.page {
+
+    &.tour {
+
+        .side-by-side {
+            margin-top: $size-13;
+
+            &:first-child {
+                margin-top: $size-5;
+            }
+        }
+    }
+
+    &.countdown {
+
+        .side-by-side {
+            margin-top: $size-13;
+
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    .page-heading-wrapper {
+
+        .section-padding {
+    
+            padding-bottom: 0;
+            
+            .page-heading {
+                text-align: center;
+        
+                .page-heading-title {
+                    margin-bottom: $size-3;
+                }
+        
+                .page-content {
+                    margin-bottom: $size-3;
+                }
+            }
+        }
+    }
+
+    .side-by-side {
+        margin-top: $size-8;
+    }
+}
