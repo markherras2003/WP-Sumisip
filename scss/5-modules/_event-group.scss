@@ -1,0 +1,132 @@
+.event {
+    .section-padding {
+        padding-bottom: 0px;
+
+        .event-group {
+            @extend %center-all;
+            flex-direction: column;
+        
+            .event-item{
+                // border: 1px solid red;
+                position: relative;
+                height: 130px;
+                width: 100%;
+                max-width: 550px;
+                display: flex;
+                align-items: center;
+        
+                &:hover {
+                    text-decoration: none;
+                }
+        
+        
+                &.teal {
+                    .event-details {
+                        background: getColor(Teal);
+        
+                        &::after {
+                            background-image: linear-gradient(to right, rgba(255,0,0,0), getColor(Teal));
+                        }
+                    }
+                }
+        
+                &.matisse {
+                    .event-details {
+                        background: getColor(Matisse);
+        
+                        &::after {
+                            background-image: linear-gradient(to right, rgba(255,0,0,0), getColor(Matisse));
+                        }
+                    }
+                }
+                &.marigold {
+                    .event-details {
+                        background: getColor(Marigold);
+        
+                        &::after {
+                            background-image: linear-gradient(to right, rgba(255,0,0,0), getColor(Marigold));
+                        }
+                    }
+                }
+                &.iris {
+                    .event-details {
+                        background: getColor(Iris);
+        
+                        &::after {
+                            background-image: linear-gradient(to right, rgba(255,0,0,0), getColor(Iris));
+                        }
+                    }
+                }
+                &.plum {
+                    .event-details {
+                        background: getColor(Plum);
+        
+                        &::after {
+                            background-image: linear-gradient(to right, rgba(255,0,0,0), getColor(Plum));
+                        }
+                    }
+                }
+                &.rust {
+                    .event-details {
+                        background: getColor(Rust);
+        
+                        &::after {
+                            background-image: linear-gradient(to right, rgba(255,0,0,0), getColor(Rust));
+                        }
+                    }
+                }
+        
+                .event-details {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+        
+                    width: 100%;
+                    height: 100%;
+                    max-width: 350px;
+                    flex-shrink: 0;
+                    padding-left: $size-6;
+        
+                    color: getColor(White);
+        
+                    &::after {
+                        position: absolute;
+                        width: 20%;
+                        height: 100%;
+                        content: '';
+                        left: -70px;
+                        bottom: 0;
+                        background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+                    }
+        
+                    .event-title {
+                        margin-bottom: $size-1;
+                    }
+                    
+                }
+        
+                img {
+                    width: 100%;
+                    max-width: 200px;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+        
+                }
+        
+        
+                &:not(:first-child) {
+                    margin-top: $size-half;
+                }
+        
+                &:not(:last-child) {
+                    margin-bottom: $size-half;
+                }
+        
+            }
+        }
+
+    }
+}
+
