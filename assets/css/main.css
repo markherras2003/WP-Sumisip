@@ -92,7 +92,7 @@ textarea {
 }
 
 .button,
-button, .footer-section .footer-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li .icon-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .social-footer li a .icon-wrapper, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .upper-hero-grid .hero-preview, .history-section, .history-section .timeline .timeline-control-left,
+button, .footer-section .footer-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .sumisip-about-footer .contact-list li .icon-wrapper, .footer-section .footer-wrapper .footer-container .footer-flex .social-footer li a .icon-wrapper, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .full-height, .quarter-height, .upper-hero-grid .hero-preview, .history-section, .history-section .timeline .timeline-control-left,
 .history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .pagination, .page-404, .page-404 .global-wrapper, .event .section-padding .event-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4480,6 +4480,14 @@ p.sm,
   }
 }
 
+.full-height {
+  min-height: 100%;
+}
+
+.quarter-height {
+  min-height: 70%;
+}
+
 /*  Modules Directory  */
 .featured-section {
   height: 100%;
@@ -7408,6 +7416,10 @@ p.sm,
   opacity: 0.6;
 }
 
+.page {
+  min-height: 100%;
+}
+
 .page .page-heading-wrapper .section-padding {
   padding-bottom: 0;
 }
@@ -7422,10 +7434,6 @@ p.sm,
 
 .page .page-heading-wrapper .section-padding .page-heading .page-content {
   margin-bottom: 24px;
-}
-
-.page .side-by-side {
-  margin-top: 64px;
 }
 
 .page.countdown .side-by-side {

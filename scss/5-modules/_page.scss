@@ -1,5 +1,6 @@
 .page {
-    
+  min-height: 100%;
+
   .page-heading-wrapper {
     .section-padding {
       padding-bottom: 0;
@@ -17,15 +18,7 @@
       }
     }
   }
-
-  .side-by-side {
-    margin-top: $size-8;
-  }
-
-  &.tour {
-    
-  }
-
+  
   &.countdown {
     .side-by-side {
       margin-top: $size-13;

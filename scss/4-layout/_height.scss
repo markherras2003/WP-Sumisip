@@ -1,0 +1,9 @@
+.full-height {
+  min-height: 100%;
+  @extend %center-all;
+}
+
+.quarter-height {
+  min-height: 70%;
+  @extend %center-all;
+}
