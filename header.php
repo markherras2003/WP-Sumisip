@@ -27,6 +27,9 @@
 if(is_home()) {
     echo '<nav class="rosewood">'; 
 }
+elseif(is_singular('events')) {
+    echo '<nav class="marigold">'; 
+} 
 elseif(is_single()) {
     echo '<nav class="matisse">'; 
 } 

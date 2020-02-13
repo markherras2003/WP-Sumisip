@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Tour Page
+ * Template Name: Delicasy Page
  * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
