@@ -465,20 +465,6 @@ button:hover {
   text-decoration: none;
 }
 
-.button-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.button-group button:last-child {
-  margin-left: 8px;
-}
-
-.button-group a:last-child {
-  margin-left: 8px;
-}
-
 /* 
     Set default global styles for display text:
     .display-1, .display-2, .display-3, .display-4
@@ -1925,7 +1911,6 @@ p,
 .p {
   margin: 0;
   padding: 0;
-  margin-bottom: 8px;
   font-size: 16px;
 }
 
@@ -1941,6 +1926,11 @@ p.sm,
 .p.sm {
   font-size: 13px;
   line-height: 19px;
+}
+
+p:not(:last-child),
+.p:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 @media (max-width: 768px) {
@@ -4466,7 +4456,7 @@ p.sm,
     width: 100%;
   }
   .side-by-side .details {
-    margin-top: 16px;
+    margin-top: 24px;
   }
   .side-by-side.reverse .preview {
     -webkit-box-ordinal-group: 2;
@@ -7352,24 +7342,52 @@ p.sm,
   text-decoration: none;
 }
 
-.composition h2, .composition h3, .composition h4, .composition h5 {
+.post-composition h2,
+.post-composition h3,
+.post-composition h4,
+.post-composition h5 {
   margin-bottom: 8px;
 }
 
-.composition p:not(:last-child) {
-  margin-bottom: 4px;
+.post-composition p:not(:last-child) {
+  margin-bottom: 8px;
 }
 
-.composition:nth-child(even) p img {
+.post-composition:nth-child(even) p img {
   float: left !important;
 }
 
-.composition:nth-child(odd) p img {
+.post-composition:nth-child(odd) p img {
   float: right !important;
 }
 
-.composition:not(:last-child) {
+.post-composition:not(:last-child) {
   margin-bottom: 16px;
+}
+
+.page-composition h2,
+.page-composition h3,
+.page-composition h4 {
+  margin-bottom: 16px;
+}
+
+.page-composition p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.page-composition button {
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .page-composition h2,
+  .page-composition h3,
+  .page-composition h4 {
+    margin-bottom: 8px;
+  }
+  .page-composition button {
+    margin-top: 8px;
+  }
 }
 
 .countdown-event {

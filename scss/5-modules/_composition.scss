@@ -1,0 +1,63 @@
+.post-composition {
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: $size-1;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: $size-1;
+    }
+  }
+
+  &:nth-child(even) {
+    p {
+      img {
+        float: left !important;
+      }
+    }
+  }
+
+  &:nth-child(odd) {
+    p {
+      img {
+        float: right !important;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $size-2;
+  }
+}
+
+.page-composition {
+  h2,
+  h3,
+  h4 {
+    margin-bottom: $size-2;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: $size-1;
+    }
+  }
+
+  button {
+    margin-top: $size-2;
+  }
+
+  @include md {
+    h2, h3, h4 {
+      margin-bottom: $size-1;
+    }
+
+
+    button {
+      margin-top: $size-1;
+    }
+  }
+}

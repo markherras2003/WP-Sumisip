@@ -9,155 +9,149 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    padding: 0;
-    font-weight: 800;
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
 
-    &.light {
-        font-weight: 300;
-    }
+  &.light {
+    font-weight: 300;
+  }
 
-    &.uppercase {
-        text-transform: uppercase;
-    }
+  &.uppercase {
+    text-transform: uppercase;
+  }
 }
 
 .display {
-    &-1 {
-        font-size: 56px;
-        line-height: 64px;
+  &-1 {
+    font-size: 56px;
+    line-height: 64px;
 
-        @include md {
-            font-size: 48px;
-            line-height: 56px;
-        }
+    @include md {
+      font-size: 48px;
+      line-height: 56px;
     }
+  }
 
-    &-2 {
-        font-size: 48px;
-        line-height: 56px;
+  &-2 {
+    font-size: 48px;
+    line-height: 56px;
 
-        @include md {
-            font-size: 40px;
-            line-height: 48px;
-        }
+    @include md {
+      font-size: 40px;
+      line-height: 48px;
     }
+  }
 
-    &-3 {
-        font-size: 40px;
-        line-height: 48px;
-
-        @include md {
-            font-size: 32px;
-            line-height: 38px;
-        }
-    }
-}
-
-h1 {
+  &-3 {
     font-size: 40px;
     line-height: 48px;
 
-    &.light {
-        font-size: 32px;
-    }
-
     @include md {
-        font-size: 32px;
-        line-height: 38px;
+      font-size: 32px;
+      line-height: 38px;
     }
+  }
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 48px;
+
+  &.light {
+    font-size: 32px;
+  }
+
+  @include md {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 38px;
+  font-size: 32px;
+  line-height: 38px;
 
-    &.light {
-        font-size: 24px;
-    }
+  &.light {
+    font-size: 24px;
+  }
 
-    @include md {
-        font-size: 26px;
-        line-height: 34px;
-    }
-
+  @include md {
+    font-size: 26px;
+    line-height: 34px;
+  }
 }
 
 h3 {
-    font-size: 26px;
-    line-height: 34px;
+  font-size: 26px;
+  line-height: 34px;
 
-    @include md {
-        font-size: 24px;
-        line-height: 32px;
-    }
+  @include md {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 h4 {
-    font-size: 24px;
-    line-height: 32px;
+  font-size: 24px;
+  line-height: 32px;
 
-    @include md {
-        font-size: 18px;
-        line-height: 26px;
-    }
+  @include md {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
 h5 {
-    font-size: 18px;
-    line-height: 26px;
+  font-size: 18px;
+  line-height: 26px;
 
-    @include md {
-        font-size: 16px;
-        line-height: 24px;
-    }
+  @include md {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 h6 {
-    font-size: 16px;
-    line-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
 
-    @include md {
-        font-size: 14px;
-        line-height: 21px;
-    }
+  @include md {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
-
-
-
 .section-heading {
-    margin-bottom: $size-4;
+  margin-bottom: $size-4;
 }
 
 .heading-group {
+  margin-bottom: $size-2;
+
+  .overline {
+    margin-bottom: $size-1;
+  }
+
+  .display-1,
+  h1 {
     margin-bottom: $size-2;
-
-    .overline {
-        margin-bottom: $size-1;
-    }
-
-    .display-1,
-    h1 {
-        margin-bottom: $size-2;
-    }
-
+  }
 }
 
 .section-heading-group {
-    text-align: center;
-    margin-bottom: $size-6;
+  text-align: center;
+  margin-bottom: $size-6;
 
-    .display-1,
-    h1 {
-        margin-bottom: $size-2;
-    }
-
+  .display-1,
+  h1 {
+    margin-bottom: $size-2;
+  }
 }
 
 .overline {
-    text-transform: uppercase;
-    opacity: .7;
-    font-size: 21px;
-    display: block;
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-size: 21px;
+  display: block;
 }

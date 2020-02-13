@@ -177,20 +177,3 @@ button {
     }
 
 }
-
-.button-group {
-    display: flex;
-
-    button {
-        &:last-child {
-            margin-left: $size-1;
-        }
-    }
-
-    a {
-        &:last-child {
-            margin-left: $size-1;
-        }
-    }
-
-}
