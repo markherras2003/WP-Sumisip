@@ -13,16 +13,6 @@ get_header();
 
 ?>
 
-	<section class="post-hero-section">
-        <div class="post-hero-background">
-            <img src="<?= get_template_directory_uri() ?>/assets/images/hero/wonder1.jpg">
-        </div>
-
-        <div class="post-hero-wrapper">
-            <h1 class="display-1"><?php single_post_title() ?></h1>
-        </div>
-    </section>
-
 	<?php 
 	/* Start the Loop */
 		while ( have_posts() ):
