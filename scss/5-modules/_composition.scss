@@ -25,7 +25,8 @@
       }
 
       &.margin-top-bottom {
-        margin: $size-3 0;
+        margin-top: $size-3;
+        margin-bottom: $size-3;
       }
 
       &.portrait-mode {
@@ -69,7 +70,7 @@
         &.portrait-mode {
           max-height: none;
         }
-        
+
       }
     }
 

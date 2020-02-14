@@ -6267,7 +6267,7 @@ p:not(:last-child),
 }
 
 .post-body-section .global-wrapper .post-main-body .post-content {
-  margin-bottom: 0 40px;
+  margin-bottom: 40px;
 }
 
 .post-body-section .global-wrapper .post-main-body .post-tags {
@@ -7390,7 +7390,8 @@ p:not(:last-child),
 }
 
 .post-composition p img.margin-top-bottom {
-  margin: 24px 0;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .post-composition p img.portrait-mode {
