@@ -8,7 +8,7 @@ get_header();
         global $post;
         $i=0;
         $featured_images="";
-        $author_ID = $post->post_author;
+        $author_ID =  get_post_field( 'post_author', $post_id );
         global $dynamic_featured_image;
 
             if(have_posts()) {
@@ -121,7 +121,9 @@ $i=0;
 
 <div class="author-profile">
     <div class="author-img">
-        <?= get_avatar($author_ID); ?>
+        <?= get_avatar($author_ID);
+        echo $author_ID;
+        ?>
         <?php
             $fname = get_the_author_meta('first_name');
             $lname = get_the_author_meta('last_name');
@@ -135,7 +137,7 @@ $i=0;
                 //both first name and last name are present
                 $full_name = "{$fname} {$lname}";
             }
-?>
+        ?>
     </div>
     <div class="author-details">
     <span>About the Author</span>
