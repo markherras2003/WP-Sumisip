@@ -17,7 +17,7 @@
         'post_type' => 'post',
         //'posts_per_page' => 1,
         'paged' =>$paged,
-        'showposts'=>3,
+        'showposts'=>15,
          
     );
     $post_excerpt = new \WP_Query($arg);
