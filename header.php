@@ -54,56 +54,81 @@ elseif(is_category()) {
                     </a>
                 </div>
                 <div class="nav-item">
-                    <a href="#">
+                    <a href="<?= get_home_url().'/explore-sumisip'; ?>">
                         <span>Explore</span>
                         <span>Sumisip</span>
                     </a>
                     <div class="mega-menu">
                         <div class="main mega-menu-group">
                             <h4>Events</h4>
+                            <?php   $arg = array(
+                                               'post_type' => 'events',
+                                               'posts_per_page' => 1,
+                                                 );
+                                                 $featured = new \WP_Query($arg);
+                                                 while($featured->have_posts()): $featured->the_post(); 
+                                                 //$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                                                 global $dynamic_featured_image;
+                                            ?>
                             <ul>
                                 <li>
-                                    <a href="#">
-                                        <div class="thumb-wrapper">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/11.jpg" alt="Main Mega Menu">
-                                        </div>
-                                        <h5 class="light">Kalasiglasigan 2020</h5>
-                                        <p class="sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vero
-                                            autem quo similique, temporibus amet. Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Dolorem possimus fuga eos eaque fugiat unde ipsum optio,
-                                            voluptatum laudantium error, eum dicta rerum vero repellendus porro suscipit
-                                            ullam aut similique!</p>
+                                    <a href="<?= get_permalink(); ?>">
+                                    <?php 
+                                        $key=0;
+                                        $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                                        foreach($featured_images as $featured_image) {
+                                            $key=$key+1; 
+                                            if ($key===1) {?>
+                                                                <div class="thumb-wrapper">
+                                                                    <img src="<?= $featured_image['full']; ?>" alt="Main Mega Menu">
+                                                                </div>
+                                            <?php }
+                                                
+                                    
+                                            }    if($key===0) {    
+                                                    ?>   
+                                                        <div class="thumb-wrapper"> 
+                                                        <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png" class="photo-effect">
+                                                        </div>
+                                                    <?php
+                                                        }?> 
+                                                   <h5 class="light"><?= get_the_title(); ?></h5>
+                                        <div class="p-sm"><?= the_excerpt(); ?></div>
                                     </a>
+                                <?php endwhile; ?> 
                                 </li>
-                                <li class="more-cta"><a href="#">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_permalink(); ?>">Show More</a></li>
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Places</h4>
                             <ul>
+                                
                                 <li><a href="#">Tinuse Island</a></li>
                                 <li><a href="#">Mangal Mangrove</a></li>
                                 <li><a href="#">Bessy Maglogok</a></li>
                                 <li><a href="#">Mahatalang Rotonda</a></li>
                                 <li><a href="#">Christian Village</a></li>
-                                <li class="more-cta"><a href="#">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Food</h4>
                             <ul>
-                                <li><a href="#">Tours</a></li>
-                                <li><a href="#">Cuisine</a></li>
-                                <li><a href="#">Delicasies</a></li>
-                                <li><a href="#">Businesses</a></li>
+                                <li><a href="#">Fish</a></li>
+                                <li><a href="#">Daing</a></li>
+                                <li><a href="#">Satti</a></li>
+                                <li><a href="#">Bagong Gata</a></li>
+                                <li><a href="#">Tiula Itum</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/food/'; ?>">Show More</a></li>
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Artistry</h4>
                             <ul>
-                                <li><a href="#">Tours</a></li>
-                                <li><a href="#">Cuisine</a></li>
-                                <li><a href="#">Delicasies</a></li>
+                                <li><a href="#">Weaving</a></li>
+                                <li><a href="#">Tinalak</a></li>
+                                <li><a href="#">Dagmay</a></li>
                                 <li><a href="#">Businesses</a></li>
                             </ul>
                         </div>
@@ -157,7 +182,7 @@ elseif(is_category()) {
                     </div>
                 </div>
                 <div class="nav-item">
-                    <a href="https://lgu-sumisip.com/category/article_news/">
+                    <a href="<?= get_home_url().'/category/article_news/'; ?>">
                         <span>News and</span>
                         <span>Articles</span>
                     </a>
@@ -280,10 +305,17 @@ elseif(is_category()) {
                     </a>
                 </div>
             </div>
-
+            <?php   $arg = array(
+                                               'post_type' => 'events',
+                                               'posts_per_page' => 1,
+                                                 );
+                                                 $featured = new \WP_Query($arg);
+                                                 while($featured->have_posts()): $featured->the_post(); 
+                                            ?>
             <div class="event-nav-list">
-                <a href="#" class="button outline heavy white">Kalasiglasigan 2020</a>
+                <a href="<?= get_permalink() ?>" class="button outline heavy white"><?= the_title(); ?></a>
             </div>
+                                                <?php endwhile ?>
 
             <div class="nav-menu-wrapper">
                 <div class="nav-menu">
