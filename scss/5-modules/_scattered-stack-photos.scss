@@ -1,0 +1,45 @@
+.scattered-photos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+        position: absolute;
+
+        &.tilt-left {
+            transform: rotate(-5deg);
+        }
+
+        &.tilt-right {
+            transform: rotate(5deg);
+        }
+
+        &:first-child {
+            top: 0;
+            right: 30px;
+            height: 190px;
+            width: 410px;
+            z-index: 1;
+        }
+
+        &:nth-child(2) {
+            height: 140px;
+            width: 200px;
+            bottom: -20px;
+            z-index: 3;
+            right: 50px;
+
+
+            transform: rotate(-8deg);
+
+        }
+
+        &:last-child {
+            height: 170px;
+            width: 270px;
+            bottom: 0px;
+            left: 40px;
+            z-index: 2;
+        }
+    }
+}
