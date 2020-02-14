@@ -7347,6 +7347,20 @@ p:not(:last-child),
   max-width: 60%;
 }
 
+.post-composition p img.alignright {
+  float: right;
+  margin-left: 24px;
+}
+
+.post-composition p img.alignleft {
+  float: left;
+  margin-right: 24px;
+}
+
+.post-composition p img.margin-top-bottom {
+  margin: 24px;
+}
+
 .post-composition ul {
   margin: 16px 0;
   margin-left: 24px;
@@ -7354,16 +7368,6 @@ p:not(:last-child),
 
 .post-composition ul li:not(:last-child) {
   margin-bottom: 8px;
-}
-
-.post-composition:nth-child(even) p img {
-  float: left;
-  margin-right: 24px;
-}
-
-.post-composition:nth-child(odd) p img {
-  float: right;
-  margin-left: 24px;
 }
 
 .post-composition::after {
