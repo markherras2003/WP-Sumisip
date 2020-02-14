@@ -20,10 +20,27 @@
 
                 <div class="seal-footer">
                     <h4 class="footer-heading">Government Seal</h4>
+
                     <div class="seal-wrapper">
+
+                        <?php if( get_theme_mod('site_logos') ) {
+
+                            foreach( explode(",", get_theme_mod('site_logos')) as $key ) {
+
+                                ?>
+                                    <img src="<?= $key ?>">
+                                <?php
+                            }
+
+                        }else {
+                            ?>
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/seal.png">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/s_arm.png">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/s_bas.png">
+                        
+                            <?php
+                        } ?>
+
                     </div>
                 </div>
 
@@ -90,7 +107,7 @@
                         $socialNav = [];
                     }
                     ?>
-                    
+
 
 
                     <div class="social-footer">

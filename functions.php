@@ -44,13 +44,6 @@ add_action( 'wp_enqueue_scripts', function(){
     wp_enqueue_script('my_ajax_script');
 } );
 
-function sumisip_theme_customization() {
-wp_enqueue_script('customizer_script', get_theme_file_uri( '/js/customizer_script.js', array('jquery') ));
-}
-add_action( 'admin_enqueue_scripts'  , 'sumisip_theme_customization' );
-
-
-
 
 //hook into the init action and call create_topics_nonhierarchical_taxonomy when it fires
  
@@ -676,6 +669,7 @@ function nddt_add_class_to_images($class){
     return $class;
 }
 add_filter('get_image_tag_class','nddt_add_class_to_images');
+include( get_theme_file_path('/inc/multi-image-uploader.php'));
 
 // Theme Options
 add_action('customize_register', 'ju_customize_register'); // Social
@@ -722,7 +716,6 @@ function title_filter( $where, $wp_query ){
 	endif;
 	return $where;
 }
-
 
 add_filter( 'rest_authentication_errors', 'sumisip_api_request_ips_allowed' );
 function sumisip_api_request_ips_allowed( $errors ){
