@@ -17,6 +17,7 @@
         'post_type' => 'post',
         'posts_per_page' => 10,
         'paged' =>$paged,
+        'showposts=-100',
          
     );
     $post_excerpt = new \WP_Query($arg);
