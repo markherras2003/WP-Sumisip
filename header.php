@@ -103,7 +103,6 @@ elseif(is_category()) {
                         <div class="mega-menu-group">
                             <h4>Places</h4>
                             <ul>
-                                
                                 <li><a href="#">Tinuse Island</a></li>
                                 <li><a href="#">Mangal Mangrove</a></li>
                                 <li><a href="#">Bessy Maglogok</a></li>

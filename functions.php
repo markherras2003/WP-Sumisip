@@ -694,7 +694,7 @@ add_action( 'pre_get_posts', function($q) {
 
 
 function opening_composition_shortcode( $atts ) {
-	return '<div class="composition">';
+	return '<div class="post-composition">';
 }
 
 function closing_composition_shortcode( $atts ) {
