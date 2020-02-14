@@ -11,11 +11,6 @@ get_header();
         $author_ID =  get_post_field( 'post_author', $post_id );
         global $dynamic_featured_image;
 
-            if(have_posts()) {
-                while( have_posts()) {
-                    the_post();
-                }
-            }
         ?>
 
 
