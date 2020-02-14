@@ -15,9 +15,9 @@
     $big = 99999999; 
     $arg = array(
         'post_type' => 'post',
-        'posts_per_page' => 5,
+        'posts_per_page' => 1,
         'paged' =>$paged,
-        'showposts'=>1,
+        'showposts'=>5,
          
     );
     $post_excerpt = new \WP_Query($arg);
