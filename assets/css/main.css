@@ -6905,25 +6905,29 @@ p:not(:last-child),
           justify-content: flex-start;
 }
 
-.author-profile .author-details h4 {
-  font-size: 22px;
-}
-
 .author-profile .author-details span {
   text-transform: uppercase;
-  font-size: 14px;
+}
+
+.author-profile .author-details .author-name {
+  margin: 8px 0 4px 0;
 }
 
 .author-profile .author-details p {
+  font-size: 14px;
   margin: 0px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .author-profile .author-img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 150px;
-  height: 150px;
-  margin-right: 32px;
+  width: 180px;
+  height: 180px;
+  margin-right: 24px;
 }
 
 .author-profile .author-img img {
