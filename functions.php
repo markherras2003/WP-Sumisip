@@ -12,7 +12,7 @@
 /**
  * sumisip only works in WordPress 4.7 or later.
  */
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
@@ -43,13 +43,6 @@ add_action( 'wp_enqueue_scripts', function(){
     wp_localize_script( 'my_ajax_script', 'my_ajax_url', ['admin_url' => admin_url( 'admin-ajax.php' )] );
     wp_enqueue_script('my_ajax_script');
 } );
-
-function sumisip_theme_customization() {
-wp_enqueue_script('customizer_script', get_theme_file_uri( '/js/customizer_script.js', array('jquery') ));
-}
-add_action( 'admin_enqueue_scripts'  , 'sumisip_theme_customization' );
-
-
 
 
 //hook into the init action and call create_topics_nonhierarchical_taxonomy when it fires
@@ -392,7 +385,7 @@ function sumisip_scripts() {
 	}
 
     wp_enqueue_script( 'sumisip-main', get_template_directory_uri().'/js/main.js' , array(), '20181231', true );
-    //wp_enqueue_script( 'history-featured', get_template_directory_uri().'/js/history-featured.js' , array(), '20181231', true );
+    wp_enqueue_script( 'history-featured', get_template_directory_uri().'/js/photo-stack.js' , array(), '20181231', true );
     wp_enqueue_script( 'hero-slider', get_template_directory_uri().'/js/hero-slider.js' , array(), '20181231', true );
     wp_enqueue_script( 'hero-video', get_template_directory_uri().'/js/hero-featured.js' , array(), '20181231', true );
     wp_enqueue_script( 'history-timeline', get_template_directory_uri().'/js/history-timeline.js' , array(), '20181231', true );
@@ -676,6 +669,7 @@ function nddt_add_class_to_images($class){
     return $class;
 }
 add_filter('get_image_tag_class','nddt_add_class_to_images');
+include( get_theme_file_path('/inc/multi-image-uploader.php'));
 
 // Theme Options
 add_action('customize_register', 'ju_customize_register'); // Social
@@ -700,7 +694,7 @@ add_action( 'pre_get_posts', function($q) {
 
 
 function opening_composition_shortcode( $atts ) {
-	return '<div class="composition">';
+	return '<div class="post-composition">';
 }
 
 function closing_composition_shortcode( $atts ) {
@@ -723,13 +717,18 @@ function title_filter( $where, $wp_query ){
 	return $where;
 }
 
-
 add_filter( 'rest_authentication_errors', 'sumisip_api_request_ips_allowed' );
 function sumisip_api_request_ips_allowed( $errors ){
     $allowed_ips = array( 'localhost', '192.168.0.251', '45.13.132.15' );
     $request_server = $_SERVER['REMOTE_ADDR'];
     if( ! in_array( $request_server, $allowed_ips ) )
-        return new WP_Error( 'forbidden_access', 'Access denied', array( 'status' => 403 ) );
+        return new WP_Error( 403, 'Not Allowed to access gateway. Contact Dev-Ops for more info.' );
     return $errors;
 
 }
+
+if( ! get_role('developer') ){
+    $roles = get_role( 'administrator' )->capabilities;
+    add_role('developer', 'Developer', $roles);
+}
+
