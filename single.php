@@ -139,7 +139,7 @@ $i=0;
     </div>
     <div class="author-details">
         <h4>About the Author</h4>
-        <span><?= $full_name.'-'; ?><?= get_author_role($author_ID); ?></span>
+        <span><h4 class="author-name"><?= $full_name.'-'; ?><?= get_author_role($author_ID); ?></h4></span>
         <?php
             $userMeta = get_user_meta($author_ID);
             ?>
