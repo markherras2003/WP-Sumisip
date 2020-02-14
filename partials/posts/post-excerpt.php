@@ -3,18 +3,19 @@
     global $dynamic_featured_image;
     $author_ID = $post->post_author;
     $oncurrentPage = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $big = 999999999; 
     $arg = array(
         'post_type' => 'post',
         'posts_per_page' => 3,
-        'paged' => $oncurrentPage
+        'paged' => get_query_var('paged', 1),
          
     );
     $post_excerpt = new \WP_Query($arg);
 
     $pagination = paginate_links( array(
-        'base' => str_replace( PHP_INT_MAX, '%#%', esc_url( get_pagenum_link( PHP_INT_MAX ) ) ),
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
         'format' => '?paged=%#%',
-        'current' => $oncurrentPage,
+        'current' => max( 1, get_query_var('paged') ),
         'total' => $post_excerpt->max_num_pages,
         'type' => 'array',
         'prev_text' => 'Previous',

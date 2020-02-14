@@ -10,6 +10,8 @@ get_header();
         $featured_images="";
         $author_ID = $post->post_author;
         global $dynamic_featured_image;
+        $h=0;   
+   
 
             if(have_posts()) {
                 while( have_posts()) {
@@ -47,7 +49,9 @@ get_header();
 
         <div class="post-hero-wrapper">
             <div class="post-dir">
-             <?php the_category() ?>
+             <?php the_category();
+
+             ?>
             </div>
 
             <h1 class="display-1"><?php the_title() ?></h1>
