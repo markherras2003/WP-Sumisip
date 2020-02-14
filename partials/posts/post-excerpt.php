@@ -3,7 +3,8 @@
     global $dynamic_featured_image;
     $author_ID = $post->post_author;
     $oncurrentPage = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    $big = 999999999*5000; 
+    $sizes=9999999 
+    $big = 9999999*$sizes; 
     $arg = array(
         'post_type' => 'post',
         'posts_per_page' => 3,
