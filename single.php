@@ -8,7 +8,7 @@ get_header();
         global $post;
         $i=0;
         $featured_images="";
-        $author_ID = $post->post_author;
+        $author_ID =  get_post_field( 'post_author', $post_id );
         global $dynamic_featured_image;
 
             if(have_posts()) {
