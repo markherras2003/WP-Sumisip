@@ -6,7 +6,7 @@
     $big = 99999999; 
     $arg = array(
         'post_type' => 'post',
-        'posts_per_page' => 3,
+        'posts_per_page' => 5,
         'paged' => get_query_var('paged', 1),
          
     );
