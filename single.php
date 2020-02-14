@@ -121,7 +121,9 @@ $i=0;
 
 <div class="author-profile">
     <div class="author-img">
-        <?= get_avatar($author_ID); ?>
+        <?= get_avatar($author_ID);
+        echo $author_ID;
+        ?>
         <?php
             $fname = get_the_author_meta('first_name');
             $lname = get_the_author_meta('last_name');
