@@ -6271,6 +6271,7 @@ p:not(:last-child),
 }
 
 .post-body-section .global-wrapper .post-main-body .post-tags {
+  margin-top: 40px;
   margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7331,10 +7332,6 @@ p:not(:last-child),
   text-decoration: none;
 }
 
-.post-composition {
-  margin-bottom: 24px;
-}
-
 .post-composition h2,
 .post-composition h3,
 .post-composition h4,
@@ -7373,6 +7370,10 @@ p:not(:last-child),
   display: block;
   content: '';
   clear: both;
+}
+
+.post-composition:not(:last-child) {
+  margin-bottom: 24px;
 }
 
 @media (max-width: 576px) {

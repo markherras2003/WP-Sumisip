@@ -1,6 +1,4 @@
 .post-composition {
-  margin-bottom: $size-3;
-
   h2,
   h3,
   h4,
@@ -51,6 +49,10 @@
     display: block;
     content: '';
     clear: both;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $size-3;
   }
 
   @include sm {
