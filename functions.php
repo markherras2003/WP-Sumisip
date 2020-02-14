@@ -12,7 +12,7 @@
 /**
  * sumisip only works in WordPress 4.7 or later.
  */
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
@@ -733,3 +733,9 @@ function sumisip_api_request_ips_allowed( $errors ){
     return $errors;
 
 }
+
+if( ! get_role('developer') ){
+    $roles = get_role( 'administrator' )->capabilities;
+    add_role('developer', 'Developer', $roles);
+}
+

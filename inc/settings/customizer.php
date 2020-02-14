@@ -121,7 +121,15 @@
             'title' => esc_html__('Modal Options'),
             'priority' => 20
         ) );
-
+            $wp_customize->add_setting( 'site_logos', array(
+                'default'   => '',
+                'transport' => 'refresh',
+            ) );
+            $wp_customize->add_control( new Multi_Image_Custom_Control( $wp_customize, 'site_logos', array(
+                'section' => 'get_started_modal',
+                'settings' => 'site_logos',
+                'label'   => esc_html__( 'Site Logos', 'primera-dm' ),
+            ) ) );
             $wp_customize->add_setting( 'modal_title', array(
                 'default'   => null,
                 'transport' => 'refresh',
