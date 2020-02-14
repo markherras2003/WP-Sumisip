@@ -103,7 +103,9 @@
         </div>
 
     </div>
-    <?php    endwhile; ?>
+    <?php    endwhile; 
+    wp_reset_postdata();
+    ?>
 
     <div class="pagination-wrapper">
         <?php previous_posts_link('') ?>
