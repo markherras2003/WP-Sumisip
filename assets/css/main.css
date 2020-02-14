@@ -7390,7 +7390,11 @@ p:not(:last-child),
 }
 
 .post-composition p img.margin-top-bottom {
-  margin: 24px;
+  margin: 24px 0;
+}
+
+.post-composition p img.portrait-mode {
+  max-height: none;
 }
 
 .post-composition ul {
@@ -7420,6 +7424,9 @@ p:not(:last-child),
     width: 100%;
     float: none;
     max-height: 300px;
+  }
+  .post-composition:nth-child(odd) p img.portrait-mode, .post-composition:nth-child(even) p img.portrait-mode {
+    max-height: none;
   }
 }
 
