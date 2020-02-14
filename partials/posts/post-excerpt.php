@@ -15,7 +15,7 @@
     $big = 99999999; 
     $arg = array(
         'post_type' => 'post',
-        'posts_per_page' => 10,
+        'posts_per_page' => 5,
         'paged' =>$paged,
         'showposts=-100',
          
