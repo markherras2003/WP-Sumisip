@@ -1,13 +1,22 @@
 <?php 
     //global $post;
+    global $paged;
+
+    if( get_query_var('paged') ) {
+        $paged = get_query_var('paged');
+    }else if ( get_query_var('page') ) {
+        $paged = get_query_var('page');
+    }else{
+        $paged = 1;
+    }
+
     global $dynamic_featured_image;
     $author_ID = $post->post_author;
-    $oncurrentPage = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $big = 99999999; 
     $arg = array(
         'post_type' => 'post',
         'posts_per_page' => 4,
-        'paged' => get_query_var('paged', 1),
+        'paged' =>$paged,
          
     );
     $post_excerpt = new \WP_Query($arg);
@@ -15,7 +24,7 @@
     $pagination = paginate_links( array(
         'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
         'format' => '?paged=%#%',
-        'current' => max( 1, get_query_var('paged') ),
+        'current' => $paged,
         'total' => $post_excerpt->max_num_pages,
         'type' => 'array',
         'prev_text' => 'Previous',
