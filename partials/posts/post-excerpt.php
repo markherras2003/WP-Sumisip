@@ -16,7 +16,7 @@
         'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
         'format' => '?paged=%#%',
         'current' => max( 1, get_query_var('paged') ),
-        'total' => $post_excerpt->max_num_pages - 1,
+        'total' => $post_excerpt->max_num_pages,
         'type' => 'array',
         'prev_text' => 'Previous',
         'next_text' => 'Next',
