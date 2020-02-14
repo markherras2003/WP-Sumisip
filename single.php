@@ -135,7 +135,7 @@ $i=0;
                 //both first name and last name are present
                 $full_name = "{$fname} {$lname}";
             }
-?>
+        ?>
     </div>
     <div class="author-details">
     <span>About the Author</span>
