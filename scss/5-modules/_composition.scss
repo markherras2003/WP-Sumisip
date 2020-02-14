@@ -1,4 +1,6 @@
 .post-composition {
+  margin-bottom: $size-3;
+
   h2,
   h3,
   h4,
@@ -13,8 +15,6 @@
 
     img {
       max-width: 60%;
-      margin: $size-3;
-      margin-top: 0;
     }
   }
 
@@ -33,7 +33,7 @@
     p {
       img {
         float: left;
-        margin-left: 0;
+        margin-right: $size-3;
       }
     }
   }
@@ -42,13 +42,9 @@
     p {
       img {
         float: right;
-        margin-right: 0;
+        margin-left: $size-3;
       }
     }
-  }
-
-  &:not(:last-child) {
-    margin-bottom: $size-2;
   }
 
   &::after {
