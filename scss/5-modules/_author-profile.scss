@@ -7,6 +7,20 @@
   align-items: center;
   justify-content: flex-start;
 
+  .author-img {
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    margin-right: $size-3;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
   .author-details {
     span {
       text-transform: uppercase;
@@ -26,17 +40,22 @@
     }
   }
 
-  .author-img {
-    flex-shrink: 0;
-    width: 180px;
-    height: 180px;
-    margin-right: $size-3;
+  @include md {
+    background-color: transparent;
+    flex-direction: column;
+    padding: 0;
 
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: center center;
+    .author-img {
+      margin-right: 0;
+      margin-bottom: $size-2;
+    }
+
+    .author-details {
+      text-align: center;
+
+      p {
+        -webkit-line-clamp: inherit;
+      }
     }
   }
 }
