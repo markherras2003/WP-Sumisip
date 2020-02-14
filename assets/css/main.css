@@ -6348,12 +6348,6 @@ p:not(:last-child),
   margin-bottom: 0 40px;
 }
 
-.post-body-section .global-wrapper .post-main-body .post-content img {
-  max-width: 60%;
-  margin: 24px;
-  float: right;
-}
-
 .post-body-section .global-wrapper .post-main-body .post-tags {
   margin-bottom: 40px;
   display: -webkit-box;
@@ -7426,6 +7420,11 @@ p:not(:last-child),
   margin-bottom: 8px;
 }
 
+.post-composition p img {
+  max-width: 60%;
+  margin: 24px;
+}
+
 .post-composition ul {
   margin: 16px 0;
   margin-left: 24px;
@@ -7436,15 +7435,32 @@ p:not(:last-child),
 }
 
 .post-composition:nth-child(even) p img {
-  float: left !important;
+  float: left;
 }
 
 .post-composition:nth-child(odd) p img {
-  float: right !important;
+  float: right;
 }
 
 .post-composition:not(:last-child) {
   margin-bottom: 16px;
+}
+
+.post-composition::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+@media (max-width: 576px) {
+  .post-composition:nth-child(odd) p img, .post-composition:nth-child(even) p img {
+    display: block;
+    margin: 24px auto;
+    max-width: none;
+    width: 100%;
+    float: none;
+    max-height: 300px;
+  }
 }
 
 .page-composition h2,

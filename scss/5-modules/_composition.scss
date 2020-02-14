@@ -10,6 +10,11 @@
     &:not(:last-child) {
       margin-bottom: $size-1;
     }
+
+    img {
+      max-width: 60%;
+      margin: $size-3;
+    }
   }
 
   ul {
@@ -26,7 +31,7 @@
   &:nth-child(even) {
     p {
       img {
-        float: left !important;
+        float: left;
       }
     }
   }
@@ -34,13 +39,33 @@
   &:nth-child(odd) {
     p {
       img {
-        float: right !important;
+        float: right;
       }
     }
   }
 
   &:not(:last-child) {
     margin-bottom: $size-2;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+  
+  @include sm {
+    &:nth-child(odd),
+    &:nth-child(even) {
+      p img {
+        display: block;
+        margin: $size-3 auto;
+        max-width: none;
+        width: 100%;
+        float: none;
+        max-height: 300px;
+      }
+    }
   }
 }
 
