@@ -122,10 +122,24 @@ $i=0;
 <div class="author-profile">
     <div class="author-img">
         <?= get_avatar($author_ID); ?>
+        <?php
+            $fname = get_the_author_meta('first_name');
+            $lname = get_the_author_meta('last_name');
+            $full_name = '';
+
+            if( empty($fname)){
+                $full_name = $lname;
+            } elseif( empty( $lname )){
+                $full_name = $fname;
+            } else {
+                //both first name and last name are present
+                $full_name = "{$fname} {$lname}";
+            }
+?>
     </div>
     <div class="author-details">
         <h4>About the Author</h4>
-        <span><?= get_author_role($author_ID); ?></span>
+        <span><?= $full_name.'-'; ?><?= get_author_role($author_ID); ?></span>
         <?php
             $userMeta = get_user_meta($author_ID);
             ?>
