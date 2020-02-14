@@ -23,7 +23,22 @@
         $wp_customize->add_setting('ju_footer_official_logo',[
 
         ]);
-        
+        $wp_customize->add_setting('ju_customizer_button',[
+
+        ]);
+
+        $wp_customize->add_setting( 'site_logos', array(
+            'default'   => '',
+            'transport' => 'refresh',
+        ) );
+
+        $wp_customize->add_control( new Multi_Image_Custom_Control( $wp_customize, 'site_logos', array(
+            'section' => 'ju_misc_section',
+            'settings' => 'site_logos',
+            'label'   => esc_html__( 'Site Logos'),
+        ) ) );
+
+
 
         $wp_customize->add_control( new WP_Customize_Control(
             $wp_customize,
@@ -35,6 +50,8 @@
                 'type'              => 'textarea'
             )
         ));
+
+        
         $wp_customize->add_control( new WP_Customize_Control(
             $wp_customize,
             'ju_footer_sumisip_copyright_input',
