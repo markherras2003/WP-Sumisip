@@ -20,6 +20,19 @@
         'prev_text' => 'Previous',
         'next_text' => 'Next',
     ) );
+
+    $fname = get_the_author_meta('first_name');
+    $lname = get_the_author_meta('last_name');
+    $full_name = '';
+
+    if( empty($fname)){
+        $full_name = $lname;
+    } elseif( empty( $lname )){
+        $full_name = $fname;
+    } else {
+        //both first name and last name are present
+        $full_name = "{$fname} {$lname}";
+    }
 ?>
 <main id="mainContent">
     <div class="posts-item" id="contentInner">
@@ -36,9 +49,9 @@
                     <h2 class="post-title"> <?php the_title() ?></h2>
                 </a>
                 <div class="post-etc">
-                    <span><?= strtoupper(get_author_role($author_ID)); ?><?php //get_user_meta($author_ID)['first_name'][0]?></span>
-                    <span><?= get_the_date(); ?></span>
                     <span><?= get_the_category()[0]->name ?></span>
+                    <span><?= get_the_date(); ?></span>
+                    <span><?= $full_name; ?></span>
                 </div>
             </div>
           </div>
@@ -71,9 +84,9 @@
                     <h3 class="post-title"><?php the_title() ?></h3>
                 </a>
                 <div class="post-etc">
-                    <span><?= strtoupper(get_author_role($author_ID)); ?><?php //get_user_meta($author_ID)['first_name'][0]?></span>
-                    <span><?= get_the_date(); ?></span>
                     <span><?= get_the_category()[0]->name ?></span>
+                    <span><?= get_the_date(); ?></span>
+                    <span><?= $full_name; ?></span>
                 </div>
         </div>
 
