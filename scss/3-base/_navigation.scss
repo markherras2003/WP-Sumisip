@@ -156,7 +156,7 @@ nav {
     }
 
     @include xxl {
-        padding: 0 56px;
+        padding: 0 $size-7;
     }
 
     @include xl {
