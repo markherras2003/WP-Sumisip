@@ -13,106 +13,75 @@ get_header();
 
 ?>
 
+<?php 
+    global $post;
+    global $paged;
+
+    $cta = "Explore ";
+    $color = "matisse";
+
+    if( get_query_var('paged') ) {
+        $paged = get_query_var('paged');
+    }else if ( get_query_var('page') ) {
+        $paged = get_query_var('page');
+    }else{
+        $paged = 1;
+    }
+
+    global $dynamic_featured_image;
+    $author_ID = $post->post_author;
+    $big = 99999999; 
+    $arg = array(
+        'post_type' => 'post',
+        //'posts_per_page' => 1,
+        'paged' =>$paged,
+        'showposts'=>20,
+        'tax_query' => array(             
+            array(
+               'taxonomy' => 'featured',
+               'field' => 'slug',
+               'terms' => 'places',
+           ),
+        )   
+    );
+    $post_excerpt = new \WP_Query($arg);
+
+    $pagination = paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => $paged,
+        'total' => $post_excerpt->max_num_pages,
+        'type' => 'array',
+        'prev_text' => 'Previous',
+        'next_text' => 'Next',
+    ) );
+    $page_id = get_queried_object_id();
+    $featured_images = $dynamic_featured_image->get_featured_images($page_id);
+?>
+
 	<section class="post-hero-section">
         <div class="post-hero-background">
-            <img src="<?= get_template_directory_uri() ?>/assets/images/hero/wonder2.jpg">
+            <?php foreach($featured_images as $featured_image) {  ?>
+            <img src="<?= $featured_image['full']; ?>">
+            <?php }?>
         </div>
 
         <div class="post-hero-wrapper">
             <h1 class="display-1"><?php single_post_title() ?></h1>
         </div>
-	</section>
-	
-	<section class="quarter-height">
-        <div class="global-wrapper quarter-height section-padding">
-            <div class="side-by-side align-items-center">
-                <div class="preview">
-                    <div class="photo-stacks">
-                        <div class="photo-stack-display loading">
-                            <div class="main-stack">
-                                <img src="#" alt="Photo Stack">
-                            </div>
-                            <div class="bg-stack">
-                                <img src="#" alt="Photo Stack">
-                            </div>
-                        </div>
-                        <div class="controls teal">
-                            <ul>
-                                <li class="active" src="<?= get_template_directory_uri() ?>/assets/images/history/3.jpg"></li>
-                                <li src="<?= get_template_directory_uri() ?>/assets/images/history/4.jpg"></li>
-                                <li src="<?= get_template_directory_uri() ?>/assets/images/history/5.jpg"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="details">
-                    <div class="page-composition button-spacing">
-                        <h2>Tinuse Island</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione expedita enim repellat
-                            debitis fugit possimus, dolores sapiente voluptatem vero, non, aut deleniti odit amet.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione expedita enim repellat
-                            debitis fugit possimus, dolores sapiente voluptatem vero, non, aut deleniti odit amet. Amet,
-                            nulla tempore. Error totam vitae recusandae?
-                        </p>
-                        <button class="colored teal">Explore Tinuse Island</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
-
-    <section class="quarter-height bg-silver">
-        <div class="global-wrapper section-padding">
-            <div class="side-by-side align-items-center reverse">
-                <div class="preview">
-                    <div class="photo-stacks">
-                        <div class="photo-stack-display loading">
-                            <div class="main-stack">
-                                <img src="#" alt="Photo Stack">
-                            </div>
-                            <div class="bg-stack">
-                                <img src="#" alt="Photo Stack">
-                            </div>
-                        </div>
-                        <div class="controls teal">
-                            <ul>
-                                <li class="active" src="<?= get_template_directory_uri() ?>/assets/images/history/1.jpg"></li>
-                                <li src="<?= get_template_directory_uri() ?>/assets/images/history/2.jpg"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="details">
-                    <div class="page-composition">
-                        <h2>Bessy Jamitla</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus atque sapiente
-                            voluptate autem dolor beatae repellendus nesciunt vitae eveniet id repudiandae
-                            asperiores, obcaecati assumenda aliquid deserunt dolores culpa, placeat minima. Sunt,
-                            inventore?
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, laudantium?
-                        </p>
-                        <button class="colored teal">Explore Tinuse Island</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-	<?php 
-	/* Start the Loop */
-	    while ( have_posts() ):
-			the_post();
-		    the_content();  
-		endwhile;
-		
-		// End of the loop.
-	?>
-
+    
+    <?php 
+        $i=0;
+        while($post_excerpt->have_posts()): $post_excerpt->the_post();
+        $i++;
+        ?>
+    <?= include( locate_template( 'partials/posts/post-page.php') ); ?>
+    
+    <?php
+        endwhile; 
+    wp_reset_postdata();
+    ?>
+    
 <?php
 get_footer();

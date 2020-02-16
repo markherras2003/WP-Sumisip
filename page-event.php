@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Delicasy Page
+ * Template Name: Event Page
  * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -17,7 +17,7 @@ get_header();
     global $post;
     global $paged;
     $cta = "Explore ";
-    $color = "rosewood";
+    $color = "marigold";
     if( get_query_var('paged') ) {
         $paged = get_query_var('paged');
     }else if ( get_query_var('page') ) {
@@ -30,17 +30,10 @@ get_header();
     $author_ID = $post->post_author;
     $big = 99999999; 
     $arg = array(
-        'post_type' => 'post',
+        'post_type' => 'events',
         //'posts_per_page' => 1,
         'paged' =>$paged,
-        'showposts'=>20,
-        'tax_query' => array(             
-            array(
-               'taxonomy' => 'featured',
-               'field' => 'slug',
-               'terms' => 'food',
-           ),
-        )   
+        'showposts'=>20, 
     );
     $post_excerpt = new \WP_Query($arg);
 
@@ -57,7 +50,7 @@ get_header();
     $featured_images = $dynamic_featured_image->get_featured_images($page_id);
 ?>
 
-	<section class="post-hero-section">
+<section class="post-hero-section">
         <div class="post-hero-background">
         <?php foreach($featured_images as $featured_image) {  ?>
             <img src="<?= $featured_image['full']; ?>">
@@ -67,7 +60,7 @@ get_header();
         <div class="post-hero-wrapper">
             <h1 class="display-1"><?php single_post_title() ?></h1>
         </div>
-	</section>
+    </section>
     <?php 
         $i=0;
         while($post_excerpt->have_posts()): $post_excerpt->the_post();
