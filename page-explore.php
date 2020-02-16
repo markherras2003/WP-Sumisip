@@ -28,7 +28,8 @@ get_header();
                 $i++;
                 if($i===1) {  ?>
                 <img src="<?= $featured_image['full']; ?>" alt="Article Image">            
-            <?php } ?>
+            <?php }
+            } ?>
         </div>
         <div class="post-hero-wrapper">
             <h1 class="display-1"><?php single_post_title() ?></h1>

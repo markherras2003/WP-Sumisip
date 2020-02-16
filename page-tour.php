@@ -61,11 +61,12 @@ get_header();
 
 	<section class="post-hero-section">
         <div class="post-hero-background">
-            <?php foreach($featured_images as $featured_image) { 
+        <?php foreach($featured_images as $featured_image) { 
                 $i++;
                 if($i===1) {  ?>
                 <img src="<?= $featured_image['full']; ?>" alt="Article Image">            
-            <?php } ?>
+            <?php }
+            } ?>
         </div>
 
         <div class="post-hero-wrapper">
