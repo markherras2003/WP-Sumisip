@@ -156,7 +156,7 @@ elseif(is_category()) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>5) {?>
+                                    if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/food/'; ?>">Show More</a></li>
                                 <?php 
                                     }
