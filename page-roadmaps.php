@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Culture Page
+ * Template Name: Roadmap Page
  * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
