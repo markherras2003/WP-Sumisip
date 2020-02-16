@@ -124,7 +124,7 @@ elseif(is_category()) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>5) {?>
+                                    if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                                 <?php 
                                     }
@@ -188,7 +188,7 @@ elseif(is_category()) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>5) {?>
+                                    if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/artistry/'; ?>">Show More</a></li>
                                 <?php 
                                     }
@@ -228,7 +228,7 @@ elseif(is_category()) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>5) {?>
+                                    if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/history/'; ?>">Show More</a></li>
                                 <?php 
                                     }
@@ -260,7 +260,7 @@ elseif(is_category()) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>5) {?>
+                                    if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/culture/'; ?>">Show More</a></li>
                                 <?php 
                                     }
@@ -292,7 +292,7 @@ elseif(is_category()) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>5) {?>
+                                    if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/awards/'; ?>">Show More</a></li>
                                 <?php 
                                     }
@@ -324,7 +324,7 @@ elseif(is_category()) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>5) {?>
+                                    if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/roadmaps/'; ?>">Show More</a></li>
                                 <?php 
                                     }
