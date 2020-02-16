@@ -1611,6 +1611,10 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
   max-width: 320px;
 }
 
+.mega-menu .mega-menu-group.mini-box.extended {
+  max-width: 420px;
+}
+
 .mega-menu .mega-menu-group.mini-box li:not(:last-child) {
   margin-bottom: 8px;
 }
