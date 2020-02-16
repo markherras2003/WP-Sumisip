@@ -36,7 +36,26 @@ elseif(is_single()) {
 elseif(is_category()) {
     echo '<nav class="teal">'; 
 } else{
-    echo '<nav class="rosewood">';
+    $titles = get_the_title();
+        switch($titles) {
+            case 'Tourist Spot':
+                echo '<nav class="matisse">';
+            break;
+            case 'Food':
+                echo '<nav class="rosewood">';
+            break;
+            case 'Artistry':
+                echo '<nav class="teal">';
+            break;
+            case 'Events':
+                echo '<nav class="marigold">';
+            break;
+            case 'Explore Sumisip':
+                echo '<nav class="teal">';
+            break;
+            default:
+                echo '<nav class="rosewood">';
+        }
 }
 ?>
             <div class="branding-wrapper">

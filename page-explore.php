@@ -24,9 +24,11 @@ get_header();
 
 <section class="post-hero-section">
         <div class="post-hero-background">
-        <?php foreach($featured_images as $featured_image) {  ?>
-            <img src="<?= $featured_image['full']; ?>">
-        <?php }?>
+        <?php foreach($featured_images as $featured_image) { 
+                $i++;
+                if($i===1) {  ?>
+                <img src="<?= $featured_image['full']; ?>" alt="Article Image">            
+            <?php } ?>
         </div>
         <div class="post-hero-wrapper">
             <h1 class="display-1"><?php single_post_title() ?></h1>
