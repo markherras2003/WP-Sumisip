@@ -98,7 +98,7 @@ elseif(is_category()) {
                                 <?php endwhile; 
                                     wp_reset_postdata();?> 
                                 </li>
-                                <li class="more-cta"><a href="<?= get_permalink(); ?>">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/events/'; ?>">Show More</a></li>
                             </ul>
                         </div>
                         <div class="mega-menu-group">
