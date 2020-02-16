@@ -69,7 +69,7 @@ get_header();
         while($post_excerpt->have_posts()): $post_excerpt->the_post();
         $i++;
         ?>
-    <?= include( locate_template( 'partials/posts/post-page.php') ); ?>
+    <?php include( locate_template( 'partials/posts/post-page.php') ); ?>
     
     <?php
         endwhile; 
