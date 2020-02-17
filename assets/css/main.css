@@ -5221,8 +5221,8 @@ p:not(:last-child),
   height: 3px;
   border-radius: 999px;
   background-color: #EAC435;
-  -webkit-animation: heroSliderLoading 7.8s ease-in both;
-          animation: heroSliderLoading 7.8s ease-in both;
+  -webkit-animation: heroSliderLoading 8s ease-in both;
+          animation: heroSliderLoading 8s ease-in both;
 }
 
 @-webkit-keyframes heroSliderLoading {
