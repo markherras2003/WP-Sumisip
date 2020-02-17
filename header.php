@@ -455,8 +455,8 @@ elseif(is_category()) {
                                         <div class="p-sm"><?= the_excerpt(); ?></div>
                                         </div>
                                     </a>
+                                    </li>
                                 <?php endwhile; ?> 
-                                </li>
                             </ul>
                         </div>
                         <div class="mega-menu-group sbs-m-1">
