@@ -12,8 +12,12 @@
 
             .post-img-wrapper {
                 width: 100%;
-                max-height: 380px;
                 margin-bottom: $size-3;
+
+                img {
+                    max-width: none;
+                    max-height: none;
+                }
 
                 &.landscape {}
 
@@ -81,7 +85,7 @@
 
                 }
             }
-            
+
         }
     }
 
