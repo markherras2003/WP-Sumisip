@@ -63,44 +63,44 @@ function sumisip_encode_html_entity ( $results, $server, $request ) {
 add_filter( 'rest_pre_echo_response', 'sumisip_encode_html_entity' , 10, 3 );
 
 
-add_action( 'rest_api_init', function($d) {
-    register_rest_route( 'feeds/v1', '/featured-post/', array(
-        'methods' => 'GET',
-        'callback' => 'custom_meta_query'
-    ) );
-});
-
-function custom_meta_query(){
-    $collections = [];
-        $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => '-1',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'featured',
-                    'field' => 'slug',
-                    'terms' => 'featured',
-                ),
-            )
-        );
-        $meta_query = new WP_Query($args);
-        if($meta_query->have_posts()) {
-            while( $meta_query->have_posts() ){
-                $looper = [];
-                $meta_query->the_post();
-                    global $dynamic_featured_image;
-                    $featured_image = $dynamic_featured_image->get_featured_images( get_the_ID() );
-                $looper['id'] = get_the_ID();
-                $looper['title'] = html_entity_decode( get_the_title() );
-                $looper['content'] = html_entity_decode( get_the_content() );
-                $looper['author'] = get_the_author();
-                $looper['datetime'] = get_post_datetime();
-                $looper['date'] = get_the_date();
-                $looper['thumbnail'] = ($featured_image) ? $featured_image[0]['full'] : [];
-                array_push( $collections, $looper );
-            }
-            echo json_encode($collections);
-        } else {
-            echo [];
-        }
-}
+//add_action( 'rest_api_init', function($d) {
+//    register_rest_route( 'feeds/v1', '/featured-post/', array(
+//        'methods' => 'GET',
+//        'callback' => 'custom_meta_query'
+//    ) );
+//});
+//
+//function custom_meta_query(){
+//    $collections = [];
+//        $args = array(
+//            'post_type' => 'post',
+//            'posts_per_page' => '-1',
+//            'tax_query' => array(
+//                array(
+//                    'taxonomy' => 'featured',
+//                    'field' => 'slug',
+//                    'terms' => 'featured',
+//                ),
+//            )
+//        );
+//        $meta_query = new WP_Query($args);
+//        if($meta_query->have_posts()) {
+//            while( $meta_query->have_posts() ){
+//                $looper = [];
+//                $meta_query->the_post();
+//                    global $dynamic_featured_image;
+//                    $featured_image = $dynamic_featured_image->get_featured_images( get_the_ID() );
+//                $looper['id'] = get_the_ID();
+//                $looper['title'] = html_entity_decode( get_the_title() );
+//                $looper['content'] = html_entity_decode( get_the_content() );
+//                $looper['author'] = get_the_author();
+//                $looper['datetime'] = get_post_datetime();
+//                $looper['date'] = get_the_date();
+//                $looper['thumbnail'] = ($featured_image) ? $featured_image[0]['full'] : [];
+//                array_push( $collections, $looper );
+//            }
+//            echo json_encode($collections);
+//        } else {
+//            echo [];
+//        }
+//}
