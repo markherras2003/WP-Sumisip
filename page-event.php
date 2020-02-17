@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Artistry Page
+ * Template Name: Event Page
  * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -17,7 +17,7 @@ get_header();
     global $post;
     global $paged;
     $cta = "Explore ";
-    $color = "teal";
+    $color = "marigold";
     if( get_query_var('paged') ) {
         $paged = get_query_var('paged');
     }else if ( get_query_var('page') ) {
@@ -30,17 +30,10 @@ get_header();
     $author_ID = $post->post_author;
     $big = 99999999; 
     $arg = array(
-        'post_type' => 'post',
+        'post_type' => 'events',
         //'posts_per_page' => 1,
         'paged' =>$paged,
-        'showposts'=>20,
-        'tax_query' => array(             
-            array(
-               'taxonomy' => 'featured',
-               'field' => 'slug',
-               'terms' => 'food',
-           ),
-        )   
+        'showposts'=>20, 
     );
     $post_excerpt = new \WP_Query($arg);
 

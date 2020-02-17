@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Artistry Page
+ * Template Name: Culture Page
  * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -38,7 +38,7 @@ get_header();
             array(
                'taxonomy' => 'featured',
                'field' => 'slug',
-               'terms' => 'food',
+               'terms' => 'culture',
            ),
         )   
     );

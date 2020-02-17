@@ -13,12 +13,26 @@ get_header();
 
 ?>
 
+<?php 
+
+    $cta = "Explore ";
+    $color = "marigold";
+    global $dynamic_featured_image;
+    $page_id = get_queried_object_id();
+    $featured_images = $dynamic_featured_image->get_featured_images($page_id);
+?>
+
 <section class="post-hero-section">
         <div class="post-hero-background">
-            <img src="<?= get_template_directory_uri(); ?>/assets/images/tours/tinuse-island.jpg">
+        <?php foreach($featured_images as $featured_image) { 
+                $i++;
+                if($i===1) {  ?>
+                <img src="<?= $featured_image['full']; ?>" alt="Article Image">            
+            <?php }
+            } ?>
         </div>
         <div class="post-hero-wrapper">
-            <h1 class="display-1">Explore Sumisip</h1>
+            <h1 class="display-1"><?php single_post_title() ?></h1>
         </div>
     </section>
 
@@ -27,165 +41,79 @@ get_header();
 
             <div class="section-wrapper">
                 <div class="page-composition text-center margin-bottom-5">
+                    <?php
+                    $arg = array(
+                        'post_type' => 'page',
+                        'pagename' => 'events',
+                        'showposts'=>1, 
+                    );
+                    $events = new \WP_Query($arg);
+                    ?>
                     <h2>Festivals and Events</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, tempore fugiat aperiam alias
-                        nostrum
-                        enim ratione similique iusto perspiciatis culpa debitis asperiores suscipit maiores ipsum minus
-                        quod, aliquid praesentium sapiente consectetur. Quo impedit tenetur necessitatibus ipsam facere
-                        sed
-                        quam quaerat accusantium tempore reprehenderit. Non pariatur consequuntur consectetur, tempora
-                        quisquam repellendus!</p>
-                    <a href="#" class="button colored  marigold">See all Events</a>
+                    <?php 
+                        while($events->have_posts()): $events->the_post();
+                            echo the_excerpt();
+                        ?>
+                  
+                    <a href="<?= get_permalink(); ?>" class="button colored  marigold">See all Events</a>
+                    <?php endwhile; wp_reset_postdata(); ?>  
                 </div>
             </div>
             <div class="event-group">
-                <a href="#" class="event-item">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/event-banner.png">
-                    <div class="event-details">
-                        <h5 class="event-title">Kalasiglasigan</h5>
-                        <h2 class="event-date">April 2, 2020</h2>
+                    <?php
+                    $arg = array(
+                        'post_type' => 'events',
+                        'showposts'=>5, 
+                    );
+                    $events = new \WP_Query($arg);
+                    ?>
+                    <?php 
+                        $x=0;
+                        while($events->have_posts()): $events->the_post();
+                        ?>
+                        <a href="<?= get_permalink(); ?>" class="event-item">
+                    <?php   $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                           
+                            foreach($featured_images as $featured_image) {
+                                $x++;     
+                            if($x===1) {?>
+                            <img src="<?= $featured_image['full']; ?>">
+                            <?php }
+                            } ?>
+                        <div class="event-details">
+                        <h5 class="event-title"><?= the_title(); ?></h5>
+                        <h2 class="event-date"><?= get_the_date(); ?></h2>
                     </div>
                 </a>
-                <a href="#" class="event-item">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/event-banner-2.png">
-                    <div class="event-details">
-                        <h5 class="event-title">Vista Arts</h5>
-                        <h2 class="event-date">April 2, 2020</h2>
-                    </div>
-                </a>
+                    <?php endwhile; wp_reset_postdata(); ?> 
             </div>
 
         </div>
     </section>
 
 
-    <section>
-        <div class="global-wrapper section-padding">
-            <div class="side-by-side ">
-                <div class="preview">
-                    <div class="photo-stacks">
-                        <div class="photo-stack-display">
-                            <div class="main-stack">
-                                <img src="" alt="Photo Stack">
-                            </div>
-                            <div class="bg-stack">
-                                <img src="" alt="Photo Stack">
-                            </div>
-                        </div>
-                        <div class="controls matisse">
-                            <ul>
-                                <li class="active" src="<?= get_template_directory_uri(); ?>/assets/images/hero/c1.jpg"></li>
-                                <li src="<?= get_template_directory_uri(); ?>/assets/images/hero/c2.jpg"></li>
-                                <li src="<?= get_template_directory_uri(); ?>/assets/images/hero/c3.jpg"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="details align-center">
-                    <div class="page-composition">
-                        <h2>Tourist Spots</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus atque sapiente
-                            voluptate autem dolor beatae repellendus nesciunt vitae eveniet id repudiandae
-                            asperiores, obcaecati assumenda aliquid deserunt dolores culpa, placeat minima. Sunt,
-                            inventore?
-                        </p>
-                        <button class="outline matisse">Explore Tourist Spots</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="global-wrapper section-padding">
-            <div class="side-by-side reverse">
-                <div class="preview">
-                    <div class="photo-stacks">
-                        <div class="photo-stack-display">
-                            <div class="main-stack">
-                                <img src="" alt="Photo Stack">
-                            </div>
-                            <div class="bg-stack">
-                                <img src="" alt="Photo Stack">
-                            </div>
-                        </div>
-                        <div class="controls rosewood">
-                            <ul>
-                                <li class="active" src="<?= get_template_directory_uri(); ?>/assets/images/hero/d1.jpg"></li>
-                                <li src="<?= get_template_directory_uri(); ?>/assets/images/hero/d2.jpg"></li>
-                                <li src="<?= get_template_directory_uri(); ?>/assets/images/hero/d3.jpg"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="details align-center">
 
-                    <div class="page-composition">
-                        <h2>Our Delicasies</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores officia saepe
-                            voluptates.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus atque sapiente
-                            voluptate autem dolor beatae repellendus nesciunt vitae eveniet id repudiandae
-                            asperiores, obcaecati assumenda aliquid deserunt dolores culpa, placeat minima. Sunt,
-                            inventore?
-                        </p>
-                        <button class="outline rosewood">Explore Our Food</button>
-                    </div>
-
-
-                    <div class="heading-group">
-                    </div>
-                    <div class="button-group">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="global-wrapper section-padding">
-            <div class="side-by-side ">
-                <div class="preview">
-                    <div class="photo-stacks">
-                        <div class="photo-stack-display">
-                            <div class="main-stack">
-                                <img src="" alt="Photo Stack">
-                            </div>
-                            <div class="bg-stack">
-                                <img src="" alt="Photo Stack">
-                            </div>
-                        </div>
-                        <div class="controls teal">
-                            <ul>
-                                <li class="active" src="<?= get_template_directory_uri(); ?>/assets/images/hero/c1.jpg"></li>
-                                <li src="<?= get_template_directory_uri(); ?>/assets/images/hero/c2.jpg"></li>
-                                <li src="<?= get_template_directory_uri(); ?>/assets/images/hero/c3.jpg"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="details align-center">
-                    <div class="page-composition">
-                        <h2>Sumisip Artisty</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus atque sapiente
-                            voluptate autem dolor beatae repellendus nesciunt vitae eveniet id repudiandae
-                            asperiores, obcaecati assumenda aliquid deserunt dolores culpa, placeat minima. Sunt,
-                            inventore?
-                        </p>
-                        <button class="outline teal">Explore Tourist Spots</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
+<?php
+    $ID =array('2','257');
+    $arg = array(
+    'post_type' => 'page',
+    'showposts'=>10, 
+    'order' => 'asc',
+    'post__not_in' => $ID,
+    );
+    $paging = new \WP_Query($arg);
+    ?>
+   
+   <?php 
+        $i=0;
+        while($paging->have_posts()): $paging->the_post();
+        $i++;
+        ?>
+    <?php include( locate_template( 'partials/posts/post-page.php') ); ?>
+    
+    <?php
+        endwhile; 
+    wp_reset_postdata();
+    ?>
 <?php
 get_footer();

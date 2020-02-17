@@ -29,14 +29,33 @@ if(is_home()) {
 }
 elseif(is_singular('events')) {
     echo '<nav class="marigold">'; 
-} 
+}
 elseif(is_single()) {
     echo '<nav class="matisse">'; 
 } 
 elseif(is_category()) {
     echo '<nav class="teal">'; 
 } else{
-    echo '<nav class="rosewood">';
+    $titles = get_the_title();
+        switch($titles) {
+            case 'Tourist Spot':
+                echo '<nav class="matisse">';
+            break;
+            case 'Food':
+                echo '<nav class="rosewood">';
+            break;
+            case 'Artistry':
+                echo '<nav class="teal">';
+            break;
+            case 'Events':
+                echo '<nav class="marigold">';
+            break;
+            case 'Explore Sumisip':
+                echo '<nav class="teal">';
+            break;
+            default:
+                echo '<nav class="rosewood">';
+        }
 }
 ?>
             <div class="branding-wrapper">
@@ -95,40 +114,106 @@ elseif(is_category()) {
                                                    <h5 class="light"><?= get_the_title(); ?></h5>
                                         <div class="p-sm"><?= the_excerpt(); ?></div>
                                     </a>
-                                <?php endwhile; ?> 
+                                <?php endwhile; 
+                                    wp_reset_postdata();?> 
                                 </li>
-                                <li class="more-cta"><a href="<?= get_permalink(); ?>">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/events/'; ?>">Show More</a></li>
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Places</h4>
                             <ul>
-                                <li><a href="#">Tinuse Island</a></li>
-                                <li><a href="#">Mangal Mangrove</a></li>
-                                <li><a href="#">Bessy Maglogok</a></li>
-                                <li><a href="#">Mahatalang Rotonda</a></li>
-                                <li><a href="#">Christian Village</a></li>
+                            <?php   $arg = array(
+                                                        'post_type' => 'post',
+                                                        //'posts_per_page' => 1,
+                                                        'paged' =>$paged,
+                                                        'showposts'=>5,
+                                                        'tax_query' => array(             
+                                                            array(
+                                                            'taxonomy' => 'featured',
+                                                            'field' => 'slug',
+                                                            'terms' => 'places',
+                                                        ),
+                                                        )   
+                                                    );
+                                                 $places = new \WP_Query($arg);
+                                                 $i=0;
+                                                 while($places->have_posts()): $places->the_post(); 
+                                                 $i++;
+                             ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                    if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Food</h4>
                             <ul>
-                                <li><a href="#">Fish</a></li>
-                                <li><a href="#">Daing</a></li>
-                                <li><a href="#">Satti</a></li>
-                                <li><a href="#">Bagong Gata</a></li>
-                                <li><a href="#">Tiula Itum</a></li>
+                            <?php   $arg = array(
+                                                        'post_type' => 'post',
+                                                        //'posts_per_page' => 1,
+                                                        'paged' =>$paged,
+                                                        'showposts'=>5,
+                                                        'tax_query' => array(             
+                                                            array(
+                                                            'taxonomy' => 'featured',
+                                                            'field' => 'slug',
+                                                            'terms' => 'food',
+                                                        ),
+                                                        )   
+                                                    );
+                                                 $places = new \WP_Query($arg);
+                                                 $i=0;
+                                                 while($places->have_posts()): $places->the_post(); 
+                                                 $i++;
+                             ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                    if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/food/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Artistry</h4>
                             <ul>
-                                <li><a href="#">Weaving</a></li>
-                                <li><a href="#">Tinalak</a></li>
-                                <li><a href="#">Dagmay</a></li>
-                                <li><a href="#">Businesses</a></li>
+                            <?php   $arg = array(
+                                                        'post_type' => 'post',
+                                                        //'posts_per_page' => 1,
+                                                        'paged' =>$paged,
+                                                        'showposts'=>5,
+                                                        'tax_query' => array(             
+                                                            array(
+                                                            'taxonomy' => 'featured',
+                                                            'field' => 'slug',
+                                                            'terms' => 'artistry',
+                                                        ),
+                                                        )   
+                                                    );
+                                                 $places = new \WP_Query($arg);
+                                                 $i=0;
+                                                 while($places->have_posts()): $places->the_post(); 
+                                                 $i++;
+                             ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                    if($i>4) {?>
+                                <li class="more-cta"><a href="<?= get_home_url().'/artistry/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
                             </ul>
                         </div>
                     </div>
@@ -142,40 +227,129 @@ elseif(is_category()) {
                         <div class="mega-menu-group">
                             <h4>History</h4>
                             <ul>
-                                <li><a href="#">Tours</a></li>
-                                <li><a href="#">Cuisine</a></li>
-                                <li><a href="#">Delicasies</a></li>
-                                <li><a href="#">Businesses</a></li>
+                            <?php   $arg = array(
+                                                        'post_type' => 'post',
+                                                        //'posts_per_page' => 1,
+                                                        'paged' =>$paged,
+                                                        'showposts'=>5,
+                                                        'tax_query' => array(             
+                                                            array(
+                                                            'taxonomy' => 'featured',
+                                                            'field' => 'slug',
+                                                            'terms' => 'history',
+                                                        ),
+                                                        )   
+                                                    );
+                                                 $places = new \WP_Query($arg);
+                                                 $i=0;
+                                                 while($places->have_posts()): $places->the_post(); 
+                                                 $i++;
+                             ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                    if($i>4) {?>
+                                <li class="more-cta"><a href="<?= get_home_url().'/history/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Culture</h4>
                             <ul>
-                                <li><a href="#">Tours</a></li>
-                                <li><a href="#">Cuisine</a></li>
-                                <li><a href="#">Delicasies</a></li>
-                                <li><a href="#">Businesses</a></li>
+                            <?php   $arg = array(
+                                                        'post_type' => 'post',
+                                                        //'posts_per_page' => 1,
+                                                        'paged' =>$paged,
+                                                        'showposts'=>5,
+                                                        'tax_query' => array(             
+                                                            array(
+                                                            'taxonomy' => 'featured',
+                                                            'field' => 'slug',
+                                                            'terms' => 'culture',
+                                                        ),
+                                                        )   
+                                                    );
+                                                 $places = new \WP_Query($arg);
+                                                 $i=0;
+                                                 while($places->have_posts()): $places->the_post(); 
+                                                 $i++;
+                             ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                    if($i>4) {?>
+                                <li class="more-cta"><a href="<?= get_home_url().'/culture/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Awards</h4>
                             <ul>
-                                <li><a href="#">Tours</a></li>
-                                <li><a href="#">Cuisine</a></li>
-                                <li><a href="#">Delicasies</a></li>
-                                <li><a href="#">Businesses</a></li>
-                                <li><a href="#">Cuisine</a></li>
-                                <li><a href="#">Delicasies</a></li>
-                                <li><a href="#">Businesses</a></li>
+                            <?php   $arg = array(
+                                                        'post_type' => 'post',
+                                                        //'posts_per_page' => 1,
+                                                        'paged' =>$paged,
+                                                        'showposts'=>5,
+                                                        'tax_query' => array(             
+                                                            array(
+                                                            'taxonomy' => 'featured',
+                                                            'field' => 'slug',
+                                                            'terms' => 'awards',
+                                                        ),
+                                                        )   
+                                                    );
+                                                 $places = new \WP_Query($arg);
+                                                 $i=0;
+                                                 while($places->have_posts()): $places->the_post(); 
+                                                 $i++;
+                             ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                    if($i>4) {?>
+                                <li class="more-cta"><a href="<?= get_home_url().'/awards/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Roadmaps</h4>
                             <ul>
-                                <li><a href="#">Tours</a></li>
-                                <li><a href="#">Cuisine</a></li>
-                                <li><a href="#">Delicasies</a></li>
-                                <li><a href="#">Businesses</a></li>
+                            <?php   $arg = array(
+                                                        'post_type' => 'post',
+                                                        //'posts_per_page' => 1,
+                                                        'paged' =>$paged,
+                                                        'showposts'=>5,
+                                                        'tax_query' => array(             
+                                                            array(
+                                                            'taxonomy' => 'featured',
+                                                            'field' => 'slug',
+                                                            'terms' => 'roadmaps',
+                                                        ),
+                                                        )   
+                                                    );
+                                                 $places = new \WP_Query($arg);
+                                                 $i=0;
+                                                 while($places->have_posts()): $places->the_post(); 
+                                                 $i++;
+                             ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                    if($i>4) {?>
+                                <li class="more-cta"><a href="<?= get_home_url().'/roadmaps/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
                             </ul>
                         </div>
                     </div>
