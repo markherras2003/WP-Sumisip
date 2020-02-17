@@ -1479,6 +1479,11 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
   }
   .nav-list.show-menu .nav-item > a {
     padding: 24px 16px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    pointer-events: none;
   }
   .nav-list.show-menu .nav-item > a span {
     color: #949494;
@@ -1719,11 +1724,6 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
-  .mega-menu .mega-menu-group {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
   .mega-menu .mega-menu-group:not(:first-child) {
     padding-left: 16px;
     margin-left: 16px;
@@ -1733,7 +1733,7 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
     display: none;
   }
   .mega-menu .mega-menu-group.main {
-    max-width: 250px;
+    max-width: 300px;
   }
   .mega-menu .mega-menu-group.mini-box {
     max-width: 220px;
