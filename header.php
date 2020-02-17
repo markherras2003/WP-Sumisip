@@ -417,7 +417,6 @@ elseif(is_category()) {
                         <div class="mega-menu-group mini-box extended">
                             <h4>Awards</h4>
                             <ul>
-                                <li>
                                     <?php   $arg = array(
                                                         'post_type' => 'post',
                                                         //'posts_per_page' => 1,
@@ -437,6 +436,7 @@ elseif(is_category()) {
                                                  global $dynamic_featured_image;
 
                                             ?>
+                                                                    <li>
                                     <a href="<?= get_permalink(); ?>">
                                     <?php 
                                         $key=0;
@@ -455,8 +455,8 @@ elseif(is_category()) {
                                         <div class="p-sm"><?= the_excerpt(); ?></div>
                                         </div>
                                     </a>
+                                    </li>
                                 <?php endwhile; ?> 
-                                </li>
                             </ul>
                         </div>
                         <div class="mega-menu-group sbs-m-1">

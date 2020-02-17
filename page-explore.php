@@ -85,7 +85,7 @@ get_header();
                         <h2 class="event-date"><?= get_the_date(); ?></h2>
                     </div>
                 </a>
-                    <?php endwhile; wp_reset_postdata(); ?> 
+                    <?php $x=0; endwhile; wp_reset_postdata(); ?> 
             </div>
 
         </div>
@@ -94,12 +94,12 @@ get_header();
 
 
 <?php
-    $ID =array('2','257');
+    $ID =array('259','475','254');
     $arg = array(
     'post_type' => 'page',
     'showposts'=>10, 
     'order' => 'asc',
-    'post__not_in' => $ID,
+    'post__in' => $ID,
     );
     $paging = new \WP_Query($arg);
     ?>
