@@ -176,38 +176,6 @@ elseif(is_category()) {
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
                                     if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/food/'; ?>">Show More</a></li>
-                                <?php 
-                                    }
-                                    endwhile; 
-                                    wp_reset_postdata();
-                                ?> 
-                            </ul>
-                        </div>
-                        <div class="mega-menu-group">
-                            <h4>Artistry</h4>
-                            <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'artistry',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
-                                                 $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
-                                                 $i++;
-                             ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
-                                <?php
-                                    if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/artistry/'; ?>">Show More</a></li>
                                 <?php 
                                     }
@@ -257,7 +225,7 @@ elseif(is_category()) {
                             </ul>
                         </div>
                         <div class="mega-menu-group">
-                            <h4>Culture</h4>
+                            <h4>Culture and Arts</h4>
                             <ul>
                             <?php   $arg = array(
                                                         'post_type' => 'post',
@@ -289,7 +257,7 @@ elseif(is_category()) {
                             </ul>
                         </div>
                         <div class="mega-menu-group">
-                            <h4>Awards</h4>
+                            <h4>Local Industry</h4>
                             <ul>
                             <?php   $arg = array(
                                                         'post_type' => 'post',
@@ -300,7 +268,7 @@ elseif(is_category()) {
                                                             array(
                                                             'taxonomy' => 'featured',
                                                             'field' => 'slug',
-                                                            'terms' => 'awards',
+                                                            'terms' => 'industry',
                                                         ),
                                                         )   
                                                     );
@@ -312,7 +280,7 @@ elseif(is_category()) {
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
                                     if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/awards/'; ?>">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/industry/'; ?>">Show More</a></li>
                                 <?php 
                                     }
                                     endwhile; 
@@ -320,38 +288,7 @@ elseif(is_category()) {
                                 ?> 
                             </ul>
                         </div>
-                        <div class="mega-menu-group">
-                            <h4>Roadmaps</h4>
-                            <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'roadmaps',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
-                                                 $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
-                                                 $i++;
-                             ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
-                                <?php
-                                    if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/roadmaps/'; ?>">Show More</a></li>
-                                <?php 
-                                    }
-                                    endwhile; 
-                                    wp_reset_postdata();
-                                ?> 
-                            </ul>
-                        </div>
+                
                     </div>
                 </div>
                 <div class="nav-item">
@@ -476,6 +413,117 @@ elseif(is_category()) {
                         <span>Local</span>
                         <span>Government</span>
                     </a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-group mini-box extended">
+                            <h4>Awards</h4>
+                            <ul>
+                                    <?php   $arg = array(
+                                                        'post_type' => 'post',
+                                                        //'posts_per_page' => 1,
+                                                        'paged' =>$paged,
+                                                        'showposts'=>3,
+                                                        'tax_query' => array(             
+                                                            array(
+                                                            'taxonomy' => 'featured',
+                                                            'field' => 'slug',
+                                                            'terms' => 'awards',
+                                                        ),
+                                                        )   
+                                                    );
+                                                 $featured = new \WP_Query($arg);
+                                                 while($featured->have_posts()): $featured->the_post(); 
+                                                 //$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                                                 global $dynamic_featured_image;
+
+                                            ?>
+                                                                    <li>
+                                    <a href="<?= get_permalink(); ?>">
+                                    <?php 
+                                        $key=0;
+                                        $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                                        foreach($featured_images as $featured_image) {
+                                            $key=$key+1; 
+                                            if ($key===1) {?>
+                                        <div class="thumb-wrapper">
+                                            <img src="<?= $featured_image['full']; ?>" alt="Main Mega Menu Thumb">
+                                        </div>
+                                            <?php }
+                                    
+                                        } ?>
+                                     <div class="details">
+                                        <h5 class="light"><?= get_the_title(); ?></h5>
+                                        <div class="p-sm"><?= the_excerpt(); ?></div>
+                                        </div>
+                                    </a>
+                                    </li>
+                                <?php endwhile; ?> 
+                            </ul>
+                        </div>
+                        <div class="mega-menu-group sbs-m-1">
+                        <h4>Mayor's Office</h4>
+                            <ul>
+                            <?php   $arg = array(
+                                                        'post_type' => 'post',
+                                                        //'posts_per_page' => 1,
+                                                        'paged' =>$paged,
+                                                        'showposts'=>5,
+                                                        'tax_query' => array(             
+                                                            array(
+                                                            'taxonomy' => 'featured',
+                                                            'field' => 'slug',
+                                                            'terms' => 'mayors_office',
+                                                        ),
+                                                        )   
+                                                    );
+                                                 $places = new \WP_Query($arg);
+                                                 $i=0;
+                                                 while($places->have_posts()): $places->the_post(); 
+                                                 $i++;
+                             ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                    if($i>4) {?>
+                                <li class="more-cta"><a href="<?= get_home_url().'/mayors_office/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
+                            </ul>
+                        </div>
+                        <div class="mega-menu-group sbs-m-1">
+                        <h4>Departments</h4>
+                            <ul>
+                            <?php   $arg = array(
+                                                        'post_type' => 'post',
+                                                        //'posts_per_page' => 1,
+                                                        'paged' =>$paged,
+                                                        'showposts'=>5,
+                                                        'tax_query' => array(             
+                                                            array(
+                                                            'taxonomy' => 'featured',
+                                                            'field' => 'slug',
+                                                            'terms' => 'departments',
+                                                        ),
+                                                        )   
+                                                    );
+                                                 $places = new \WP_Query($arg);
+                                                 $i=0;
+                                                 while($places->have_posts()): $places->the_post(); 
+                                                 $i++;
+                             ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                    if($i>4) {?>
+                                <li class="more-cta"><a href="<?= get_home_url().'/departments/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <?php   $arg = array(

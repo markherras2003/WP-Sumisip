@@ -74,7 +74,7 @@ nav {
         background-image: url('../../assets/images/svg/nav-mark.svg');
         background-position: bottom left;
         content: ' ';
-        opacity: .2;
+        opacity: 0.2;
         z-index: 1;
     }
 
@@ -106,7 +106,6 @@ nav {
         background-color: getColor(Marigold);
 
         .nav-item {
-
             a span {
                 color: shade(getColor(Marigold), 65);
             }
@@ -203,7 +202,6 @@ nav {
             }
         }
     }
-
 }
 
 .nav-menu-wrapper {
@@ -229,7 +227,7 @@ nav {
             width: 100%;
             border-radius: 999px;
             transition-duration: 300ms;
-            transition-timing-function: cubic-bezier(0.100, 0.820, 0.385, 0.995);
+            transition-timing-function: cubic-bezier(0.1, 0.82, 0.385, 0.995);
 
             &:nth-child(1) {
                 top: 0;
@@ -249,7 +247,6 @@ nav {
     }
 
     &.close {
-
         .nav-menu {
             span {
                 &:nth-child(1) {
@@ -262,7 +259,6 @@ nav {
                     top: 9px;
                     left: 10px;
                     opacity: 0;
-
                 }
 
                 &:nth-child(3) {
@@ -272,7 +268,6 @@ nav {
                 }
             }
         }
-
     }
 
     @include lg {
@@ -286,7 +281,6 @@ nav {
     z-index: 2;
 
     .nav-item {
-
         >a {
             position: relative;
             padding: 0 $size-4;
@@ -309,7 +303,6 @@ nav {
                     margin-bottom: 4px;
                 }
             }
-
         }
 
         &.active {
@@ -337,7 +330,6 @@ nav {
                 }
             }
         }
-
     }
 
     @include xxl {
@@ -368,7 +360,7 @@ nav {
             background-color: tint(getColor(Silver), 10);
             justify-content: flex-end;
             display: flex;
-            animation: dropFadeMin 300ms cubic-bezier(0.100, 0.820, 0.385, 0.995) both;
+            animation: dropFadeMin 300ms cubic-bezier(0.1, 0.82, 0.385, 0.995) both;
 
             .nav-item {
                 flex-grow: 1;
@@ -392,19 +384,16 @@ nav {
                     }
                 }
             }
-
         }
     }
 
     @include md {
-
         &.show-menu {
             top: 72px;
         }
     }
 
     @media screen and (max-width: 664px) {
-
         &.show-menu {
             display: flex;
             flex-direction: column;
@@ -423,9 +412,7 @@ nav {
                 }
             }
         }
-
     }
-
 }
 
 .mega-menu {
@@ -439,10 +426,9 @@ nav {
     background-color: getColor(White);
     display: none;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-    animation: dropFadeMin 1s cubic-bezier(0.100, 0.820, 0.385, 0.995) both;
+    animation: dropFadeMin 1s cubic-bezier(0.1, 0.82, 0.385, 0.995) both;
 
     .mega-menu-group {
-
         h4 {
             display: -webkit-box;
             -webkit-line-clamp: 1;
@@ -467,7 +453,6 @@ nav {
                     background-color: colorOpacity(getColor(Black), 5);
                     content: ' ';
                 }
-
             }
         }
 
@@ -513,13 +498,17 @@ nav {
                         text-decoration: underline;
                     }
                 }
-
             }
         }
 
         &.mini-box {
             width: 100%;
             max-width: 320px;
+
+            &.extended {
+                max-width: 420px;
+                // max-width: none;
+            }
 
             li {
                 &:not(:last-child) {
@@ -566,37 +555,9 @@ nav {
                     h5 {
                         text-decoration: underline;
                     }
-
                 }
-            }
-
-            &.extended {
-                max-width: 420px;
-            }
-
-            &.tinier-box {
-                .thumb-wrapper {
-                    width: 60px;
-                    height: 60px;
-                }
-
-                p {
-                    -webkit-line-clamp: 2;
-                }
-
-            }
-
-
-        }
-
-
-        &.holo-heading {
-
-            ul {
-                margin-top: $size-4;
             }
         }
-
     }
 
     ul {
@@ -622,10 +583,10 @@ nav {
         padding: 0px $size-1;
         font-weight: 500;
         border: 1px solid rgb(97, 97, 97);
-        opacity: .5;
+        opacity: 0.5;
 
         &:hover {
-            opacity: .7;
+            opacity: 0.7;
             text-decoration: none;
         }
     }
@@ -649,20 +610,16 @@ nav {
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 
         .mega-menu-group {
-
             &:not(:first-child) {
                 padding-left: $size-2;
                 margin-left: $size-2;
 
                 ul {
-
                     &::after {
                         left: -16px;
                         display: none;
                     }
-
                 }
-
             }
 
             &.main {
@@ -673,7 +630,6 @@ nav {
                 max-width: 220px;
             }
         }
-
     }
 
     @media screen and (max-width: 664px) {
@@ -705,7 +661,6 @@ nav {
             }
 
             &.sbs-m {
-
                 &-1 {
                     width: 50%;
                     padding-right: $size-1;
@@ -722,5 +677,4 @@ nav {
             }
         }
     }
-
 }
