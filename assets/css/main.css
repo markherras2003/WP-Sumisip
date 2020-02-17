@@ -4644,6 +4644,7 @@ p:not(:last-child),
       grid-template-columns: auto;
   -ms-grid-rows: auto 225px;
       grid-template-rows: auto 225px;
+  overflow: hidden;
 }
 
 @media (max-width: 1360px) {
@@ -4743,7 +4744,10 @@ p:not(:last-child),
   opacity: 0;
 }
 
-.upper-hero-grid .hero-details.transition .heading-group span, .upper-hero-grid .hero-details.transition .heading-group h1, .upper-hero-grid .hero-details.transition .heading-group .lead, .upper-hero-grid .hero-details.transition .heading-group a {
+.upper-hero-grid .hero-details.transition .heading-group span,
+.upper-hero-grid .hero-details.transition .heading-group h1,
+.upper-hero-grid .hero-details.transition .heading-group .lead,
+.upper-hero-grid .hero-details.transition .heading-group a {
   -webkit-animation: none;
           animation: none;
 }
@@ -4880,12 +4884,12 @@ p:not(:last-child),
 
 .upper-hero-grid .hero-preview .hero-preview-group.group-2 .secondary {
   top: 165px;
-  left: 0;
+  left: 0px;
 }
 
 .upper-hero-grid .hero-preview .hero-preview-group.group-2 .tertiary {
   top: 0px;
-  left: 200px;
+  left: 180px;
 }
 
 .upper-hero-grid .hero-preview .hero-preview-group.transitioning {
