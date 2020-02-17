@@ -94,7 +94,7 @@ get_header();
 
 
 <?php
-    $ID =array('259','457','254');
+    $ID =array('259','475','254');
     $arg = array(
     'post_type' => 'page',
     'showposts'=>10, 
