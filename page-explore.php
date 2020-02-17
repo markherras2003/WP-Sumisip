@@ -85,7 +85,7 @@ get_header();
                         <h2 class="event-date"><?= get_the_date(); ?></h2>
                     </div>
                 </a>
-                    <?php endwhile; wp_reset_postdata(); ?> 
+                    <?php $x=0; endwhile; wp_reset_postdata(); ?> 
             </div>
 
         </div>
