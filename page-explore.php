@@ -94,12 +94,12 @@ get_header();
 
 
 <?php
-    $ID =array('2','257');
+    $ID =array('259','480','254)';
     $arg = array(
     'post_type' => 'page',
     'showposts'=>10, 
     'order' => 'asc',
-    'post__not_in' => $ID,
+    'post__in' => $ID,
     );
     $paging = new \WP_Query($arg);
     ?>
