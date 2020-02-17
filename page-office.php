@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Roadmap Page
+ * Template Name: Mayors Office Page
  * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -38,7 +38,7 @@ get_header();
             array(
                'taxonomy' => 'featured',
                'field' => 'slug',
-               'terms' => 'roadmaps',
+               'terms' => 'mayors_office',
            ),
         )   
     );
