@@ -268,9 +268,9 @@ template {
 .button,
 button {
   height: 40px;
+  padding: 0 24px;
   font-weight: 500;
   font-size: 15px;
-  padding: 0 24px;
   border-radius: 999px;
   text-decoration: none;
   display: -webkit-inline-box;
@@ -289,6 +289,13 @@ button:focus {
 button:hover {
   -webkit-transition-duration: 150ms;
           transition-duration: 150ms;
+}
+
+.button.lg,
+button.lg {
+  font-size: 16px;
+  height: 48px;
+  padding: 0 32px;
 }
 
 .button.colored.rosewood,
@@ -355,6 +362,17 @@ button.colored.plum {
 .button.colored.plum:hover,
 button.colored.plum:hover {
   background-color: #8a2477;
+}
+
+.button.colored.black,
+button.colored.black {
+  color: #FFFFFF;
+  background-color: #353535;
+}
+
+.button.colored.black:hover,
+button.colored.black:hover {
+  background-color: #2a2a2a;
 }
 
 .button.outline,
@@ -6014,6 +6032,20 @@ p:not(:last-child),
   z-index: 3;
   color: #FFFFFF;
   font-weight: 800;
+}
+
+.news-section .view-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .post-hero-section {

@@ -6,9 +6,9 @@
 .button,
 button {
     height: 40px;
+    padding: 0 $size-3;
     font-weight: 500;
     font-size: 15px;
-    padding: 0 $size-3;
     border-radius: 999px;
     text-decoration: none;
     display: inline-flex;
@@ -22,6 +22,12 @@ button {
 
     &:hover {
         transition-duration: 150ms;
+    }
+
+    &.lg {
+        font-size: 16px;
+        height: 48px;
+        padding: 0 $size-4;
     }
 
     &.colored {
@@ -52,7 +58,7 @@ button {
                 background-color: shade(getColor(Teal), 20);
             }
         }
-        
+
         &.marigold {
             color: getColor(Rust);
             background-color: getColor(Marigold);
@@ -77,6 +83,15 @@ button {
 
             &:hover {
                 background-color: shade(getColor(Plum), 20);
+            }
+        }
+
+        &.black {
+            color: getColor(White);
+            background-color: getColor(Black);
+
+            &:hover {
+                background-color: shade(getColor(Black), 20);
             }
         }
 
@@ -109,7 +124,7 @@ button {
                 color: getColor(White);
             }
         }
-        
+
         &.teal {
             color: getColor(Teal);
             border-color: getColor(Teal);
@@ -129,7 +144,7 @@ button {
                 color: getColor(Rust);
             }
         }
-        
+
         &.iris {
             color: getColor(Iris);
             border-color: getColor(Iris);
@@ -139,7 +154,7 @@ button {
                 color: getColor(White);
             }
         }
-        
+
         &.plum {
             color: getColor(Plum);
             border-color: getColor(Plum);
