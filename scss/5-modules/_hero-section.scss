@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto 225px;
+    overflow: hidden;
 
     @include xxl {
         padding-right: 0;
@@ -83,7 +84,11 @@
             opacity: 0;
 
             .heading-group {
-                span, h1, .lead, a {
+
+                span,
+                h1,
+                .lead,
+                a {
                     animation: none;
                 }
             }
@@ -107,6 +112,7 @@
             .preview-circle-wrapper {
                 position: absolute;
                 width: auto;
+                // outline: 1px solid blue;
 
                 .preview-circle {
                     position: absolute;
@@ -215,6 +221,7 @@
             }
 
             &.group-2 {
+
                 .main {
                     top: 140px;
                     left: 300px;
@@ -222,12 +229,12 @@
 
                 .secondary {
                     top: 165px;
-                    left: 0;
+                    left: 0px;
                 }
 
                 .tertiary {
                     top: 0px;
-                    left: 200px;
+                    left: 180px;
                 }
             }
 
@@ -467,7 +474,7 @@
                             height: 3px;
                             border-radius: 999px;
                             background-color: getColor(Marigold);
-                            animation: heroSliderLoading 7.8s ease-in both;
+                            animation: heroSliderLoading 8s ease-in both;
 
                             @keyframes heroSliderLoading {
                                 0% {

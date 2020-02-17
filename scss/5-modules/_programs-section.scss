@@ -30,6 +30,15 @@
                 width: 56px;
                 height: 56px;
                 margin-bottom: $size-2;
+
+                svg {
+                    // height: 100%;
+                    width: 100%;
+
+                    path {
+                        fill: getColor(White);
+                    }
+                }
             }
 
             .program-content {

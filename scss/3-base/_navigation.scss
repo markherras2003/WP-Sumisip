@@ -384,6 +384,8 @@ nav {
 
                 >a {
                     padding: $size-3 $size-2;
+                    user-select: none;
+                    pointer-events: none;
 
                     span {
                         color: getColor(Ash);
@@ -627,7 +629,6 @@ nav {
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 
         .mega-menu-group {
-            flex-grow: 1;
 
             &:not(:first-child) {
                 padding-left: $size-2;
@@ -645,7 +646,7 @@ nav {
             }
 
             &.main {
-                max-width: 250px;
+                max-width: 300px;
             }
 
             &.mini-box {

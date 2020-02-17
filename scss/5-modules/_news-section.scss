@@ -122,4 +122,12 @@
             }
         }
     }
+
+    .view-more {
+        display: flex;
+        width: 100%;
+        margin-top: $size-4;
+        justify-content: center;
+        align-items: center;
+    }
 }

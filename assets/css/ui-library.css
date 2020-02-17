@@ -4220,6 +4220,10 @@ html {
   background-color: #7B4A00;
 }
 
+.text-rust {
+  color: geColor(Rust);
+}
+
 .bg-white {
   background-color: #FFFFFF;
 }

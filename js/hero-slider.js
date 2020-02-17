@@ -106,6 +106,7 @@ $(document).ready(function() {
       tertiaryPreview.attr('src', tertiaryPrevData);
 
       var assignGroup = Math.floor(Math.random() * 2 + 1);
+      // var assignGroup = 2;
       heroPrevGroup.attr(
         'class',
         'transitioning hero-preview-group group-' + assignGroup
