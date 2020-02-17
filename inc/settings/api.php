@@ -47,3 +47,10 @@ if( ! get_role('developer') ){
     $roles = get_role( 'administrator' )->capabilities;
     add_role('developer', 'Developer', $roles);
 }
+
+add_filter( 'rest_pre_echo_response', function( $results, $server, $request ) {
+    foreach ( $results as $key => $result ){
+        $results[$key]['title']['rendered'] = html_entity_decode( $results[$key]['title']['rendered']  );
+    }
+    return $results;
+}, 10, 3 );
