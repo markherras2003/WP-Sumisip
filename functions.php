@@ -20,7 +20,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
     defined( 'TC_CORE_PATH' ) or define( 'TC_CORE_PATH', get_theme_file_path('/inc/') );
 }
 require_once TC_CORE_PATH . 'init.php';
-
+require_once TC_CORE_PATH . 'settings/api.php';
 function gavilan_blocks( $categories, $post ) {
     return array_merge(
         $categories,
@@ -706,20 +706,6 @@ function title_filter( $where, $wp_query ){
 	return $where;
 }
 
-add_filter( 'rest_authentication_errors', 'sumisip_api_request_ips_allowed' );
-function sumisip_api_request_ips_allowed( $errors ){
-    $allowed_ips = array( 'localhost', '192.168.0.251', '45.13.132.15' );
-    $request_server = $_SERVER['REMOTE_ADDR'];
-    if( ! in_array( $request_server, $allowed_ips ) )
-        return new WP_Error( 403, 'Not Allowed to access gateway. Contact Dev-Ops for more info.' );
-    return $errors;
-
-}
-
-if( ! get_role('developer') ){
-    $roles = get_role( 'administrator' )->capabilities;
-    add_role('developer', 'Developer', $roles);
-}
 
 
 
