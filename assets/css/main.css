@@ -1638,10 +1638,6 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
   max-width: 320px;
 }
 
-.mega-menu .mega-menu-group.mini-box.extended {
-  max-width: 420px;
-}
-
 .mega-menu .mega-menu-group.mini-box li:not(:last-child) {
   margin-bottom: 8px;
 }
@@ -1691,6 +1687,23 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 
 .mega-menu .mega-menu-group.mini-box a:hover h5 {
   text-decoration: underline;
+}
+
+.mega-menu .mega-menu-group.mini-box.extended {
+  max-width: 420px;
+}
+
+.mega-menu .mega-menu-group.mini-box.tinier-box .thumb-wrapper {
+  width: 60px;
+  height: 60px;
+}
+
+.mega-menu .mega-menu-group.mini-box.tinier-box p {
+  -webkit-line-clamp: 2;
+}
+
+.mega-menu .mega-menu-group.holo-heading ul {
+  margin-top: 32px;
 }
 
 .mega-menu ul {

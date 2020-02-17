@@ -521,11 +521,6 @@ nav {
             width: 100%;
             max-width: 320px;
 
-            &.extended {
-                max-width: 420px;
-                // max-width: none;
-            }
-
             li {
                 &:not(:last-child) {
                     margin-bottom: $size-1;
@@ -575,6 +570,31 @@ nav {
                 }
             }
 
+            &.extended {
+                max-width: 420px;
+            }
+
+            &.tinier-box {
+                .thumb-wrapper {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                p {
+                    -webkit-line-clamp: 2;
+                }
+
+            }
+
+
+        }
+
+
+        &.holo-heading {
+
+            ul {
+                margin-top: $size-4;
+            }
         }
 
     }
