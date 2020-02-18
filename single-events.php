@@ -53,35 +53,7 @@ get_header();
 
     <section>
 
-        <?php the_content(); ?>
-
-        <div class="global-wrapper content-padding">
-            <div class="post-composition">
-                <h2>How did Kalasiglasigan start?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic natus sed quisquam quo
-                    deserunt doloremque, odio ad illum explicabo fugit dolorem tempore libero dignissimos,
-                    blanditiis,
-                    eaque ut corporis distinctio quod a pariatur labore! Labore libero consequuntur similique quis
-                    saepe
-                    fugit cumque culpa esse voluptatibus minima aut vero consectetur, perferendis molestiae harum
-                    incidunt veritatis error quisquam? Nemo itaque soluta quam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ut ipsum ad cumque aperiam
-                    ipsam
-                    voluptates ullam molestias iste corrupti sed eum tempore voluptatibus repudiandae sit neque
-                    quasi
-                    error eos iure aut illo esse minus, animi voluptas? Corrupti dolorem, corporis voluptatibus ut
-                    perferendis dolor qui assumenda libero sapiente exercitationem rem iure vel. Exercitationem
-                    obcaecati facilis sunt reiciendis, maxime sequi perferendis nihil sed dolorem eius error minus.
-                    Tempore mollitia accusamus sed inventore in amet quasi dolorem ea libero iure eum expedita vel
-                    tenetur distinctio, eligendi accusantium quod eveniet quis ipsa ad aspernatur esse excepturi
-                    maxime.
-                    Dicta iure ut consectetur nam. Repellat!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, earum adipisci unde accusantium
-                    ducimus quas fuga facere obcaecati omnis corporis sit molestias ad mollitia cupiditate
-                    voluptatum
-                    rerum libero natus architecto!</p>
-            </div>
-        </div>   
+        <?php the_content(); ?>   
         
         <div class="global-wrapper content-padding">
             <div class="side-by-side">
@@ -149,7 +121,9 @@ get_header();
         </div>
         <div class="global-wrapper content-padding">
             <div class="post-composition">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing.</h2>
+                <h2>
+                    
+                </h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum recusandae nemo quia? Velit nisi sed
                     quasi vel eligendi id aut temporibus ut inventore error placeat saepe, voluptatem nesciunt natus
                     distinctio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias et labore magni
