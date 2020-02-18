@@ -86,7 +86,7 @@ function create_topics_nonhierarchical_taxonomy() {
 
 
 function sm_custom_meta() {
-    add_meta_box( 'sm_meta', __( 'Featured Posts', 'sm-textdomain' ), 'sm_meta_callback', 'post' );
+    add_meta_box( 'sm_meta', __( 'Featured Posts', 'sm-textdomain' ), 'sm_meta_callback', 'events' );
 }
 function sm_meta_callback( $post ) {
     $featured = get_post_meta( $post->ID );

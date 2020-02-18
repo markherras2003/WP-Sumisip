@@ -361,6 +361,13 @@ elseif(is_category()) {
                                 <?php   $arg = array(
                                                'post_type' => 'post',
                                                'posts_per_page' => 3,
+                                               'tax_query' => array(             
+                                                array(
+                                                   'taxonomy' => 'featured',
+                                                   'field' => 'slug',
+                                                   'terms' => 'trending',
+                                               ),
+                                            )   
                                                  );
                                                  $featured = new \WP_Query($arg);
                                                  while($featured->have_posts()): $featured->the_post(); 
@@ -398,6 +405,13 @@ elseif(is_category()) {
                                 <?php   $arg = array(
                                                'post_type' => 'post',
                                                'posts_per_page' => 3,
+                                               'tax_query' => array(             
+                                                array(
+                                                   'taxonomy' => 'featured',
+                                                   'field' => 'slug',
+                                                   'terms' => 'hot-topics',
+                                               ),
+                                            )   
                                                  );
                                                  $featured = new \WP_Query($arg);
                                                  while($featured->have_posts()): $featured->the_post(); 
@@ -552,6 +566,8 @@ elseif(is_category()) {
             <?php   $arg = array(
                                                'post_type' => 'events',
                                                'posts_per_page' => 1,
+                                               'meta_checkbox'=> 'meta_key',
+                                               'meta_value'=> 'yes',
                                                  );
                                                  $featured = new \WP_Query($arg);
                                                  while($featured->have_posts()): $featured->the_post(); 
