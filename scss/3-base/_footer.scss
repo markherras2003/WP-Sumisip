@@ -33,7 +33,7 @@ footer {
 
         .footer-section {
             margin-bottom: $size-5;
-            margin-right: $size-5;
+
 
             h4 {
                 margin-bottom: $size-3;
@@ -71,6 +71,10 @@ footer {
                 }
 
             }
+
+            &:not(:last-child) {
+                margin-right: $size-8;
+            }
         }
 
         .footer-seals {
@@ -100,12 +104,23 @@ footer {
             justify-content: flex-start;
         }
 
+        @include lg {
+            .footer-section {
+                flex-grow: 1;
+                flex-basis: 33.33%;
+                
+                &:not(:last-child) {
+                    margin-right: $size-4;
+                }
+            }
+        }
+
         @include md {
             flex-direction: column;
 
             .footer-section {
                 margin-bottom: $size-4;
-                margin-right: $size-4;
+
             }
         }
 

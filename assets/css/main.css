@@ -538,7 +538,6 @@ footer .footer-container {
 
 footer .footer-container .footer-section {
   margin-bottom: 40px;
-  margin-right: 40px;
 }
 
 footer .footer-container .footer-section h4 {
@@ -581,6 +580,10 @@ footer .footer-container .footer-section ul li:not(:last-child) {
   margin-bottom: 8px;
 }
 
+footer .footer-container .footer-section:not(:last-child) {
+  margin-right: 64px;
+}
+
 footer .footer-container .footer-seals {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -618,6 +621,19 @@ footer .footer-container .footer-flex {
           justify-content: flex-start;
 }
 
+@media (max-width: 992px) {
+  footer .footer-container .footer-section {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+  }
+  footer .footer-container .footer-section:not(:last-child) {
+    margin-right: 32px;
+  }
+}
+
 @media (max-width: 768px) {
   footer .footer-container {
     -webkit-box-orient: vertical;
@@ -627,7 +643,6 @@ footer .footer-container .footer-flex {
   }
   footer .footer-container .footer-section {
     margin-bottom: 32px;
-    margin-right: 32px;
   }
 }
 
@@ -4680,6 +4695,10 @@ p:not(:last-child),
   -ms-grid-rows: auto 225px;
       grid-template-rows: auto 225px;
   overflow: hidden;
+}
+
+.hero-section.loading {
+  min-height: calc(100% - 104px);
 }
 
 @media (max-width: 1360px) {

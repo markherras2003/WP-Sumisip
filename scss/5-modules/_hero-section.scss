@@ -10,6 +10,10 @@
     grid-template-rows: auto 225px;
     overflow: hidden;
 
+    &.loading {
+        min-height: calc(100% - 104px);
+    }
+
     @include xxl {
         padding-right: 0;
         overflow: hidden;
