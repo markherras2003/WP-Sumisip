@@ -10,9 +10,9 @@ $(document).ready(function() {
   $('.hero-section').removeClass('loading');
 
   // Initialize Transitioning on first entry;
-  setTimeout(function() {
-    heroPrevGroup.addClass('transitioning');
-  }, 700);
+  // setTimeout(function() {
+  //   heroPrevGroup.addClass('transitioning');
+  // }, 700);
 
 // Initialize Controls;
   heroPrevControls.show();
@@ -87,7 +87,7 @@ $(document).ready(function() {
       heroPrevGroup.removeClass('transitioning');
       setTimeout(() => {
         mainUpdateFunction();
-      }, 75);
+      }, 175);
     } else {
       mainUpdateFunction();
     }
@@ -163,4 +163,5 @@ $(document).ready(function() {
     // Update indicator;
     $('#hero-preview-number-indicator').text(sourceElement.index() + 1);
   });
+
 });
