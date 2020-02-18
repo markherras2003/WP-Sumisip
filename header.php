@@ -125,8 +125,7 @@ elseif(is_category()) {
                             <ul>
                             <?php   $arg = array(
                                                         'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
+                                                        'order' => 'asc',
                                                         'showposts'=>14,
                                                         'tax_query' => array(             
                                                             array(
@@ -140,10 +139,12 @@ elseif(is_category()) {
                                                  $i=0;
                                                  while($places->have_posts()): $places->the_post(); 
                                                  $i++;
+                                                 if($i>=1 && $i<=7) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>6) {?>
+                                   }
+                                    if($i==7) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                                 <?php 
                                     }
@@ -164,7 +165,7 @@ elseif(is_category()) {
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
                                 }
-                                    if($i>13) {?>
+                                    if($i==13) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                                 <?php 
                                     }
