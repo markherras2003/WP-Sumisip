@@ -8,11 +8,6 @@ $(window).on('load', function() {
 
   $('.hero-section').removeClass('loading');
 
-  // Initialize Transitioning on first entry;
-  // setTimeout(function() {
-  //   heroPrevGroup.addClass('transitioning');
-  // }, 700);
-
   // Initialize Controls;
   heroPrevControls.show();
 
@@ -169,4 +164,5 @@ $(window).on('load', function() {
     // Update indicator;
     $('#hero-preview-number-indicator').text(sourceElement.index() + 1);
   });
+  
 });
