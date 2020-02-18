@@ -106,12 +106,7 @@ footer {
 
         @include lg {
             .footer-section {
-                flex-grow: 1;
-                flex-basis: 33.33%;
-                
-                &:not(:last-child) {
-                    margin-right: $size-4;
-                }
+                margin-right: $size-4;
             }
         }
 
@@ -120,7 +115,14 @@ footer {
 
             .footer-section {
                 margin-bottom: $size-4;
+            }
+        }
 
+        @include sm {
+            .footer-section {
+                flex-grow: 1;
+                margin-right: 0 !important;
+                width: 100%;
             }
         }
 
