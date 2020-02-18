@@ -211,7 +211,8 @@ if ( ! function_exists( 'sumisip_setup' ) ) :
 		);
 
     register_nav_menu('links', __('Quick Links'));
-    register_nav_menu('department', __('Department Links'));
+    register_nav_menu('visit', __('Visit Us'));
+    register_nav_menu('downloadable', __('Downloadable Links'));
     register_nav_menu('contact-menu', __('Contact Menu'));
     register_nav_menu('social-menu', __('Social Menu'));
 
@@ -707,6 +708,7 @@ function title_filter( $where, $wp_query ){
 	endif;
 	return $where;
 }
+
 
 
 

@@ -621,6 +621,15 @@ footer .footer-container .footer-flex {
           justify-content: flex-start;
 }
 
+footer .footer-container .footer-flex .visit-us a {
+  pointer-events: none;
+  cursor: default;
+}
+
+footer .footer-container .footer-flex .visit-us a:hover {
+  text-decoration: none;
+}
+
 @media (max-width: 992px) {
   footer .footer-container .footer-section {
     margin-right: 32px;

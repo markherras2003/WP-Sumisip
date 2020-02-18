@@ -34,14 +34,10 @@
                 }else {
                 ?>
                 <div class="seal-wrapper">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/s_bas.png">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/footer/sumisip.png">
                 </div>
                 <div class="seal-wrapper">
-
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/s_arm.png">
-                </div>
-                <div class="seal-wrapper">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/featured/seal.png">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/images/footer/barmm.png">
 
                 </div>
 
@@ -49,6 +45,7 @@
                 } 
                 ?>
             </div>
+
         </div>
 
         <div class="footer-flex">
@@ -56,18 +53,23 @@
             <div class="footer-section visit-us">
                 <div class="visit-content">
                     <h4>Visit Us</h4>
-                    <ul>
-                        <li>Municipality of Sumisip</li>
-                        <li>Information Office</li>
-                        <li> Room 18, City Hall Bldg. </li>
-                        <li> Bohe Bato, Sumisip</li>
-                        <li>7305 Basilan, Philippines</li>
-                    </ul>
+                        <?php  
+                            if(has_nav_menu('visit')){
+                            wp_nav_menu([
+                                'theme_location'      => 'visit',
+                                'container'           => false,
+                                'fallback_cb'         => false,
+                                'depth'               => 0,
+                                // 'walker'              => new JU_Custom_Nav_Walker()
+                            ]);
+                            }
+                        ?>
                 </div>
             </div>
 
             <div class="footer-section contact-list">
                 <h4>Contact Us</h4>
+
                 <?php
                 if( has_nav_menu('contact-menu') ) {
                     $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
@@ -125,8 +127,7 @@
                 ?>
 
 
-
-
+                
                 <ul>
                     <li>
                         <a href="<?= array_key_exists(1, $socialNav) ? $socialNav[0]->url  : 'https://www.facebook.com'?>">
@@ -153,7 +154,7 @@
                                 </svg></div>
                             <span><?= array_key_exists(1, $socialNav) ? $socialNav[0]->post_title : 'Twitter Page' ?></span>
                         </a></li>
-                    <li><a href="<?= array_key_exists(1, $socialNav) ? $socialNav[0]->url  : 'https://www.instagram.com'?>">
+                    <li><a href="<?= array_key_exists(1, $socialNav) ? $socialNav[0]->url  : 'https://www.instgram.com'?>">
                             <div class="icon-wrapper"><svg aria-hidden="true" focusable="false"
                                     data-prefix="fab" data-icon="instagram"
                                     class="svg-inline--fa fa-instagram fa-w-14" role="img"
@@ -175,26 +176,11 @@
             </div>
 
             <div class="footer-section department-footer">
-                <h4>Local Department</h4>
+                <h4>Downloadables</h4>
                 <?php  
-                    if(has_nav_menu('department')){
+                    if(has_nav_menu('downloadable')){
                     wp_nav_menu([
-                        'theme_location'      => 'department',
-                        'container'           => false,
-                        'fallback_cb'         => false,
-                        'depth'               => 0,
-                        // 'walker'              => new JU_Custom_Nav_Walker()
-                    ]);
-                    }
-                ?>
-            </div>
-
-            <div class="footer-section links-footer">
-                <h4>Quick Links</h4>
-                <?php  
-                    if(has_nav_menu('links')){
-                    wp_nav_menu([
-                        'theme_location'      => 'links',
+                        'theme_location'      => 'downloadable',
                         'container'           => false,
                         'fallback_cb'         => false,
                         'depth'               => 0,
@@ -212,29 +198,30 @@
 <div class="footer-pattern"></div>
 
 <div class="footer-copyright">
-        <?php if(get_theme_mod('ju_footer_sumisip_copyright')) {
-            ?>
-             <p><?= get_theme_mod('ju_footer_sumisip_copyright') ?></p>
-            <?php
-        } else {?> 
-        <p>Ⓒ Sumisip, Basilan Philippines.</p>
-        <?php 
-        }
+    <?php if(get_theme_mod('ju_footer_sumisip_copyright')) {
         ?>
+            <p><?= get_theme_mod('ju_footer_sumisip_copyright') ?></p>
+        <?php
+    } else {?> 
+    <p>Ⓒ Sumisip, Basilan Philippines.</p>
+    <?php 
+    }
+    ?>
 
-        <?php if(get_theme_mod('ju_footer_sumisip_allrights')) {
-            ?>
-            <p><?= get_theme_mod('ju_footer_sumisip_allrights') ?></p>
-            <?php
-        } else {
-            ?>
-                <p>All rights reserved. 2020</p>
-            <?php
-            
-        } ?>
+    <?php if(get_theme_mod('ju_footer_sumisip_allrights')) {
+        ?>
+        <p><?= get_theme_mod('ju_footer_sumisip_allrights') ?></p>
+        <?php
+    } else {
+        ?>
+            <p>All rights reserved. 2020</p>
+        <?php
+        
+    } ?>
 </div>
 
 </footer>
+
 
 
 
