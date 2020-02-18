@@ -451,7 +451,7 @@ elseif(is_category()) {
                         <span>Government</span>
                     </a>
                     <div class="mega-menu">
-                        <div class="mega-menu-group mini-box extended">
+                        <div class="mega-menu-group mini-box tinier-box extended">
                             <h4>Awards</h4>
                             <ul>
                                     <?php   $arg = array(
