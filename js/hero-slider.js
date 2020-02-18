@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).on('load', function() {
   // Initialize first slide data;
   var heroPrevGroup = $('.hero-preview-group');
   var firstHeroSlide = $('.hero-preview-controls .active');
