@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   // Initialize first slide data;
   var heroPrevGroup = $('.hero-preview-group');
   var firstHeroSlide = $('.hero-preview-controls .active');
@@ -14,7 +13,7 @@ $(document).ready(function() {
   //   heroPrevGroup.addClass('transitioning');
   // }, 700);
 
-// Initialize Controls;
+  // Initialize Controls;
   heroPrevControls.show();
 
   var heroIntervalTimer = 8 * 1000;
@@ -137,6 +136,12 @@ $(document).ready(function() {
     description.text(descriptionData);
     link.attr('href', hrefData);
 
+    if (hrefData == '' || hrefData == undefined) {
+      link.hide();
+    } else {
+      link.show();
+    }
+
     setTimeout(function() {
       heroDetails.removeClass('transition');
     }, 100);
@@ -163,5 +168,4 @@ $(document).ready(function() {
     // Update indicator;
     $('#hero-preview-number-indicator').text(sourceElement.index() + 1);
   });
-
 });

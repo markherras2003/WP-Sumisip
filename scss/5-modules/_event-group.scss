@@ -16,13 +16,13 @@
 
     .event-details {
       position: relative;
-      z-index: 2;
+      z-index: 3;
       text-align: right;
       color: getColor(White);
 
       .event-title {
         margin-bottom: $size-half;
-        color: colorOpacity(getColor(White), 50);
+        color: colorOpacity(getColor(White), 80);
       }
     }
 
@@ -37,6 +37,17 @@
       z-index: 1;
     }
 
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      content: ' ';
+      background-color: colorOpacity(getColor(Black), 60);
+      z-index: 2;
+    }
+
     &:not(:first-child) {
       margin-top: $size-half;
     }
@@ -49,13 +60,17 @@
       .event-details {
         .event-title {
           margin-bottom: $size-half;
-          color: colorOpacity(getColor(White), 85);
+          color: colorOpacity(getColor(White), 100);
         }
       }
 
       img {
         transition-duration: 150ms;
         transform: rotate(1deg) scale(1.05);
+      }
+
+      &::after {
+        background-color: colorOpacity(getColor(Black), 20);
       }
     }
   }
