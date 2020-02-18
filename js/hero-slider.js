@@ -11,6 +11,9 @@ $(window).on('load', function() {
   // Initialize Controls;
   heroPrevControls.show();
 
+  // Initialize Controls Count;
+  $('#hero-max').text( heroPrevControls.find('li').length );
+
   var heroIntervalTimer = 8 * 1000;
   var heroSlideInterval = setInterval(function() {
     nextActiveHero();
