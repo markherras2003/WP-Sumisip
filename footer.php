@@ -31,18 +31,7 @@
                         </div>
                     <?php
                     }   
-                }else {
-                ?>
-                <div class="seal-wrapper">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/footer/sumisip.png">
-                </div>
-                <div class="seal-wrapper">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/footer/barmm.png">
-
-                </div>
-
-                <?php
-                } 
+                }
                 ?>
             </div>
 
