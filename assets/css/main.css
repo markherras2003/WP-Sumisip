@@ -4721,6 +4721,9 @@ p:not(:last-child),
     -ms-grid-rows: auto 250px;
         grid-template-rows: auto 250px;
   }
+  .hero-section.loading {
+    min-height: 100%;
+  }
 }
 
 @media (max-width: 768px) {

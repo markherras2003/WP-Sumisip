@@ -26,6 +26,11 @@
         padding: 0 64px;
         padding-right: 64px;
         grid-template-rows: auto 250px;
+
+        &.loading {
+            min-height: 100%;
+        }
+    
     }
 
     @include md {
