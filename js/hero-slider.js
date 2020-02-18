@@ -81,12 +81,12 @@ $(window).on('load', function() {
 
   var transitioningTimeout;
   function updatePreview(sourceElement) {
+    heroPrevGroup.removeClass('transitioning');
     if (heroPrevGroup.hasClass('transitioning')) {
       clearTimeout(transitioningTimeout);
-      heroPrevGroup.removeClass('transitioning');
       setTimeout(() => {
         mainUpdateFunction();
-      }, 175);
+      }, 200);
     } else {
       mainUpdateFunction();
     }
@@ -105,11 +105,12 @@ $(window).on('load', function() {
       tertiaryPreview.attr('src', tertiaryPrevData);
 
       var assignGroup = Math.floor(Math.random() * 2 + 1);
-      // var assignGroup = 2;
-      heroPrevGroup.attr(
-        'class',
-        'transitioning hero-preview-group group-' + assignGroup
-      );
+      setTimeout(function() {
+        heroPrevGroup.attr(
+          'class',
+          'transitioning hero-preview-group group-' + assignGroup
+        );
+      }, 200);
 
       transitioningTimeout = setTimeout(() => {
         heroPrevGroup.removeClass('transitioning');
@@ -144,7 +145,7 @@ $(window).on('load', function() {
 
     setTimeout(function() {
       heroDetails.removeClass('transition');
-    }, 100);
+    }, 200);
   }
 
   // Hero Controls
