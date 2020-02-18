@@ -53,7 +53,7 @@ get_header();
 
     <section>
 
-        <?php get_the_content(); ?>
+        <?php the_content(); ?>
 
         <div class="global-wrapper content-padding">
             <div class="section-wrapper">
