@@ -52,6 +52,9 @@ get_header();
     </section>
 
     <section>
+
+    <?php the_content(); ?>
+
         <div class="global-wrapper content-padding">
             <div class="section-wrapper">
                 <div class="page-composition text-center">
