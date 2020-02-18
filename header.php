@@ -199,7 +199,7 @@ elseif(is_category()) {
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
                                     if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/artistry/'; ?>">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/food/'; ?>">Show More</a></li>
                                 <?php 
                                     }
                                     endwhile; 
@@ -458,7 +458,7 @@ elseif(is_category()) {
                                                         'post_type' => 'post',
                                                         //'posts_per_page' => 1,
                                                         'paged' =>$paged,
-                                                        'showposts'=>3,
+                                                        'showposts'=>4,
                                                         'tax_query' => array(             
                                                             array(
                                                             'taxonomy' => 'featured',
@@ -552,7 +552,7 @@ elseif(is_category()) {
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
                                     if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/sangguniang/'; ?>">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/sannguniang-bayan/'; ?>">Show More</a></li>
                                 <?php 
                                     }
                                     endwhile; 
