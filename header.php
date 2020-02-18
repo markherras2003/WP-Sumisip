@@ -125,8 +125,7 @@ elseif(is_category()) {
                             <ul>
                             <?php   $arg = array(
                                                         'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
+                                                        'order' => 'desc',
                                                         'showposts'=>14,
                                                         'tax_query' => array(             
                                                             array(
