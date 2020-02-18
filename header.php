@@ -526,7 +526,7 @@ elseif(is_category()) {
                                                             array(
                                                             'taxonomy' => 'featured',
                                                             'field' => 'slug',
-                                                            'terms' => 'sangguniang',
+                                                            'terms' => 'sanggunian',
                                                         ),
                                                         )   
                                                     );
@@ -538,7 +538,7 @@ elseif(is_category()) {
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
                                     if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/departments/'; ?>">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/sangguniang/'; ?>">Show More</a></li>
                                 <?php 
                                     }
                                     endwhile; 
