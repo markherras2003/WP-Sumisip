@@ -515,7 +515,7 @@ elseif(is_category()) {
                             </ul>
                         </div>
                         <div class="mega-menu-group sbs-m-1">
-                        <h4>Departments</h4>
+                        <h4>Sangguniang Bayan</h4>
                             <ul>
                             <?php   $arg = array(
                                                         'post_type' => 'post',
@@ -526,7 +526,7 @@ elseif(is_category()) {
                                                             array(
                                                             'taxonomy' => 'featured',
                                                             'field' => 'slug',
-                                                            'terms' => 'departments',
+                                                            'terms' => 'sangguniang',
                                                         ),
                                                         )   
                                                     );
