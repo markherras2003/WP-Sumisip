@@ -140,7 +140,7 @@ elseif(is_category()) {
                                                  $i=0;
                                                  while($places->have_posts()): $places->the_post(); 
                                                  $i++;
-                                                 if($i>1 && $i<6) {
+                                                 if($i>=1 && $i<=7) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
