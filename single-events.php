@@ -56,20 +56,6 @@ get_header();
         <?php the_content(); ?>
 
         <div class="global-wrapper content-padding">
-            <div class="section-wrapper">
-                <div class="page-composition text-center">
-                    <h2>What is Kalasiglasigan?</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ex beatae
-                        consectetur tenetur quia pariatur mollitia eius laudantium veritatis illum, consequatur
-                        reiciendis natus molestias, odit cum voluptas nobis quidem exercitationem molestiae laboriosam
-                        non assumenda ad! Magni laborum repudiandae velit adipisci delectus modi et odio officia
-                        consectetur dolore earum tempore impedit, repellendus, quos molestiae eligendi at ut dolor
-                        incidunt provident excepturi?
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="global-wrapper content-padding">
             <div class="post-composition">
                 <h2>How did Kalasiglasigan start?</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic natus sed quisquam quo
