@@ -143,7 +143,7 @@ elseif(is_category()) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>6) {?>
+                                    if($i==6) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                                 <?php 
                                     }
@@ -164,7 +164,7 @@ elseif(is_category()) {
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
                                 }
-                                    if($i>13) {?>
+                                    if($i==13) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                                 <?php 
                                     }
