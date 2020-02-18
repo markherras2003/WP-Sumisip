@@ -389,7 +389,9 @@ function sumisip_scripts() {
     wp_enqueue_script( 'hero-slider', get_template_directory_uri().'/js/hero-slider.js' , array(), '20181231', true );
     wp_enqueue_script( 'hero-featured', get_template_directory_uri().'/js/hero-featured.js' , array(), '20181231', true );
 	wp_enqueue_script( 'history-timeline', get_template_directory_uri().'/js/history-timeline.js' , array(), '20181231', true );
-	wp_enqueue_script( 'hero-video', get_template_directory_uri().'/js/hero-video-autoplay.js' , array(), '20181231', true );
+	if (is_home()) {
+	//wp_enqueue_script( 'hero-video', get_template_directory_uri().'/js/hero-video-autoplay.js' , array(), '20181231', true );
+	}
 	wp_enqueue_script( 'navigation', get_template_directory_uri().'/js/navigation.js' , array(), '20181231', true );
 	//wp_enqueue_script( 'tinymce_script', get_template_directory_uri().'/js/tinymce.js' , array(), '20181231', true );
 	
