@@ -120,14 +120,14 @@ elseif(is_category()) {
                                 <li class="more-cta"><a href="<?= get_home_url().'/events/'; ?>">Show More</a></li>
                             </ul>
                         </div>
-                        <div class="mega-menu-group">
+                        <div class="mega-menu-group sbs-m-">
                             <h4>Places</h4>
                             <ul>
                             <?php   $arg = array(
                                                         'post_type' => 'post',
                                                         //'posts_per_page' => 1,
                                                         'paged' =>$paged,
-                                                        'showposts'=>5,
+                                                        'showposts'=>14,
                                                         'tax_query' => array(             
                                                             array(
                                                             'taxonomy' => 'featured',
@@ -143,7 +143,7 @@ elseif(is_category()) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>4) {?>
+                                    if($i>6) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                                 <?php 
                                     }
@@ -152,7 +152,29 @@ elseif(is_category()) {
                                 ?> 
                             </ul>
                         </div>
-                        <div class="mega-menu-group">
+
+                        <div class="mega-menu-group sbs-m-2 holo-heading">
+                            <ul>
+                            <?php    
+                            $i=0;
+                            while($places->have_posts()): $places->the_post(); 
+                              $i++;
+                                if($i>7 && $i<13) {
+                                ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                }
+                                    if($i>13) {?>
+                                <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
+                            </ul>
+                        </div>            
+
+                        <div class="mega-menu-group sbs-m-">
                             <h4>Food</h4>
                             <ul>
                             <?php   $arg = array(
