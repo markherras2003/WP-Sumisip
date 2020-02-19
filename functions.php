@@ -13,6 +13,13 @@
  * sumisip only works in WordPress 4.7 or later.
  */
 //error_reporting(E_ALL);
+
+/*-----------------------------------------------------------------------------------*/
+/*	Load Vafpress Framework
+/*-----------------------------------------------------------------------------------*/
+require_once('vafpress.php');
+
+
 if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
