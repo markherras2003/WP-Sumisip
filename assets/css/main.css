@@ -1882,6 +1882,12 @@ p:not(:last-child),
   line-height: 19px;
 }
 
+.p-lead p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+}
+
 /* 
     Set default global style for table element:
     e.g. <table></table>, .table
@@ -7577,10 +7583,67 @@ p:not(:last-child),
   background-color: rgba(53, 53, 53, 0.2);
 }
 
+.hub-contents .hub-padding {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.hub-contents .hub-padding.first-child {
+  padding-top: 96px;
+}
+
+.hub-contents .hub-padding.last-child {
+  padding-bottom: 96px;
+}
+
+@media (max-width: 1200px) {
+  .hub-contents .hub-padding.first-child {
+    padding-top: 80px;
+  }
+  .hub-contents .hub-padding.last-child {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hub-contents .hub-padding {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .hub-contents .hub-padding.first-child {
+    padding-top: 64px;
+  }
+  .hub-contents .hub-padding.last-child {
+    padding-bottom: 64px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hub-contents .hub-padding {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .hub-contents .hub-padding.first-child {
+    padding-top: 40px;
+  }
+  .hub-contents .hub-padding.last-child {
+    padding-bottom: 40px;
+  }
+}
+
 .hub-contents .hub-composition h2,
 .hub-contents .hub-composition h3,
 .hub-contents .hub-composition h4 {
   margin-bottom: 16px;
+}
+
+.hub-contents .hub-composition ul {
+  margin: 16px 0;
+  margin-left: 24px;
+}
+
+.hub-contents .hub-composition.hub-leading {
+  text-align: center;
 }
 
 /* Custom Directory */
@@ -7683,4 +7746,3 @@ p:not(:last-child),
             transform: translateY(0px);
   }
 }
-/*# sourceMappingURL=main.css.map */
