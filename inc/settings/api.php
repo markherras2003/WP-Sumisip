@@ -30,6 +30,7 @@ function slug_get_feed_featured_image_post_meta_cb( $object, $field_name, $reque
  * Function to restrict wp-json access.
  * @param $errors WP_Error
  * @return WP_Error
+ * @move to SUMISIP_PLUGIN
  */
 //function sumisip_api_request_ips_allowed( $errors ){
 //    $allowed_ips = array( 'localhost', '192.168.0.251', '45.13.132.15' );
