@@ -45,11 +45,6 @@
       padding-bottom: $size-5;
     }
 
-    // @include xs {
-    //   padding-top: $size-4;
-    //   padding-bottom: $size-4;
-    // }
-
     &.no-padding-top {
       padding-top: 0;
     }
@@ -63,11 +58,11 @@
     padding-top: $size-4;
     padding-bottom: $size-4;
 
-    &:first-child {
+    &.first-child {
       padding-top: $size-12;
     }
 
-    &:last-child {
+    &.last-child {
       padding-bottom: $size-12;
     }
 
@@ -115,6 +110,7 @@
       padding-top: 0;
     }
   }
+  
 }
 
 .section-wrapper {
