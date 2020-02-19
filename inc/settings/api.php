@@ -54,6 +54,9 @@ if( ! get_role('developer') ){
  * @return array
  */
 function sumisip_encode_html_entity ( $results, $server, $request ) {
+    if( isset($results['code']) ){
+        return $results;
+    }
     $handles = ['/wp/v2/posts', '/wp/v2/events'];
     if ( in_array( $request->get_route(), $handles ) ){
         foreach ( $results as $key => $result ){
