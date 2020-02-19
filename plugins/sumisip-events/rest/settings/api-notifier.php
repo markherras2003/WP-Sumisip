@@ -1,5 +1,7 @@
 <?php
+
 add_action('transition_post_status', 'post_published_notification', 10, 3);
+
 function post_published_notification($new_status, $old_status, $post)
 {
 
@@ -9,10 +11,10 @@ function post_published_notification($new_status, $old_status, $post)
 
         $post_data = [
             'title' => $post->post_title,
-            'body' => get_the_excerpt($post->ID),
+            'body' => get_the_excerpt( $post->ID ),
             'id' => $post->ID,
         ];
-        if( !empty(get_option('notifier_endpoint')) ){
+        if( ! empty( get_option('notifier_endpoint') ) ){
             $response = wp_remote_request( get_option('notifier_endpoint'),
                 array(
                     'method' => 'POST',
