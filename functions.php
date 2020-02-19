@@ -442,6 +442,7 @@ add_action( 'wp_print_footer_scripts', 'sumisip_skip_link_focus_fix' );
 /**
  * Enqueue supplemental block editor styles.
  */
+
 function sumisip_editor_customizer_styles() {
 
 	wp_enqueue_style( 'sumisip-editor-customizer-styles', get_theme_file_uri( '/style-editor-customizer.css' ), false, '1.1', 'all' );

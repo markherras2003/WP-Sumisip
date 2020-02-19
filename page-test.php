@@ -348,7 +348,11 @@ get_header();
             </div>
         </section>
 
-
+        <section class="video-section">
+            <video id="autoplayVideo">
+                <source src="<?= esc_url(vp_option('vpt_option.section_video')); ?>" type="video/mp4">
+            </video>
+        </section>
 
 <?php
 get_footer();

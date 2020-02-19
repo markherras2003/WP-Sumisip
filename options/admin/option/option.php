@@ -719,74 +719,33 @@ array(
 
 
 
-
-
-
-
-
-			/* =============== Menu - Social Media Settings ====================== */	
-			
-			
-			
-			/* =============== Menu - Footer Widgets ====================== */
-			array(
-			'title' => __('Footer Widgets', 'textdomain_code'),
-			'name' => 'menu_4',
-			'icon' => 'font-awesome:fa-th',
+		/* =============== Jwplayer Settings ====================== */
+		array(
+			'title' => __('Video Section', 'textdomain_code'),
+			'name' => 'video_section',
+			'icon' => 'font-awesome:fa-play-circle-o',
 			'controls' => array(
-					
+			
+					// Start Video Player Logo
+					array(
+						'type' => 'upload',
+						'name' => 'section_video',
+						'label' => __('Featured Video', 'textdomain_code'),
+						'description' => __('Upload An Video', 'textdomain_code'),
+						'default' => $themepath.'logo-small.png',
+					),
+				// End Video Player Logo
+				
+			
+			
+			)),
+			
+			
+			/* =============== Menu - Social Media Settings ====================== */
 
-			// Enable RSS Feed
-					array(
-						'type' => 'toggle',
-						'name' => 'enable_footer_widget',
-						'label' => __('Enable Footer Widget', 'textdomain_code'),
-						'description' => __('Do you want to enable the footer widget?', 'textdomain_code'),
-						'default' => '0',
-					),
-			// Enable RSS Feed
 
-			array(
-				'type' => 'radioimage',
-				'name' => 'widget_columns',
-				'label' => __('Widget Columns', 'textdomain_code'),
-				'description' => __('Choose a column for your widget', 'textdomain_code'),
-				'item_max_height' => '100',
-				'item_max_width' => '100',
-				'items' => array(
-					array(
-						'value' => 'style_one',
-						'label' => __('Style One', 'textdomain_code'),
-						'img' => $themepath.'sizes/style-1.png',
-					),
-					array(
-						'value' => 'style_two',
-						'label' => __('Style Two', 'textdomain_code'),
-						'img' => $themepath.'sizes/style-2.png',
-					),
-					array(
-						'value' => 'style_three',
-						'label' => __('Style Three', 'textdomain_code'),
-						'img' => $themepath.'sizes/style-3.png',
-					),
-					array(
-						'value' => 'one_third',
-						'label' => __('One Third', 'textdomain_code'),
-						'img' => $themepath.'sizes/one-third.png',
-					),
-					array(
-						'value' => 'one_fourth',
-						'label' => __('One Fourth', 'textdomain_code'),
-						'img' => $themepath.'sizes/one-fourth.png',
-					),
-				),
-				'default' => array(
-					'one_third',
-				),
-			),
 
-		)),
-			/* =============== Menu - Footer Widgets ====================== */	
+	
 
 
 		
