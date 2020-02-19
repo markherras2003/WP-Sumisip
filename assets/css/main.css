@@ -508,6 +508,8 @@ footer .footer-wrapper {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  max-width: 2160px;
+  margin: 0 auto;
 }
 
 @media (max-width: 1200px) {
