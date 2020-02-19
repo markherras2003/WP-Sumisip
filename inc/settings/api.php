@@ -30,6 +30,7 @@ function slug_get_feed_featured_image_post_meta_cb( $object, $field_name, $reque
  * Function to restrict wp-json access.
  * @param $errors WP_Error
  * @return WP_Error
+ * @move to SUMISIP_PLUGIN
  */
 //function sumisip_api_request_ips_allowed( $errors ){
 //    $allowed_ips = array( 'localhost', '192.168.0.251', '45.13.132.15' );
@@ -53,12 +54,17 @@ if( ! get_role('developer') ){
  * @return array
  */
 function sumisip_encode_html_entity ( $results, $server, $request ) {
-    if ( $request->get_route() != '/feeds/v1/featured-post' ){
+    if( isset($results['code']) ){
+        return $results;
+    }
+    $handles = ['/wp/v2/posts', '/wp/v2/events'];
+    if ( in_array( $request->get_route(), $handles ) ){
         foreach ( $results as $key => $result ){
             $results[$key]['title']['rendered'] = html_entity_decode( $results[$key]['title']['rendered']  );
         }
         return $results;
     }
+    return $results;
 }
 add_filter( 'rest_pre_echo_response', 'sumisip_encode_html_entity' , 10, 3 );
 
