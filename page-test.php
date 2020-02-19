@@ -147,6 +147,68 @@ get_header();
 
 </div>
 
+<?php
+    $video_url = vp_option('vpt_option.featured_video');
+    $video_preview = vp_option('vpt_option.featured_image');
+        $arg = array(
+            'post_type' => 'post',
+            'showposts'=>6,
+            'post__in' => array(vp_option('vpt_option.featured_first'), vp_option('vpt_option.featured_second'), vp_option('vpt_option.featured_third'),
+            vp_option('vpt_option.featured_fourth'), vp_option('vpt_option.featured_fifth'),vp_option('vpt_option.featured_sixth') ),
+            'orderby'=>'post__in',
+        );
+        $featured = new \WP_Query($arg);
+       
+?>
+<section class="featured-section">
+        <div class="featured-video">
+            <div class="preview">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z" />
+                </svg>
+                <img src="<?= $video_preview ?>" alt="">
+            </div>
+
+            <video id="featured-video">
+                <source src="<?= esc_url( $video_url )?>" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+
+
+
+        <div class="featured-articles-wrapper">
+            <?php while($featured->have_posts()): $featured->the_post(); 
+            global $dynamic_featured_image;
+            ?>
+                <div class="featured-article">
+                    <div class="featured-article-gallery">
+                <?php 
+                $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                $key=0;
+                foreach($featured_images as $featured_image) { ?>
+                        <div class="fa-gallery-img <?= ( ($key+1) === 1 )? 'active': '' ?>">
+                            <img src="<?= $featured_image['full']; ?>" alt="Article Image">
+                        </div>
+                <?php }
+                $key=0; ?>
+                    </div>
+                    <div class="featured-details">
+                        <h4><?= the_title(); ?></h4>
+                        <?= the_excerpt(); ?>
+                            <a href="<?= get_permalink(); ?>">Read More</a>
+                    </div>   
+                </div>
+            <?php endwhile;
+                wp_reset_postdata();
+            ?>
+
+        </div>
+
+</section>
+
 
 
 <?php

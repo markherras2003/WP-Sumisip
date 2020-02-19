@@ -357,110 +357,128 @@ array(
 
 			/* =============== Jwplayer Settings ====================== */
 			array(
-			'title' => __('Video Player Settings', 'textdomain_code'),
+			'title' => __('Featured Section', 'textdomain_code'),
 			'name' => 'menu_2',
 			'icon' => 'font-awesome:fa-play-circle-o',
 			'controls' => array(
 			
-			// Start License Key
-					array(
-						'type' => 'textbox',
-						'name' => 'license_key',
-						'label' => __('JWplayer PRO License Key', 'textdomain_code'),
-						'description' => __('If you have purchased a license from JWplayer you can enter it here.', 'textdomain_code'),
-						'default' => '',
-					),
-			// End License Key
-			
-				// Start Player Skin
 				array(
 					'type' => 'select',
-					'name' => 'playerskin',
-					'label' => __('Select Player Skins', 'textdomain_code'),
+					'name' => 'featured_first',
+					'label' => __('First Article', 'vp_textdomain'),
+					'description' => __('First Article', 'vp_textdomain'),
 					'items' => array(
-						array(
-							'value' => 'default_skin',
-							'label' => __('Default Skin', 'textdomain_code'),
-						),
-						array(
-							'value' => 'skin_one',
-							'label' => __('Skin 1', 'textdomain_code'),
-						),
-						array(
-							'value' => 'skin_two',
-							'label' => __('Skin 2', 'textdomain_code'),
-						),
-						array(
-							'value' => 'bekle',
-							'label' => __('Bekle(Licensed Only)', 'textdomain_code'),
-						),
-						array(
-							'value' => 'glow',
-							'label' => __('Glow(Licensed Only)', 'textdomain_code'),
-						),
-						array(
-							'value' => 'beelden',
-							'label' => __('Beelden(Licensed Only)', 'textdomain_code'),
-						),
-						array(
-							'value' => 'stormtrooper',
-							'label' => __('Stormtrooper(Licensed Only)', 'textdomain_code'),
-						),
-						array(
-							'value' => 'vapor',
-							'label' => __('Vapor(Licensed Only)', 'textdomain_code'),
-						),
-						array(
-							'value' => 'roundster',
-							'label' => __('Roundster(Licensed Only)', 'textdomain_code'),
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
 						),
 					),
-					'default' => array(
-						'default_skin',
-					),
-					'validation' => 'required',
+					'default' => '{{last}}',
 				),
-				// End Player Skin
+
+				array(
+					'type' => 'select',
+					'name' => 'featured_second',
+					'label' => __('Second Article', 'vp_textdomain'),
+					'description' => __('Second Article', 'vp_textdomain'),
+					'items' => array(
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
+						),
+					),
+					'default' => '{{last}}',
+				),
+
+				array(
+					'type' => 'select',
+					'name' => 'featured_third',
+					'label' => __('Third Article', 'vp_textdomain'),
+					'description' => __('Third Article', 'vp_textdomain'),
+					'items' => array(
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
+						),
+					),
+					'default' => '{{last}}',
+				),
+
+				array(
+					'type' => 'select',
+					'name' => 'featured_fourth',
+					'label' => __('Fourth Article', 'vp_textdomain'),
+					'description' => __('Fourth Article', 'vp_textdomain'),
+					'items' => array(
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
+						),
+					),
+					'default' => '{{last}}',
+				),
+
+				array(
+					'type' => 'select',
+					'name' => 'featured_fifth',
+					'label' => __('Fifth Article', 'vp_textdomain'),
+					'description' => __('Fifth Article', 'vp_textdomain'),
+					'items' => array(
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
+						),
+					),
+					'default' => '{{last}}',
+				),
+
+				array(
+					'type' => 'select',
+					'name' => 'featured_sixth',
+					'label' => __('Sixth Article', 'vp_textdomain'),
+					'description' => __('Sixth Article', 'vp_textdomain'),
+					'items' => array(
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
+						),
+					),
+					'default' => '{{last}}',
+				),
 				
 				// Start Video Player Logo
 					array(
 						'type' => 'upload',
-						'name' => 'player_logo',
-						'label' => __('Player Logo(Licensed Only)', 'textdomain_code'),
-						'description' => __('Upload A logo for your video player', 'textdomain_code'),
+						'name' => 'featured_video',
+						'label' => __('Featured Video', 'textdomain_code'),
+						'description' => __('Upload A video player', 'textdomain_code'),
+						'default' => $themepath.'logo-small.png',
+					),
+				// End Video Player Logo
+
+					// Start Video Player Logo
+					array(
+						'type' => 'upload',
+						'name' => 'featured_image',
+						'label' => __('Featured Image', 'textdomain_code'),
+						'description' => __('Upload An Image Preview', 'textdomain_code'),
 						'default' => $themepath.'logo-small.png',
 					),
 				// End Video Player Logo
 				
-				// Start Player Link
-					array(
-						'type' => 'textbox',
-						'name' => 'player_link',
-						'label' => __('Logo Link(Licensed Only)', 'textdomain_code'),
-						'description' => __('If you have purchased a license from JWplayer you can enter it here.', 'textdomain_code'),
-						'default' => site_url(),
-					),
-				// End Player Link
-				
-				// Start About Player
-					array(
-						'type' => 'textbox',
-						'name' => 'player_about',
-						'label' => __('About Text(Licensed Only)', 'textdomain_code'),
-						'description' => __('If you wish to display an about text when you right click on the player.', 'textdomain_code'),
-						'default' => 'About Video Player',
-					),
-				// End About Player
-				
-				// Start Player Link
-					array(
-						'type' => 'textbox',
-						'name' => 'player_about_link',
-						'label' => __('About Link(Licensed Only)', 'textdomain_code'),
-						'description' => __('About Text Link', 'textdomain_code'),
-						'default' => site_url(),
-					),
-				// End Player Link
+			
 			
 			)),
 			
