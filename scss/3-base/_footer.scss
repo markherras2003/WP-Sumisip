@@ -65,34 +65,35 @@ footer {
 
                     }
 
-                    // &.span-block {
-                    //     flex-wrap: wrap;
-
-                    //     span {
-                    //         &:nth-child(2) {
-                    //             flex-basis: calc(30% - 37px);
-                    //         }
-
-                    //         &:nth-child(3) {
-                    //             flex-basis: 30%;
-                    //             padding-left: 37px;
-
-                    //         }
-                    //     }
-                    // }
                 }
 
                 li {
+                    align-items: flex-start;
+
                     &:not(:last-child) {
                         margin-bottom: $size-1;
                     }
                 }
+
+                li {
+                    &.multiple-details {
+                        .multiple {
+                            span {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+
 
             }
 
             &:not(:last-child) {
                 margin-right: $size-8;
             }
+
+
         }
 
         .footer-seals {

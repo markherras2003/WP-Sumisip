@@ -577,8 +577,18 @@ footer .footer-container .footer-section ul a .icon-wrapper svg {
   fill: #FFFFFF;
 }
 
+footer .footer-container .footer-section ul li {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 footer .footer-container .footer-section ul li:not(:last-child) {
   margin-bottom: 8px;
+}
+
+footer .footer-container .footer-section ul li.multiple-details .multiple span {
+  display: block;
 }
 
 footer .footer-container .footer-section:not(:last-child) {
@@ -7746,3 +7756,4 @@ p:not(:last-child),
             transform: translateY(0px);
   }
 }
+/*# sourceMappingURL=main.css.map */
