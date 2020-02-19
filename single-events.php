@@ -26,14 +26,30 @@ get_header();
                 global $wp_query;
                 $postid = $wp_query->post->ID;
                 date_default_timezone_set("Asia/Manila");
-                $start_date = get_post_meta($postid, 'start_date', true);
-                $end_date = strtotime(get_post_meta($postid, 'end_date', true));
-                $remaining = $end_date - strtotime(date( $start_date." h:i:s A"));
-                $days_remaining = floor($remaining / 86400);
-                $hours_remaining = floor(($remaining / 3600) % 24);
-                $minutes_remaining = floor(($remaining / 60) % 60);
-                
-                wp_reset_query();
+//                $start_date = get_post_meta($postid, 'start_date', true);
+//                $end_date = strtotime(get_post_meta($postid, 'end_date', true));
+//                $remaining = $end_date - strtotime(date( $start_date." h:i:s A"));
+//                $days_remaining = floor($remaining / 86400);
+//                $hours_remaining = floor(($remaining / 3600) % 24);
+//                $minutes_remaining = floor(($remaining / 60) % 60);
+
+                $current_day = strtotime( date('Y-m-d H:i:s') );
+                $meta_start_date = strtotime( get_post_meta( $postid, 'event_start', true) );
+
+                $date_difference = abs($meta_start_date - $current_day);
+                $years_difference = floor($date_difference / (365*60*60*24));
+                $months_difference = floor(($date_difference - $years_difference * 365*60*60*24)
+                    / (30*60*60*24));
+                $days_remaining = floor(($date_difference - $years_difference * 365*60*60*24 -
+                        $months_difference*30*60*60*24)/ (60*60*24));
+                $hours_remaining = floor(($date_difference - $years_difference * 365*60*60*24
+                        - $months_difference*30*60*60*24 - $days_remaining*60*60*24)
+                    / (60*60));
+                $minutes_remaining = floor(($date_difference - $years_difference * 365*60*60*24
+                    - $months_difference*30*60*60*24 - $days_remaining*60*60*24
+                    - $hours_remaining*60*60)/ 60);
+
+            wp_reset_query();
             ?>
                 <div class="count days">
                     <h2 class="display-3"><?= $days_remaining ?></h2>
