@@ -352,6 +352,7 @@ array(
 ),
 
 // End Hero		
+		
 			
 
 
@@ -484,77 +485,245 @@ array(
 			
 			
 			/* =============== Menu - Social Media Settings ====================== */
-			array(
-			'title' => __('Social Media Settings', 'textdomain_code'),
-			'name' => 'menu_3',
-			'icon' => 'font-awesome:fa-group',
+		
+
+
+
+
+
+
+//HERO Slider			
+
+array(
+	'title' => __('Sumisip Programs', 'vp_textdomain'),
+	'logo'  => '',
+	'icon' => 'font-awesome:fa-social',
+	'menus' => array(
+
+
+		array(
+			'title' => __('Program 1', 'vp_textdomain'),
+			'name' => 'programs_1',
+			'icon' => 'font-awesome:fa-magic',
 			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_1',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
 					
-				// Facebook
-					array(
-						'type' => 'textbox',
-						'name' => 'facebook',
-						'label' => __('Facebook page', 'textdomain_code'),
-						'description' => __('Enter your facebook URL', 'textdomain_code'),
-						'default' => '',
-						'validation' => 'url',
-					),
-				// Facebook
-				
-				// Twitter
-					array(
-						'type' => 'textbox',
-						'name' => 'twitter',
-						'label' => __('Twitter Profile', 'textdomain_code'),
-						'description' => __('Enter your Twitter Profile URL', 'textdomain_code'),
-						'default' => '',
-						'validation' => 'url',
-					),
-				// Twitter
-				
-				// Google
-					array(
-						'type' => 'textbox',
-						'name' => 'google',
-						'label' => __('Google Plus', 'textdomain_code'),
-						'description' => __('Enter your google plus URL', 'textdomain_code'),
-						'default' => '',
-						'validation' => 'url',
-					),
-				// Google
-				
-				// Pinterest
-					array(
-						'type' => 'textbox',
-						'name' => 'pinterest',
-						'label' => __('Pinterest', 'textdomain_code'),
-						'description' => __('Enter your pinterest profile', 'textdomain_code'),
-						'default' => '',
-						'validation' => 'url',
-					),
-				// Pinterest
-				
-				// Flickr
-					array(
-						'type' => 'textbox',
-						'name' => 'linkedin',
-						'label' => __('LinkedIn', 'textdomain_code'),
-						'description' => __('Enter your LinkedIn profile', 'textdomain_code'),
-						'default' => '',
-						'validation' => 'url',
-					),
-				// Flickr
-				
-				// Enable RSS Feed
-					array(
-						'type' => 'toggle',
-						'name' => 'enablerss',
-						'label' => __('Enable RSS Feed', 'textdomain_code'),
-						'description' => __('Turn on RSS Feed?', 'textdomain_code'),
-						'default' => '0',
-					),
-				// Enable RSS Feed
-					)),
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_1',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_1',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+		array(
+			'title' => __('Program 2', 'vp_textdomain'),
+			'name' => 'programs_2',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_2',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_2',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_2',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+		array(
+			'title' => __('Program 3', 'vp_textdomain'),
+			'name' => 'programs_3',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_3',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_3',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_3',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+		array(
+			'title' => __('Program 4', 'vp_textdomain'),
+			'name' => 'programs_4',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_4',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_4',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_4',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+		array(
+			'title' => __('Program 5', 'vp_textdomain'),
+			'name' => 'programs_5',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_5',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_5',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_5',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+		array(
+			'title' => __('Program 6', 'vp_textdomain'),
+			'name' => 'programs_6',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_6',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_6',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_6',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+
+	
+
+
+
+
+	),
+),
+
+// End Hero
+
+
+
+
+
+
+
+
+
 			/* =============== Menu - Social Media Settings ====================== */	
 			
 			
