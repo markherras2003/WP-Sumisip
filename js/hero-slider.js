@@ -12,7 +12,7 @@ $(window).on('load', function() {
   heroPrevControls.show();
 
   // Initialize Controls Count;
-  $('#hero-max').text( heroPrevControls.find('li').length );
+  $('#hero-max').text(heroPrevControls.find('li').length);
 
   var heroIntervalTimer = 8 * 1000;
   var heroSlideInterval = setInterval(function() {
@@ -79,8 +79,8 @@ $(window).on('load', function() {
 
   var transitioningTimeout;
   function updatePreview(sourceElement) {
-    heroPrevGroup.removeClass('transitioning');
     if (heroPrevGroup.hasClass('transitioning')) {
+      heroPrevGroup.removeClass('transitioning');
       clearTimeout(transitioningTimeout);
       setTimeout(() => {
         mainUpdateFunction();
@@ -167,5 +167,4 @@ $(window).on('load', function() {
     // Update indicator;
     $('#hero-preview-number-indicator').text(sourceElement.index() + 1);
   });
-  
 });
