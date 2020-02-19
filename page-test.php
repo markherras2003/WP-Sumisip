@@ -354,5 +354,88 @@ get_header();
             </video>
         </section>
 
+
+        <?php 
+
+$arg = array(
+    'post_type' => 'post',
+    'showposts'=>6,
+    'post_status' => 'publish',
+     'tax_query' => array(
+      'relation' => 'OR',
+        array(
+            'taxonomy' => 'featured',
+            'field'    => 'slug',
+            'terms'    => array( 'news-articles'),
+        ),
+        array(
+            'taxonomy' => 'category',
+            'field'    => 'slug',
+            'terms'    => array( 'article_news'),
+        ),
+    ),
+
+);     
+
+
+$featured = new \WP_Query($arg);
+
+?>
+
+<section class="news-section">
+<div class="global-wrapper section-padding">
+    <div class="section-heading-group">
+        <h1>News And Article</h1>
+        <p></p>
+    </div>
+    <div class="news-boxes">
+    <?php 
+    while($featured->have_posts()): $featured->the_post(); 
+        global $dynamic_featured_image;
+
+    ?>
+        <div class="news-box">
+        <?php 
+    $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+    $key=0;
+    foreach($featured_images as $featured_image) {
+        $key=$key+1;
+        if($key===1) { ?>
+                <div class="background-wrapper">
+                    <img src="<?= $featured_image['full']; ?>">
+                </div>
+        <?php  }
+       ?>
+
+    <?php } ?>
+            <div class="news-content">
+                <h4><a href="<?= get_permalink(); ?>"><?= get_the_title(); ?></a></h4>
+                <div class="news-extra-info">
+                    <span class="date"><?= get_the_date(); ?></span>
+                    <div class="comment-wrapper">
+                        <a href="<?= get_permalink(); ?>">
+                            <i class="fa fa-comment"></i>
+                            <span><?= get_comments_number(); ?></span>
+                        </a>
+                    </div>
+                    <span class="category">
+                                <?php foreach((get_the_category()) as $category){
+                                echo $category->name."<br>";
+                                }	?></span>
+                </div>
+                <?= the_excerpt(); ?>
+            </div>
+            <a href="<?= get_permalink(); ?>">Read More</a>
+        </div>
+        <?php endwhile;
+            wp_reset_postdata();
+        ?>
+    </div>
+    <div class="view-more">
+        <button class="button outline black lg" onclick="window.location.href = '<?= get_home_url().'/category/article_news/'; ?>';">View More News and Articles</button>
+    </div>
+</div>
+</section>
+
 <?php
 get_footer();
