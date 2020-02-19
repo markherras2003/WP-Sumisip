@@ -120,14 +120,13 @@ elseif(is_category()) {
                                 <li class="more-cta"><a href="<?= get_home_url().'/events/'; ?>">Show More</a></li>
                             </ul>
                         </div>
-                        <div class="mega-menu-group">
+                        <div class="mega-menu-group sbs-m-">
                             <h4>Places</h4>
                             <ul>
                             <?php   $arg = array(
                                                         'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
+                                                        'order' => 'asc',
+                                                        'showposts'=>14,
                                                         'tax_query' => array(             
                                                             array(
                                                             'taxonomy' => 'featured',
@@ -140,10 +139,12 @@ elseif(is_category()) {
                                                  $i=0;
                                                  while($places->have_posts()): $places->the_post(); 
                                                  $i++;
+                                                 if($i>=1 && $i<=7) {
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
-                                    if($i>4) {?>
+                                   }
+                                    if($i==7) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                                 <?php 
                                     }
@@ -152,7 +153,29 @@ elseif(is_category()) {
                                 ?> 
                             </ul>
                         </div>
-                        <div class="mega-menu-group">
+
+                        <div class="mega-menu-group sbs-m-2 holo-heading">
+                            <ul>
+                            <?php    
+                            $i=0;
+                            while($places->have_posts()): $places->the_post(); 
+                              $i++;
+                                if($i>7 && $i<13) {
+                                ?>
+                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <?php
+                                }
+                                    if($i==13) {?>
+                                <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
+                                <?php 
+                                    }
+                                    endwhile; 
+                                    wp_reset_postdata();
+                                ?> 
+                            </ul>
+                        </div>            
+
+                        <div class="mega-menu-group sbs-m-">
                             <h4>Food</h4>
                             <ul>
                             <?php   $arg = array(
@@ -176,7 +199,7 @@ elseif(is_category()) {
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
                                     if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/artistry/'; ?>">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/food/'; ?>">Show More</a></li>
                                 <?php 
                                     }
                                     endwhile; 
@@ -338,6 +361,13 @@ elseif(is_category()) {
                                 <?php   $arg = array(
                                                'post_type' => 'post',
                                                'posts_per_page' => 3,
+                                               'tax_query' => array(             
+                                                array(
+                                                   'taxonomy' => 'featured',
+                                                   'field' => 'slug',
+                                                   'terms' => 'trending',
+                                               ),
+                                            )   
                                                  );
                                                  $featured = new \WP_Query($arg);
                                                  while($featured->have_posts()): $featured->the_post(); 
@@ -375,6 +405,13 @@ elseif(is_category()) {
                                 <?php   $arg = array(
                                                'post_type' => 'post',
                                                'posts_per_page' => 3,
+                                               'tax_query' => array(             
+                                                array(
+                                                   'taxonomy' => 'featured',
+                                                   'field' => 'slug',
+                                                   'terms' => 'hot-topics',
+                                               ),
+                                            )   
                                                  );
                                                  $featured = new \WP_Query($arg);
                                                  while($featured->have_posts()): $featured->the_post(); 
@@ -414,14 +451,14 @@ elseif(is_category()) {
                         <span>Government</span>
                     </a>
                     <div class="mega-menu">
-                        <div class="mega-menu-group mini-box extended">
+                        <div class="mega-menu-group mini-box tinier-box extended">
                             <h4>Awards</h4>
                             <ul>
                                     <?php   $arg = array(
                                                         'post_type' => 'post',
                                                         //'posts_per_page' => 1,
                                                         'paged' =>$paged,
-                                                        'showposts'=>3,
+                                                        'showposts'=>4,
                                                         'tax_query' => array(             
                                                             array(
                                                             'taxonomy' => 'featured',
@@ -492,7 +529,7 @@ elseif(is_category()) {
                             </ul>
                         </div>
                         <div class="mega-menu-group sbs-m-1">
-                        <h4>Departments</h4>
+                        <h4>Sangguniang Bayan</h4>
                             <ul>
                             <?php   $arg = array(
                                                         'post_type' => 'post',
@@ -503,7 +540,7 @@ elseif(is_category()) {
                                                             array(
                                                             'taxonomy' => 'featured',
                                                             'field' => 'slug',
-                                                            'terms' => 'departments',
+                                                            'terms' => 'sanggunian',
                                                         ),
                                                         )   
                                                     );
@@ -515,7 +552,7 @@ elseif(is_category()) {
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
                                     if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/departments/'; ?>">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/sannguniang-bayan/'; ?>">Show More</a></li>
                                 <?php 
                                     }
                                     endwhile; 
@@ -529,6 +566,8 @@ elseif(is_category()) {
             <?php   $arg = array(
                                                'post_type' => 'events',
                                                'posts_per_page' => 1,
+                                               'meta_checkbox'=> 'meta_key',
+                                               'meta_value'=> 'yes',
                                                  );
                                                  $featured = new \WP_Query($arg);
                                                  while($featured->have_posts()): $featured->the_post(); 

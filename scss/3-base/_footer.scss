@@ -102,6 +102,21 @@ footer {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
+
+
+            .visit-us {
+
+                a { 
+                    pointer-events: none;
+                    cursor: default;
+                    
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+
         }
 
         @include lg {

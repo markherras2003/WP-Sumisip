@@ -2,6 +2,8 @@
     //global $post;
     global $paged;
 
+    $cat = get_term_by('name', single_cat_title('',false), 'category');
+
     if( get_query_var('paged') ) {
         $paged = get_query_var('paged');
     }else if ( get_query_var('page') ) {
@@ -15,9 +17,9 @@
     $big = 99999999; 
     $arg = array(
         'post_type' => 'post',
-        //'posts_per_page' => 1,
+        'category_name' => $cat->slug,
         'paged' =>$paged,
-        'showposts'=>15,
+        'showposts'=>10,
          
     );
     $post_excerpt = new \WP_Query($arg);
@@ -120,9 +122,11 @@
     <div class="pagination-wrapper">
         <?php previous_posts_link('') ?>
         <ul class="pagination" id="page-navigation">
-           <?php foreach ( $pagination as $key => $page_link ) : ?>
+           <?php
+           foreach ( $pagination as $key => $page_link ) : ?>
 						<li class="<?php if ( strpos( $page_link, 'current' ) !== false ) { echo 'active'; } ?>"><?php echo $page_link ?></li>
-		   <?php endforeach ?>
+           <?php endforeach
+           ?>
     
         </ul>
        <?php next_posts_link('', $post_excerpt->max_num_pages) ?>

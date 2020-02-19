@@ -6,7 +6,8 @@
         </div>
 
         <div class="post-hero-wrapper">
-            <h1 class="display-1"><?= single_cat_title(); ?></h1>
+            <h1 class="display-1"><?= single_cat_title(); ?>
+           </h1>
         </div>
     </section>
 

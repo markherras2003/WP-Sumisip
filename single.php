@@ -50,7 +50,6 @@ get_header();
         <div class="post-hero-wrapper">
             <div class="post-dir">
              <?php the_category();
-
              ?>
             </div>
 
@@ -125,7 +124,9 @@ $i=0;
 
 <div class="author-profile">
     <div class="author-img">
-        <?= get_avatar(2,360);
+        <?php $author_ID = get_the_author_meta( 'ID' ); ?>
+        
+        <?= get_avatar($author_ID,360);
         ?>
         <?php
             $fname = get_the_author_meta('first_name');

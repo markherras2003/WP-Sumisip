@@ -3,10 +3,10 @@
 $nd = get_the_title();
 $ss = single_post_title('',false);
 switch($nd) {
-    case 'Tourist Spot':
+    case 'Places and Tours':
         $color = 'matisse';
     break;
-    case 'Food':
+    case 'Our Delicasies':
         $color = 'rosewood';
     break;
     case 'Artistry':
