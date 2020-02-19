@@ -60,9 +60,9 @@ $videopress_theme_options = new VP_Option(array(
 /* ============================================================ */
 /* Metaboxes */
 /* ============================================================ */
-$videopress_post_options = new VP_Metabox(get_template_directory() . '/options/admin/metabox/video-options.php');
-$videopress_post_options = new VP_Metabox(get_template_directory() . '/options/admin/metabox/playlist-builder.php');
-$videopress_post_options = new VP_Metabox(get_template_directory() . '/options/admin/metabox/layout-builder.php');
+//$videopress_post_options = new VP_Metabox(get_template_directory() . '/options/admin/metabox/video-options.php');
+//$videopress_post_options = new VP_Metabox(get_template_directory() . '/options/admin/metabox/playlist-builder.php');
+//$videopress_post_options = new VP_Metabox(get_template_directory() . '/options/admin/metabox/layout-builder.php');
 
 /*
  * EOF
