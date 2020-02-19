@@ -29,7 +29,7 @@ array(
 									'name' => 'featured_1_1',
 									'label' => __('Upload Featured Slider', 'textdomain_code'),
 									'description' => __('Upload Your Featured', 'textdomain_code'),
-									'default' => $themepath.'logo.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -37,7 +37,7 @@ array(
 									'name' => 'featured_2_1',
 									'label' => __('Upload Second Image', 'textdomain_code'),
 									'description' => __('Upload Second Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -45,7 +45,7 @@ array(
 									'name' => 'featured_3_1',
 									'label' => __('Upload Third Image', 'textdomain_code'),
 									'description' => __('Upload Third Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -94,7 +94,7 @@ array(
 									'name' => 'featured_1_2',
 									'label' => __('Upload Featured Slider', 'textdomain_code'),
 									'description' => __('Upload Your Featured', 'textdomain_code'),
-									'default' => $themepath.'logo.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -102,7 +102,7 @@ array(
 									'name' => 'featured_2_2',
 									'label' => __('Upload Second Image', 'textdomain_code'),
 									'description' => __('Upload Second Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -110,7 +110,7 @@ array(
 									'name' => 'featured_3_2',
 									'label' => __('Upload Third Image', 'textdomain_code'),
 									'description' => __('Upload Third Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -160,7 +160,7 @@ array(
 									'name' => 'featured_1_3',
 									'label' => __('Upload Featured Slider', 'textdomain_code'),
 									'description' => __('Upload Your Featured', 'textdomain_code'),
-									'default' => $themepath.'logo.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -168,7 +168,7 @@ array(
 									'name' => 'featured_2_3',
 									'label' => __('Upload Second Image', 'textdomain_code'),
 									'description' => __('Upload Second Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -176,7 +176,7 @@ array(
 									'name' => 'featured_3_3',
 									'label' => __('Upload Third Image', 'textdomain_code'),
 									'description' => __('Upload Third Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -226,7 +226,7 @@ array(
 									'name' => 'featured_1_4',
 									'label' => __('Upload Featured Slider', 'textdomain_code'),
 									'description' => __('Upload Your Featured', 'textdomain_code'),
-									'default' => $themepath.'logo.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -234,7 +234,7 @@ array(
 									'name' => 'featured_2_4',
 									'label' => __('Upload Second Image', 'textdomain_code'),
 									'description' => __('Upload Second Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -242,7 +242,7 @@ array(
 									'name' => 'featured_3_4',
 									'label' => __('Upload Third Image', 'textdomain_code'),
 									'description' => __('Upload Third Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -291,7 +291,7 @@ array(
 									'name' => 'featured_1_5',
 									'label' => __('Upload Featured Slider', 'textdomain_code'),
 									'description' => __('Upload Your Featured', 'textdomain_code'),
-									'default' => $themepath.'logo.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -299,7 +299,7 @@ array(
 									'name' => 'featured_2_5',
 									'label' => __('Upload Second Image', 'textdomain_code'),
 									'description' => __('Upload Second Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -307,7 +307,7 @@ array(
 									'name' => 'featured_3_5',
 									'label' => __('Upload Third Image', 'textdomain_code'),
 									'description' => __('Upload Third Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -465,7 +465,7 @@ array(
 						'name' => 'featured_video',
 						'label' => __('Featured Video', 'textdomain_code'),
 						'description' => __('Upload A video player', 'textdomain_code'),
-						'default' => $themepath.'logo-small.png',
+						'default' => $themepath.'/assets/svg/branding-official.svg',
 					),
 				// End Video Player Logo
 
@@ -475,7 +475,7 @@ array(
 						'name' => 'featured_image',
 						'label' => __('Featured Image', 'textdomain_code'),
 						'description' => __('Upload An Image Preview', 'textdomain_code'),
-						'default' => $themepath.'logo-small.png',
+						'default' => $themepath.'/assets/svg/branding-official.svg',
 					),
 				// End Video Player Logo
 				
@@ -732,7 +732,7 @@ array(
 						'name' => 'section_video',
 						'label' => __('Featured Video', 'textdomain_code'),
 						'description' => __('Upload An Video', 'textdomain_code'),
-						'default' => $themepath.'logo-small.png',
+						'default' => $themepath.'/assets/svg/branding-official.svg',
 					),
 				// End Video Player Logo
 				
