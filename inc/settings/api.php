@@ -54,12 +54,14 @@ if( ! get_role('developer') ){
  * @return array
  */
 function sumisip_encode_html_entity ( $results, $server, $request ) {
-    if ( $request->get_route() != '/feeds/v1/featured-post' ){
+    $handles = ['/wp/v2/posts', '/wp/v2/events'];
+    if ( in_array( $request->get_route(), $handles ) ){
         foreach ( $results as $key => $result ){
             $results[$key]['title']['rendered'] = html_entity_decode( $results[$key]['title']['rendered']  );
         }
         return $results;
     }
+    return $results;
 }
 add_filter( 'rest_pre_echo_response', 'sumisip_encode_html_entity' , 10, 3 );
 
