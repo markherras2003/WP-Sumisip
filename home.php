@@ -78,7 +78,7 @@ get_header();
                     description="<?= vp_option('vpt_option.description_1_2') ?>"
                     href="<?= vp_option('vpt_option.url_1_2') ?>"
                     mainPrev="<?= vp_option('vpt_option.featured_1_2') ?>" secondaryPrev="<?= vp_option('vpt_option.featured_2_2') ?>"
-                    tertiaryPrev="<?= vp_option('vpt_option.featured_3_3') ?>">
+                    tertiaryPrev="<?= vp_option('vpt_option.featured_3_2') ?>">
                     <img src="<?= vp_option('vpt_option.featured_1_2') ?>" alt="Slide 1">
                 </li>
 
