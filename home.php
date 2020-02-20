@@ -349,7 +349,7 @@ get_header();
         </section>
 
         <section class="video-section">
-            <video id="autoplayVideo" autoplay controls>
+            <video id="autoplayVideo" controls>
                 <source src="<?= esc_url(vp_option('vpt_option.section_video')); ?>" type="video/mp4">
             </video>
         </section>
