@@ -528,7 +528,7 @@ elseif(is_category()) {
                                         $posting_id=$menu->object_id;
                                         $featured_images = $dynamic_featured_image->get_featured_images($posting_id);
                                         $my_post = get_post( $posting_id ); 
-                                        $my_excerpt = $my_post->post_excerpt
+                                        $my_excerpt = $my_post->post_excerpt;
                                         foreach($featured_images as $featured_image) {
                                             $key=$key+1; 
                                             if ($key===1) {?>
