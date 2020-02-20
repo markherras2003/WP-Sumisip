@@ -221,7 +221,10 @@ if ( ! function_exists( 'sumisip_setup' ) ) :
     register_nav_menu('visit', __('Visit Us'));
     register_nav_menu('downloadable', __('Downloadable Links'));
     register_nav_menu('contact-menu', __('Contact Menu'));
-    register_nav_menu('social-menu', __('Social Menu'));
+	register_nav_menu('social-menu', __('Social Menu'));
+	register_nav_menu('department-menu', __('Department Links'));
+	register_nav_menu('mayor-menu', __('Mayors Office Links'));
+	register_nav_menu('sangguniang-menu', __('Sangguniang Bayan Links'));
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
