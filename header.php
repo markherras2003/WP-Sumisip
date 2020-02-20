@@ -502,7 +502,6 @@ elseif(is_category()) {
                         </div>
                         <div class="mega-menu-group sbs-m-1">
                         <h4>Mayor's Office</h4>
-                        <?php
                                              <?php  
                                              if(has_nav_menu('mayor-menu')){
                                              wp_nav_menu([
@@ -514,7 +513,7 @@ elseif(is_category()) {
                                              ]);
                                              }
                                          ?>
-                        ?>          
+                           
                         </div>     
                         <div class="mega-menu-group sbs-m-1">
                         <h4>Sangguniang Bayan</h4>
