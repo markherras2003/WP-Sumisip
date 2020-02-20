@@ -225,6 +225,7 @@ if ( ! function_exists( 'sumisip_setup' ) ) :
 	register_nav_menu('department-menu', __('Department Header Links'));
 	register_nav_menu('mayor-menu', __('Mayors Office Links'));
 	register_nav_menu('sangguniang-menu', __('Sangguniang Bayan Links'));
+	register_nav_menu('awards-menu', __('Awards Menu Links'));
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
