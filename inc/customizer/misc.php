@@ -119,18 +119,6 @@
                 'settings'          =>  'ju_footer_sumisip_allrights',
             )
         ));
-
-        $wp_customize->add_control(
-            new WP_Customize_Media_Control(
-                $wp_customize,
-                'official_logo_input',
-                array(
-                    'label'      => __( 'Upload Seal' ),
-                    'section'    => 'ju_misc_section',
-                    'settings'   => 'ju_footer_official_logo',
-                )
-            )
-        );
         
     }
 ?>
