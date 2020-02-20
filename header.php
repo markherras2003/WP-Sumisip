@@ -145,7 +145,7 @@ elseif(is_category()) {
                                 <?php
                                    }
                                     if($i==7) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/places/'; ?>">Show More</a></li>
                                 <?php 
                                     }
                                 }
