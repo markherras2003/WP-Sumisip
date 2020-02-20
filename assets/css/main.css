@@ -1135,9 +1135,9 @@ img.photo-effect, .photo-stacks .photo-stack-display img {
 }
 
 img.photo-effect {
-  height: 100% !important;
-  width: 100% !important;
-  max-height: 350px !important;
+  height: 100%;
+  width: 100%;
+  max-height: 350px;
 }
 
 img.tilt-left {
@@ -1266,7 +1266,7 @@ nav.matisse {
 }
 
 nav.matisse .nav-item:hover, nav.matisse .nav-item.active {
-  background-color: #2c4c7f;
+  background-color: rgba(26, 45, 75, 0.3);
 }
 
 nav.marigold {
@@ -1278,7 +1278,7 @@ nav.marigold .nav-item a span {
 }
 
 nav.marigold .nav-item:hover, nav.marigold .nav-item.active {
-  background-color: #deba32;
+  background-color: rgba(164, 137, 37, 0.2);
 }
 
 nav.teal {
@@ -1286,7 +1286,7 @@ nav.teal {
 }
 
 nav.teal .nav-item:hover, nav.teal .nav-item.active {
-  background-color: #097c79;
+  background-color: rgba(6, 73, 71, 0.2);
 }
 
 nav.iris {

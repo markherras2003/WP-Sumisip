@@ -97,7 +97,7 @@ nav {
 
             &:hover,
             &.active {
-                background-color: shade(getColor(Matisse), 15);
+                background-color: colorOpacity(shade(getColor(Matisse), 50), 30);
             }
         }
     }
@@ -112,7 +112,7 @@ nav {
 
             &:hover,
             &.active {
-                background-color: shade(getColor(Marigold), 5);
+                background-color: colorOpacity(shade(getColor(Marigold), 30), 20);
             }
         }
     }
@@ -125,7 +125,7 @@ nav {
 
             &:hover,
             &.active {
-                background-color: shade(getColor(Teal), 15);
+                background-color: colorOpacity(shade(getColor(Teal), 50), 20);
             }
         }
     }
