@@ -538,7 +538,7 @@ elseif(is_category()) {
                                         } ?>
                                      <div class="details">
                                         <h5 class="light"><?= $menu->title ?></h5>
-                                        <div class="p-sm"><?= custom_get_the_excerpt($posting_id) ?></div>
+                                        <div class="p-sm"><p><?= custom_get_the_excerpt($posting_id) ?></p></div>
                                         </div>
                                     </a>
                                     </li>
