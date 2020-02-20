@@ -9,6 +9,10 @@
  * @since 1.0.0
  */
 
+
+get_header();
+
+
 ?>
 
 <div class="hero-section loading">
@@ -432,3 +436,6 @@ $featured = new \WP_Query($arg);
     </div>
 </div>
 </section>
+
+<?php
+get_footer();
