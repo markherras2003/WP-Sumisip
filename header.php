@@ -141,17 +141,17 @@ Oldest Church
 
                             <?php   $arg = array(
                                                         'post_type' => 'post',
-                                                        'showposts'=>14,
+                                                        'showposts'=>11,
                                                         'post__in' => array('274','272','268','264','262','569','571','573',
                                                         '577','579','581'),
                                                         'orderby'=>'post__in',
-                                                       /* 'tax_query' => array(             
+                                                         'tax_query' => array(             
                                                             array(
                                                             'taxonomy' => 'featured',
                                                             'field' => 'slug',
                                                             'terms' => 'places',
                                                         ),
-                                                        */
+                                                    
                                                         )   
                                                     );
                                                  $places = new \WP_Query($arg);
