@@ -125,7 +125,7 @@ elseif(is_category()) {
                             <ul>
                             <?php   $arg = array(
                                                         'post_type' => 'post',
-                                                        'showposts'=>11,
+                                                        'showposts'=>15,
                                                         'post__in' => array('274','272','268','264','262','569','571','573',
                                                         '577','579','581'),
                                                         'orderby'=>'post__in',
@@ -183,9 +183,10 @@ elseif(is_category()) {
                             <ul>
                             <?php   $arg = array(
                                                         'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
                                                         'paged' =>$paged,
                                                         'showposts'=>5,
+                                                        'post__in' => array('294','292','290','288','278'),
+                                                        'orderby'=>'post__in',
                                                         'tax_query' => array(             
                                                             array(
                                                             'taxonomy' => 'featured',
