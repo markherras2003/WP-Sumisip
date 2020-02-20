@@ -457,52 +457,6 @@ elseif(is_category()) {
                     <div class="mega-menu">
                         <div class="mega-menu-group mini-box tinier-box extended">
                             <h4>Awards</h4>
-                            <ul>
-                                    <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>4,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'awards',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $featured = new \WP_Query($arg);
-                                                 while($featured->have_posts()): $featured->the_post(); 
-                                                 //$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
-                                                 global $dynamic_featured_image;
-
-                                            ?>
-                                                                    <li>
-                                    <a href="<?= get_permalink(); ?>">
-                                    <?php 
-                                        $key=0;
-                                        $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
-                                        foreach($featured_images as $featured_image) {
-                                            $key=$key+1; 
-                                            if ($key===1) {?>
-                                        <div class="thumb-wrapper">
-                                            <img src="<?= $featured_image['full']; ?>" alt="Main Mega Menu Thumb">
-                                        </div>
-                                            <?php }
-                                    
-                                        } ?>
-                                     <div class="details">
-                                        <h5 class="light"><?= get_the_title(); ?></h5>
-                                        <div class="p-sm"><?= the_excerpt(); ?></div>
-                                        </div>
-                                    </a>
-                                    </li>
-                                <?php endwhile; ?> 
-                            </ul>
-                        </div>
-
-                        <div class="mega-menu-group mini-box tinier-box extended">
-                            <h4>Awards</h4>
 
                             <?php
                                 if( has_nav_menu('awards-menu') ) {
