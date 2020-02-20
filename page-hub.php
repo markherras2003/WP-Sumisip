@@ -64,7 +64,11 @@ get_header();
         </div>
     </section>
     
- <?= the_content() ?>
+<section>
+
+<?php the_content(); ?>   
+
+</section>
     
 <?php
 get_footer();
