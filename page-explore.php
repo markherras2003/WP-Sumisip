@@ -91,6 +91,8 @@ get_header();
         </div>
     </section>
 
+
+<section class="hub-contents">
 <?php
 
 if(have_posts()) {
