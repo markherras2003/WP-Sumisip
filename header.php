@@ -123,36 +123,32 @@ elseif(is_category()) {
                         <div class="mega-menu-group sbs-m-">
                             <h4>Places</h4>
                             <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        'showposts'=>15,
-                                                        'post__in' => array('274','272','268','264','262','569','571','573',
-                                                        '577','579','581'),
-                                                        'orderby'=>'post__in',
-                                                         'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'places',
-                                                        ),
-                                                    
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
+                             <?php
+                                if( has_nav_menu('places-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+                                    $menuID = $menuLocations['places-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                                    <?php 
                                                  $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
-                                                 $i++;
-                                                 if($i>=1 && $i<=7) {
-                             ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                                 foreach ($navMenu as $menu) {
+                                                    $i++;
+                                                    if($i>=1 && $i<=7) {            
+                                            ?>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title ?></a></li>
                                 <?php
                                    }
                                     if($i==7) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                                 <?php 
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                                }
                                 ?> 
                             </ul>
                         </div>
@@ -161,19 +157,18 @@ elseif(is_category()) {
                             <ul>
                             <?php    
                             $i=0;
-                            while($places->have_posts()): $places->the_post(); 
+                            foreach ($navMenu as $menu) {
                               $i++;
                                 if($i>7 && $i<13) {
                                 ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title; ?></a></li>
                                 <?php
                                 }
                                     if($i==13) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                                 <?php 
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                            }
                                 ?> 
                             </ul>
                         </div>            
@@ -181,33 +176,31 @@ elseif(is_category()) {
                         <div class="mega-menu-group sbs-m-">
                             <h4>Food</h4>
                             <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'post__in' => array('294','292','290','288','278'),
-                                                        'orderby'=>'post__in',
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'food',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
+                            <?php
+                                if( has_nav_menu('food-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+                                    $menuID = $menuLocations['food-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                                    <?php 
                                                  $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
+                                                 foreach ($navMenu as $menu) { 
                                                  $i++;
                              ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title; ?></a></li>
                                 <?php
                                     if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/food/'; ?>">Show More</a></li>
                                 <?php 
+                                    break;
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                                  }
                                 ?> 
                             </ul>
                         </div>
@@ -222,96 +215,94 @@ elseif(is_category()) {
                         <div class="mega-menu-group">
                             <h4>History</h4>
                             <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'history',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
+                            <?php
+                                if( has_nav_menu('history-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+                                    $menuID = $menuLocations['history-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                                    <?php 
                                                  $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
-                                                 $i++;
-                             ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                                 foreach ($navMenu as $menu) {
+                                                     $i++;
+                            ?>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title; ?></a></li>
                                 <?php
                                     if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/history/'; ?>">Show More</a></li>
                                 <?php 
+                                    break;
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                                   }
                                 ?> 
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Culture and Arts</h4>
                             <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'culture',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
+                            <?php
+                                if( has_nav_menu('culture-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+                                    $menuID = $menuLocations['culture-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                          
+                                    <?php 
                                                  $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
+                                                 foreach ($navMenu as $menu) {
                                                  $i++;
                              ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title; ?></a></li>
                                 <?php
                                     if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/culture/'; ?>">Show More</a></li>
                                 <?php 
+                                    break;
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                                 }
                                 ?> 
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Local Industry</h4>
                             <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'industry',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
+                            <?php
+                                if( has_nav_menu('local-industry-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+                                    $menuID = $menuLocations['local-industry-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                                    <?php 
                                                  $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
+                                                 foreach ($navMenu as $menu) {
                                                  $i++;
                              ?>
                                 <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
                                 <?php
                                     if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/industry/'; ?>">Show More</a></li>
-                                <?php 
+                                <?php
+                                    break; 
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                                   }
                                 ?> 
                             </ul>
                         </div>
@@ -457,7 +448,6 @@ elseif(is_category()) {
                     <div class="mega-menu">
                         <div class="mega-menu-group mini-box tinier-box extended">
                             <h4>Awards</h4>
-
                             <?php
                                 if( has_nav_menu('awards-menu') ) {
                                     $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
