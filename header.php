@@ -295,7 +295,7 @@ elseif(is_category()) {
                                                  foreach ($navMenu as $menu) {
                                                  $i++;
                              ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title; ?></a></li>
                                 <?php
                                     if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/industry/'; ?>">Show More</a></li>
