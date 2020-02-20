@@ -722,6 +722,17 @@ function title_filter( $where, $wp_query ){
 }
 
 
+function custom_get_the_excerpt($post_id) {
+    global $post;  
+    $save_post = $post;
+    $post = get_post( $post_id );
+    setup_postdata( $post );
+    $output = get_the_excerpt();
+    $post = $save_post;
+    return $output;
+}
+
+
 
 
 
