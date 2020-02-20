@@ -229,6 +229,10 @@ if ( ! function_exists( 'sumisip_setup' ) ) :
 	register_nav_menu('history-menu', __('History Menu Links'));
 	register_nav_menu('culture-menu', __('Culture and Arts Menu Links'));
 	register_nav_menu('local-industry-menu', __('Local Industry Menu Links'));
+	register_nav_menu('places-menu', __('Places Menu Links'));
+	register_nav_menu('food-menu', __('Food Menu Links'));
+
+
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
