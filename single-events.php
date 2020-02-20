@@ -67,7 +67,7 @@ get_header();
         </div>
     </section>
 
-    <section>
+    <section class="hub-contents">
 
         <?php the_content(); ?>   
         
