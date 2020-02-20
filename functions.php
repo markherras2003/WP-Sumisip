@@ -740,6 +740,3 @@ function custom_get_the_excerpt($post_id) {
 }
 
 
-
-
-

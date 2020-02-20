@@ -16,7 +16,9 @@ $(() => {
         $(window).height() / 2;
   
       if (scrollValue >= topThreshold && scrollValue <= bottomThreshold) {
-        autoplayVideo.play();
+        if (navigator.userAgent.indexOf("Chrome") > 0) {
+          this.paused?this.play():this.pause();
+        }
       } else {
         autoplayVideo.pause();
       }
@@ -25,14 +27,4 @@ $(() => {
     });
   }
   
-});
-
-
- /* Chrome HTML5 Video Player Fix(CLick Anywhere) */
- jQuery(document).ready(function($){
-  //$('#autoplayVideo').click(function(){
-      if (navigator.userAgent.indexOf("Chrome") > 0) {
-          this.paused?this.play():this.pause();
-      }
-  //});
 });
