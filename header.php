@@ -517,29 +517,31 @@ elseif(is_category()) {
                         </div>     
                         <div class="mega-menu-group sbs-m-1">
                         <h4>Sangguniang Bayan</h4>
-                        <?php
-                                if( has_nav_menu('sangguniang-menu') ) {
-                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
-                                    $menuID = $menuLocations['sangguniang-menu']; // Get the *primary* menu ID
-                                    $navigation = wp_get_nav_menu_items($menuID);
-
-                                } else {
-                                    $navigation = [];
-                                }
-                        ?>  
+                                        <?php  
+                                             if(has_nav_menu('sangguniang-menu')){
+                                             wp_nav_menu([
+                                                 'theme_location'      => 'sangguniang-menu',
+                                                 'container'           => false,
+                                                 'fallback_cb'         => false,
+                                                 'depth'               => 0,
+                                                 // 'walker'              => new JU_Custom_Nav_Walker()
+                                             ]);
+                                             }
+                                         ?>  
                         </div>
                         <div class="mega-menu-group sbs-m-1">
                         <h4>Departments</h4>
-                        <?php
-                                if( has_nav_menu('department-menu') ) {
-                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
-                                    $menuID = $menuLocations['department-menu']; // Get the *primary* menu ID
-                                    $navigation = wp_get_nav_menu_items($menuID);
-
-                                } else {
-                                    $navigation = [];
-                                }
-                        ?>  
+                        <?php  
+                                             if(has_nav_menu('department-menu')){
+                                             wp_nav_menu([
+                                                 'theme_location'      => 'department-menu',
+                                                 'container'           => false,
+                                                 'fallback_cb'         => false,
+                                                 'depth'               => 0,
+                                                 // 'walker'              => new JU_Custom_Nav_Walker()
+                                             ]);
+                                             }
+                                         ?> 
                         </div>
                     </div>
                 </div>
