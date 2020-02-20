@@ -527,7 +527,8 @@ elseif(is_category()) {
                                         $key=0;
                                         $posting_id=$menu->object_id;
                                         $featured_images = $dynamic_featured_image->get_featured_images($posting_id);
-                                        $excerpt = apply_filters('the_excerpt', get_post_field('post_excerpt', $posting_id));
+                                        $my_post = get_post( $posting_id ); 
+                                        $my_excerpt = $my_post->post_excerpt
                                         foreach($featured_images as $featured_image) {
                                             $key=$key+1; 
                                             if ($key===1) {?>
@@ -539,7 +540,7 @@ elseif(is_category()) {
                                         } ?>
                                      <div class="details">
                                         <h5 class="light"><?= $menu->title ?></h5>
-                                        <div class="p-sm"><?= $excerpt ?></div>
+                                        <div class="p-sm"><?= $my_excerpt ?></div>
                                         </div>
                                     </a>
                                     </li>
