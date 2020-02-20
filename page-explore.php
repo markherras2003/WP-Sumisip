@@ -92,28 +92,7 @@ get_header();
     </section>
 
 
+<?= the_content() ?>
 
-<?php
-    $ID =array('259','254');
-    $arg = array(
-    'post_type' => 'page',
-    'showposts'=>10, 
-    'order' => 'desc',
-    'post__in' => $ID,
-    );
-    $paging = new \WP_Query($arg);
-    ?>
-   
-   <?php 
-        $i=0;
-        while($paging->have_posts()): $paging->the_post();
-        $i++;
-        ?>
-    <?php include( locate_template( 'partials/posts/post-page.php') ); ?>
-    
-    <?php
-        endwhile; 
-    wp_reset_postdata();
-    ?>
 <?php
 get_footer();
