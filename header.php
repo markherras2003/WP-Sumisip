@@ -123,22 +123,6 @@ elseif(is_category()) {
                         <div class="mega-menu-group sbs-m-">
                             <h4>Places</h4>
                             <ul>
-
-                            Tinuse Island
-Grand Masjid
-Bessey Janitla
-Bessy Maglogok
-Mangal Rubber Plantation
-Christian Village
-Mahatalang Rotonda
-VIEW MORE
-Buli Buli Public Market
-Bukbuk Beach
-Tolong Beach
-Oldest Church
-
-
-
                             <?php   $arg = array(
                                                         'post_type' => 'post',
                                                         'showposts'=>11,
