@@ -68,7 +68,7 @@ get_header();
 
                 <li class="active" overline="<?= vp_option('vpt_option.tagline_1_1') ?>" heading="<?= vp_option('vpt_option.title_1_1') ?>"
                     description="<?= vp_option('vpt_option.description_1_1') ?>"
-                    href="https://lgu-sumisip.com/the-new-sumisip/"
+                    href="<?= vp_option('vpt_option.url_1_1') ?>"
                     mainPrev="<?= vp_option('vpt_option.featured_1_1') ?>" secondaryPrev="<?= vp_option('vpt_option.featured_2_1') ?>"
                     tertiaryPrev="<?= vp_option('vpt_option.featured_3_1') ?>">
                     <img src="<?= vp_option('vpt_option.featured_1_1') ?>" alt="Slide 1">
@@ -76,15 +76,15 @@ get_header();
 
                 <li overline="<?= vp_option('vpt_option.tagline_1_2') ?>" heading="<?= vp_option('vpt_option.title_1_2') ?>"
                     description="<?= vp_option('vpt_option.description_1_2') ?>"
-                    href="https://lgu-sumisip.com/the-new-sumisip/"
+                    href="<?= vp_option('vpt_option.url_1_2') ?>"
                     mainPrev="<?= vp_option('vpt_option.featured_1_2') ?>" secondaryPrev="<?= vp_option('vpt_option.featured_2_2') ?>"
-                    tertiaryPrev="<?= vp_option('vpt_option.featured_3_3') ?>">
+                    tertiaryPrev="<?= vp_option('vpt_option.featured_3_2') ?>">
                     <img src="<?= vp_option('vpt_option.featured_1_2') ?>" alt="Slide 1">
                 </li>
 
                 <li overline="<?= vp_option('vpt_option.tagline_1_3') ?>" heading="<?= vp_option('vpt_option.title_1_3') ?>"
                     description="<?= vp_option('vpt_option.description_1_3') ?>"
-                    href="https://lgu-sumisip.com/the-new-sumisip/"
+                    href="<?= vp_option('vpt_option.url_1_3') ?>"
                     mainPrev="<?= vp_option('vpt_option.featured_1_3') ?>" secondaryPrev="<?= vp_option('vpt_option.featured_2_3') ?>"
                     tertiaryPrev="<?= vp_option('vpt_option.featured_3_3') ?>">
                     <img src="<?= vp_option('vpt_option.featured_1_3') ?>" alt="Slide 1">
@@ -92,7 +92,7 @@ get_header();
 
                 <li overline="<?= vp_option('vpt_option.tagline_1_4') ?>" heading="<?= vp_option('vpt_option.title_1_4') ?>"
                     description="<?= vp_option('vpt_option.description_1_4') ?>"
-                    href="https://lgu-sumisip.com/the-new-sumisip/"
+                    href="<?= vp_option('vpt_option.url_1_4') ?>"
                     mainPrev="<?= vp_option('vpt_option.featured_1_4') ?>" secondaryPrev="<?= vp_option('vpt_option.featured_2_4') ?>"
                     tertiaryPrev="<?= vp_option('vpt_option.featured_3_4') ?>">
                     <img src="<?= vp_option('vpt_option.featured_1_4') ?>" alt="Slide 1">
@@ -100,7 +100,7 @@ get_header();
 
                 <li overline="<?= vp_option('vpt_option.tagline_1_5') ?>" heading="<?= vp_option('vpt_option.title_1_5') ?>"
                     description="<?= vp_option('vpt_option.description_1_5') ?>"
-                    href="https://lgu-sumisip.com/the-new-sumisip/"
+                    href="<?= vp_option('vpt_option.url_1_5') ?>"
                     mainPrev="<?= vp_option('vpt_option.featured_1_5') ?>" secondaryPrev="<?= vp_option('vpt_option.featured_2_5') ?>"
                     tertiaryPrev="<?= vp_option('vpt_option.featured_3_5') ?>">
                     <img src="<?= vp_option('vpt_option.featured_1_5') ?>" alt="Slide 1">
