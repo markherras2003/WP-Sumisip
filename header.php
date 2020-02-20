@@ -502,67 +502,42 @@ elseif(is_category()) {
                         </div>
                         <div class="mega-menu-group sbs-m-1">
                         <h4>Mayor's Office</h4>
-                            <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'mayors_office',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
-                                                 $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
-                                                 $i++;
-                             ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
-                                <?php
-                                    if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/mayors_office/'; ?>">Show More</a></li>
-                                <?php 
-                                    }
-                                    endwhile; 
-                                    wp_reset_postdata();
-                                ?> 
-                            </ul>
-                        </div>
+                        <?php
+                                if( has_nav_menu('mayor-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+                                    $menuID = $menuLocations['mayor-menu']; // Get the *primary* menu ID
+                                    $navigation = wp_get_nav_menu_items($menuID);
+
+                                } else {
+                                    $navigation = [];
+                                }
+                        ?>             
+                        </div>     
                         <div class="mega-menu-group sbs-m-1">
                         <h4>Sangguniang Bayan</h4>
-                            <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'sanggunian',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
-                                                 $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
-                                                 $i++;
-                             ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
-                                <?php
-                                    if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/sannguniang-bayan/'; ?>">Show More</a></li>
-                                <?php 
-                                    }
-                                    endwhile; 
-                                    wp_reset_postdata();
-                                ?> 
-                            </ul>
+                        <?php
+                                if( has_nav_menu('sangguniang-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+                                    $menuID = $menuLocations['sangguniang-menu']; // Get the *primary* menu ID
+                                    $navigation = wp_get_nav_menu_items($menuID);
+
+                                } else {
+                                    $navigation = [];
+                                }
+                        ?>  
+                        </div>
+                        <div class="mega-menu-group sbs-m-1">
+                        <h4>Departments</h4>
+                        <?php
+                                if( has_nav_menu('department-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+                                    $menuID = $menuLocations['department-menu']; // Get the *primary* menu ID
+                                    $navigation = wp_get_nav_menu_items($menuID);
+
+                                } else {
+                                    $navigation = [];
+                                }
+                        ?>  
                         </div>
                     </div>
                 </div>
