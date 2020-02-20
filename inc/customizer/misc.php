@@ -33,9 +33,6 @@
             'default'   => ''
         ]);
 
-        $wp_customize->add_setting('ju_footer_official_logo',[
-
-        ]);
         $wp_customize->add_setting('ju_customizer_button',[
 
         ]);
