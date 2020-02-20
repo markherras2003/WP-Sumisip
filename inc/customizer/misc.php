@@ -8,9 +8,22 @@
             'panel'     =>  'sumisip',
         ]);
 
-        $wp_customize->add_setting('ju_footer_sumisip_description',[
+        $wp_customize->add_setting('ju_footer_sumisip_start_day',[
             'default'   => ''
         ]);
+
+        $wp_customize->add_setting('ju_footer_sumisip_end_day',[
+            'default'   => ''
+        ]);
+
+        $wp_customize->add_setting('ju_footer_sumisip_start_time',[
+            'default'   => ''
+        ]);
+
+        $wp_customize->add_setting('ju_footer_sumisip_end_time',[
+            'default'   => ''
+        ]);
+
 
         $wp_customize->add_setting('ju_footer_sumisip_copyright',[
             'default'   => ''
@@ -20,9 +33,6 @@
             'default'   => ''
         ]);
 
-        $wp_customize->add_setting('ju_footer_official_logo',[
-
-        ]);
         $wp_customize->add_setting('ju_customizer_button',[
 
         ]);
@@ -42,12 +52,46 @@
 
         $wp_customize->add_control( new WP_Customize_Control(
             $wp_customize,
-            'ju_footer_sumisip_description_input',
+            'ju_footer_sumisip_start_day_input',
             array(
-                'label'             =>  __('Sumisip Footer Description'),
+                'label'             =>  __('Sumisip Start Day'),
                 'section'           =>  'ju_misc_section',
-                'settings'          =>  'ju_footer_sumisip_description',
-                'type'              => 'textarea'
+                'settings'          =>  'ju_footer_sumisip_start_day',
+            )
+        ));
+
+
+
+        $wp_customize->add_control( new WP_Customize_Control(
+            $wp_customize,
+            'ju_footer_sumisip_end_day_input',
+            array(
+                'label'             =>  __('Sumisip End Day'),
+                'section'           =>  'ju_misc_section',
+                'settings'          =>  'ju_footer_sumisip_end_day',
+            )
+        ));
+
+
+        $wp_customize->add_control( new WP_Customize_Control(
+            $wp_customize,
+            'ju_footer_sumisip_start_time_input',
+            array(
+                'label'             =>  __('Sumisip Start Time'),
+                'section'           =>  'ju_misc_section',
+                'settings'          =>  'ju_footer_sumisip_start_time',
+            )
+        ));
+
+
+
+        $wp_customize->add_control( new WP_Customize_Control(
+            $wp_customize,
+            'ju_footer_sumisip_end_time_input',
+            array(
+                'label'             =>  __('Sumisip End Time'),
+                'section'           =>  'ju_misc_section',
+                'settings'          =>  'ju_footer_sumisip_end_time',
             )
         ));
 
@@ -72,18 +116,6 @@
                 'settings'          =>  'ju_footer_sumisip_allrights',
             )
         ));
-
-        $wp_customize->add_control(
-            new WP_Customize_Media_Control(
-                $wp_customize,
-                'official_logo_input',
-                array(
-                    'label'      => __( 'Upload Seal' ),
-                    'section'    => 'ju_misc_section',
-                    'settings'   => 'ju_footer_official_logo',
-                )
-            )
-        );
         
     }
 ?>

@@ -29,7 +29,7 @@ array(
 									'name' => 'featured_1_1',
 									'label' => __('Upload Featured Slider', 'textdomain_code'),
 									'description' => __('Upload Your Featured', 'textdomain_code'),
-									'default' => $themepath.'logo.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -37,7 +37,7 @@ array(
 									'name' => 'featured_2_1',
 									'label' => __('Upload Second Image', 'textdomain_code'),
 									'description' => __('Upload Second Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -45,7 +45,7 @@ array(
 									'name' => 'featured_3_1',
 									'label' => __('Upload Third Image', 'textdomain_code'),
 									'description' => __('Upload Third Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -94,7 +94,7 @@ array(
 									'name' => 'featured_1_2',
 									'label' => __('Upload Featured Slider', 'textdomain_code'),
 									'description' => __('Upload Your Featured', 'textdomain_code'),
-									'default' => $themepath.'logo.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -102,7 +102,7 @@ array(
 									'name' => 'featured_2_2',
 									'label' => __('Upload Second Image', 'textdomain_code'),
 									'description' => __('Upload Second Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -110,7 +110,7 @@ array(
 									'name' => 'featured_3_2',
 									'label' => __('Upload Third Image', 'textdomain_code'),
 									'description' => __('Upload Third Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -160,7 +160,7 @@ array(
 									'name' => 'featured_1_3',
 									'label' => __('Upload Featured Slider', 'textdomain_code'),
 									'description' => __('Upload Your Featured', 'textdomain_code'),
-									'default' => $themepath.'logo.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -168,7 +168,7 @@ array(
 									'name' => 'featured_2_3',
 									'label' => __('Upload Second Image', 'textdomain_code'),
 									'description' => __('Upload Second Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -176,7 +176,7 @@ array(
 									'name' => 'featured_3_3',
 									'label' => __('Upload Third Image', 'textdomain_code'),
 									'description' => __('Upload Third Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -226,7 +226,7 @@ array(
 									'name' => 'featured_1_4',
 									'label' => __('Upload Featured Slider', 'textdomain_code'),
 									'description' => __('Upload Your Featured', 'textdomain_code'),
-									'default' => $themepath.'logo.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -234,7 +234,7 @@ array(
 									'name' => 'featured_2_4',
 									'label' => __('Upload Second Image', 'textdomain_code'),
 									'description' => __('Upload Second Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -242,7 +242,7 @@ array(
 									'name' => 'featured_3_4',
 									'label' => __('Upload Third Image', 'textdomain_code'),
 									'description' => __('Upload Third Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -291,7 +291,7 @@ array(
 									'name' => 'featured_1_5',
 									'label' => __('Upload Featured Slider', 'textdomain_code'),
 									'description' => __('Upload Your Featured', 'textdomain_code'),
-									'default' => $themepath.'logo.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -299,7 +299,7 @@ array(
 									'name' => 'featured_2_5',
 									'label' => __('Upload Second Image', 'textdomain_code'),
 									'description' => __('Upload Second Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -307,7 +307,7 @@ array(
 									'name' => 'featured_3_5',
 									'label' => __('Upload Third Image', 'textdomain_code'),
 									'description' => __('Upload Third Image', 'textdomain_code'),
-									'default' => $themepath.'logo-small.png',
+									'default' => $themepath.'/assets/svg/branding-official.svg',
 								),
 
 								array(
@@ -352,254 +352,400 @@ array(
 ),
 
 // End Hero		
+		
 			
 
 
 			/* =============== Jwplayer Settings ====================== */
 			array(
-			'title' => __('Video Player Settings', 'textdomain_code'),
+			'title' => __('Featured Section', 'textdomain_code'),
 			'name' => 'menu_2',
 			'icon' => 'font-awesome:fa-play-circle-o',
 			'controls' => array(
 			
-			// Start License Key
-					array(
-						'type' => 'textbox',
-						'name' => 'license_key',
-						'label' => __('JWplayer PRO License Key', 'textdomain_code'),
-						'description' => __('If you have purchased a license from JWplayer you can enter it here.', 'textdomain_code'),
-						'default' => '',
-					),
-			// End License Key
-			
-				// Start Player Skin
 				array(
 					'type' => 'select',
-					'name' => 'playerskin',
-					'label' => __('Select Player Skins', 'textdomain_code'),
+					'name' => 'featured_first',
+					'label' => __('First Article', 'vp_textdomain'),
+					'description' => __('First Article', 'vp_textdomain'),
 					'items' => array(
-						array(
-							'value' => 'default_skin',
-							'label' => __('Default Skin', 'textdomain_code'),
-						),
-						array(
-							'value' => 'skin_one',
-							'label' => __('Skin 1', 'textdomain_code'),
-						),
-						array(
-							'value' => 'skin_two',
-							'label' => __('Skin 2', 'textdomain_code'),
-						),
-						array(
-							'value' => 'bekle',
-							'label' => __('Bekle(Licensed Only)', 'textdomain_code'),
-						),
-						array(
-							'value' => 'glow',
-							'label' => __('Glow(Licensed Only)', 'textdomain_code'),
-						),
-						array(
-							'value' => 'beelden',
-							'label' => __('Beelden(Licensed Only)', 'textdomain_code'),
-						),
-						array(
-							'value' => 'stormtrooper',
-							'label' => __('Stormtrooper(Licensed Only)', 'textdomain_code'),
-						),
-						array(
-							'value' => 'vapor',
-							'label' => __('Vapor(Licensed Only)', 'textdomain_code'),
-						),
-						array(
-							'value' => 'roundster',
-							'label' => __('Roundster(Licensed Only)', 'textdomain_code'),
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
 						),
 					),
-					'default' => array(
-						'default_skin',
-					),
-					'validation' => 'required',
+					'default' => '{{last}}',
 				),
-				// End Player Skin
+
+				array(
+					'type' => 'select',
+					'name' => 'featured_second',
+					'label' => __('Second Article', 'vp_textdomain'),
+					'description' => __('Second Article', 'vp_textdomain'),
+					'items' => array(
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
+						),
+					),
+					'default' => '{{last}}',
+				),
+
+				array(
+					'type' => 'select',
+					'name' => 'featured_third',
+					'label' => __('Third Article', 'vp_textdomain'),
+					'description' => __('Third Article', 'vp_textdomain'),
+					'items' => array(
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
+						),
+					),
+					'default' => '{{last}}',
+				),
+
+				array(
+					'type' => 'select',
+					'name' => 'featured_fourth',
+					'label' => __('Fourth Article', 'vp_textdomain'),
+					'description' => __('Fourth Article', 'vp_textdomain'),
+					'items' => array(
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
+						),
+					),
+					'default' => '{{last}}',
+				),
+
+				array(
+					'type' => 'select',
+					'name' => 'featured_fifth',
+					'label' => __('Fifth Article', 'vp_textdomain'),
+					'description' => __('Fifth Article', 'vp_textdomain'),
+					'items' => array(
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
+						),
+					),
+					'default' => '{{last}}',
+				),
+
+				array(
+					'type' => 'select',
+					'name' => 'featured_sixth',
+					'label' => __('Sixth Article', 'vp_textdomain'),
+					'description' => __('Sixth Article', 'vp_textdomain'),
+					'items' => array(
+						'data' => array(
+							array(
+								'source' => 'function',
+								'value'  => 'vp_get_posts',
+							),
+						),
+					),
+					'default' => '{{last}}',
+				),
 				
 				// Start Video Player Logo
 					array(
 						'type' => 'upload',
-						'name' => 'player_logo',
-						'label' => __('Player Logo(Licensed Only)', 'textdomain_code'),
-						'description' => __('Upload A logo for your video player', 'textdomain_code'),
-						'default' => $themepath.'logo-small.png',
+						'name' => 'featured_video',
+						'label' => __('Featured Video', 'textdomain_code'),
+						'description' => __('Upload A video player', 'textdomain_code'),
+						'default' => $themepath.'/assets/svg/branding-official.svg',
+					),
+				// End Video Player Logo
+
+					// Start Video Player Logo
+					array(
+						'type' => 'upload',
+						'name' => 'featured_image',
+						'label' => __('Featured Image', 'textdomain_code'),
+						'description' => __('Upload An Image Preview', 'textdomain_code'),
+						'default' => $themepath.'/assets/svg/branding-official.svg',
 					),
 				// End Video Player Logo
 				
-				// Start Player Link
-					array(
-						'type' => 'textbox',
-						'name' => 'player_link',
-						'label' => __('Logo Link(Licensed Only)', 'textdomain_code'),
-						'description' => __('If you have purchased a license from JWplayer you can enter it here.', 'textdomain_code'),
-						'default' => site_url(),
-					),
-				// End Player Link
-				
-				// Start About Player
-					array(
-						'type' => 'textbox',
-						'name' => 'player_about',
-						'label' => __('About Text(Licensed Only)', 'textdomain_code'),
-						'description' => __('If you wish to display an about text when you right click on the player.', 'textdomain_code'),
-						'default' => 'About Video Player',
-					),
-				// End About Player
-				
-				// Start Player Link
-					array(
-						'type' => 'textbox',
-						'name' => 'player_about_link',
-						'label' => __('About Link(Licensed Only)', 'textdomain_code'),
-						'description' => __('About Text Link', 'textdomain_code'),
-						'default' => site_url(),
-					),
-				// End Player Link
+			
 			
 			)),
 			
 			
 			/* =============== Menu - Social Media Settings ====================== */
-			array(
-			'title' => __('Social Media Settings', 'textdomain_code'),
-			'name' => 'menu_3',
-			'icon' => 'font-awesome:fa-group',
-			'controls' => array(
-					
-				// Facebook
-					array(
-						'type' => 'textbox',
-						'name' => 'facebook',
-						'label' => __('Facebook page', 'textdomain_code'),
-						'description' => __('Enter your facebook URL', 'textdomain_code'),
-						'default' => '',
-						'validation' => 'url',
-					),
-				// Facebook
-				
-				// Twitter
-					array(
-						'type' => 'textbox',
-						'name' => 'twitter',
-						'label' => __('Twitter Profile', 'textdomain_code'),
-						'description' => __('Enter your Twitter Profile URL', 'textdomain_code'),
-						'default' => '',
-						'validation' => 'url',
-					),
-				// Twitter
-				
-				// Google
-					array(
-						'type' => 'textbox',
-						'name' => 'google',
-						'label' => __('Google Plus', 'textdomain_code'),
-						'description' => __('Enter your google plus URL', 'textdomain_code'),
-						'default' => '',
-						'validation' => 'url',
-					),
-				// Google
-				
-				// Pinterest
-					array(
-						'type' => 'textbox',
-						'name' => 'pinterest',
-						'label' => __('Pinterest', 'textdomain_code'),
-						'description' => __('Enter your pinterest profile', 'textdomain_code'),
-						'default' => '',
-						'validation' => 'url',
-					),
-				// Pinterest
-				
-				// Flickr
-					array(
-						'type' => 'textbox',
-						'name' => 'linkedin',
-						'label' => __('LinkedIn', 'textdomain_code'),
-						'description' => __('Enter your LinkedIn profile', 'textdomain_code'),
-						'default' => '',
-						'validation' => 'url',
-					),
-				// Flickr
-				
-				// Enable RSS Feed
-					array(
-						'type' => 'toggle',
-						'name' => 'enablerss',
-						'label' => __('Enable RSS Feed', 'textdomain_code'),
-						'description' => __('Turn on RSS Feed?', 'textdomain_code'),
-						'default' => '0',
-					),
-				// Enable RSS Feed
-					)),
-			/* =============== Menu - Social Media Settings ====================== */	
-			
-			
-			
-			/* =============== Menu - Footer Widgets ====================== */
-			array(
-			'title' => __('Footer Widgets', 'textdomain_code'),
-			'name' => 'menu_4',
-			'icon' => 'font-awesome:fa-th',
-			'controls' => array(
-					
+		
 
-			// Enable RSS Feed
-					array(
-						'type' => 'toggle',
-						'name' => 'enable_footer_widget',
-						'label' => __('Enable Footer Widget', 'textdomain_code'),
-						'description' => __('Do you want to enable the footer widget?', 'textdomain_code'),
-						'default' => '0',
-					),
-			// Enable RSS Feed
 
-			array(
-				'type' => 'radioimage',
-				'name' => 'widget_columns',
-				'label' => __('Widget Columns', 'textdomain_code'),
-				'description' => __('Choose a column for your widget', 'textdomain_code'),
-				'item_max_height' => '100',
-				'item_max_width' => '100',
-				'items' => array(
-					array(
-						'value' => 'style_one',
-						'label' => __('Style One', 'textdomain_code'),
-						'img' => $themepath.'sizes/style-1.png',
-					),
-					array(
-						'value' => 'style_two',
-						'label' => __('Style Two', 'textdomain_code'),
-						'img' => $themepath.'sizes/style-2.png',
-					),
-					array(
-						'value' => 'style_three',
-						'label' => __('Style Three', 'textdomain_code'),
-						'img' => $themepath.'sizes/style-3.png',
-					),
-					array(
-						'value' => 'one_third',
-						'label' => __('One Third', 'textdomain_code'),
-						'img' => $themepath.'sizes/one-third.png',
-					),
-					array(
-						'value' => 'one_fourth',
-						'label' => __('One Fourth', 'textdomain_code'),
-						'img' => $themepath.'sizes/one-fourth.png',
-					),
-				),
-				'default' => array(
-					'one_third',
-				),
+
+
+
+
+//HERO Slider			
+
+array(
+	'title' => __('Sumisip Programs', 'vp_textdomain'),
+	'logo'  => '',
+	'icon' => 'font-awesome:fa-social',
+	'menus' => array(
+
+
+		array(
+			'title' => __('Program 1', 'vp_textdomain'),
+			'name' => 'programs_1',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_1',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_1',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_1',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
 			),
+		),
 
-		)),
-			/* =============== Menu - Footer Widgets ====================== */	
+
+		array(
+			'title' => __('Program 2', 'vp_textdomain'),
+			'name' => 'programs_2',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_2',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_2',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_2',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+		array(
+			'title' => __('Program 3', 'vp_textdomain'),
+			'name' => 'programs_3',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_3',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_3',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_3',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+		array(
+			'title' => __('Program 4', 'vp_textdomain'),
+			'name' => 'programs_4',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_4',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_4',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_4',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+		array(
+			'title' => __('Program 5', 'vp_textdomain'),
+			'name' => 'programs_5',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_5',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_5',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_5',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+		array(
+			'title' => __('Program 6', 'vp_textdomain'),
+			'name' => 'programs_6',
+			'icon' => 'font-awesome:fa-magic',
+			'controls' => array(
+								
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_title_1_6',
+									'label' => __('Title', 'textdomain_code'),
+									'description' => __('Set your Title', 'textdomain_code'),
+									'default' => 'Set Your Title',
+								),
+					
+							
+								array(
+									'type' => 'textarea',
+									'name' => 'programs_description_1_6',
+									'label' => __('Description Text', 'textdomain_code'),
+									'description' => __('Set your description', 'textdomain_code'),
+									'default' => 'Set your description',
+								),
+
+								array(
+									'type' => 'textbox',
+									'name' => 'programs_url_1_6',
+									'label' => __('URL Link', 'textdomain_code'),
+									'description' => __('Set your URL Link', 'textdomain_code'),
+									'default' => 'Set Your URL Link',
+								),
+			),
+		),
+
+
+
+	
+
+
+
+
+	),
+),
+
+// End Hero
+
+
+
+
+		/* =============== Jwplayer Settings ====================== */
+		array(
+			'title' => __('Video Section', 'textdomain_code'),
+			'name' => 'video_section',
+			'icon' => 'font-awesome:fa-play-circle-o',
+			'controls' => array(
+			
+					// Start Video Player Logo
+					array(
+						'type' => 'upload',
+						'name' => 'section_video',
+						'label' => __('Featured Video', 'textdomain_code'),
+						'description' => __('Upload An Video', 'textdomain_code'),
+						'default' => $themepath.'/assets/svg/branding-official.svg',
+					),
+				// End Video Player Logo
+				
+			
+			
+			)),
+			
+			
+			/* =============== Menu - Social Media Settings ====================== */
+
+
+
+	
 
 
 		

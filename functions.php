@@ -221,7 +221,18 @@ if ( ! function_exists( 'sumisip_setup' ) ) :
     register_nav_menu('visit', __('Visit Us'));
     register_nav_menu('downloadable', __('Downloadable Links'));
     register_nav_menu('contact-menu', __('Contact Menu'));
-    register_nav_menu('social-menu', __('Social Menu'));
+	register_nav_menu('social-menu', __('Social Menu'));
+	register_nav_menu('department-menu', __('Department Header Links'));
+	register_nav_menu('mayor-menu', __('Mayors Office Links'));
+	register_nav_menu('sangguniang-menu', __('Sangguniang Bayan Links'));
+	register_nav_menu('awards-menu', __('Awards Menu Links'));
+	register_nav_menu('history-menu', __('History Menu Links'));
+	register_nav_menu('culture-menu', __('Culture and Arts Menu Links'));
+	register_nav_menu('local-industry-menu', __('Local Industry Menu Links'));
+	register_nav_menu('places-menu', __('Places Menu Links'));
+	register_nav_menu('food-menu', __('Food Menu Links'));
+
+
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -442,6 +453,7 @@ add_action( 'wp_print_footer_scripts', 'sumisip_skip_link_focus_fix' );
 /**
  * Enqueue supplemental block editor styles.
  */
+
 function sumisip_editor_customizer_styles() {
 
 	wp_enqueue_style( 'sumisip-editor-customizer-styles', get_theme_file_uri( '/style-editor-customizer.css' ), false, '1.1', 'all' );
@@ -717,6 +729,14 @@ function title_filter( $where, $wp_query ){
 }
 
 
-
+function custom_get_the_excerpt($post_id) {
+    global $post;  
+    $save_post = $post;
+    $post = get_post( $post_id );
+    setup_postdata( $post );
+    $output = get_the_excerpt();
+    $post = $save_post;
+    return $output;
+}
 
 

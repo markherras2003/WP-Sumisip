@@ -123,33 +123,32 @@ elseif(is_category()) {
                         <div class="mega-menu-group sbs-m-">
                             <h4>Places</h4>
                             <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        'order' => 'asc',
-                                                        'showposts'=>14,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'places',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
+                             <?php
+                                if( has_nav_menu('places-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+                                    $menuID = $menuLocations['places-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                                    <?php 
                                                  $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
-                                                 $i++;
-                                                 if($i>=1 && $i<=7) {
-                             ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                                 foreach ($navMenu as $menu) {
+                                                    $i++;
+                                                    if($i>=1 && $i<=7) {            
+                                            ?>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title ?></a></li>
                                 <?php
                                    }
                                     if($i==7) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
+                                <li class="more-cta"><a href="<?= get_home_url().'/places/'; ?>">Show More</a></li>
                                 <?php 
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                                }
                                 ?> 
                             </ul>
                         </div>
@@ -158,19 +157,18 @@ elseif(is_category()) {
                             <ul>
                             <?php    
                             $i=0;
-                            while($places->have_posts()): $places->the_post(); 
+                            foreach ($navMenu as $menu) {
                               $i++;
                                 if($i>7 && $i<13) {
                                 ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title; ?></a></li>
                                 <?php
                                 }
                                     if($i==13) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/tourist-spot/'; ?>">Show More</a></li>
                                 <?php 
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                            }
                                 ?> 
                             </ul>
                         </div>            
@@ -178,32 +176,31 @@ elseif(is_category()) {
                         <div class="mega-menu-group sbs-m-">
                             <h4>Food</h4>
                             <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'food',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
+                            <?php
+                                if( has_nav_menu('food-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+                                    $menuID = $menuLocations['food-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                                    <?php 
                                                  $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
+                                                 foreach ($navMenu as $menu) { 
                                                  $i++;
                              ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title; ?></a></li>
                                 <?php
                                     if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/food/'; ?>">Show More</a></li>
                                 <?php 
+                                    break;
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                                  }
                                 ?> 
                             </ul>
                         </div>
@@ -218,96 +215,94 @@ elseif(is_category()) {
                         <div class="mega-menu-group">
                             <h4>History</h4>
                             <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'history',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
+                            <?php
+                                if( has_nav_menu('history-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+                                    $menuID = $menuLocations['history-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                                    <?php 
                                                  $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
-                                                 $i++;
-                             ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                                 foreach ($navMenu as $menu) {
+                                                     $i++;
+                            ?>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title; ?></a></li>
                                 <?php
                                     if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/history/'; ?>">Show More</a></li>
                                 <?php 
+                                    break;
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                                   }
                                 ?> 
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Culture and Arts</h4>
                             <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'culture',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
+                            <?php
+                                if( has_nav_menu('culture-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+                                    $menuID = $menuLocations['culture-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                          
+                                    <?php 
                                                  $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
+                                                 foreach ($navMenu as $menu) {
                                                  $i++;
                              ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title; ?></a></li>
                                 <?php
                                     if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/culture/'; ?>">Show More</a></li>
                                 <?php 
+                                    break;
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                                 }
                                 ?> 
                             </ul>
                         </div>
                         <div class="mega-menu-group">
                             <h4>Local Industry</h4>
                             <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'industry',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
+                            <?php
+                                if( has_nav_menu('local-industry-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+
+                                    $menuID = $menuLocations['local-industry-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                                    <?php 
                                                  $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
+                                                 foreach ($navMenu as $menu) {
                                                  $i++;
                              ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <li><a href="<?= $menu->url; ?>"><?= $menu->title; ?></a></li>
                                 <?php
                                     if($i>4) {?>
                                 <li class="more-cta"><a href="<?= get_home_url().'/industry/'; ?>">Show More</a></li>
-                                <?php 
+                                <?php
+                                    break; 
                                     }
-                                    endwhile; 
-                                    wp_reset_postdata();
+                                   }
                                 ?> 
                             </ul>
                         </div>
@@ -453,31 +448,29 @@ elseif(is_category()) {
                     <div class="mega-menu">
                         <div class="mega-menu-group mini-box tinier-box extended">
                             <h4>Awards</h4>
-                            <ul>
-                                    <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>4,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'awards',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $featured = new \WP_Query($arg);
-                                                 while($featured->have_posts()): $featured->the_post(); 
-                                                 //$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
-                                                 global $dynamic_featured_image;
+                            <?php
+                                if( has_nav_menu('awards-menu') ) {
+                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
 
+                                    $menuID = $menuLocations['awards-menu']; // Get the *primary* menu ID
+
+                                    $navMenu = wp_get_nav_menu_items($menuID); 
+
+                                    } else {
+                                        $navMenu = [];
+                                    }
+                            ?>
+                            <ul>
+                                    <?php 
+                                                 global $dynamic_featured_image;
+                                                 foreach ($navMenu as $menu) {            
                                             ?>
                                                                     <li>
-                                    <a href="<?= get_permalink(); ?>">
+                                    <a href="<?= $menu->url ?>">
                                     <?php 
                                         $key=0;
-                                        $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                                        $posting_id=$menu->object_id;
+                                        $featured_images = $dynamic_featured_image->get_featured_images($posting_id);
                                         foreach($featured_images as $featured_image) {
                                             $key=$key+1; 
                                             if ($key===1) {?>
@@ -488,77 +481,56 @@ elseif(is_category()) {
                                     
                                         } ?>
                                      <div class="details">
-                                        <h5 class="light"><?= get_the_title(); ?></h5>
-                                        <div class="p-sm"><?= the_excerpt(); ?></div>
+                                        <h5 class="light"><?= $menu->title ?></h5>
+                                        <div class="p-sm"><p><?= custom_get_the_excerpt($posting_id) ?></p></div>
                                         </div>
                                     </a>
                                     </li>
-                                <?php endwhile; ?> 
+                                    <?php } ?> 
                             </ul>
                         </div>
                         <div class="mega-menu-group sbs-m-1">
                         <h4>Mayor's Office</h4>
-                            <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'mayors_office',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
-                                                 $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
-                                                 $i++;
-                             ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
-                                <?php
-                                    if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/mayors_office/'; ?>">Show More</a></li>
-                                <?php 
-                                    }
-                                    endwhile; 
-                                    wp_reset_postdata();
-                                ?> 
-                            </ul>
-                        </div>
+                                             <?php  
+                                             if(has_nav_menu('mayor-menu')){
+                                             wp_nav_menu([
+                                                 'theme_location'      => 'mayor-menu',
+                                                 'container'           => false,
+                                                 'fallback_cb'         => false,
+                                                 'depth'               => 0,
+                                                 // 'walker'              => new JU_Custom_Nav_Walker()
+                                             ]);
+                                             }
+                                         ?>
+                           
+                        </div>     
                         <div class="mega-menu-group sbs-m-1">
                         <h4>Sangguniang Bayan</h4>
-                            <ul>
-                            <?php   $arg = array(
-                                                        'post_type' => 'post',
-                                                        //'posts_per_page' => 1,
-                                                        'paged' =>$paged,
-                                                        'showposts'=>5,
-                                                        'tax_query' => array(             
-                                                            array(
-                                                            'taxonomy' => 'featured',
-                                                            'field' => 'slug',
-                                                            'terms' => 'sanggunian',
-                                                        ),
-                                                        )   
-                                                    );
-                                                 $places = new \WP_Query($arg);
-                                                 $i=0;
-                                                 while($places->have_posts()): $places->the_post(); 
-                                                 $i++;
-                             ?>
-                                <li><a href="<?= get_permalink(); ?>"><?= the_title(); ?></a></li>
-                                <?php
-                                    if($i>4) {?>
-                                <li class="more-cta"><a href="<?= get_home_url().'/sannguniang-bayan/'; ?>">Show More</a></li>
-                                <?php 
-                                    }
-                                    endwhile; 
-                                    wp_reset_postdata();
-                                ?> 
-                            </ul>
+                                        <?php  
+                                             if(has_nav_menu('sangguniang-menu')){
+                                             wp_nav_menu([
+                                                 'theme_location'      => 'sangguniang-menu',
+                                                 'container'           => false,
+                                                 'fallback_cb'         => false,
+                                                 'depth'               => 0,
+                                                 // 'walker'              => new JU_Custom_Nav_Walker()
+                                             ]);
+                                             }
+                                         ?>  
+                        </div>
+                        <div class="mega-menu-group sbs-m-1">
+                        <h4>Departments</h4>
+                        <?php  
+                                             if(has_nav_menu('department-menu')){
+                                             wp_nav_menu([
+                                                 'theme_location'      => 'department-menu',
+                                                 'container'           => false,
+                                                 'fallback_cb'         => false,
+                                                 'depth'               => 0,
+                                                 // 'walker'              => new JU_Custom_Nav_Walker()
+                                             ]);
+                                             }
+                                         ?> 
                         </div>
                     </div>
                 </div>
