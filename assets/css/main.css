@@ -601,6 +601,7 @@ footer .footer-container .footer-seals {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  max-width: 380px;
 }
 
 footer .footer-container .footer-seals .seal-group {
