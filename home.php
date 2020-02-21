@@ -404,10 +404,12 @@ $featured = new \WP_Query($arg);
                 <div class="background-wrapper">
                     <img src="<?= $featured_image['full']; ?>">
                 </div>
-        <?php  }
-       ?>
-
-    <?php } ?>
+        <?php  }?>           
+    <?php } 
+            if($key===0) { ?>
+             <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">    
+    <?php   }
+    ?>
             <div class="news-content">
                 <h4><a href="<?= get_permalink(); ?>"><?= get_the_title(); ?></a></h4>
                 <div class="news-extra-info">
@@ -419,8 +421,13 @@ $featured = new \WP_Query($arg);
                         </a>
                     </div>
                     <span class="category">
-                                <?php foreach((get_the_category()) as $category){
+                                <?php
+                                $x=0;
+                                foreach((get_the_category()) as $category){
+                                $x++;
+                                if($x>1) {
                                 echo $category->name."<br>";
+                                    }
                                 }	?></span>
                 </div>
                 <?= the_excerpt(); ?>
