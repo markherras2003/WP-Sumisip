@@ -345,7 +345,7 @@ elseif(is_category()) {
 
                     <?php 
                             if($key===0) { ?>
-                            <div class="background-wrapper">
+                            <div class="thumb-wrapper">
                             <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">  
                             </div>  
                     <?php   }
