@@ -6879,6 +6879,10 @@ p:not(:last-child),
   background: #484848;
 }
 
+.comment-meta {
+  background-color: inherit;
+}
+
 .author-profile {
   position: relative;
   background: #F8f8f8;

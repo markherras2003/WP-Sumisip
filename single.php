@@ -121,10 +121,11 @@ $i=0;
 </div>
 
 
-
+<?php $author_ID = get_the_author_meta( 'ID' ); ?>
+<?php if ($author_ID!=1) {?>
 <div class="author-profile">
     <div class="author-img">
-        <?php $author_ID = get_the_author_meta( 'ID' ); ?>
+      
         
         <?= get_avatar($author_ID,360);
         ?>
@@ -143,6 +144,7 @@ $i=0;
             }
         ?>
     </div>
+    
     <div class="author-details">
     <span>About the Author</span>
         <h4 class="author-name"><?= $full_name; ?></h4>
@@ -152,7 +154,7 @@ $i=0;
             <p><?= $userMeta['description'][0] ?></p>
     </div>
 </div>
-
+<?php } ?>
 
 <div class="post-social-media">
     <div class="social-wrapper">

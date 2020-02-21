@@ -342,6 +342,15 @@ elseif(is_category()) {
                      <?php }
             
                 } ?>
+
+                    <?php 
+                            if($key===0) { ?>
+                            <div class="thumb-wrapper">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">  
+                            </div>  
+                    <?php   }
+                    ?>
+                
                                         <h5 class="light"><?= get_the_title(); ?></h5>
                                         <div class="p-sm"><?= the_excerpt(); ?></div>
                                     </a>
