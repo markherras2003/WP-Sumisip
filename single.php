@@ -143,7 +143,7 @@ $i=0;
             }
         ?>
     </div>
-    <? if ($author_ID!=1) {?>
+    <?php if ($author_ID!=1) {?>
     <div class="author-details">
     <span>About the Author</span>
         <h4 class="author-name"><?= $full_name; ?></h4>
