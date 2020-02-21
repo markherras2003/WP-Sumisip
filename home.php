@@ -258,7 +258,7 @@ get_header();
                             <p><?= vp_option('vpt_option.programs_description_1_2'); ?></p>
                         </div>
 
-                        <a href="<?= vp_option('vpt_option.programs_url_1_3'); ?>">Learn More</a>
+                        <a href="<?= vp_option('vpt_option.programs_url_1_2'); ?>">Learn More</a>
 
                     </div>
 
