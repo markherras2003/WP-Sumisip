@@ -6,7 +6,9 @@
             <img src="<?php 
             $no=get_template_directory_uri()."/assets/images/no-available.png";
             if (function_exists('z_taxonomy_image_url')) 
-                                echo z_taxonomy_image_url(); ?>">
+                                echo z_taxonomy_image_url();
+                                else
+                                echo $no; ?>">
         </div>
 
         <div class="post-hero-wrapper">
