@@ -55,11 +55,6 @@ $featured_images = $dynamic_featured_image->get_featured_images($page_id);
                 $hours_remaining =$since_start->h;
                 $minutes_remaining = $since_start->i;
 
-
-
-
-
-
             wp_reset_query();
             ?>
                 <div class="count days">
@@ -72,7 +67,7 @@ $featured_images = $dynamic_featured_image->get_featured_images($page_id);
                 </div>
                 <div class="count minutes">
                     <h2 class="display-3"><?= $minutes_remaining ?></h2>
-                    <p>Minutes<?= $since_start->days; ?></p>
+                    <p>Minutes</p>
                 </div>
             </div>
         </div>
