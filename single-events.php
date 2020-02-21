@@ -14,7 +14,8 @@ get_header();
 
 global $post;
 global $dynamic_featured_image;
-$featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+$page_id = get_queried_object_id();
+$featured_images = $dynamic_featured_image->get_featured_images($page_id);
 ?>
 
 <section class="post-hero-section">
