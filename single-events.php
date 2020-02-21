@@ -12,11 +12,20 @@
 
 get_header();
 
+global $post;
+global $dynamic_featured_image;
+$page_id = get_queried_object_id();
+$featured_images = $dynamic_featured_image->get_featured_images($page_id);
 ?>
 
 <section class="post-hero-section">
         <div class="post-hero-background">
-            <img src="<?= get_template_directory_uri() ?>/assets/images/hero/wonder3.jpg">  
+        <?php foreach($featured_images as $featured_image) { 
+                $i++;
+                if($i===1) {  ?>
+                <img src="<?= $featured_image['full']; ?>" alt="Article Image">            
+            <?php }
+            } ?>  
         </div>
 
         <div class="post-hero-wrapper">
