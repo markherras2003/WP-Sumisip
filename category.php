@@ -2,7 +2,8 @@
 
     <section class="post-hero-section">
         <div class="post-hero-background">
-            <img src="<?= get_template_directory_uri() ?>/assets/images/hero/wonder1.jpg">
+        
+            <img src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url(); ?>">
         </div>
 
         <div class="post-hero-wrapper">
