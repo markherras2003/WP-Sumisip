@@ -385,7 +385,7 @@ $featured = new \WP_Query($arg);
 <section class="news-section">
 <div class="global-wrapper section-padding">
     <div class="section-heading-group">
-        <h1>News And Article</h1>
+        <h1>News And Articles</h1>
         <p></p>
     </div>
     <div class="news-boxes">
