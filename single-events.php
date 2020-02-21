@@ -42,21 +42,23 @@ $featured_images = $dynamic_featured_image->get_featured_images($page_id);
 //                $hours_remaining = floor(($remaining / 3600) % 24);
 //                $minutes_remaining = floor(($remaining / 60) % 60);
 
-                $current_day = strtotime( date('Y-m-d H:i:s') );
-                $meta_start_date = strtotime( get_post_meta( $postid, 'event_start', true) );
+                $d1start = get_post_meta($postid, 'event_start', true);
+                $dt = strtotime($d1start); //make timestamp with datetime string
+                $d2end = get_post_meta($postid, 'end_date', true);
+                $endt = strtotime($d2end);
 
-                $date_difference = abs($meta_start_date - $current_day);
-                $years_difference = floor($date_difference / (365*60*60*24));
-                $months_difference = floor(($date_difference - $years_difference * 365*60*60*24)
-                    / (30*60*60*24));
-                $days_remaining = floor(($date_difference - $years_difference * 365*60*60*24 -
-                        $months_difference*30*60*60*24)/ (60*60*24));
-                $hours_remaining = floor(($date_difference - $years_difference * 365*60*60*24
-                        - $months_difference*30*60*60*24 - $days_remaining*60*60*24)
-                    / (60*60));
-                $minutes_remaining = floor(($date_difference - $years_difference * 365*60*60*24
-                    - $months_difference*30*60*60*24 - $days_remaining*60*60*24
-                    - $hours_remaining*60*60)/ 60);
+                $start_date = new DateTime( date('Y-m-d H:i:s',$dt));
+                $since_start = $start_date->diff(new DateTime(date('Y-m-d H:i:s',$endt)));
+
+
+                $days_remaining = $since_start->days;
+                $hours_remaining =$since_start->h;
+                $minutes_remaining = $since_start->i;
+
+
+
+
+
 
             wp_reset_query();
             ?>
@@ -70,7 +72,7 @@ $featured_images = $dynamic_featured_image->get_featured_images($page_id);
                 </div>
                 <div class="count minutes">
                     <h2 class="display-3"><?= $minutes_remaining ?></h2>
-                    <p>Minutes</p>
+                    <p>Minutes<?= $since_start->days; ?></p>
                 </div>
             </div>
         </div>
