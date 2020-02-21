@@ -407,7 +407,9 @@ $featured = new \WP_Query($arg);
         <?php  }?>           
     <?php } 
             if($key===0) { ?>
-             <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">    
+              <div class="background-wrapper">
+             <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">  
+             </div>  
     <?php   }
     ?>
             <div class="news-content">
