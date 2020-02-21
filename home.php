@@ -427,7 +427,7 @@ $featured = new \WP_Query($arg);
                                 $x=0;
                                 foreach((get_the_category()) as $category){
                                 $x++;
-                                if($x>1) {
+                                if($x===1) {
                                 echo $category->name."<br>";
                                     }
                                 }	?></span>
