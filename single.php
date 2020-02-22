@@ -82,7 +82,6 @@ get_header();
 </div>
 
 <h1 class="post-title margin-bottom-3"><?= the_title(); ?></h1>
-<h1>
 
 <div class="post-img-wrapper">
 
