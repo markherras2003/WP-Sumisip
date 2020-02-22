@@ -82,7 +82,10 @@ get_header();
                             } ?>
                         <div class="event-details">
                         <h5 class="event-title"><?= the_title(); ?></h5>
-                        <h2 class="event-date"><?= get_the_date(); ?></h2>
+                        <h2 class="event-date"><?php 
+                        $d2end = get_post_meta(get_the_ID(), 'end_date', true);
+                        echo date("M jS, Y", strtotime($d2end));
+                        ?></h2>
                     </div>
                 </a>
                     <?php $x=0; endwhile; wp_reset_postdata(); ?> 
