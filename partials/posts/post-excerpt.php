@@ -97,7 +97,6 @@
             <div class="post-title">
                 <a href="<?= get_permalink();?>">
                     <h3 class="post-title"><?php the_title() ?></h3>
-                    <h3><?php echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]'); ?></h3>
                 </a>
                 <div class="post-etc">
                     <span><?= get_the_category()[0]->name ?></span>
