@@ -54,7 +54,6 @@ get_header();
             </div>
 
             <h1 class="display-1"><?php the_title() ?></h1>
-            <h1><?php echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]'); ?></h1>
             <div class="post-etc">
                 <a href="#">By <?php the_author(); ?></a>
                 <a href="#"><?php the_date(); ?></a>
@@ -83,6 +82,7 @@ get_header();
 </div>
 
 <h1 class="post-title margin-bottom-3"><?= the_title(); ?></h1>
+<h1><?php echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]'); ?></h1>
 
 <div class="post-img-wrapper">
 
