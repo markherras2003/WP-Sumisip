@@ -387,6 +387,14 @@ function sumisip_content_width() {
 }
 add_action( 'after_setup_theme', 'sumisip_content_width', 0 );
 
+
+ 
+function tinymce_loader($hook) {
+
+  wp_enqueue_script( 'sumisip-main', get_template_directory_uri().'/js/main.js' , array(), '20181231', true );
+}
+add_action('admin_enqueue_scripts', 'tinymce_loader');
+
 /**
  * Enqueue scripts and styles.
  */
@@ -403,8 +411,7 @@ function sumisip_scripts() {
 		//wp_enqueue_script( 'sumisip-touch-navigation', get_theme_file_uri( '/js/touch-keyboard-navigation.js' ), array(), '20181231', true );
 	}
 
-    wp_enqueue_script( 'sumisip-main', get_template_directory_uri().'/js/main.js' , array(), '20181231', true );
-    wp_enqueue_script( 'history-featured', get_template_directory_uri().'/js/photo-stack.js' , array(), '20181231', true );
+	wp_enqueue_script( 'history-featured', get_template_directory_uri().'/js/photo-stack.js' , array(), '20181231', true );
     wp_enqueue_script( 'hero-slider', get_template_directory_uri().'/js/hero-slider.js' , array(), '20181231', true );
     wp_enqueue_script( 'hero-featured', get_template_directory_uri().'/js/hero-featured.js' , array(), '20181231', true );
 	wp_enqueue_script( 'history-timeline', get_template_directory_uri().'/js/history-timeline.js' , array(), '20181231', true );
