@@ -7662,6 +7662,81 @@ p:not(:last-child),
   text-align: center;
 }
 
+.award-section {
+  margin-top: 72px;
+}
+
+.award-section .awards {
+  text-align: center;
+}
+
+.award-section .awards ul {
+  margin-bottom: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.award-section .awards ul li {
+  list-style: none;
+  width: calc(100% / 5);
+}
+
+.award-section .awards ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.award-section .awards ul li a .thumb-wrapper {
+  overflow: hidden;
+  border: 1px solid #fcfcfc;
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.award-section .awards ul li a .thumb-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media (max-width: 768px) {
+  .award-section .awards ul li a .thumb-wrapper {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .award-section .awards ul li {
+    width: 33.33%;
+  }
+  .award-section .awards ul li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 376px) {
+  .award-section .awards ul li {
+    width: 50%;
+  }
+}
+
 /* Custom Directory */
 /*  Animations Library */
 @-webkit-keyframes dropFadeMin {
