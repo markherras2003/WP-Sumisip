@@ -7729,11 +7729,17 @@ p:not(:last-child),
   .award-section .awards ul li:not(:last-child) {
     margin-bottom: 16px;
   }
+  .award-section .awards ul li:nth-child(4) {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 376px) {
   .award-section .awards ul li {
     width: 50%;
+  }
+  .award-section .awards ul li:not(:last-child) {
+    margin-bottom: 16px;
   }
 }
 

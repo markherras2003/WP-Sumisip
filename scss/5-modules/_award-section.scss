@@ -13,10 +13,6 @@
                 list-style: none;
                 width: calc(100% / 5);
 
-                // &:not(:last-child){
-                //     margin-right: 32px;
-                // }
-
                 a {
                     display: flex;
                     justify-content: center;
@@ -41,39 +37,32 @@
                             height: 100px;
                             width: 100px;
                         }
-        
+
                     }
 
 
                 }
 
-                
+
                 @include sm {
                     width: 33.33%;
 
-                    &:not(:last-child){
+                    &:not(:last-child) {
                         margin-bottom: $size-2;
-                        // margin-right: $size-2;
                     }
 
-                    // &:nth-child(3n){
-                    //     margin-right: 0;
-                    // }
-
-                   
+                    &:nth-child(4) {
+                        margin-bottom: 0;
+                    }
 
                 }
 
                 @include xs {
                     width: 50%;
 
-                    // &:not(:last-child){
-                    //     margin-right: 16px;
-                    // }
-
-                    // &:nth-child(even){
-                    //     margin-right: 0;
-                    // }
+                    &:not(:last-child) {
+                        margin-bottom: $size-2;
+                    }
 
                 }
             }
