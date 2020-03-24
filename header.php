@@ -365,13 +365,15 @@ elseif(is_category()) {
                                 <?php   $arg = array(
                                                'post_type' => 'post',
                                                'posts_per_page' => 3,
-                                               'tax_query' => array(             
+                                               'category_name' => 'Trending',
+                                             /*  'tax_query' => array(             
                                                 array(
-                                                   'taxonomy' => 'featured',
+                                                   'taxonomy' => 'categories',
                                                    'field' => 'slug',
                                                    'terms' => 'trending',
                                                ),
-                                            )   
+                                              
+                                                )   */
                                                  );
                                                  $featured = new \WP_Query($arg);
                                                  while($featured->have_posts()): $featured->the_post(); 
@@ -407,15 +409,17 @@ elseif(is_category()) {
                             <h4>Hot Topics</h4>
                             <ul>    
                                 <?php   $arg = array(
-                                               'post_type' => 'post',
-                                               'posts_per_page' => 3,
-                                               'tax_query' => array(             
-                                                array(
-                                                   'taxonomy' => 'featured',
-                                                   'field' => 'slug',
-                                                   'terms' => 'hot-topics',
-                                               ),
-                                            )   
+                                        'post_type' => 'post',
+                                        'posts_per_page' => 3,
+                                        'category_name' => 'Hot',
+                                      /*  'tax_query' => array(             
+                                         array(
+                                            'taxonomy' => 'categories',
+                                            'field' => 'slug',
+                                            'terms' => 'trending',
+                                        ),
+                                       
+                                         )   */
                                                  );
                                                  $featured = new \WP_Query($arg);
                                                  while($featured->have_posts()): $featured->the_post(); 
