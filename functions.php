@@ -428,7 +428,8 @@ function sumisip_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
     wp_deregister_script('jquery');
-    wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', null, '3.4.1', false);
+    //wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', null, '3.4.1', false);
+    wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', null, '1.12.4', false);
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-validate', 'https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js', array('jquery'), wp_get_theme()->get( 'Version' ) );
 //    $data = array(
@@ -747,3 +748,51 @@ function custom_get_the_excerpt($post_id) {
 }
 
 
+function insert_fb_in_head()
+{
+	global $post;
+	global $dynamic_featured_image;
+    if (!is_singular()) //if it is not a post or a page
+        return;
+
+    if ($excerpt = $post->post_excerpt)
+    {
+        $excerpt = strip_tags($post->post_excerpt);
+    }
+    else
+    {
+        $excerpt = get_bloginfo('description');
+    }
+
+    echo '<meta property="og:title" content="' . get_the_title() . '"/>';
+    echo '<meta property="og:description" content="' . $excerpt . '"/>';
+    echo '<meta property="og:type" content="article"/>';
+    echo '<meta property="og:url" content="' . get_permalink() . '"/>';
+    echo '<meta property="og:site_name" content="' . get_bloginfo() . '"/>';
+
+    echo '<meta name="twitter:title" content="' . get_the_title() . '"/>';
+    echo '<meta name="twitter:card" content="summary" />';
+    echo '<meta name="twitter:description" content="' . $excerpt . '" />';
+    echo '<meta name="twitter:url" content="' . get_permalink() . '"/>';
+
+
+	$featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+    if ( !$featured_images )
+    {
+        //the post does not have featured image, use a default image
+        $default_image = "https://lgu-sumisip.com/wp-content/uploads/2020/02/1.png"; //<--replace this with a default image on your server or an image in your media library
+        echo '<meta property="og:image" content="' . $default_image . '"/>';
+        echo '<meta name="twitter:image" content="' . $default_image . '"/>';
+    }
+    else
+    {
+        //$thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
+		echo '<meta property="og:image" content="' . $featured_images[0]['full'] . '"/>';
+		echo '<meta property="og:image:width" content="1630" />';
+		echo '<meta property="og:image:height" content="630" />';
+		
+        echo '<meta name="twitter:image" content="' . $featured_images[0]['full'] . '"/>';
+    }
+}
+
+add_action('wp_head', 'insert_fb_in_head', 5);

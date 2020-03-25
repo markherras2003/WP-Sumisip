@@ -352,6 +352,126 @@ array(
 ),
 
 // End Hero		
+
+
+
+
+			/* =============== Jwplayer Settings ====================== */
+			array(
+				'title' => __('Awards Section', 'textdomain_code'),
+				'name' => 'menu_awards',
+				'icon' => 'font-awesome:fa-play-circle-o',
+				'controls' => array(
+				
+					array(
+						'type' => 'select',
+						'name' => 'awards_first',
+						'label' => __('First Awards Article', 'vp_textdomain'),
+						'description' => __('First Awards Article', 'vp_textdomain'),
+						'items' => array(
+							'data' => array(
+								array(
+									'source' => 'function',
+									'value'  => 'vp_get_posts',
+								),
+							),
+						),
+						'default' => '{{last}}',
+					),
+	
+					array(
+						'type' => 'select',
+						'name' => 'awards_second',
+						'label' => __('Second Awards Article', 'vp_textdomain'),
+						'description' => __('Second Awards Article', 'vp_textdomain'),
+						'items' => array(
+							'data' => array(
+								array(
+									'source' => 'function',
+									'value'  => 'vp_get_posts',
+								),
+							),
+						),
+						'default' => '{{last}}',
+					),
+	
+					array(
+						'type' => 'select',
+						'name' => 'awards_third',
+						'label' => __('Third Awards Article', 'vp_textdomain'),
+						'description' => __('Third Awards Article', 'vp_textdomain'),
+						'items' => array(
+							'data' => array(
+								array(
+									'source' => 'function',
+									'value'  => 'vp_get_posts',
+								),
+							),
+						),
+						'default' => '{{last}}',
+					),
+	
+					array(
+						'type' => 'select',
+						'name' => 'awards_fourth',
+						'label' => __('Fourth Awards Article', 'vp_textdomain'),
+						'description' => __('Fourth Awards Article', 'vp_textdomain'),
+						'items' => array(
+							'data' => array(
+								array(
+									'source' => 'function',
+									'value'  => 'vp_get_posts',
+								),
+							),
+						),
+						'default' => '{{last}}',
+					),
+	
+					array(
+						'type' => 'select',
+						'name' => 'awards_fifth',
+						'label' => __('Fifth Awards Article', 'vp_textdomain'),
+						'description' => __('Fifth Awards Article', 'vp_textdomain'),
+						'items' => array(
+							'data' => array(
+								array(
+									'source' => 'function',
+									'value'  => 'vp_get_posts',
+								),
+							),
+						),
+						'default' => '{{last}}',
+					),
+					
+					array(
+						'type' => 'textbox',
+						'name' => 'awards_title',
+						'label' => __('Title Description', 'textdomain_code'),
+						'description' => __('Set your Title', 'textdomain_code'),
+						'default' => 'Awards And Recognitions',
+					),
+	
+					array(
+						'type' => 'textbox',
+						'name' => 'awards_description',
+						'label' => __('Awards Description', 'textdomain_code'),
+						'description' => __('Set your Description', 'textdomain_code'),
+						'default' => 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.',
+					),
+					
+					array(
+						'type' => 'textbox',
+						'name' => 'awards_url',
+						'label' => __('Awards URL', 'textdomain_code'),
+						'description' => __('Set your Awards URL Page', 'textdomain_code'),
+						'default' => 'http://lgu-sumisip.com/awards',
+					),
+				
+				
+				)),
+
+
+
 		
 			
 

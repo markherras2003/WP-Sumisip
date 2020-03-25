@@ -147,6 +147,48 @@ get_header();
 
 </div>
 
+
+
+
+
+
+<?php
+        $arg = array(
+            'post_type' => 'post',
+            'showposts'=>5,
+            'post__in' => array(vp_option('vpt_option.awards_first'), vp_option('vpt_option.awards_second'), vp_option('vpt_option.awards_third'),
+            vp_option('vpt_option.awards_fourth'), vp_option('vpt_option.awards_fifth')),
+            'orderby'=>'post__in',
+        );
+        $awards = new \WP_Query($arg);  
+?>
+<section class="award-section bg-coal">
+            <div class="global-wrapper section-padding awards">
+                <div class="section-heading-group">
+                    <h1><?= vp_option('vpt_option.awards_title') ?></h1>
+                    <p><?= vp_option('vpt_option.awards_description') ?></p>
+                </div>
+                <ul>
+                <?php while($awards->have_posts()): $awards->the_post(); 
+            global $dynamic_featured_image;
+            ?>
+                <?php 
+                $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                foreach($featured_images as $featured_image) { ?>
+                  <li><a href="<?= get_permalink(); ?>"><div class="thumb-wrapper"><img src="<?= $featured_image['full'];?>" alt=""></div></a></li>
+                <?php } ?>  
+                <?php endwhile;
+                wp_reset_postdata();
+            ?>      
+                </ul>
+                <a class="button colored rosewood" href="<?= vp_option('vpt_option.awards_url') ?>">What does this Awards mean?</a>
+            </div>
+</section>
+
+
+
+
+
 <?php
     $video_url = vp_option('vpt_option.featured_video');
     $video_preview = vp_option('vpt_option.featured_image');
@@ -210,7 +252,14 @@ get_header();
 </section>
 
 
-
+<section>
+<div class="global-wrapper section-padding">
+                <div class="section-heading-group">
+                    <h1>Calendar of Events</h1>
+                </div>
+                    <?php echo do_shortcode('[fullcalendar type="event"]'); ?>
+</div>
+</section>
 
 
 

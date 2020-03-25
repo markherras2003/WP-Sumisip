@@ -76,8 +76,10 @@ public function widget( $args, $instance ) {
          echo '<li>';
              echo '<a href="'.get_permalink().'">';
                  echo '<div class="post-item excerpt">';
-                         // tHe();
-                         the_excerpt();
+//                         // tHe();
+//                         the_excerpt();
+            echo '<h5>'; echo get_the_title(); echo '</h5>';
+            echo '<p>'; echo get_the_excerpt(); echo '<p>';
 
                          echo'<span>'; 
                              echo get_the_category()[0]->cat_name;

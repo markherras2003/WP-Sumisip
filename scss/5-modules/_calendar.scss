@@ -1,0 +1,201 @@
+.wpfc-calendar-wrapper {
+
+    form {
+        .fc-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: $size-3;
+
+
+            .fc-left {
+
+                .fc-button-group {
+                    
+                    .fc-prev-button,
+                    .fc-next-button {
+                        height: 32px;
+                        border: none;
+                        background: none;
+                        position: absolute;
+
+                        .ui-icon{
+                            height: 24px;
+                            width: 24px;
+
+                        }
+                    }
+
+                    .fc-prev-button {
+                        left: 0;
+
+                        .ui-icon {
+                            background-image: url('../../assets/images/svg/caret-left.svg');
+
+                            &.ui-icon-circle-triangle-w {
+                                background-position: center;
+                            }
+                        }
+                    }
+
+                    .fc-next-button {
+                        right: 0;
+
+                        .ui-icon {
+                            background-image: url('../../assets/images/svg/caret-right.svg');
+                           
+
+                            &.ui-icon-circle-triangle-e  {
+                                background-position: center;
+                            }
+                        }
+                    }
+
+                }
+
+                .fc-today-button {
+                    display: none;
+                }
+            }
+
+            .fc-center {
+                h2 {
+                    font-size: 24px !important;
+                    font-family: 'poppins';
+                }
+            }
+
+            .fc-right {
+                display: none;
+            }
+        }
+
+        .fc-view-container{
+            
+            .fc-view{
+                table{
+
+                    .fc-head{
+                        tr{
+                            td{
+                                background: none;
+                                border: 1px solid getColor(Teal);
+
+                                .ui-widget-header{
+                                    background: getColor(Teal);
+                                    border: 1px solid getColor(Teal);
+
+                                    table{
+                                        thead{
+                                            tr{
+                                                // border: 2px solid getColor(Teal);
+                                                th{
+                                                    color: getColor(white);
+                                                    padding: 8px;
+                                                    font-family: "poppins";
+                                                    font-weight: 400;
+
+                                                    @include sm{
+                                                        padding: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .fc-body{
+                        tr{
+                            .ui-widget-content{
+                                background: none;
+
+                                .fc-day-grid-container{
+                                    .fc-day-grid{
+                                        .fc-week {
+
+                                            .fc-bg{
+                                                table{
+                                                    tbody{
+                                                        tr{
+                                                            td{
+                                                                &.fc-today{
+                                                                    border: inherit;
+                                                                    border: 1px solid #dddddd;
+                                                                    background: tint(getColor(teal), 90%);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .fc-content-skeleton{
+                                                table{
+                                                    thead{
+                                                        tr{
+                                                            td{
+                                                                padding-right: 8px;
+                                                                font-family: 'poppins',sans-serif;
+                                                                font-size: 14px!important;
+                                                                font-weight: 400;
+
+                                                                &.fc-today{
+                                                                    // font-weight: 400;
+
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    tbody{
+                                                        tr{
+                                                            td{
+                                                                padding: 8px;
+
+                                                                &.fc-event-container{
+                                                                    a {
+                                                                        padding: 8px;
+                                                                        font-family: 'poppins';
+                                                                        font-weight: 400;
+                                                                        background-color: getColor(Teal)!important;
+                                                                        border: none;
+
+                                                                        .fc-content{
+                                                                            .fc-time{
+                                                                                font-weight: 400;
+
+                                                                                &::after{
+                                                                                    content: 'm';
+                                                                                    margin-right: 4px;
+                                                                                }
+                                                                            }
+                                                                            .fc-title{
+
+                                                                            }
+                                                                        }
+
+                                                                        &:not(:last-child){
+                                                                            margin-bottom: 4px;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
