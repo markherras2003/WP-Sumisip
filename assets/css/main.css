@@ -7743,6 +7743,135 @@ p:not(:last-child),
   }
 }
 
+.wpfc-calendar-wrapper form .fc-toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 24px;
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-button-group .fc-prev-button,
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-button-group .fc-next-button {
+  height: 32px;
+  border: none;
+  background: none;
+  position: absolute;
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-button-group .fc-prev-button .ui-icon,
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-button-group .fc-next-button .ui-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-button-group .fc-prev-button {
+  left: 0;
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-button-group .fc-prev-button .ui-icon {
+  background-image: url("../../assets/images/svg/caret-left.svg");
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-button-group .fc-prev-button .ui-icon.ui-icon-circle-triangle-w {
+  background-position: center;
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-button-group .fc-next-button {
+  right: 0;
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-button-group .fc-next-button .ui-icon {
+  background-image: url("../../assets/images/svg/caret-right.svg");
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-button-group .fc-next-button .ui-icon.ui-icon-circle-triangle-e {
+  background-position: center;
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-left .fc-today-button {
+  display: none;
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-center h2 {
+  font-size: 24px !important;
+  font-family: 'poppins';
+}
+
+.wpfc-calendar-wrapper form .fc-toolbar .fc-right {
+  display: none;
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-head tr td {
+  background: none;
+  border: 1px solid #0B928E;
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-head tr td .ui-widget-header {
+  background: #0B928E;
+  border: 1px solid #0B928E;
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-head tr td .ui-widget-header table thead tr th {
+  color: #FFFFFF;
+  padding: 8px;
+  font-family: "poppins";
+  font-weight: 400;
+}
+
+@media (max-width: 576px) {
+  .wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-head tr td .ui-widget-header table thead tr th {
+    padding: 0;
+  }
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-body tr .ui-widget-content {
+  background: none;
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-body tr .ui-widget-content .fc-day-grid-container .fc-day-grid .fc-week .fc-bg table tbody tr td.fc-today {
+  border: inherit;
+  border: 1px solid #dddddd;
+  background: #e7f4f4;
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-body tr .ui-widget-content .fc-day-grid-container .fc-day-grid .fc-week .fc-content-skeleton table thead tr td {
+  padding-right: 8px;
+  font-family: 'poppins',sans-serif;
+  font-size: 14px !important;
+  font-weight: 400;
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-body tr .ui-widget-content .fc-day-grid-container .fc-day-grid .fc-week .fc-content-skeleton table tbody tr td {
+  padding: 8px;
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-body tr .ui-widget-content .fc-day-grid-container .fc-day-grid .fc-week .fc-content-skeleton table tbody tr td.fc-event-container a {
+  padding: 8px;
+  font-family: 'poppins';
+  font-weight: 400;
+  background-color: #0B928E !important;
+  border: none;
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-body tr .ui-widget-content .fc-day-grid-container .fc-day-grid .fc-week .fc-content-skeleton table tbody tr td.fc-event-container a .fc-content .fc-time {
+  font-weight: 400;
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-body tr .ui-widget-content .fc-day-grid-container .fc-day-grid .fc-week .fc-content-skeleton table tbody tr td.fc-event-container a .fc-content .fc-time::after {
+  content: 'm';
+  margin-right: 4px;
+}
+
+.wpfc-calendar-wrapper form .fc-view-container .fc-view table .fc-body tr .ui-widget-content .fc-day-grid-container .fc-day-grid .fc-week .fc-content-skeleton table tbody tr td.fc-event-container a:not(:last-child) {
+  margin-bottom: 4px;
+}
+
 /* Custom Directory */
 /*  Animations Library */
 @-webkit-keyframes dropFadeMin {

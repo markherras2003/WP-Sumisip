@@ -147,6 +147,8 @@ get_header();
 
 </div>
 
+
+
 <?php
         $arg = array(
             'post_type' => 'post',
@@ -247,6 +249,9 @@ get_header();
 
 <section>
 <div class="global-wrapper section-padding">
+                <div class="section-heading-group">
+                    <h1>Calendar of Events</h1>
+                </div>
                     <?php echo do_shortcode('[fullcalendar type="event"]'); ?>
 </div>
 </section>
