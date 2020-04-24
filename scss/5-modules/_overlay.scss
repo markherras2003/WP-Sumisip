@@ -9,7 +9,7 @@
         position: relative;
         background-image: url('../../assets/images/Ramadan.png');
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: top center;
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -35,6 +35,10 @@
 
         @include sm {
             background-image: url('../../assets/images/Ramadan\ Sm.png');
+        }
+
+        @include xs{
+            background-image: url('../../assets/images/Ramadan-XS.png');
         }
     }
 
