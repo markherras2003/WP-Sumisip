@@ -43,3 +43,22 @@ $(window).on('load', function() {
     }
   });
 });
+
+
+$(document).ready(function(){ 
+
+  $("#ramadan-close").click(function() { 
+   $(".ramadan").fadeOut();
+   $('body').css('overflow', 'visible');
+   });
+
+   $("#covid-close").click(function() { 
+    $(".covid").fadeOut();
+    $('body').css('overflow', 'visible');
+    });
+
+  //  $("#covid-close").click(function() { 
+  //   $(".covid").fadeOut("slow"); 
+  //   });
+});
+ 

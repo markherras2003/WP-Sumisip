@@ -1,0 +1,142 @@
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 999;
+
+    .ramadan {
+        position: relative;
+        background-image: url('../../assets/images/Ramadan.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+
+        .close {
+            position: absolute;
+            top: 56px;
+            right: 56px;
+            cursor: pointer;
+
+            @include md {
+                top: 32px;
+                right: 32px;
+            }
+
+        }
+
+        @include xl {
+            background-image: url('../../assets/images/Ramadan-LG.png');
+        }
+
+        @include sm {
+            background-image: url('../../assets/images/Ramadan\ Sm.png');
+        }
+    }
+
+
+
+    .covid {
+        position: relative;
+        background-image: url('../../assets/images/Covid.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        #covid-close {
+            position: absolute;
+            top: 56px;
+            right: 56px;
+            cursor: pointer;
+
+            @include md {
+                top: 32px;
+                right: 32px;
+            }
+        }
+
+        .content {
+            position: absolute;
+            width: 100%;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .display {
+                display: block;
+                font-size: 120px;
+                font-weight: 700;
+                color: getColor(Rosewood);
+                line-height: 160px;
+            }
+
+            .display-2 {
+                display: block;
+                font-size: 72px;
+                color: getColor(Rosewood);
+            }
+
+            .social-links {
+                display: flex;
+                justify-content: center;
+                margin-top: 32px;
+
+                .email,
+                .fb {
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        color: getColor(Rosewood);
+                        font-size: 18px;
+                        margin-left: 8px;
+                    }
+                }
+
+                .email {
+                    margin-right: 40px;
+                }
+            }
+
+            .contact {
+                margin-top: 40px;
+
+                h2 {
+                    text-transform: uppercase;
+                }
+
+                .health,
+                .mdrrmo {
+                    margin-top: 24px;
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        font-size: 24px;
+                        line-height: 32px;
+
+                        &.office {
+                            color: getColor(Rosewood);
+                            text-transform: uppercase;
+                        }
+
+                        &.numbers {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
