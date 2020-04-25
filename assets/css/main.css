@@ -7874,20 +7874,110 @@ p:not(:last-child),
 .overlay {
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   z-index: 999;
 }
 
 .overlay .ramadan {
   position: relative;
-  background-image: url("../../assets/images/Ramadan.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  background-color: #070029;
   width: 100%;
   height: 100%;
   z-index: 2;
+}
+
+.overlay .ramadan .content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.overlay .ramadan .content .img-wrapper {
+  width: 60%;
+  height: 100%;
+  background-image: url("../../assets/images/Ramadan.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.overlay .ramadan .content .lantern {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24%;
+  height: 60%;
+  background-image: url("../../assets/images/lantern.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+@media (max-width: 1200px) {
+  .overlay .ramadan .content .lantern {
+    height: 24%;
+  }
+}
+
+.overlay .ramadan .content .description {
+  padding: 56px;
+  height: auto;
+  width: 40%;
+}
+
+.overlay .ramadan .content .description p {
+  color: white;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1200px) {
+  .overlay .ramadan .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .overlay .ramadan .content .img-wrapper {
+    height: 60%;
+    width: 100%;
+  }
+  .overlay .ramadan .content .description {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay .ramadan .content .img-wrapper {
+    width: 90%;
+  }
+  .overlay .ramadan .content .description {
+    height: 50%;
+    width: 100%;
+    padding: 24px;
+  }
+  .overlay .ramadan .content .description p {
+    font-size: 12px;
+    line-height: initial;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 376px) {
+  .overlay .ramadan .content .img-wrapper {
+    height: 32%;
+  }
+  .overlay .ramadan .content .description p {
+    font-size: 10px;
+  }
 }
 
 .overlay .ramadan .close {
@@ -7895,42 +7985,43 @@ p:not(:last-child),
   top: 56px;
   right: 56px;
   cursor: pointer;
+  z-index: 999;
 }
 
 @media (max-width: 768px) {
   .overlay .ramadan .close {
-    top: 32px;
-    right: 32px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .overlay .ramadan {
-    background-image: url("../../assets/images/Ramadan-LG.png");
+    top: 24px;
+    right: 24px;
   }
 }
 
 @media (max-width: 576px) {
-  .overlay .ramadan {
-    background-image: url("../../assets/images/Ramadan Sm.png");
-  }
-}
-
-@media (max-width: 376px) {
-  .overlay .ramadan {
-    background-image: url("../../assets/images/Ramadan-XS.png");
+  .overlay .ramadan .close {
+    height: 16px;
+    width: 16px;
   }
 }
 
 .overlay .covid {
   position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.overlay .covid .img-wrapper {
   background-image: url("../../assets/images/Covid.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 100%;
-  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .overlay .covid .img-wrapper {
+    background-position: left;
+  }
 }
 
 .overlay .covid #covid-close {
@@ -7938,12 +8029,20 @@ p:not(:last-child),
   top: 56px;
   right: 56px;
   cursor: pointer;
+  z-index: 999;
 }
 
 @media (max-width: 768px) {
   .overlay .covid #covid-close {
-    top: 32px;
-    right: 32px;
+    top: 24px;
+    right: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay .covid #covid-close {
+    height: 16px;
+    width: 16px;
   }
 }
 
@@ -8044,6 +8143,61 @@ p:not(:last-child),
 .overlay .covid .content .contact .health span.numbers,
 .overlay .covid .content .contact .mdrrmo span.numbers {
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .overlay .covid .content {
+    padding: 0 24px;
+    top: 40px;
+  }
+  .overlay .covid .content .display {
+    font-size: 72px;
+    line-height: 80px;
+  }
+  .overlay .covid .content .display-2 {
+    font-size: 44px;
+  }
+  .overlay .covid .content .social-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .overlay .covid .content .social-links .email {
+    margin-bottom: 16px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay .covid .content .display {
+    font-size: 64px;
+    line-height: 64px;
+  }
+  .overlay .covid .content .display-2 {
+    font-size: 32px;
+  }
+  .overlay .covid .content .social-links {
+    margin-top: 16px;
+  }
+  .overlay .covid .content .social-links .email {
+    margin-bottom: 8px;
+  }
+  .overlay .covid .content .contact {
+    margin-top: 24px;
+  }
+  .overlay .covid .content .contact .health,
+  .overlay .covid .content .contact .mdrrmo {
+    margin-top: 8px;
+  }
+  .overlay .covid .content .contact .health span,
+  .overlay .covid .content .contact .mdrrmo span {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 /* Custom Directory */
