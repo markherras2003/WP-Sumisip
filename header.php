@@ -463,49 +463,7 @@ elseif(is_category()) {
                         <span>Government</span>
                     </a>
                     <div class="mega-menu">
-                        <div class="mega-menu-group mini-box tinier-box extended">
-                            <h4>Awards</h4>
-                            <?php
-                                if( has_nav_menu('awards-menu') ) {
-                                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
-
-                                    $menuID = $menuLocations['awards-menu']; // Get the *primary* menu ID
-
-                                    $navMenu = wp_get_nav_menu_items($menuID); 
-
-                                    } else {
-                                        $navMenu = [];
-                                    }
-                            ?>
-                            <ul>
-                                    <?php 
-                                                 global $dynamic_featured_image;
-                                                 foreach ($navMenu as $menu) {            
-                                            ?>
-                                                                    <li>
-                                    <a href="<?= $menu->url ?>">
-                                    <?php 
-                                        $key=0;
-                                        $posting_id=$menu->object_id;
-                                        $featured_images = $dynamic_featured_image->get_featured_images($posting_id);
-                                        foreach($featured_images as $featured_image) {
-                                            $key=$key+1; 
-                                            if ($key===1) {?>
-                                        <div class="thumb-wrapper">
-                                            <img src="<?= $featured_image['full']; ?>" alt="Main Mega Menu Thumb">
-                                        </div>
-                                            <?php }
-                                    
-                                        } ?>
-                                     <div class="details">
-                                        <h5 class="light"><?= $menu->title ?></h5>
-                                        <div class="p-sm"><p><?= custom_get_the_excerpt($posting_id) ?></p></div>
-                                        </div>
-                                    </a>
-                                    </li>
-                                    <?php } ?> 
-                            </ul>
-                        </div>
+                       
                         <div class="mega-menu-group sbs-m-1">
                         <h4>Mayor's Office</h4>
                                              <?php  
