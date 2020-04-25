@@ -53,6 +53,7 @@ $(document).ready(function(){
 
    $("#covid-close").click(function() { 
     $(".covid").fadeOut();
+    $(".overlay").fadeOut();
     $('body').css('overflow', 'visible');
     });
 
