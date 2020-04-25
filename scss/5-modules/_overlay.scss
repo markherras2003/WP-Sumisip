@@ -7,7 +7,7 @@
 
     .ramadan {
         position: relative;
-        background-color: #070029;
+        background-color: getColor(white);
         width: 100%;
         height: 100%;
         z-index: 2;
@@ -21,7 +21,7 @@
             .img-wrapper {
                 width: 60%;
                 height: 100%;
-                background-image: url('../../assets/images/Ramadan.png');
+                background-image: url('../../assets/images/ramadan.svg');
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: contain;
@@ -34,7 +34,7 @@
                 top: 0;
                 width: 24%;
                 height: 60%;
-                background-image: url('../../assets/images/lantern.png');
+                background-image: url('../../assets/images/lantern.svg');
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: contain;
@@ -50,7 +50,7 @@
                 width: 40%;
 
                 p {
-                    color: white;
+                    color: getColor(Black);
                     margin-bottom: 16px;
                 }
             }
@@ -131,12 +131,16 @@
         z-index: 1;
 
         .img-wrapper {
-            background-image: url('../../assets/images/Covid.png');
+            background-color: white;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             width: 100%;
             height: 100%;
+
+            svg{
+                margin-left: -240px;
+            }
         }
 
         #covid-close {
@@ -168,24 +172,25 @@
             flex-direction: column;
             text-align: center;
 
-            .display {
+            .display-1 {
+
                 display: block;
-                font-size: 120px;
+                font-size: 56px;
                 font-weight: 700;
-                color: getColor(Rosewood);
-                line-height: 160px;
+                color: getColor(Matisse);
+                line-height: 54px;
             }
 
             .display-2 {
                 display: block;
-                font-size: 72px;
-                color: getColor(Rosewood);
+                font-size: 40px;
+                color: getColor(Matisse);
             }
 
             .social-links {
                 display: flex;
                 justify-content: center;
-                margin-top: 32px;
+                margin-top: 8px;
 
                 .email,
                 .fb {
@@ -193,7 +198,7 @@
                     align-items: center;
 
                     p {
-                        color: getColor(Rosewood);
+                        color: getColor(Matisse);
                         font-size: 18px;
                         margin-left: 8px;
                     }
@@ -204,34 +209,12 @@
                 }
             }
 
-            .contact {
+            h4{
+                color: getColor(Matisse);
                 margin-top: 40px;
-
-                h2 {
-                    text-transform: uppercase;
-                }
-
-                .health,
-                .mdrrmo {
-                    margin-top: 24px;
-                    display: flex;
-                    flex-direction: column;
-
-                    span {
-                        font-size: 24px;
-                        line-height: 32px;
-
-                        &.office {
-                            color: getColor(Rosewood);
-                            text-transform: uppercase;
-                        }
-
-                        &.numbers {
-                            font-weight: 700;
-                        }
-                    }
-                }
             }
+
+           
 
             .details {
                 position: absolute;
@@ -242,27 +225,60 @@
                 left: 50%;
                 transform: translateX(-50%);
 
+                .contact {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 24px;
+    
+                    h3{
+                        text-transform: uppercase;
+                    }
+    
+                    .health,
+                    .mdrrmo {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 40px;
+    
+                        span {
+                            font-size: 24px;
+                            line-height: 32px;
+                            text-align: left;
+    
+                            &.office {
+                                color: getColor(Matisse);
+                                text-transform: uppercase;
+                            }
+    
+                            &.numbers {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+
                 .updated-time {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: center;
+                    
+                    p{
+                        margin: 0;
 
-                    .confirmed {
-                        text-align: right;
-                        font-weight: 700;
-                        color: getColor(Rosewood);
+                        &:not(:last-child){
+                            margin-right: 40px;
+                        }
                     }
+
 
                     @include sm {
                         flex-direction: column;
 
-                        span {
-                            font-size: 12px;
-                            line-height: 16px;
-                        }
-
-                        .confirmed {
-                            margin-top: 8px;
-                            text-align: center;
+                        p{
+                            margin-bottom: 0;
+                            &:not(:last-child){
+                                margin-right: 0;
+                            }
                         }
                     }
                 }
@@ -389,11 +405,6 @@
                 padding: 0 24px;
                 top: 40px;
 
-                .display {
-                    font-size: 72px;
-                    line-height: 80px;
-                }
-
                 .display-2 {
                     font-size: 44px;
                 }
@@ -410,10 +421,6 @@
             }
 
             @include sm {
-                .display {
-                    font-size: 64px;
-                    line-height: 64px;
-                }
 
                 .display-2 {
                     font-size: 32px;
@@ -440,6 +447,10 @@
                     }
                 }
 
+                h4{
+                    margin-top: 24px;
+                }
+
                 .contact {
                     margin-top: 24px;
 
@@ -458,6 +469,7 @@
             @include xs{
                 top: 16px;
                 height: 95%;
+
                 .display{
                     font-size: 40px;
                     line-height: 56px;

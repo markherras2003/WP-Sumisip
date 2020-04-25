@@ -7885,7 +7885,7 @@ p:not(:last-child),
 
 .overlay .ramadan {
   position: relative;
-  background-color: #070029;
+  background-color: #FFFFFF;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -7907,7 +7907,7 @@ p:not(:last-child),
 .overlay .ramadan .content .img-wrapper {
   width: 60%;
   height: 100%;
-  background-image: url("../../assets/images/Ramadan.png");
+  background-image: url("../../assets/images/ramadan.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -7919,7 +7919,7 @@ p:not(:last-child),
   top: 0;
   width: 24%;
   height: 60%;
-  background-image: url("../../assets/images/lantern.png");
+  background-image: url("../../assets/images/lantern.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -7938,7 +7938,7 @@ p:not(:last-child),
 }
 
 .overlay .ramadan .content .description p {
-  color: white;
+  color: #353535;
   margin-bottom: 16px;
 }
 
@@ -8014,12 +8014,16 @@ p:not(:last-child),
 }
 
 .overlay .covid .img-wrapper {
-  background-image: url("../../assets/images/Covid.png");
+  background-color: white;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 100%;
+}
+
+.overlay .covid .img-wrapper svg {
+  margin-left: -240px;
 }
 
 .overlay .covid #covid-close {
@@ -8062,18 +8066,18 @@ p:not(:last-child),
   text-align: center;
 }
 
-.overlay .covid .content .display {
+.overlay .covid .content .display-1 {
   display: block;
-  font-size: 120px;
+  font-size: 56px;
   font-weight: 700;
-  color: #AA0952;
-  line-height: 160px;
+  color: #345995;
+  line-height: 54px;
 }
 
 .overlay .covid .content .display-2 {
   display: block;
-  font-size: 72px;
-  color: #AA0952;
+  font-size: 40px;
+  color: #345995;
 }
 
 .overlay .covid .content .social-links {
@@ -8083,7 +8087,7 @@ p:not(:last-child),
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 32px;
+  margin-top: 8px;
 }
 
 .overlay .covid .content .social-links .email,
@@ -8098,7 +8102,7 @@ p:not(:last-child),
 
 .overlay .covid .content .social-links .email p,
 .overlay .covid .content .social-links .fb p {
-  color: #AA0952;
+  color: #345995;
   font-size: 18px;
   margin-left: 8px;
 }
@@ -8107,41 +8111,9 @@ p:not(:last-child),
   margin-right: 40px;
 }
 
-.overlay .covid .content .contact {
+.overlay .covid .content h4 {
+  color: #345995;
   margin-top: 40px;
-}
-
-.overlay .covid .content .contact h2 {
-  text-transform: uppercase;
-}
-
-.overlay .covid .content .contact .health,
-.overlay .covid .content .contact .mdrrmo {
-  margin-top: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.overlay .covid .content .contact .health span,
-.overlay .covid .content .contact .mdrrmo span {
-  font-size: 24px;
-  line-height: 32px;
-}
-
-.overlay .covid .content .contact .health span.office,
-.overlay .covid .content .contact .mdrrmo span.office {
-  color: #AA0952;
-  text-transform: uppercase;
-}
-
-.overlay .covid .content .contact .health span.numbers,
-.overlay .covid .content .contact .mdrrmo span.numbers {
-  font-weight: 700;
 }
 
 .overlay .covid .content .details {
@@ -8160,19 +8132,68 @@ p:not(:last-child),
           transform: translateX(-50%);
 }
 
+.overlay .covid .content .details .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 24px;
+}
+
+.overlay .covid .content .details .contact h3 {
+  text-transform: uppercase;
+}
+
+.overlay .covid .content .details .contact .health,
+.overlay .covid .content .details .contact .mdrrmo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 40px;
+}
+
+.overlay .covid .content .details .contact .health span,
+.overlay .covid .content .details .contact .mdrrmo span {
+  font-size: 24px;
+  line-height: 32px;
+  text-align: left;
+}
+
+.overlay .covid .content .details .contact .health span.office,
+.overlay .covid .content .details .contact .mdrrmo span.office {
+  color: #345995;
+  text-transform: uppercase;
+}
+
+.overlay .covid .content .details .contact .health span.numbers,
+.overlay .covid .content .details .contact .mdrrmo span.numbers {
+  font-weight: 700;
+}
+
 .overlay .covid .content .details .updated-time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.overlay .covid .content .details .updated-time .confirmed {
-  text-align: right;
-  font-weight: 700;
-  color: #AA0952;
+.overlay .covid .content .details .updated-time p {
+  margin: 0;
+}
+
+.overlay .covid .content .details .updated-time p:not(:last-child) {
+  margin-right: 40px;
 }
 
 @media (max-width: 576px) {
@@ -8182,13 +8203,11 @@ p:not(:last-child),
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .overlay .covid .content .details .updated-time span {
-    font-size: 12px;
-    line-height: 16px;
+  .overlay .covid .content .details .updated-time p {
+    margin-bottom: 0;
   }
-  .overlay .covid .content .details .updated-time .confirmed {
-    margin-top: 8px;
-    text-align: center;
+  .overlay .covid .content .details .updated-time p:not(:last-child) {
+    margin-right: 0;
   }
 }
 
@@ -8320,10 +8339,6 @@ p:not(:last-child),
     padding: 0 24px;
     top: 40px;
   }
-  .overlay .covid .content .display {
-    font-size: 72px;
-    line-height: 80px;
-  }
   .overlay .covid .content .display-2 {
     font-size: 44px;
   }
@@ -8343,10 +8358,6 @@ p:not(:last-child),
 }
 
 @media (max-width: 576px) {
-  .overlay .covid .content .display {
-    font-size: 64px;
-    line-height: 64px;
-  }
   .overlay .covid .content .display-2 {
     font-size: 32px;
     line-height: 32px;
@@ -8364,6 +8375,9 @@ p:not(:last-child),
   .overlay .covid .content .social-links .email p,
   .overlay .covid .content .social-links .fb p {
     font-size: 12px;
+  }
+  .overlay .covid .content h4 {
+    margin-top: 24px;
   }
   .overlay .covid .content .contact {
     margin-top: 24px;
