@@ -26,7 +26,36 @@
 
 <div class="overlay">
             <div class="ramadan">
-                <svg id="ramadan-close" class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <div class="content">
+                    <div class="img-wrapper"></div>
+                    <div class="lantern"></div>
+                    <div class="description">
+                        <p>The Local Government Unit of Sumisip is in solidarity with our Muslim
+                            brothers and sisters around the world in celebrating the holy month of
+                            Ramadan welcoming it with love, peace, spirit of oneness and hope
+                            amidst the COVID-19 pandemic.
+                        </p>
+                        <p>
+                            While we will not be able to spend this month side-by-side, we hope to
+                            keep our sense of community alive as much we can during this ever-
+                            changing and uncertain time.
+                        </p>
+                        <p>
+                            Let us continue to offer dua'a to end this health crisis. Let us practice our
+                            faith at home.
+                        </p>
+                        <p>
+                            May Allah (swt) protect and guide us all, and give us strength to
+                            overcome the adversities brought by the health crisis.
+                        </p>
+
+                        <p>Ramadan Mubarak!</p>
+                        <p>#Ramadan1141 #Ramadan2020 #Sumisip2020</p>
+
+                    </div>
+                </div>
+                <svg id="ramadan-close" class="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
                     <g transform="translate(0 -0.001)">
                         <g id="Group_446" data-name="Group 446" transform="translate(0 0.001)">
                             <path id="Path_325" data-name="Path 325"
@@ -47,6 +76,8 @@
                         </g>
                     </g>
                 </svg>
+
+                <div class="img-wrapper"></div>
 
                 <div class="content">
                     <span class="display">Sumisip</span>
@@ -79,9 +110,11 @@
                         </div>
                         <div class="fb">
                             <svg xmlns="http://www.w3.org/2000/svg" width="10.428" height="20" viewBox="0 0 10.428 20">
-                                <path id="facebook" d="M14.711,3.321h1.9V.141A25.62,25.62,0,0,0,13.841,0,4.308,4.308,0,0,0,9.216,4.7V7.5H6.187v3.555H9.216V20H12.93V11.056h2.906L16.3,7.5H12.929V5.052C12.93,4.024,13.218,3.321,14.711,3.321Z" transform="translate(-6.187)" fill="#aa0952"/>
-                              </svg>
-                              
+                                <path id="facebook"
+                                    d="M14.711,3.321h1.9V.141A25.62,25.62,0,0,0,13.841,0,4.308,4.308,0,0,0,9.216,4.7V7.5H6.187v3.555H9.216V20H12.93V11.056h2.906L16.3,7.5H12.929V5.052C12.93,4.024,13.218,3.321,14.711,3.321Z"
+                                    transform="translate(-6.187)" fill="#aa0952" />
+                            </svg>
+
                             <p>www.facebook.com/lgusumisip</p>
                         </div>
                     </div>
@@ -94,6 +127,31 @@
                         <div class="mdrrmo">
                             <span class="office">Mdrrmo</span>
                             <span class="numbers">09060185363</span>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="updated-time">
+                            <span class="updated">Updated: <span id="covidlatest">2020/04/22 08:40 am</span> <br> Source: Department of Health</span>
+                            <span class="confirmed">NO CONFIRMED CASE OF COVID -19 IN <br> SUMISIP, BASILAN</span>
+                        </div>
+                        <div class="cases">
+                            <ul>
+                                <li class="New-confirmed rosewood">
+                                   <p> New Confirmed Cases </p>
+                                    <h3>+<span id="newconfirmed"></span></h3>
+                                </li>
+                                <li class="confirmed matisse">
+                                    <p>Confirmed Cases </p>
+                                    <h3><span id="cases"></span></h3></li>
+                                <li class="New-Deaths teal">
+                                    <p>New Deaths</p>
+                                    <h3>+<span id="newdeaths"></span></h3>
+                                </li>
+                                <li class="Deaths marigold">
+                                    <p>Deaths</p>
+                                    <h3><span id="deaths"></span></h3>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
