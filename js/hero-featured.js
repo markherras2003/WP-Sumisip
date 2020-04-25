@@ -55,6 +55,7 @@ $(document).ready(function(){
     $(".covid").fadeOut();
     $(".overlay").fadeOut();
     $('body').css('overflow', 'visible');
+    $('html').css('overflow', 'visible');
     });
 
 
