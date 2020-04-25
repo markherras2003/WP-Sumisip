@@ -8018,12 +8018,6 @@ p:not(:last-child),
   height: 100%;
 }
 
-@media (max-width: 768px) {
-  .overlay .covid .img-wrapper {
-    background-position: right;
-  }
-}
-
 .overlay .covid #covid-close {
   position: absolute;
   top: 56px;
@@ -8218,6 +8212,9 @@ p:not(:last-child),
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 25%;
   height: 120px;
   padding: 16px;
@@ -8227,8 +8224,8 @@ p:not(:last-child),
   margin-right: 24px;
 }
 
-.overlay .covid .content .details .cases ul li h3 {
-  margin-top: 8px;
+.overlay .covid .content .details .cases ul li p {
+  margin: 0;
 }
 
 .overlay .covid .content .details .cases ul li.rosewood {

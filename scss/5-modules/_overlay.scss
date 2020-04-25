@@ -137,10 +137,6 @@
             background-size: cover;
             width: 100%;
             height: 100%;
-
-            @include md {
-                background-position: right;
-            }
         }
 
         #covid-close {
@@ -284,6 +280,7 @@
                             list-style: none;
                             display: flex;
                             flex-direction: column;
+                            justify-content: center;
                             width: 25%;
                             height: 120px;
                             padding: 16px;
@@ -292,9 +289,11 @@
                                 margin-right: 24px;
                             }
 
-                            h3 {
-                                margin-top: 8px;
+                            p{
+                                margin: 0;
+
                             }
+
 
                             &.rosewood {
                                 border: 1px solid getColor(Rosewood);
