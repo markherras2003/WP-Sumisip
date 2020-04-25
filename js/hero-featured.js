@@ -49,7 +49,6 @@ $(document).ready(function(){
 
   $("#ramadan-close").click(function() { 
    $(".ramadan").fadeOut();
-   $('body').css('overflow', 'visible');
    });
 
    $("#covid-close").click(function() { 
@@ -57,8 +56,5 @@ $(document).ready(function(){
     $('body').css('overflow', 'visible');
     });
 
-  //  $("#covid-close").click(function() { 
-  //   $(".covid").fadeOut("slow"); 
-  //   });
 });
  

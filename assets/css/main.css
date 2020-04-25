@@ -136,6 +136,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  overflow: hidden;
+}
+
 main {
   display: block;
 }

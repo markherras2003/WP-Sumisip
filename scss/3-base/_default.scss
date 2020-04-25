@@ -18,12 +18,17 @@ body {
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
-    color: getColor( Black );
+    color: getColor(Black);
     margin: 0;
     padding: 0;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    overflow: hidden;
+
 }
 
 main {
@@ -61,7 +66,7 @@ samp {
 
 code {
     font-size: 12px;
-    color: getColor( Rosewood );
+    color: getColor(Rosewood);
 }
 
 
