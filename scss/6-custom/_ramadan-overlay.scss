@@ -1,0 +1,231 @@
+#ramadan-overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: #589DD2;
+  background-color: #052740;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  .navigation {
+    position: relative;
+    padding-top: $size-4;
+    padding-bottom: $size-3;
+    flex-grow: 0;
+    flex-shrink: 0;
+    z-index: 9;
+
+    .global-wrapper {
+      text-align: right;
+    }
+
+    .button {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #589DD2;
+      font-weight: 300;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    @include md {
+      padding-top: $size-3;
+      padding-bottom: $size-1;
+    }
+
+    @include sm {
+      .global-wrapper {
+        text-align: center;
+      }
+    }
+
+  }
+
+  .ramadan-contents-wrapper {
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-image-group {
+    position: relative;
+    z-index: 1;
+
+    .highlights {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 600px);
+      height: 490px;
+      width: 1200px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: auto;
+      }
+
+      @include md {
+        left: calc(50% - 470px);
+        height: 400px;
+        width: 980px;
+      }
+
+    }
+
+    .mubarak-group {
+      position: relative;
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+      padding-top: 170px;
+
+      .mubarak-inline {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: 2;
+      }
+
+      .radial-bg {
+        position: absolute;
+        top: -50px;
+        left: -240px;
+        width: 1250px;
+        height: 768px;
+        opacity: .8;
+        z-index: 1;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+
+      }
+
+      @include md {
+        padding-top: 130px;
+
+        .mubarak-inline {
+          .group-a {
+            transform: translateX(-24px);
+          }
+
+          .group-b {
+            display: none;
+          }
+        }
+
+        .radial-bg {
+          top: -160px;
+          left: -460px;
+          width: 1350px;
+          height: 928px;
+        }
+
+      }
+
+      @include sm {
+        padding-top: 80px;
+
+
+        .mubarak-inline {
+          .group-a {
+            transform: translateX(-48px);
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .copy {
+    position: relative;
+    padding-top: $size-4;
+    padding-bottom: $size-8;
+    z-index: 5;
+
+    .tags {
+      padding: $size-2 0;
+      font-size: 12px;
+      color: getColor(Teal);
+    }
+
+  }
+
+
+
+  // .ramadan-contents-wrapper {
+  //   position: relative;
+  //   top: -96px;
+  //   min-height: calc(100% + 96px);
+  //   flex-grow: 1;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  //   z-index: 1;
+  //   overflow: hidden;
+
+  //   &::before {
+  //     position: absolute;
+  //     top: 40px;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     content: ' ';
+  //     z-index: -1;
+  //     background-image: url('../../assets/images/ramadan/highlights.svg');
+  //     background-position: top center;
+  //     background-repeat: no-repeat;
+  //   }
+
+
+  // }
+
+
+  // .main-image-group {
+  //   position: relative;
+  //   width: 100%;
+  //   max-width: 768px;
+  //   height: 330px;
+  //   margin: 0 auto;
+  //   margin-top: $size-8;
+  //   display: flex;
+  //   align-items: flex-end;
+  //   justify-content: center;
+  //   z-index: 1;
+
+  //   &::before {
+  //     position: absolute;
+  //     top: -90%;
+  //     left: -50%;
+  //     height: 315%;
+  //     width: 200%;
+  //     content: ' ';
+  //     z-index: -1;
+  //     background-image: url('../../assets/images/ramadan/radial-bg.svg');
+  //     background-position: center center;
+  //   }
+
+
+  // }
+
+  // .copy {
+  //   position: relative;
+  //   padding-top: $size-6;
+  //   padding-bottom: $size-4;
+  //   z-index: 2;
+  // }
+
+}

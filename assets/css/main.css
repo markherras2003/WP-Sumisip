@@ -136,10 +136,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  overflow: hidden;
-}
-
 main {
   display: block;
 }
@@ -7834,6 +7830,7 @@ p:not(:last-child),
   border: 1px solid #fcfcfc;
   width: 140px;
   height: 140px;
+  border-radius: 999px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -8442,6 +8439,193 @@ p:not(:last-child),
 }
 
 /* Custom Directory */
+#ramadan-overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: #589DD2;
+  background-color: #052740;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+}
+
+#ramadan-overlay .navigation {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  z-index: 9;
+}
+
+#ramadan-overlay .navigation .global-wrapper {
+  text-align: right;
+}
+
+#ramadan-overlay .navigation .button {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #589DD2;
+  font-weight: 300;
+}
+
+#ramadan-overlay .navigation .button:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+  #ramadan-overlay .navigation {
+    padding-top: 24px;
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  #ramadan-overlay .navigation .global-wrapper {
+    text-align: center;
+  }
+}
+
+#ramadan-overlay .ramadan-contents-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#ramadan-overlay .main-image-group {
+  position: relative;
+  z-index: 1;
+}
+
+#ramadan-overlay .main-image-group .highlights {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 600px);
+  height: 490px;
+  width: 1200px;
+}
+
+#ramadan-overlay .main-image-group .highlights img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: auto;
+     object-fit: auto;
+}
+
+@media (max-width: 768px) {
+  #ramadan-overlay .main-image-group .highlights {
+    left: calc(50% - 470px);
+    height: 400px;
+    width: 980px;
+  }
+}
+
+#ramadan-overlay .main-image-group .mubarak-group {
+  position: relative;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-top: 170px;
+}
+
+#ramadan-overlay .main-image-group .mubarak-group .mubarak-inline {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+}
+
+#ramadan-overlay .main-image-group .mubarak-group .radial-bg {
+  position: absolute;
+  top: -50px;
+  left: -240px;
+  width: 1250px;
+  height: 768px;
+  opacity: .8;
+  z-index: 1;
+}
+
+#ramadan-overlay .main-image-group .mubarak-group .radial-bg img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  #ramadan-overlay .main-image-group .mubarak-group {
+    padding-top: 130px;
+  }
+  #ramadan-overlay .main-image-group .mubarak-group .mubarak-inline .group-a {
+    -webkit-transform: translateX(-24px);
+            transform: translateX(-24px);
+  }
+  #ramadan-overlay .main-image-group .mubarak-group .mubarak-inline .group-b {
+    display: none;
+  }
+  #ramadan-overlay .main-image-group .mubarak-group .radial-bg {
+    top: -160px;
+    left: -460px;
+    width: 1350px;
+    height: 928px;
+  }
+}
+
+@media (max-width: 576px) {
+  #ramadan-overlay .main-image-group .mubarak-group {
+    padding-top: 80px;
+  }
+  #ramadan-overlay .main-image-group .mubarak-group .mubarak-inline .group-a {
+    -webkit-transform: translateX(-48px);
+            transform: translateX(-48px);
+  }
+}
+
+#ramadan-overlay .copy {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 64px;
+  z-index: 5;
+}
+
+#ramadan-overlay .copy .tags {
+  padding: 16px 0;
+  font-size: 12px;
+  color: #0B928E;
+}
+
 /*  Animations Library */
 @-webkit-keyframes dropFadeMin {
   0% {
@@ -8541,4 +8725,3 @@ p:not(:last-child),
             transform: translateY(0px);
   }
 }
-/*# sourceMappingURL=main.css.map */
