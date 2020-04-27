@@ -1,15 +1,3 @@
-
-$(function() {
-  var COOKIE_NAME = 'action';
-  $go = $.cookie(COOKIE_NAME);
-  if ($go == null) {
-    $.cookie(COOKIE_NAME, 'landing', { path: '/', expires: 6 });
-    window.location = "/landing"
-  }
-  else {
-  }
-});
-
 $(() => {
   // Navigation Menu;
   $('.nav-menu-wrapper').on('click', function() {
