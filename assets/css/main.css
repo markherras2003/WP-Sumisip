@@ -8441,7 +8441,7 @@ p:not(:last-child),
 /* Custom Directory */
 #ramadan-overlay {
   position: relative;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   color: #589DD2;
   background-color: #052740;
@@ -8565,6 +8565,7 @@ p:not(:last-child),
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 2;
+  min-height: 330px;
 }
 
 #ramadan-overlay .main-image-group .mubarak-group .radial-bg {
@@ -8725,3 +8726,4 @@ p:not(:last-child),
             transform: translateY(0px);
   }
 }
+/*# sourceMappingURL=main.css.map */
