@@ -19,11 +19,10 @@
 /*-----------------------------------------------------------------------------------*/
 require_once('vafpress.php');
 
-add_action ('wp_loaded', 'my_custom_redirect');
-function my_custom_redirect() {
-    $visit_time = date('F j, Y  g:i a');
-    if( !isset($_COOKIE['wp_visit_time']) ) {
-        setcookie('wp_visit_time', $visit_time);
+add_action ('wp_loaded', 'redirect_hook');
+function redirect_hook() {
+    if( !isset($_COOKIE['action']) ) {
+        setcookie('action', 'landing' ,time()+43200);
         wp_redirect(get_home_url() . '/ramadan'); exit;
     }
 }
