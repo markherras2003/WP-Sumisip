@@ -418,7 +418,7 @@ function sumisip_scripts() {
 	if (is_home()) {
 	//wp_enqueue_script( 'hero-video', get_template_directory_uri().'/js/hero-video-autoplay.js' , array(), '20181231', true );
 	}
-	wp_enqueue_script( 'navigation', get_template_directory_uri().'/js/navigation.js' , array('jquery'), '20181231', true );
+	wp_enqueue_script( 'navigation', get_template_directory_uri().'/js/navigation.js' , array(), '20181231', true );
 	//wp_enqueue_script( 'tinymce_script', get_template_directory_uri().'/js/tinymce.js' , array(), '20181231', true );
 	
     //wp_enqueue_script( 'sumisip-swiper', get_template_directory_uri() . '/js/swiper.min.js' , array(), '20181231', true );
