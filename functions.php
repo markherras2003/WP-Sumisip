@@ -19,6 +19,14 @@
 /*-----------------------------------------------------------------------------------*/
 require_once('vafpress.php');
 
+add_action ('wp_loaded', 'my_custom_redirect');
+function my_custom_redirect() {
+    $visit_time = date('F j, Y  g:i a');
+    if( !isset($_COOKIE['wp_visit_time']) ) {
+        setcookie('wp_visit_time', $visit_time);
+        wp_redirect(get_home_url() . '/ramadan'); exit;
+    }
+}
 
 if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
