@@ -432,7 +432,6 @@ function sumisip_scripts() {
     wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', null, '1.12.4', false);
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-validate', 'https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js', array('jquery'), wp_get_theme()->get( 'Version' ) );
-    wp_enqueue_script('jquery-cookie', 'https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js', array('jquery'), wp_get_theme()->get( 'Version' ) );
 //    $data = array(
 //        'ajax_url' => admin_url( 'admin-ajax.php' ),
 //    );
