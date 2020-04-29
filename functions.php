@@ -21,10 +21,13 @@ require_once('vafpress.php');
 
 add_action ('wp_loaded', 'redirect_hook');
 function redirect_hook() {
-    if( !isset($_COOKIE['action']) ) {
-        setcookie('action', 'landing' ,time()+43200);
-        wp_redirect(get_home_url() . '/ramadan'); exit;
-    }
+	$server_req = $_SERVER['REQUEST_URI'];
+	if( !(strpos($server_req, 'wp-json') !== false ) ){
+		if( !isset($_COOKIE['action']) ) {
+			setcookie('action', 'landing' ,time()+43200);
+			wp_redirect(get_home_url() . '/ramadan'); exit;
+		}
+	}
 }
 
 if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
