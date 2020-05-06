@@ -24,6 +24,22 @@ $(document).ready( function($){
                     }]
                 },
                 options: {
+                    global: {
+                        fontFamily: "'Poppins'",
+                        defaultFontFamily: "'Poppins",
+                        fontSize: 12
+                  },
+
+                    layout: {
+                        padding: {
+                          // Any unspecified dimensions are assumed to be 0
+                          left: 4,
+                          top: 4,
+                          right: 4
+
+                        }
+                      },
+
                     scaleShowLabels:{
                         display: false
                     },
@@ -59,8 +75,12 @@ $(document).ready( function($){
                                 drawOnChartArea: false,
                                 drawBorder: false
                             },
+
                             ticks: {
-                                display: false //this will remove only the label
+                                display: true, //this will remove only the label
+                                fontColor: 'rgba(255, 255, 255, 0.4)',
+                                fontSize: 12,
+                                fontFamily: "'Poppins'",
                             },
                             border: false
                         }],
@@ -71,7 +91,11 @@ $(document).ready( function($){
                                 drawBorder: false
                             },
                             ticks: {
-                                display: false //this will remove only the label
+                                display: false, //this will remove only the label
+                                fontColor: 'rgba(255, 255, 255, 0.04)',
+                                fontSize: 12,
+                                fontFamily: "'Poppins'",
+
                             }
                         }]
                     },
@@ -115,6 +139,22 @@ $(document).ready( function($){
                     }]
                 },
                 options: {
+                    global: {
+                        fontFamily: "'Poppins'",
+                        defaultFontFamily: "'Poppins",
+                        fontSize: 12
+                  },
+
+                    layout: {
+                        padding: {
+                          // Any unspecified dimensions are assumed to be 0
+                          left: 4,
+                          top: 4,
+                          right: 4
+
+                        }
+                      },
+
                     scaleShowLabels:{
                         display: false
                     },
@@ -150,8 +190,12 @@ $(document).ready( function($){
                                 drawOnChartArea: false,
                                 drawBorder: false
                             },
+
                             ticks: {
-                                display: false //this will remove only the label
+                                display: true, //this will remove only the label
+                                fontColor: 'rgba(255, 255, 255, 0.4)',
+                                fontSize: 12,
+                                fontFamily: "'Poppins'",
                             },
                             border: false
                         }],
@@ -162,7 +206,11 @@ $(document).ready( function($){
                                 drawBorder: false
                             },
                             ticks: {
-                                display: false //this will remove only the label
+                                display: false, //this will remove only the label
+                                fontColor: 'rgba(255, 255, 255, 0.04)',
+                                fontSize: 12,
+                                fontFamily: "'Poppins'",
+
                             }
                         }]
                     },
@@ -206,6 +254,22 @@ $(document).ready( function($){
                     }]
                 },
                 options: {
+                    global: {
+                        fontFamily: "'Poppins'",
+                        defaultFontFamily: "'Poppins",
+                        fontSize: 12
+                  },
+
+                    layout: {
+                        padding: {
+                          // Any unspecified dimensions are assumed to be 0
+                          left: 4,
+                          top: 4,
+                          right: 4
+
+                        }
+                      },
+
                     scaleShowLabels:{
                         display: false
                     },
@@ -241,8 +305,12 @@ $(document).ready( function($){
                                 drawOnChartArea: false,
                                 drawBorder: false
                             },
+
                             ticks: {
-                                display: false //this will remove only the label
+                                display: true, //this will remove only the label
+                                fontColor: 'rgba(255, 255, 255, 0.4)',
+                                fontSize: 12,
+                                fontFamily: "'Poppins'",
                             },
                             border: false
                         }],
@@ -253,7 +321,11 @@ $(document).ready( function($){
                                 drawBorder: false
                             },
                             ticks: {
-                                display: false //this will remove only the label
+                                display: false, //this will remove only the label
+                                fontColor: 'rgba(255, 255, 255, 0.04)',
+                                fontSize: 12,
+                                fontFamily: "'Poppins'",
+
                             }
                         }]
                     },
@@ -297,6 +369,22 @@ $(document).ready( function($){
                     }]
                 },
                 options: {
+                    global: {
+                        fontFamily: "'Poppins'",
+                        defaultFontFamily: "'Poppins",
+                        fontSize: 12
+                  },
+
+                    layout: {
+                        padding: {
+                          // Any unspecified dimensions are assumed to be 0
+                          left: 4,
+                          top: 4,
+                          right: 4
+
+                        }
+                      },
+
                     scaleShowLabels:{
                         display: false
                     },
@@ -332,8 +420,12 @@ $(document).ready( function($){
                                 drawOnChartArea: false,
                                 drawBorder: false
                             },
+
                             ticks: {
-                                display: false //this will remove only the label
+                                display: true, //this will remove only the label
+                                fontColor: 'rgba(255, 255, 255, 0.4)',
+                                fontSize: 12,
+                                fontFamily: "'Poppins'",
                             },
                             border: false
                         }],
@@ -344,7 +436,11 @@ $(document).ready( function($){
                                 drawBorder: false
                             },
                             ticks: {
-                                display: false //this will remove only the label
+                                display: false, //this will remove only the label
+                                fontColor: 'rgba(255, 255, 255, 0.04)',
+                                fontSize: 12,
+                                fontFamily: "'Poppins'",
+
                             }
                         }]
                     },

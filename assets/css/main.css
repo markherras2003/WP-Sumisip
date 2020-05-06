@@ -8184,12 +8184,45 @@ p:not(:last-child),
 #covid-overlay .covid-content-wrapper .updated-cases .case .analysis .container {
   padding: 0;
   margin: 0;
-  height: 80%;
+  height: auto;
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
 
 #covid-overlay .covid-content-wrapper .updated-cases .case .analysis .container canvas {
   width: 100%;
-  height: 180px !important;
+  height: 210px !important;
+}
+
+#covid-overlay .covid-content-wrapper .updated-cases .case .analysis .canvas-hide {
+  position: absolute;
+  left: 0;
+  bottom: 11px;
+  height: 24px;
+  width: 100%;
+}
+
+#covid-overlay .covid-content-wrapper .updated-cases .case .analysis .canvas-hide::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  height: 24px;
+  width: 20%;
+  background-color: #AA0952;
+  opacity: .6;
+}
+
+#covid-overlay .covid-content-wrapper .updated-cases .case .analysis .canvas-hide::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  height: 24px;
+  width: 20%;
+  background-color: #AA0952;
+  opacity: .6;
 }
 
 #covid-overlay .covid-content-wrapper .updated-cases .case .analysis .months {
@@ -8204,34 +8237,6 @@ p:not(:last-child),
   width: 100%;
   left: 0;
   text-align: center;
-}
-
-#covid-overlay .covid-content-wrapper .updated-cases .case .analysis .months li {
-  list-style: none;
-  opacity: .4;
-  color: white;
-  font-size: 12px;
-  font-weight: 100;
-}
-
-#covid-overlay .covid-content-wrapper .updated-cases .case .analysis .months li:first-child::before {
-  position: absolute;
-  left: 0;
-  content: '';
-  height: 24px;
-  width: 20%;
-  background-color: #AA0952;
-  opacity: .6;
-}
-
-#covid-overlay .covid-content-wrapper .updated-cases .case .analysis .months li:last-child::before {
-  position: absolute;
-  right: 0;
-  content: '';
-  height: 24px;
-  width: 20%;
-  background-color: #AA0952;
-  opacity: .6;
 }
 
 #covid-overlay .covid-content-wrapper .updated-cases .case .total-case {
@@ -8291,27 +8296,27 @@ p:not(:last-child),
   color: #6E6E6E;
 }
 
-#covid-overlay .covid-content-wrapper .updated-cases .case.activ .analysis .months li:first-child::before {
+#covid-overlay .covid-content-wrapper .updated-cases .case.activ .analysis .canvas-hide::before {
   background-color: #345995;
 }
 
-#covid-overlay .covid-content-wrapper .updated-cases .case.activ .analysis .months li:last-child::before {
+#covid-overlay .covid-content-wrapper .updated-cases .case.activ .analysis .canvas-hide::after {
   background-color: #345995;
 }
 
-#covid-overlay .covid-content-wrapper .updated-cases .case.recovered .analysis .months li:first-child::before {
+#covid-overlay .covid-content-wrapper .updated-cases .case.recovered .analysis .canvas-hide::before {
   background-color: #0B928E;
 }
 
-#covid-overlay .covid-content-wrapper .updated-cases .case.recovered .analysis .months li:last-child::before {
+#covid-overlay .covid-content-wrapper .updated-cases .case.recovered .analysis .canvas-hide::after {
   background-color: #0B928E;
 }
 
-#covid-overlay .covid-content-wrapper .updated-cases .case.death .analysis .months li:first-child::before {
+#covid-overlay .covid-content-wrapper .updated-cases .case.death .analysis .canvas-hide::before {
   background-color: #AD2D95;
 }
 
-#covid-overlay .covid-content-wrapper .updated-cases .case.death .analysis .months li:last-child::before {
+#covid-overlay .covid-content-wrapper .updated-cases .case.death .analysis .canvas-hide::after {
   background-color: #AD2D95;
 }
 
