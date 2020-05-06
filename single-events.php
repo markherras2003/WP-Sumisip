@@ -44,7 +44,7 @@ $featured_images = $dynamic_featured_image->get_featured_images($page_id);
 
                 $d1start = get_post_meta($postid, 'event_start', true);
                 $dt = strtotime($d1start); //make timestamp with datetime string
-                $d2end = get_post_meta($postid, 'end_date', true);
+                $d2end = get_post_meta($postid, 'event_end', true);
                 $endt = strtotime($d2end);
 
                 $start_date = new DateTime( date('Y-m-d H:i:s',$dt));
@@ -56,6 +56,7 @@ $featured_images = $dynamic_featured_image->get_featured_images($page_id);
                 $minutes_remaining = $since_start->i;
 
             wp_reset_query();
+
             ?>
                 <div class="count days">
                     <h2 class="display-3"><?= $days_remaining ?></h2>

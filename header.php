@@ -511,7 +511,7 @@ elseif(is_category()) {
                 </div>
             </div>
             <?php   $arg = array(
-                                               'post_type' => 'events',
+                                               'post_type' => 'page',
                                                'posts_per_page' => 1,
                                                'meta_checkbox'=> 'meta_key',
                                                'meta_value'=> 'yes',
