@@ -8181,6 +8181,17 @@ p:not(:last-child),
   line-height: 24px;
 }
 
+#covid-overlay .covid-content-wrapper .updated-cases .case .analysis .container {
+  padding: 0;
+  margin: 0;
+  height: 80%;
+}
+
+#covid-overlay .covid-content-wrapper .updated-cases .case .analysis .container canvas {
+  width: 100%;
+  height: 180px !important;
+}
+
 #covid-overlay .covid-content-wrapper .updated-cases .case .analysis .months {
   position: absolute;
   bottom: 24px;
