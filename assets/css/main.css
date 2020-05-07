@@ -8398,20 +8398,6 @@ p:not(:last-child),
   margin-bottom: 24px;
 }
 
-#covid-overlay .news-section .covid .news-box .background-wrapper::after {
-  top: initial;
-  height: 50%;
-  bottom: 0;
-}
-
-@media (max-width: 576px) {
-  #covid-overlay .news-section .covid .news-box .background-wrapper::after {
-    top: 0;
-    height: 100%;
-    bottom: initial;
-  }
-}
-
 #covid-overlay .news-section .covid .button {
   margin-top: 32px;
 }

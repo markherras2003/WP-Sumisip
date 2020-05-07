@@ -316,22 +316,22 @@
                     margin-bottom: $size-3;
                 }
 
-                .background-wrapper {
+                // .background-wrapper {
 
-                    &::after {
-                        top: initial;
-                        height: 50%;
-                        bottom: 0;
-                    }
+                //     &::after {
+                //         top: initial;
+                //         height: 50%;
+                //         bottom: 0;
+                //     }
 
-                    @include sm {
-                        &::after {
-                            top: 0;
-                            height: 100%;
-                            bottom: initial;
-                        }
-                    }
-                }
+                //     @include sm {
+                //         &::after {
+                //             top: 0;
+                //             height: 100%;
+                //             bottom: initial;
+                //         }
+                //     }
+                // }
             }
 
             .button {
