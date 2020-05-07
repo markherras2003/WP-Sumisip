@@ -8517,6 +8517,7 @@ p:not(:last-child),
 }
 
 #covid-overlay footer .num p {
+  font-size: 12px;
   margin: 0;
 }
 
