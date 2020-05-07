@@ -6,20 +6,14 @@ $(document).ready( function($){
             var myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ['January', 'February', 'March', 'April', 'May'],
+                    labels: ['January','February', 'March', 'April', 'May'],
                     datasets: [{
                         label: '',
-                        data: [0, 2, 10, 5, 20],
+                        data: [0, 0, 0, 0, 0],
                         backgroundColor: [
                             'transparent'
                         ],
-                        borderColor: [
-                            'white',
-                            'white',
-                            'white',
-                            'white',
-                            'white'
-                        ],
+                        borderColor: 'white',
                         borderWidth: 2
                     }]
                 },
@@ -57,10 +51,6 @@ $(document).ready( function($){
                         bodyAlign: 'center',
 
                         callbacks:{
-                            label: function (tooltipItems, data) {
-                                return  tooltipItems.yLabel + " %";
-                           },
-
                               title: function(tooltipItem, data) {
                                 return;
                               }
@@ -81,6 +71,9 @@ $(document).ready( function($){
                                 fontColor: 'rgba(255, 255, 255, 0.4)',
                                 fontSize: 12,
                                 fontFamily: "'Poppins'",
+                                beginAtZero: true,
+                                min: 0,
+                                max: 10
                             },
                             border: false
                         }],
@@ -95,7 +88,9 @@ $(document).ready( function($){
                                 fontColor: 'rgba(255, 255, 255, 0.04)',
                                 fontSize: 12,
                                 fontFamily: "'Poppins'",
-
+                                beginAtZero: true,
+                                min: 0,
+                                max: 10
                             }
                         }]
                     },
@@ -124,17 +119,11 @@ $(document).ready( function($){
                     labels: ['January', 'February', 'March', 'April', 'May'],
                     datasets: [{
                         label: '',
-                        data: [0, 5, 100, 300, 200],
+                        data: [0, 0, 0, 0, 0],
                         backgroundColor: [
                             'transparent'
                         ],
-                        borderColor: [
-                            'white',
-                            'white',
-                            'white',
-                            'white',
-                            'white'
-                        ],
+                        borderColor:'white',
                         borderWidth: 2
                     }]
                 },
@@ -172,9 +161,6 @@ $(document).ready( function($){
                         bodyAlign: 'center',
 
                         callbacks:{
-                            label: function (tooltipItems, data) {
-                                return  tooltipItems.yLabel + " %";
-                           },
 
                               title: function(tooltipItem, data) {
                                 return;
@@ -196,6 +182,9 @@ $(document).ready( function($){
                                 fontColor: 'rgba(255, 255, 255, 0.4)',
                                 fontSize: 12,
                                 fontFamily: "'Poppins'",
+                                beginAtZero: true,
+                                min: 0,
+                                max: 10
                             },
                             border: false
                         }],
@@ -210,11 +199,12 @@ $(document).ready( function($){
                                 fontColor: 'rgba(255, 255, 255, 0.04)',
                                 fontSize: 12,
                                 fontFamily: "'Poppins'",
-
+                                beginAtZero: true,
+                                min: 0,
+                                max: 10
                             }
                         }]
                     },
-
                     plugins: {
                         datalabels: {
                             formatter: (value, ctx) => {
@@ -231,7 +221,7 @@ $(document).ready( function($){
                     }
                 }
             });
-//Recovered
+//PUI
             var ctx = document.getElementById('myChart3').getContext('2d');
             var myChart = new Chart(ctx, {
                 type: 'line',
@@ -239,17 +229,11 @@ $(document).ready( function($){
                     labels: ['January', 'February', 'March', 'April', 'May'],
                     datasets: [{
                         label: '',
-                        data: [0, 5, 10, 50, 100],
+                        data: [0, 0, 0, 0, 3],
                         backgroundColor: [
                             'transparent'
                         ],
-                        borderColor: [
-                            'white',
-                            'white',
-                            'white',
-                            'white',
-                            'white'
-                        ],
+                        borderColor: 'white',
                         borderWidth: 2
                     }]
                 },
@@ -287,9 +271,6 @@ $(document).ready( function($){
                         bodyAlign: 'center',
 
                         callbacks:{
-                            label: function (tooltipItems, data) {
-                                return  tooltipItems.yLabel + " %";
-                           },
 
                               title: function(tooltipItem, data) {
                                 return;
@@ -311,6 +292,9 @@ $(document).ready( function($){
                                 fontColor: 'rgba(255, 255, 255, 0.4)',
                                 fontSize: 12,
                                 fontFamily: "'Poppins'",
+                                beginAtZero: true,
+                                min: 0,
+                                max: 10
                             },
                             border: false
                         }],
@@ -325,7 +309,9 @@ $(document).ready( function($){
                                 fontColor: 'rgba(255, 255, 255, 0.04)',
                                 fontSize: 12,
                                 fontFamily: "'Poppins'",
-
+                                beginAtZero: true,
+                                min: 0,
+                                max: 10
                             }
                         }]
                     },
@@ -346,7 +332,7 @@ $(document).ready( function($){
                     }
                 }
             });
-//Death
+//PUI
             var ctx = document.getElementById('myChart4').getContext('2d');
             var myChart = new Chart(ctx, {
                 type: 'line',
@@ -354,18 +340,12 @@ $(document).ready( function($){
                     labels: ['January', 'February', 'March', 'April', 'May'],
                     datasets: [{
                         label: '',
-                        data: [0, 5, 100, 300, 200],
+                        data: [0, 0, 0, 0, 1],
                         backgroundColor: [
                             'transparent'
                         ],
-                        borderColor: [
-                            'white',
-                            'white',
-                            'white',
-                            'white',
-                            'white'
-                        ],
-                        borderWidth: 2
+                        borderColor: 'white',
+                        borderWidth: 2,
                     }]
                 },
                 options: {
@@ -400,12 +380,9 @@ $(document).ready( function($){
                         displayColors: false,
                         titleAlign: 'center',
                         bodyAlign: 'center',
+                        fontFamily: '"Poppins"',
 
                         callbacks:{
-                            label: function (tooltipItems, data) {
-                                return  tooltipItems.yLabel + " %";
-                           },
-
                               title: function(tooltipItem, data) {
                                 return;
                               }
@@ -426,6 +403,9 @@ $(document).ready( function($){
                                 fontColor: 'rgba(255, 255, 255, 0.4)',
                                 fontSize: 12,
                                 fontFamily: "'Poppins'",
+                                beginAtZero: true,
+                                min: 0,
+                                max: 100
                             },
                             border: false
                         }],
@@ -440,7 +420,9 @@ $(document).ready( function($){
                                 fontColor: 'rgba(255, 255, 255, 0.04)',
                                 fontSize: 12,
                                 fontFamily: "'Poppins'",
-
+                                beginAtZero: true,
+                                min: 0,
+                                max: 10
                             }
                         }]
                     },

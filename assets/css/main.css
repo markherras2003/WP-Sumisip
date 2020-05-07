@@ -8150,6 +8150,7 @@ p:not(:last-child),
   margin: 0 auto;
   max-width: 900px;
   width: 100%;
+  margin-bottom: 56px;
 }
 
 #covid-overlay .covid-content-wrapper .updated-cases {
@@ -8164,7 +8165,6 @@ p:not(:last-child),
       grid-template-columns: repeat(4, calc(25% - 18px));
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  margin-top: 56px;
   width: 100%;
 }
 
@@ -8242,7 +8242,7 @@ p:not(:last-child),
 #covid-overlay .covid-content-wrapper .updated-cases .case .total-case {
   position: relative;
   background-color: #FFFFFF;
-  padding: 24px;
+  padding: 24px 32px;
   width: 100%;
   border-radius: 0 0 24px 24px;
   -webkit-box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
@@ -8260,6 +8260,7 @@ p:not(:last-child),
   font-size: 14px;
   color: #484848;
   margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 #covid-overlay .covid-content-wrapper .updated-cases .case .total-case .total-footer {
@@ -8369,7 +8370,7 @@ p:not(:last-child),
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 56px;
 }
 
 #covid-overlay .news-section .section-heading-group h2 {

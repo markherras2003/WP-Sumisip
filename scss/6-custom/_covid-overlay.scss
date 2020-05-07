@@ -60,6 +60,7 @@
             margin: 0 auto;
             max-width: 900px;
             width: 100%;
+            margin-bottom: 56px;
         }
 
         .updated-cases {
@@ -69,7 +70,6 @@
             justify-content: center;
             grid-template-columns: repeat(4, calc(25% - 18px));
             grid-template-rows: auto;
-            margin-top: 56px;
             width: 100%;
 
             .case {
@@ -149,7 +149,7 @@
                 .total-case {
                     position: relative;
                     background-color: getColor(white);
-                    padding: 24px;
+                    padding: 24px 32px;
                     width: 100%;
                     border-radius: 0 0 24px 24px;
                     box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
@@ -160,6 +160,7 @@
                         font-size: 14px;
                         color: getColor(Clay);
                         margin-bottom: $size-1;
+                        text-transform: uppercase;
                     }
 
                     .total-footer {
@@ -288,15 +289,13 @@
 
     }
 
-
-
     .news-section {
 
         .section-heading-group {
             max-width: 900px;
             width: 100%;
             margin: 0 auto;
-            margin-bottom: 40px;
+            margin-bottom: 56px;
 
             h2 {
                 font-size: 40px;
