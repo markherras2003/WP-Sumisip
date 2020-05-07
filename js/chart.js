@@ -229,7 +229,7 @@ $(document).ready( function($){
                     labels: ['January', 'February', 'March', 'April', 'May'],
                     datasets: [{
                         label: '',
-                        data: [0, 0, 0, 0, 3],
+                        data: [0, 0, 40, 3, 0],
                         backgroundColor: [
                             'transparent'
                         ],
@@ -294,7 +294,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 10
+                                max: 100
                             },
                             border: false
                         }],
@@ -311,7 +311,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 10
+                                max: 100
                             }
                         }]
                     },
@@ -340,7 +340,7 @@ $(document).ready( function($){
                     labels: ['January', 'February', 'March', 'April', 'May'],
                     datasets: [{
                         label: '',
-                        data: [0, 0, 0, 0, 1],
+                        data: [0, 0, 4, 1, 0],
                         backgroundColor: [
                             'transparent'
                         ],
@@ -422,7 +422,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 10
+                                max: 100
                             }
                         }]
                     },
