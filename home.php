@@ -404,7 +404,7 @@ get_header();
         </section>
 
 
-        <?php 
+<?php 
 
 $arg = array(
     'post_type' => 'post',
