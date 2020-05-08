@@ -513,8 +513,10 @@ elseif(is_category()) {
             <?php   $arg = array(
                                                'post_type' => 'page',
                                                'posts_per_page' => 1,
-                                               'meta_checkbox'=> 'meta_key',
+                                               'pagename' => 'covid19'
+                                               /*'meta_checkbox'=> 'meta_key',
                                                'meta_value'=> 'yes',
+                                               */
                                                  );
                                                  $featured = new \WP_Query($arg);
                                                  while($featured->have_posts()): $featured->the_post(); 
