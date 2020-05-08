@@ -314,29 +314,12 @@
             flex-direction: column;
             align-items: center;
 
-            .news-box {
+            .covid-boxes {
                 width: 100%;
 
                 &:not(:last-child) {
                     margin-bottom: $size-3;
                 }
-
-                // .background-wrapper {
-
-                //     &::after {
-                //         top: initial;
-                //         height: 50%;
-                //         bottom: 0;
-                //     }
-
-                //     @include sm {
-                //         &::after {
-                //             top: 0;
-                //             height: 100%;
-                //             bottom: initial;
-                //         }
-                //     }
-                // }
             }
 
             .button {

@@ -162,7 +162,7 @@ $featured = new \WP_Query($arg);
         global $dynamic_featured_image;
 
 ?>
-        <div class="news-box">
+        <div class="news-box covid-box">
     
         <?php 
     $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
