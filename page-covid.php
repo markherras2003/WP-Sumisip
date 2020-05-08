@@ -133,12 +133,12 @@ $arg = array(
         array(
             'taxonomy' => 'featured',
             'field'    => 'slug',
-            'terms'    => array( 'news-article'),
+            'terms'    => array( 'covid19'),
         ),
         array(
             'taxonomy' => 'category',
             'field'    => 'slug',
-            'terms'    => array( 'article_news'),
+            'terms'    => array( 'covid19'),
         ),
     ),
 
