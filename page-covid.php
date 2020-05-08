@@ -35,11 +35,7 @@
     <div class="section-heading-group">
         <h1 class=display-1>Sumisip Ncov Watch</h1>
         <p>
-            It is a long established fact that a reader will be distracted by the readable content of a page
-            when
-            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-            distribution
-            of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        In December 2019 There was an infectious disease that originated in Wuhan China called Coronavirus or Covid-19. As the outbreak has been declared a Public Health Emergency in January 2020, we in the Local Government of Sumisip came together for the preparation and prevention of Covid-19 as well as providing supplies amidst this crisis. LGU Sumisip will be posting updates regarding our status as seen below.
         </p>
     </div>
     <div class="updated-cases">
@@ -119,11 +115,7 @@
     <div class="section-heading-group">
         <h2>News Update</h2>
         <p>
-            It is a long established fact that a reader will be distracted by the readable content of a page
-            when
-            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-            distribution
-            of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        In light of the current situation regarding the Covid-19 pandemic. We provide the latest Covid-19 news and updates regarding our municipality. This includes our programs and operations to combat the virus spread and help our citizens.
         </p>
     </div>
 
