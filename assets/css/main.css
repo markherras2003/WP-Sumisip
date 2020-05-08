@@ -7094,11 +7094,6 @@ p:not(:last-child),
   text-decoration: none;
 }
 
-.page-404 .global-wrapper {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .page-404 .text-404 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -8379,22 +8374,10 @@ p:not(:last-child),
   margin-bottom: 8px;
 }
 
-#covid-overlay .news-section .covid {
+#covid-overlay .news-section .news-boxes.covid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  grid-template-columns: initial;
-  flex-direction: column;
-  align-items: center;
-}
-
-#covid-overlay .news-section .covid .covid-box {
-  width: 100%;
-}
-
-#covid-overlay .news-section .covid .covid-box:not(:last-child) {
-=======
   -ms-grid-columns: initial;
       grid-template-columns: initial;
   -webkit-box-orient: vertical;
@@ -8406,12 +8389,15 @@ p:not(:last-child),
           align-items: center;
 }
 
-#covid-overlay .news-section .covid .news-box:not(:last-child) {
->>>>>>> parent of c0197d8... css update...
+#covid-overlay .news-section .news-boxes.covid .news-box.covid-box {
+  width: 100%;
+}
+
+#covid-overlay .news-section .news-boxes.covid .news-box.covid-box:not(:last-child) {
   margin-bottom: 24px;
 }
 
-#covid-overlay .news-section .covid .button {
+#covid-overlay .news-section .news-boxes.covid .button {
   margin-top: 32px;
 }
 
