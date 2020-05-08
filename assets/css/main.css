@@ -7573,11 +7573,11 @@ p:not(:last-child),
   align-items: center;
 }
 
-#covid-overlay .news-section .covid .covid-boxes {
+#covid-overlay .news-section .covid .covid-box {
   width: 100%;
 }
 
-#covid-overlay .news-section .covid .covid-boxes:not(:last-child) {
+#covid-overlay .news-section .covid .covid-box:not(:last-child) {
   margin-bottom: 24px;
 }
 
