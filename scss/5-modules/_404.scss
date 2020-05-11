@@ -1,23 +1,47 @@
 .page-404 {
-    @extend %center-all;    
 
     .global-wrapper {
         @extend %center-all;
-    }
-    .text-404 {
-        flex-grow: 1;
-    }
-    
-    .sumisip-brand {
-        flex-shrink: 0;
-        width: 100%;
-        max-width: 400px;
-        margin-left: $size-5;
+        flex-direction: column;
 
-        img {
-            height: auto;
-            width: 400px;
-            filter: grayscale(100%);
+        .text-404{
+            text-align: center;
+            width: 60%;
+        }
+
+        .sumisip-brand {
+            width: 100%;
+            max-width: 400px;
+            height: 320px;
+            // margin-left: $size-5;
+    
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                // filter: grayscale(100%);
+            }
+    
+            
+        }
+
+        @include lg {
+
+            .text-404{
+                width: 100%;
+            }
+        
+            .sumisip-brand{
+                margin-left: 0;
+
+                img{
+                    width: 100%;
+                }
+            }
         }
     }
+
+   
+
+   
 }

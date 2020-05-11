@@ -341,6 +341,16 @@
         width: 100%;
         height: auto;
 
+        .section-heading-group{
+            h2{
+                margin-bottom: 16px;
+            }
+
+            p{
+                margin-bottom: 0;
+            }
+        }
+
         .ph-details {
             max-width: 1200px;
             margin: auto;

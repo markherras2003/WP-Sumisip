@@ -101,7 +101,7 @@ textarea {
 
 .button,
 button, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .full-height, .quarter-height, .upper-hero-grid .hero-preview, .history-section, .history-section .timeline .timeline-control-left,
-.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .pagination, .page-404, .page-404 .global-wrapper, .event-group {
+.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .pagination, .page-404 .global-wrapper, .event-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7094,25 +7094,41 @@ p:not(:last-child),
   text-decoration: none;
 }
 
-.page-404 .text-404 {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+.page-404 .global-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.page-404 .sumisip-brand {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+.page-404 .global-wrapper .text-404 {
+  text-align: center;
+  width: 60%;
+}
+
+.page-404 .global-wrapper .sumisip-brand {
   width: 100%;
   max-width: 400px;
-  margin-left: 40px;
+  height: 320px;
 }
 
-.page-404 .sumisip-brand img {
-  height: auto;
-  width: 400px;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+.page-404 .global-wrapper .sumisip-brand img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .page-404 .global-wrapper .text-404 {
+    width: 100%;
+  }
+  .page-404 .global-wrapper .sumisip-brand {
+    margin-left: 0;
+  }
+  .page-404 .global-wrapper .sumisip-brand img {
+    width: 100%;
+  }
 }
 
 .photo-stacks {
@@ -8405,6 +8421,14 @@ p:not(:last-child),
   padding: 80px 20px;
   width: 100%;
   height: auto;
+}
+
+#covid-overlay .ph-cases .section-heading-group h2 {
+  margin-bottom: 16px;
+}
+
+#covid-overlay .ph-cases .section-heading-group p {
+  margin-bottom: 0;
 }
 
 #covid-overlay .ph-cases .ph-details {
