@@ -19,7 +19,7 @@
 /*-----------------------------------------------------------------------------------*/
 require_once('vafpress.php');
 
-/*add_action ('wp_loaded', 'redirect_hook');
+add_action ('wp_loaded', 'redirect_hook');
 function redirect_hook() {
 	$server_req = $_SERVER['REQUEST_URI'];
 	if( !(strpos($server_req, 'wp-json') !== false ) ){
@@ -28,7 +28,7 @@ function redirect_hook() {
 			wp_redirect(get_home_url() . '/ramadan'); exit;
 		}
 	}
-}*/
+}
 
 if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
