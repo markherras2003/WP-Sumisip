@@ -8436,7 +8436,7 @@ p:not(:last-child),
 }
 
 @media (max-width: 768px) {
-  #covid-overlay .news-section-container .cff-wrapper #cff .cff-posts-wrap .cff-item:not(:last-child) {
+  #covid-overlay .news-section-container .cff-wrapper #cff .cff-posts-wrap .cff-item {
     margin-bottom: 40px;
   }
 }
@@ -8514,13 +8514,7 @@ p:not(:last-child),
 
 @media (max-width: 768px) {
   #covid-overlay .news-section-container .cff-wrapper .cff-load-more {
-    bottom: -56px;
-  }
-}
-
-@media (max-width: 576px) {
-  #covid-overlay .news-section-container .cff-wrapper .cff-load-more {
-    bottom: -40px;
+    bottom: 0;
   }
 }
 

@@ -348,9 +348,7 @@
                     .cff-item {
                         
                         @include md{
-                            &:not(:last-child){
-                                margin-bottom: 40px;
-                            }
+                            margin-bottom: 40px;
                         }
                     }
                     .cff-shadow{
@@ -430,12 +428,9 @@
                 float: initial;
 
                 @include md{
-                    bottom: -56px;
+                    bottom: 0;
                 }
 
-                @include sm{
-                    bottom: -40px;
-                }
             }
         }
 
