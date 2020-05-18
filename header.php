@@ -522,7 +522,7 @@ elseif(is_category()) {
                                                  while($featured->have_posts()): $featured->the_post(); 
                                             ?>
             <div class="event-nav-list">
-                <a href="<?= get_permalink() ?>" class="button outline heavy white"><?= the_title(); ?></a>
+                <a href="<?= get_permalink() ?>" class="button outline heavy white"><span class="sumisip">Sumisip&nbsp;</span><?= the_title(); ?></a>
             </div>
                                                 <?php endwhile ?>
 

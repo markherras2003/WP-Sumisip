@@ -47,7 +47,7 @@
     .covid-content-wrapper {
         max-width: 1440px;
         width: 100%;
-        margin: 104px auto 0;
+        margin: 104px auto 80px;
         flex-grow: 1;
         flex-shrink: 1;
         display: flex;
@@ -293,7 +293,9 @@
 
     }
 
-    .news-section {
+    .news-section-container {
+        padding: 80px;
+
 
         .section-heading-group {
             max-width: 900px;
@@ -334,6 +336,112 @@
                 }
             }
         }
+
+        .cff-wrapper {
+            #cff {
+                display: flex;
+                flex-direction: column;
+                
+                .cff-posts-wrap {
+                    margin-bottom: 54px;
+
+                    .cff-item {
+                        
+                        @include md{
+                            &:not(:last-child){
+                                margin-bottom: 40px;
+                            }
+                        }
+                    }
+                    .cff-shadow{
+                        box-shadow: 0 0 10px 0 rgba(0,0,0,0.05);
+                    }
+                }
+
+                .cff-item {
+                    // .cff-post-text {
+                    //     display: -webkit-box;
+                    //     -webkit-line-clamp: 8;
+                    //     -webkit-box-orient: vertical;
+                    //     overflow: hidden;
+
+                    //     .cff-expand{
+                    //         position: absolute;
+                    //     }
+                    // }
+
+                    .cff-meta-wrap {
+                        flex-wrap: wrap;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+
+                        .cff-post-links {
+                            margin: 0;
+
+                        }
+
+                        .cff-view-comments-wrap {
+                            .cff-view-comments {
+                                background: none;
+                                box-shadow: none;
+                                padding: 0;
+
+                                ul {
+                                    li {
+                                        margin-right: 0 !important;
+                                        margin: 0 4px;
+
+                                        span {
+                                            margin: 0 4px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @include md{
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .cff-load-more {
+                height: 40px;
+                padding: 0 $size-3;
+                font-weight: 500;
+                font-size: 15px;
+                border-radius: 999px;
+                text-decoration: none;
+                display: inline-flex;
+                cursor: pointer;
+                @extend %center-all;
+                background: transparent;
+                border: 1px solid;
+                width: fit-content;
+                margin: auto;
+                position: absolute;
+                bottom: -80px;
+                left: 50%;
+                transform: translateX(-50%);
+                float: initial;
+
+                @include md{
+                    bottom: -56px;
+                }
+
+                @include sm{
+                    bottom: -40px;
+                }
+            }
+        }
+
+        @include md{
+            padding: 80px 20px;
+        }
     }
 
     .ph-cases {
@@ -341,12 +449,12 @@
         width: 100%;
         height: auto;
 
-        .section-heading-group{
-            h2{
+        .section-heading-group {
+            h2 {
                 margin-bottom: 16px;
             }
 
-            p{
+            p {
                 margin-bottom: 0;
             }
         }
@@ -439,7 +547,8 @@
                 margin-right: 24px;
             }
 
-            p {
+            p,
+            a[href^=tel] {
                 font-size: 12px;
                 // letter-spacing: .5px;
                 margin: 0;
@@ -454,13 +563,16 @@
                     margin-right: 0;
                 }
 
-                p {
+                p,
+                a[href^=tel] {
                     font-size: 12px;
                 }
             }
 
             @include sm {
-                p {
+
+                p,
+                a[href^=tel] {
                     &:not(:last-child) {
                         margin-right: 0;
                     }

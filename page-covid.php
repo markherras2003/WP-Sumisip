@@ -141,7 +141,7 @@
 </div>
 
 
-<div class="news-section global-wrapper section-padding">
+<div class="news-section-container">
 
     <div class="section-heading-group">
         <h2>News Update</h2>
