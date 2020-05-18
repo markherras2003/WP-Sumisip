@@ -16,8 +16,10 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='<?php echo content_url(); ?>/plugins/custom-facebook-feed-pro/css/cff-style.css?ver=3.10.6' media='all' />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+    
     <script type="text/javascript" src="<?= get_template_directory_uri(); ?>/js/chart.js"></script>
     <?php wp_head(); ?>
 </head>
@@ -110,104 +112,6 @@
     </div>
 </div>
 
-<div class="news-section global-wrapper section-padding">
-
-    <div class="section-heading-group">
-        <h2>News Update</h2>
-        <p>
-        In light of the current situation regarding the Covid-19 pandemic. We provide the latest Covid-19 news and updates regarding our municipality. This includes our programs and operations to combat the virus spread and help our citizens.
-        </p>
-    </div>
-
-    <div class="news-boxes covid">
-
-
-    <?php 
-
-$arg = array(
-    'post_type' => 'post',
-    'showposts'=>3,
-    'post_status' => 'publish',
-     'tax_query' => array(
-      'relation' => 'OR',
-        array(
-            'taxonomy' => 'featured',
-            'field'    => 'slug',
-            'terms'    => array( 'covid19'),
-        ),
-        array(
-            'taxonomy' => 'category',
-            'field'    => 'slug',
-            'terms'    => array( 'covid19'),
-        ),
-    ),
-
-);     
-
-
-$featured = new \WP_Query($arg);
-
-?>
-
-<?php 
-    while($featured->have_posts()): $featured->the_post(); 
-        global $dynamic_featured_image;
-
-?>
-        <div class="news-box covid-box">
-    
-        <?php 
-    $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
-    $key=0;
-    foreach($featured_images as $featured_image) {
-        $key=$key+1;
-        if($key===1) { ?>
-                <div class="background-wrapper">
-                    <img src="<?= $featured_image['full']; ?>">
-                </div>
-        <?php  }?>           
-    <?php } 
-            if($key===0) { ?>
-              <div class="background-wrapper">
-             <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">  
-             </div>  
-    <?php   }
-    ?>
-            <div class="news-content">
-                <h4><a href="<?= get_permalink(); ?>"><?= get_the_title(); ?></a></h4>
-                <div class="news-extra-info">
-                    <span class="date"><?= get_the_date(); ?></span>
-                    <div class="comment-wrapper">
-                        <a href="<?= get_permalink(); ?>">
-                            <i class="fa fa-comment"></i>
-                            <span><?= get_comments_number(); ?></span>
-                        </a>
-                    </div>
-                    <span class="category">
-                                <?php
-                                $x=0;
-                                foreach((get_the_category()) as $category){
-                                $x++;
-                                if($x===1) {
-                                echo $category->name."<br>";
-                                    }
-                                }	?></span>
-                </div>
-                <?= the_excerpt(); ?>
-            </div>
-            <a href="<?= get_permalink(); ?>">Read More</a>
-        </div>
-
-        <?php endwhile;
-            wp_reset_postdata();
-        ?>
-
-        <a href="https://lgu-sumisip.com/category/covid19/" class="button outline">Load More</a>
-
-    </div>
-
-</div>
-
 <div class="ph-cases bg-coal">
     <div class="section-heading-group">
         <h2>Number of Cases in Ph</h2>
@@ -236,6 +140,23 @@ $featured = new \WP_Query($arg);
     </div>
 </div>
 
+
+<div class="news-section global-wrapper section-padding">
+
+    <div class="section-heading-group">
+        <h2>News Update</h2>
+        <p>
+        In light of the current situation regarding the Covid-19 pandemic. We provide the latest Covid-19 news and updates regarding our municipality. This includes our programs and operations to combat the virus spread and help our citizens.
+        </p>
+    </div>
+
+
+
+    <?= do_shortcode('[custom-facebook-feed poststyle=boxed]')  ?>
+
+
+</div>
+
 <footer class="covid-footer">
     <h5>Hotline Numbers:</h5>
     <div class="num">
@@ -252,16 +173,9 @@ $featured = new \WP_Query($arg);
 </div>
 
 
-
-
-
-
-
-
-
-
-
 <?php //wp_footer(); ?>
+
+<script src='<?php echo content_url(); ?>/plugins/custom-facebook-feed-pro/js/cff-scripts.js?ver=3.10.6'></script>
 </body>
 </html>
 
