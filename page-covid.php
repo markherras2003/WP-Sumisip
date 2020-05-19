@@ -54,7 +54,7 @@
             </div>
             <div class="total-case">
                 <span class="total">Total Confirmed Cases</span>
-                <h2>0</h2>
+                <h3>0</h3>
             </div>
         </div>
         <div class="case activ">
@@ -70,7 +70,7 @@
             </div>
             <div class="total-case">
                 <span class="total">Total Active Cases</span>
-                <h2>0</h2>
+                <h3>0</h3>
             </div>
         </div>
         <div class="case recovered">
@@ -87,7 +87,7 @@
             </div>
             <div class="total-case">
                 <span class="total">Persons Under Monitoring (PUM)</span>
-                <h2>43</h2>
+                <h3>43</h3>
             </div>
         </div>
         <div class="case death ">
@@ -106,14 +106,13 @@
             </div>
             <div class="total-case">
                 <span class="total">Persons Under Investigation (PUI)</span>
-                <h2>5</h2>
+                <h3>5</h3>
             </div>
         </div>
     </div>
-</div>
 
-<div class="ph-cases bg-coal">
-    <div class="section-heading-group">
+    <div class="ph-cases">
+    <div class="section-ph-cases">
         <h2>Number of Cases in Ph</h2>
         <p>Updated: <span id="covidlatest">2020/04/22 08:40 am</span></p> 
         <p>Source: Department of Health</p>
@@ -138,8 +137,8 @@
             </li>
         </ul>
     </div>
+    </div>
 </div>
-
 
 <div class="news-section-container">
 

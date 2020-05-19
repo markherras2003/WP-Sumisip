@@ -14,7 +14,7 @@ $(document).ready( function($){
                             'transparent'
                         ],
                         borderColor: 'white',
-                        borderWidth: 2
+                        borderWidth: 3
                     }]
                 },
                 options: {
@@ -124,7 +124,7 @@ $(document).ready( function($){
                             'transparent'
                         ],
                         borderColor:'white',
-                        borderWidth: 2
+                        borderWidth: 3
                     }]
                 },
                 options: {
@@ -234,7 +234,7 @@ $(document).ready( function($){
                             'transparent'
                         ],
                         borderColor: 'white',
-                        borderWidth: 2
+                        borderWidth: 3
                     }]
                 },
                 options: {
@@ -294,7 +294,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 100
+                                max: 50
                             },
                             border: false
                         }],
@@ -311,7 +311,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 100
+                                max: 50
                             }
                         }]
                     },
@@ -345,7 +345,7 @@ $(document).ready( function($){
                             'transparent'
                         ],
                         borderColor: 'white',
-                        borderWidth: 2,
+                        borderWidth: 3,
                     }]
                 },
                 options: {
@@ -405,7 +405,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 100
+                                max: 50
                             },
                             border: false
                         }],
@@ -422,7 +422,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 100
+                                max: 50
                             }
                         }]
                     },

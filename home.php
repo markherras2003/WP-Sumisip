@@ -168,17 +168,7 @@ get_header();
 <section class="Fb-feeds">
     <div class="global-wrapper section-padding">
 
-    <?= do_shortcode('
-    [custom-facebook-feed
-    loadmore=false
-    carousel=true
-    carouselcols=3
-    carouselmobilecols=1
-    carouselpag=true
-    carouselautoplay=true
-    carouseltime=5000
-    poststyle=boxed
-    ]')  ?>
+    <?= do_shortcode('[custom-facebook-feed carousel="true" carouselcols=3 carouselpag=true loadmore=false]')  ?>
 
     </div>
 </section>
