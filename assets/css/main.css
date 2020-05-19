@@ -8084,7 +8084,6 @@ p:not(:last-child),
 }
 
 #ramadan-overlay .article .ramadan-cards .r-cards {
-  width: calc(33.33% - 16px);
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -8128,10 +8127,12 @@ p:not(:last-child),
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-size: 14px;
 }
 
 #ramadan-overlay .article .ramadan-cards .r-cards .content a {
   color: #0B928E;
+  font-size: 12px;
 }
 
 @media (max-width: 576px) {
@@ -8752,13 +8753,14 @@ p:not(:last-child),
 }
 
 #covid-overlay footer .num p,
-#covid-overlay footer .num a[href^=tel] {
+#covid-overlay footer .num a[href^="tel:"] {
+  color: white !important;
   font-size: 12px;
   margin: 0;
 }
 
 #covid-overlay footer .num p:not(:last-child),
-#covid-overlay footer .num a[href^=tel]:not(:last-child) {
+#covid-overlay footer .num a[href^="tel:"]:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -8767,14 +8769,14 @@ p:not(:last-child),
     margin-right: 0;
   }
   #covid-overlay footer .num p,
-  #covid-overlay footer .num a[href^=tel] {
+  #covid-overlay footer .num a[href^="tel:"] {
     font-size: 12px;
   }
 }
 
 @media (max-width: 576px) {
   #covid-overlay footer .num p:not(:last-child),
-  #covid-overlay footer .num a[href^=tel]:not(:last-child) {
+  #covid-overlay footer .num a[href^="tel:"]:not(:last-child) {
     margin-right: 0;
   }
 }

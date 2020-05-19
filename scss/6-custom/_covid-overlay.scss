@@ -557,7 +557,8 @@
             }
 
             p,
-            a[href^=tel] {
+            a[href^="tel:"] {
+                color: white!important;
                 font-size: 12px;
                 // letter-spacing: .5px;
                 margin: 0;
@@ -573,7 +574,7 @@
                 }
 
                 p,
-                a[href^=tel] {
+                a[href^="tel:"] {
                     font-size: 12px;
                 }
             }
@@ -581,7 +582,7 @@
             @include sm {
 
                 p,
-                a[href^=tel] {
+                a[href^="tel:"] {
                     &:not(:last-child) {
                         margin-right: 0;
                     }
