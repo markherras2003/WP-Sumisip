@@ -171,6 +171,7 @@
 
       .r-cards {
         width: calc(33.33% - 16px);
+        flex-grow: 1;
 
         &:not(:last-child) {
           margin-right: 24px;

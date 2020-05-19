@@ -8085,6 +8085,9 @@ p:not(:last-child),
 
 #ramadan-overlay .article .ramadan-cards .r-cards {
   width: calc(33.33% - 16px);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 #ramadan-overlay .article .ramadan-cards .r-cards:not(:last-child) {
