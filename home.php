@@ -164,6 +164,25 @@ get_header();
         );
         $awards = new \WP_Query($arg);  
 ?>
+
+<section class="Fb-feeds">
+    <div class="global-wrapper section-padding">
+
+    <?= do_shortcode('
+    [custom-facebook-feed
+    loadmore=false
+    carousel=true
+    carouselcols=3
+    carouselmobilecols=1
+    carouselpag=true
+    carouselautoplay=true
+    carouseltime=5000
+    poststyle=boxed
+    ]')  ?>
+
+    </div>
+</section>
+
 <section class="award-section bg-coal">
             <div class="global-wrapper section-padding awards">
                 <div class="section-heading-group">
