@@ -8076,6 +8076,77 @@ p:not(:last-child),
   color: #0B928E;
 }
 
+#ramadan-overlay .article .ramadan-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+#ramadan-overlay .article .ramadan-cards .r-cards {
+  width: calc(33.33% - 16px);
+}
+
+#ramadan-overlay .article .ramadan-cards .r-cards:not(:last-child) {
+  margin-right: 24px;
+}
+
+#ramadan-overlay .article .ramadan-cards .r-cards .img-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 24px;
+}
+
+#ramadan-overlay .article .ramadan-cards .r-cards .img-wrap img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#ramadan-overlay .article .ramadan-cards .r-cards .img-wrap::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+#ramadan-overlay .article .ramadan-cards .r-cards .content h4 {
+  margin-bottom: 8px;
+}
+
+#ramadan-overlay .article .ramadan-cards .r-cards .content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#ramadan-overlay .article .ramadan-cards .r-cards .content a {
+  color: #0B928E;
+}
+
+@media (max-width: 576px) {
+  #ramadan-overlay .article .ramadan-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #ramadan-overlay .article .ramadan-cards .r-cards {
+    width: 100%;
+  }
+  #ramadan-overlay .article .ramadan-cards .r-cards:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
 #covid-overlay {
   position: relative;
   height: auto;
