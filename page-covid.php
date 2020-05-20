@@ -113,8 +113,8 @@
 
     <div class="ph-cases">
     <div class="section-ph-cases">
-        <h2>Number of Cases in Ph</h2>
-        <p>Updated: <span id="covidlatest">2020/04/22 08:40 am</span></p> 
+        <p>Updated: <span id="covidlatest">2020/04/22 08:40 am</span></p>
+        <h2>Number of Cases in Ph</h2> 
         <p>Source: Department of Health</p>
     </div>
 
@@ -160,11 +160,11 @@
     <h5>Hotline Numbers:</h5>
     <div class="num">
         <p>Municipality Health Office:</p>
-        <p>0905-539-3167 / 0915-074-7690</p>
+        <a href="tel:">0905-539-3167 / 0915-074-7690</a>
     </div>
     <div class="num">
         <p>MDRRMO:</p>
-        <p>0906-018-5363</p>
+        <a href="tel:">0906-018-5363</a>
     </div>
 
 </footer>

@@ -104,7 +104,7 @@
                     .canvas-hide {
                         position: absolute;
                         left: 0;
-                        bottom: 11px;
+                        bottom: 8px;
                         height: 24px;
                         width: 100%;
 
@@ -299,9 +299,9 @@
                 justify-content: space-between;
                 align-items: baseline;
 
-                h2 {
-                    margin-bottom: 16px;
-                }
+                // h2 {
+                //     margin-bottom: 16px;
+                // }
 
                 p {
                     margin-bottom: 0;
@@ -515,7 +515,7 @@
                 @extend %center-all;
                 background: transparent;
                 border: 1px solid;
-                width: fit-content;
+                width: auto;
                 margin: auto;
                 position: absolute;
                 bottom: -80px;
@@ -557,16 +557,17 @@
             }
 
             p,
-            a[href^="tel:"] {
+            a[href^=tel] {
                 color: white!important;
                 font-size: 12px;
-                // letter-spacing: .5px;
                 margin: 0;
+                text-decoration: none;
 
                 &:not(:last-child) {
                     margin-right: 8px;
                 }
             }
+            
 
             @include md {
                 &:not(:last-child) {
@@ -574,7 +575,7 @@
                 }
 
                 p,
-                a[href^="tel:"] {
+                a[href^=tel]  {
                     font-size: 12px;
                 }
             }
@@ -582,7 +583,7 @@
             @include sm {
 
                 p,
-                a[href^="tel:"] {
+                a[href^=tel]  {
                     &:not(:last-child) {
                         margin-right: 0;
                     }

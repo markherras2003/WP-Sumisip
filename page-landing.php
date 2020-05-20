@@ -82,30 +82,30 @@
             <div class="ramadan-cards">
               <div class="r-cards">
                 <div class="img-wrap">
-                <img src="../../assets/images/ramadan/r-1.jpg" alt="">
+                <img src="<?= get_template_directory_uri(); ?>/assets/images/ramadan/r-1.jpg" alt="">
                 </div>
                 <div class="content">
-                  <h4>Ramadan Kareem Ramadan Kareem</h4>
+                  <h6>Ramadan Kareem Ramadan Kareem</h6>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos repellendus excepturi velit impedit reprehenderit?</p>
                   <a href="">Read more</a>
                 </div>
               </div>
               <div class="r-cards">
                 <div class="img-wrap">
-                <img src="../../assets/images/ramadan/r-2.jpg" alt="">
+                <img src="<?= get_template_directory_uri(); ?>/assets/images/ramadan/r-2.jpg" alt="">
                 </div>
                 <div class="content">
-                  <h4>Ramadan Kareem</h4>
+                  <h6>Ramadan Kareem</h6>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos repellendus excepturi velit impedit reprehenderit?</p>
                   <a href="">Read more</a>
                 </div>
               </div>
               <div class="r-cards">
                 <div class="img-wrap">
-                <img src="../../assets/images/ramadan/r3.jpg" alt="">
+                <img src="<?= get_template_directory_uri(); ?>/assets/images/ramadan/r3.jpg" alt="">
                 </div>
                 <div class="content">
-                  <h4>Ramadan Kareem</h4>
+                  <h6>Ramadan Kareem</h6>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos repellendus excepturi velit impedit reprehenderit?</p>
                   <a href="">Read more</a>
                 </div>
