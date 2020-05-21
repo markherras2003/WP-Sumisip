@@ -183,6 +183,8 @@ get_header();
     
 </div>
 
+</div>
+
 
 <section class="award-section">
             <div class="global-wrapper section-padding awards">
