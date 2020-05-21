@@ -410,9 +410,9 @@ elseif(is_category()) {
                             </ul>
                         </div>
                         <div class="mini-box mega-menu-group">
-                            <h4>Hot Topics</h4>
+                            <h4>Recent Update</h4>
 
-                            <?= do_shortcode('[custom-facebook-feed num=3 cols=1 post=status layout=thumb poststyle=regular textlength=0]')  ?>
+                            <?= do_shortcode('[custom-facebook-feed num=3 cols=1 post=status loadmore=false layout=thumb poststyle=regular textlength=0]')  ?>
                          
                         </div>
                     </div>  

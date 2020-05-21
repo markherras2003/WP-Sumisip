@@ -1746,6 +1746,45 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
   -webkit-line-clamp: 2;
 }
 
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item {
+  padding-bottom: 8px;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-meta-wrap .cff-view-comments-wrap {
+  display: none;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-meta-wrap .cff-post-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-meta-wrap .cff-post-links .cff-viewpost-facebook {
+  height: 24px;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-meta-wrap .cff-post-links .cff-share-container {
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-author {
+  margin: 0;
+  display: none;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-post-text {
+  margin: 0;
+}
+
 .mega-menu .mega-menu-group.holo-heading ul {
   margin-top: 32px;
 }

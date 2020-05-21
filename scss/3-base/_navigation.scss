@@ -569,6 +569,51 @@ nav {
 
             }
 
+            //FB-feed
+            .cff-wrapper {
+                #cff {
+                    .cff-posts-wrap {
+                        .cff-item {
+                            padding-bottom: 8px;
+                            .cff-meta-wrap {
+                                .cff-view-comments-wrap {
+                                    display: none;
+                                }
+
+                                .cff-post-links {
+                                    display: flex;
+                                    height: auto;
+                                    width: 100%;
+                                    justify-content: space-between;
+
+                                    .cff-viewpost-facebook {
+                                        height: 24px;
+                                    }
+
+                                    .cff-share-container {
+                                        height: 24px;
+                                        display: flex;
+                                    }
+                                }
+                            }
+                            .cff-text-wrapper{
+
+                                .cff-author{
+                                    margin: 0;
+                                    display: none;
+                                }
+                                .cff-post-text{
+                                    margin:0;
+
+                                    // .cff-text{
+                                    //     display: none;
+                                    // }
+                                }
+                                }
+                        }
+                    }
+                }
+            }
 
         }
 
