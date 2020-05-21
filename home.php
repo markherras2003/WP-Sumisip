@@ -171,10 +171,9 @@ get_header();
     <div class="item"><?= do_shortcode('[custom-facebook-feed num=3 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
     <div class="item"><?= do_shortcode('[custom-facebook-feed num=6  offset=6 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
     <div class="item"><?= do_shortcode('[custom-facebook-feed num=9  offset=9 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=12  offset=12 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=15  offset=15 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
-    
-    
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=12  offset=13 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=15  offset=16 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
+
     
 </div>
 
