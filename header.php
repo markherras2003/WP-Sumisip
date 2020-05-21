@@ -411,49 +411,9 @@ elseif(is_category()) {
                         </div>
                         <div class="mini-box mega-menu-group">
                             <h4>Hot Topics</h4>
-                            <ul>    
-                                <?php   $arg = array(
-                                        'post_type' => 'post',
-                                        'posts_per_page' => 3,
-                                        'category_name' => 'Hot',
-                                      /*  'tax_query' => array(             
-                                         array(
-                                            'taxonomy' => 'categories',
-                                            'field' => 'slug',
-                                            'terms' => 'trending',
-                                        ),
-                                       
-                                         )   */
-                                                 );
-                                                 $featured = new \WP_Query($arg);
-                                                 while($featured->have_posts()): $featured->the_post(); 
-                                                 //$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
-                                                 global $dynamic_featured_image;
 
-                                ?>
-                                <li>
-                                <a href="<?= get_permalink(); ?>">
-                                                <?php 
-                                $key=0;
-                                $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
-                                foreach($featured_images as $featured_image) {
-                                    $key=$key+1; 
-                                    if ($key===1) {?>
-                                        <div class="thumb-wrapper">
-                                            <img src="<?= $featured_image['thumb']; ?>" alt="Main Mega Menu Thumb">
-                                        </div>
-                                    <?php }
-                            
-                                } ?>
-                                        <div class="details">
-                                            <h5 class="light"><?= the_title(); ?></h5>
-                                            <span class="p-sm"><?= the_excerpt(); ?></span>
-                                        </div>
-                                    </a>
-                                   
-                                </li>
-                                <?php endwhile; ?> 
-                            </ul>
+                            <?= do_shortcode('[custom-facebook-feed num=3 cols=1 post=status layout=thumb poststyle=regular textlength=0]')  ?>
+                         
                         </div>
                     </div>  
                 </div>
