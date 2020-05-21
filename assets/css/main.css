@@ -8646,6 +8646,9 @@ p:not(:last-child),
   #covid-overlay .covid-content-wrapper .updated-cases .case:not(:last-child) {
     margin-bottom: 24px !important;
   }
+  #covid-overlay .covid-content-wrapper .global-wrapper {
+    padding: 0;
+  }
 }
 
 #covid-overlay .news-section-container {

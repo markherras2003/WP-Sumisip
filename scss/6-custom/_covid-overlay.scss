@@ -56,7 +56,6 @@
         justify-content: center;
         padding: 0 20px;
 
-
         .updated-ph-aside {
             display: flex;
             max-width: 992px;
@@ -492,7 +491,6 @@
             }
         }
 
-
         @media screen and (max-width: 720px) {
             .updated-cases {
                 .case .analysis {
@@ -510,6 +508,10 @@
                     }
                 }
 
+            }
+
+            .global-wrapper {
+                padding: 0;
             }
         }
 
