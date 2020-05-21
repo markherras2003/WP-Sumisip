@@ -166,6 +166,12 @@ get_header();
 ?>
 
 <div class="fbfeed-container bg-coal margin-top-5">
+
+<div class="section-heading-group">
+        <h1>Recent Updates</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur officia reiciendis, nobis temporibus porro.</p>
+</div>
+
 <div id="owl" class="owl-carousel owl-theme">
 
     <div class="item"><?= do_shortcode('[custom-facebook-feed num=3 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
