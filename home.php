@@ -169,7 +169,6 @@ get_header();
 
 <div class="section-heading-group">
         <h1>Recent Updates</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur officia reiciendis, nobis temporibus porro.</p>
 </div>
 
 <div id="owl" class="owl-carousel owl-theme">
