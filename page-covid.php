@@ -149,7 +149,7 @@
         </p>
     </div>
 
-    <?= do_shortcode('[custom-facebook-feed poststyle=boxed]')  ?>
+    <?= do_shortcode('[custom-facebook-feed layout=half poststyle=boxed]')  ?>
 
 
 </div>
