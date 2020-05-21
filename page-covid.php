@@ -168,7 +168,7 @@
                 </p>
         </div>
 
-        <?= do_shortcode('[custom-facebook-feed layout=half poststyle=boxed]')  ?>
+        <?= do_shortcode('[custom-facebook-feed layout=full poststyle=boxed]')  ?>
 
     </div>
 

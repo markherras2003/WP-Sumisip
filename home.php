@@ -169,16 +169,15 @@ get_header();
 
 <div class="section-heading-group">
         <h1>Recent Updates</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur officia reiciendis, nobis temporibus porro.</p>
 </div>
 
 <div id="owl" class="owl-carousel owl-theme">
 
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=3 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=6  offset=6 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=9  offset=9 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=12  offset=13 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=15  offset=16 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=3 layout=half poststyle=boxed loadmore=false desclength=150]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=6  offset=6 layout=half poststyle=boxed loadmore=false desclength=150]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=9  offset=9 layout=half poststyle=boxed loadmore=false desclength=150]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=12  offset=13 layout=half poststyle=boxed loadmore=false desclength=150]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=15  offset=16 layout=half poststyle=boxed loadmore=false desclength=150]');  ?></div>
 
     
 </div>

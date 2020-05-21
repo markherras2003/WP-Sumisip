@@ -101,7 +101,7 @@ textarea {
 
 .button,
 button, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .full-height, .quarter-height, .upper-hero-grid .hero-preview, .history-section, .history-section .timeline .timeline-control-left,
-.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .pagination, .page-404 .global-wrapper, .event-group, #covid-overlay .news-section-container .cff-wrapper .cff-load-more, .fbfeed-container .cff-wrapper .cff-load-more {
+.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .pagination, .page-404 .global-wrapper, .event-group, .fbfeed-container .cff-wrapper .cff-load-more, #covid-overlay .news-section-container .cff-wrapper .cff-load-more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7922,6 +7922,128 @@ p:not(:last-child),
   }
 }
 
+.fbfeed-container {
+  padding: 80px;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+}
+
+.fbfeed-container .cff-wrapper #cff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fbfeed-container .cff-wrapper #cff .cff-posts-wrap .cff-item {
+  position: relative;
+  margin-bottom: 0 !important;
+  border-radius: 12px !important;
+}
+
+@media (max-width: 768px) {
+  .fbfeed-container .cff-wrapper #cff .cff-posts-wrap .cff-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.fbfeed-container .cff-wrapper #cff .cff-posts-wrap .cff-shadow {
+  -webkit-box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
+          box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
+}
+
+.fbfeed-container .cff-wrapper #cff .cff-item {
+  margin-bottom: 0;
+}
+
+.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-post-links {
+  margin: 0;
+}
+
+.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+}
+
+.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments ul li {
+  margin-right: 0 !important;
+  margin: 0 4px;
+}
+
+.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments ul li span {
+  margin: 0 4px;
+}
+
+@media (max-width: 768px) {
+  .fbfeed-container .cff-wrapper #cff .cff-item {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.fbfeed-container .cff-wrapper #cff.cff-masonry {
+  margin-bottom: 0;
+}
+
+.fbfeed-container .cff-wrapper #cff.cff-masonry.cff-item {
+  margin-bottom: 0;
+}
+
+.fbfeed-container .cff-wrapper .cff-load-more {
+  height: 40px;
+  padding: 0 24px;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid;
+  width: auto;
+  margin: auto;
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  float: initial;
+}
+
+@media (max-width: 768px) {
+  .fbfeed-container .cff-wrapper .cff-load-more {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .fbfeed-container {
+    padding: 80px 20px;
+  }
+}
+
 /* Custom Directory */
 #ramadan-overlay {
   position: relative;
@@ -8916,127 +9038,6 @@ p:not(:last-child),
   }
   #covid-overlay footer h5 {
     margin-right: 0;
-  }
-}
-
-.fbfeed-container {
-  padding: 80px;
-  overflow: hidden;
-  height: auto;
-  width: 100%;
-}
-
-.fbfeed-container .cff-wrapper #cff {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.fbfeed-container .cff-wrapper #cff .cff-posts-wrap .cff-item {
-  position: relative;
-  margin-bottom: 0 !important;
-}
-
-@media (max-width: 768px) {
-  .fbfeed-container .cff-wrapper #cff .cff-posts-wrap .cff-item:not(:last-child) {
-    margin-bottom: 40px;
-  }
-}
-
-.fbfeed-container .cff-wrapper #cff .cff-posts-wrap .cff-shadow {
-  -webkit-box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
-          box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
-}
-
-.fbfeed-container .cff-wrapper #cff .cff-item {
-  margin-bottom: 0;
-}
-
-.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-post-links {
-  margin: 0;
-}
-
-.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments {
-  background: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  padding: 0;
-}
-
-.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments ul li {
-  margin-right: 0 !important;
-  margin: 0 4px;
-}
-
-.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments ul li span {
-  margin: 0 4px;
-}
-
-@media (max-width: 768px) {
-  .fbfeed-container .cff-wrapper #cff .cff-item {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-.fbfeed-container .cff-wrapper #cff.cff-masonry {
-  margin-bottom: 0;
-}
-
-.fbfeed-container .cff-wrapper #cff.cff-masonry.cff-item {
-  margin-bottom: 0;
-}
-
-.fbfeed-container .cff-wrapper .cff-load-more {
-  height: 40px;
-  padding: 0 24px;
-  font-weight: 500;
-  font-size: 15px;
-  border-radius: 999px;
-  text-decoration: none;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid;
-  width: auto;
-  margin: auto;
-  position: absolute;
-  bottom: -80px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  float: initial;
-}
-
-@media (max-width: 768px) {
-  .fbfeed-container .cff-wrapper .cff-load-more {
-    bottom: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .fbfeed-container {
-    padding: 80px 20px;
   }
 }
 

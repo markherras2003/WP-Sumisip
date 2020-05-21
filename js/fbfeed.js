@@ -4,8 +4,12 @@ $(document).ready(function() {
    
         navigation : true, // Show next and prev buttons
    
-        slideSpeed : 300,
+        slideSpeed : 900,
         paginationSpeed : 400,
+
+        autoplay:true,
+        autoplayTimeout:7000,
+        loop: true,
    
         items : 1, 
         itemsDesktop : false,
