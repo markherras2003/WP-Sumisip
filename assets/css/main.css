@@ -8716,8 +8716,8 @@ p:not(:last-child),
 }
 
 #covid-overlay .news-section-container .cff-wrapper #cff .cff-posts-wrap .cff-shadow {
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
+          box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
 }
 
 #covid-overlay .news-section-container .cff-wrapper #cff .cff-item .cff-meta-wrap {
@@ -8909,8 +8909,8 @@ p:not(:last-child),
 }
 
 .fbfeed-container .cff-wrapper #cff .cff-posts-wrap .cff-shadow {
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
+          box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
 }
 
 .fbfeed-container .cff-wrapper #cff .cff-item {
