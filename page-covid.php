@@ -149,8 +149,6 @@
         </p>
     </div>
 
-
-
     <?= do_shortcode('[custom-facebook-feed poststyle=boxed]')  ?>
 
 

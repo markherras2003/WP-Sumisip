@@ -412,8 +412,10 @@ function sumisip_scripts() {
 	//wp_enqueue_style( 'sumisip-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'sumisip-style', get_template_directory_uri().'/assets/css/main.css', array(), wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'editor-style', get_template_directory_uri().'/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'owl-style', get_template_directory_uri().'/assets/css/owl.carousel.min.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'owl-default-style', get_template_directory_uri().'/assets/css/owl.theme.default.min.css', array(), wp_get_theme()->get( 'Version' ) );
     //wp_enqueue_style( 'sumisip-ui-library', get_template_directory_uri().'/css/ui-library.css', array(), wp_get_theme()->get( 'Version' ) );
-
+	
 	wp_style_add_data( 'sumisip-style', 'rtl', 'replace' );
 
 	if ( has_nav_menu( 'menu-1' ) ) {
@@ -422,11 +424,14 @@ function sumisip_scripts() {
 	}
 
 	wp_enqueue_script( 'history-featured', get_template_directory_uri().'/js/photo-stack.js' , array(), '20181231', true );
+	wp_enqueue_script( 'fbfeed-js', get_template_directory_uri().'/js/fbfeed.js' , array(), '20181231', true );
     wp_enqueue_script( 'hero-slider', get_template_directory_uri().'/js/hero-slider.js' , array(), '20181231', true );
     wp_enqueue_script( 'hero-featured', get_template_directory_uri().'/js/hero-featured.js' , array(), '20181233', true );
 	wp_enqueue_script( 'history-timeline', get_template_directory_uri().'/js/history-timeline.js' , array(), '20181231', true );
 	wp_enqueue_script( 'chart-min','https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js' , array(), '20181231', true );
 	wp_enqueue_script( 'chart-js', get_template_directory_uri().'/js/chart.js' , array(), '20181231', true );
+	wp_enqueue_script( 'owl-slider', get_template_directory_uri().'/js/owl.carousel.min.js' , array(), '20181231', true );
+
 	if (is_home()) {
 	//wp_enqueue_script( 'hero-video', get_template_directory_uri().'/js/hero-video-autoplay.js' , array(), '20181231', true );
 	}

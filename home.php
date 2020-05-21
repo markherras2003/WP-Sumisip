@@ -165,9 +165,19 @@ get_header();
         $awards = new \WP_Query($arg);  
 ?>
 
+<div class="fbfeed-container bg-coal margin-top-5">
+<div id="owl" class="owl-carousel owl-theme">
+
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=3  poststyle=boxed loadmore=false]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=6  offset=6 poststyle=boxed loadmore=false]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=9  offset=9 poststyle=boxed loadmore=false]');  ?></div>
+    
+    
+    
+</div>
 
 
-<section class="award-section bg-coal">
+<section class="award-section">
             <div class="global-wrapper section-padding awards">
                 <div class="section-heading-group">
                     <h1><?= vp_option('vpt_option.awards_title') ?></h1>

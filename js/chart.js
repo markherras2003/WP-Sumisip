@@ -73,7 +73,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 10
+                                max: 0
                             },
                             border: false
                         }],
@@ -90,7 +90,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 10
+                                max: 50
                             }
                         }]
                     },
@@ -184,7 +184,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 10
+                                max: 0
                             },
                             border: false
                         }],
@@ -201,7 +201,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 10
+                                max: 50
                             }
                         }]
                     },
@@ -294,7 +294,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 50
+                                max: 0
                             },
                             border: false
                         }],
@@ -405,7 +405,7 @@ $(document).ready( function($){
                                 fontFamily: "'Poppins'",
                                 beginAtZero: true,
                                 min: 0,
-                                max: 50
+                                max: 0
                             },
                             border: false
                         }],
@@ -443,9 +443,6 @@ $(document).ready( function($){
                     }
                 }
             });
-
-
-
 
             var url_link = 'https://coronavirus-19-api.herokuapp.com/countries/Philippines'
 
