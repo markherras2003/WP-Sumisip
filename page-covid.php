@@ -149,7 +149,7 @@
         </p>
     </div>
 
-    <?= do_shortcode('[custom-facebook-feed poststyle=boxed]')  ?>
+    <?= do_shortcode('[custom-facebook-feed layout=half poststyle=boxed]')  ?>
 
 
 </div>
@@ -173,6 +173,7 @@
 <?php //wp_footer(); ?>
 
 <script src='<?php echo content_url(); ?>/plugins/custom-facebook-feed-pro/js/cff-scripts.js?ver=3.10.6'></script>
+<script src='<?php echo content_url(); ?>/themes/WP-Sumisip/js/chart.js'></script>
 </body>
 </html>
 
