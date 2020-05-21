@@ -166,15 +166,16 @@ get_header();
 ?>
 
 <div class="fbfeed-container bg-coal margin-top-5">
-<div id="owl" class="owl-carousel owl-theme">
+    <div class="section-heading-group">
+        <h1>Recent Updates</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur officia reiciendis, nobis temporibus porro.</p>
+    </div>
 
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=3  poststyle=boxed loadmore=false]');  ?></div>
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=6  offset=6 poststyle=boxed loadmore=false]');  ?></div>
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=9  offset=9 poststyle=boxed loadmore=false]');  ?></div>
-    
-    
-    
-</div>
+    <div id="owl" class="owl-carousel owl-theme">
+        <div class="item"><?= do_shortcode('[custom-facebook-feed num=3 layout=half poststyle=boxed loadmore=false]');  ?></div>
+        <div class="item"><?= do_shortcode('[custom-facebook-feed num=6 layout=half offset=6 poststyle=boxed loadmore=false]');  ?></div>
+        <div class="item"><?= do_shortcode('[custom-facebook-feed num=9 layout=half offset=9 poststyle=boxed loadmore=false]');  ?></div>
+    </div>
 
 
 <section class="award-section">
