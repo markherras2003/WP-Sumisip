@@ -168,9 +168,9 @@ get_header();
 <div class="fbfeed-container bg-coal margin-top-5">
 <div id="owl" class="owl-carousel owl-theme">
 
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=3 layout=thumb  poststyle=boxed loadmore=false]');  ?></div>
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=6  offset=6 layout=thumb poststyle=boxed loadmore=false]');  ?></div>
-    <div class="item"><?= do_shortcode('[custom-facebook-feed num=9  offset=9 layout=thumb poststyle=boxed loadmore=false]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=3 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=6  offset=6 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
+    <div class="item"><?= do_shortcode('[custom-facebook-feed num=9  offset=9 layout=thumb poststyle=boxed loadmore=false desclength=150]');  ?></div>
     
     
     
