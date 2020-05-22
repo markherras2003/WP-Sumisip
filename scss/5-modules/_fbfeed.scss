@@ -3,115 +3,122 @@
     overflow: hidden;
     height: auto;
     width: 100%;
-
-}
-
-.cff-wrapper {
+    .cff-wrapper {
 
 
-    #cff {
-        display: flex;
-        flex-direction: column;
-        .cff-posts-wrap {
-            // margin-bottom: 54px;
-            
-
-            .cff-item {
-                position: relative;
-                margin-bottom: 0 !important;
-                border-radius: 12px!important;
+        #cff {
+            display: flex;
+            flex-direction: column;
+            .cff-posts-wrap {
+                // margin-bottom: 54px;
                 
-
-                @include md {
-
-                    &:not(:last-child) {
-                        margin-bottom: 40px;
+    
+                .cff-item {
+                    position: relative;
+                    margin-bottom: 0 !important;
+                    border-radius: 12px!important;
+                    
+    
+                    @include md {
+    
+                        &:not(:last-child) {
+                            margin-bottom: 40px;
+                        }
                     }
                 }
-            }
-
-            .cff-shadow {
-                box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
-            }
-        }
-
-        .cff-item {
-            margin-bottom: 0;
-
-            .cff-meta-wrap {
-                flex-wrap: wrap;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-
-                .cff-post-links {
-                    margin: 0;
-
+    
+                .cff-shadow {
+                    box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
                 }
+            }
+    
+            .cff-item {
+                margin-bottom: 0;
+    
+                .cff-meta-wrap {
+                    flex-wrap: wrap;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
 
-                .cff-view-comments-wrap {
-                    .cff-view-comments {
-                        background: none;
-                        box-shadow: none;
-                        padding: 0;
-
-                        ul {
-                            li {
-                                margin-right: 0 !important;
-                                margin: 0 4px;
-
-                                span {
+                    .cff-post-links {
+                        margin: 0;
+                    }
+    
+                    .cff-view-comments-wrap {
+                        .cff-view-comments {
+                            background: none;
+                            box-shadow: none;
+                            padding: 0;
+    
+                            ul {
+                                li {
+                                    margin-right: 0 !important;
                                     margin: 0 4px;
+    
+                                    span {
+                                        margin: 0 4px;
+                                    }
                                 }
                             }
                         }
                     }
                 }
+                // .cff-text-wrapper{
+                //     .cff-post-text{
+                //         .cff-text{
+                //             br{
+                //                 // display: none;
+                //             }
+                //         }
+                //     }
+                // }
+    
+                @include md {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
             }
-
-            @include md {
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
-
-        &.cff-masonry {
-            margin-bottom: 0;
-
-            &.cff-item {
+    
+            &.cff-masonry {
                 margin-bottom: 0;
+    
+                &.cff-item {
+                    margin-bottom: 0;
+                }
             }
         }
-    }
-
-    .cff-load-more {
-        height: 40px;
-        padding: 0 $size-3;
-        font-weight: 500;
-        font-size: 15px;
-        border-radius: 999px;
-        text-decoration: none;
-        display: inline-flex;
-        cursor: pointer;
-        @extend %center-all;
-        background: transparent;
-        border: 1px solid;
-        width: auto;
-        margin: auto;
-        position: absolute;
-        bottom: -80px;
-        left: 50%;
-        transform: translateX(-50%);
-        float: initial;
-
-        @include md {
-            bottom: 0;
+    
+        .cff-load-more {
+            height: 40px;
+            padding: 0 $size-3;
+            font-weight: 500;
+            font-size: 15px;
+            border-radius: 999px;
+            text-decoration: none;
+            display: inline-flex;
+            cursor: pointer;
+            @extend %center-all;
+            background: transparent;
+            border: 1px solid;
+            width: auto;
+            margin: auto;
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            float: initial;
+    
+            @include md {
+                bottom: 0;
+            }
+    
         }
-
     }
+    
+    @include md {
+        padding: 80px 20px;
+    }
+
 }
 
-@include md {
-    padding: 80px 20px;
-}

@@ -574,14 +574,15 @@ nav {
                 #cff {
                     .cff-posts-wrap {
                         .cff-item {
-                            border: none!important;
+                            border: none !important;
                             padding-bottom: 0;
 
                             .cff-meta-wrap {
-                                display: none;  
+                                display: none;
                             }
-                            .cff-media-wrap{
-                                .cff-photo{
+
+                            .cff-media-wrap {
+                                .cff-photo {
                                     width: 36%;
                                 }
                             }
@@ -595,7 +596,11 @@ nav {
                                 }
 
                                 .cff-post-text {
-                                  
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 3;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;
+
                                     margin: 0;
 
                                     .cff-text {
