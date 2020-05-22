@@ -7,9 +7,9 @@ $(document).ready(function() {
         slideSpeed : 900,
         paginationSpeed : 400,
 
-        autoplay:true,
-        autoplayTimeout:7000,
-        loop: true,
+        // autoplay:true,
+        // autoplayTimeout:7000,
+        // loop: true,
    
         items : 1, 
         itemsDesktop : false,
