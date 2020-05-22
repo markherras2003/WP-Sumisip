@@ -609,6 +609,7 @@ nav {
                                 }
 
                                 .cff-post-text {
+                                    display: initial;
                                     -webkit-line-clamp: 3!important;
                                     -webkit-box-orient: vertical;
                                     overflow: hidden;
@@ -616,6 +617,7 @@ nav {
                                     margin: 0;
 
                                     .cff-text {
+                                        display: initial;
                                         font-size: 13px;
                                         -webkit-line-clamp: 3 !important;
                                         -webkit-box-orient: vertical;
