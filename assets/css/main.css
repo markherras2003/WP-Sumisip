@@ -8290,7 +8290,7 @@ p:not(:last-child),
 
 #ramadan-overlay .article .ramadan-cards .r-cards .img-wrap {
   position: relative;
-  width: 30%;
+  width: 25%;
   height: 150px;
   margin-right: 24px;
 }
@@ -8311,6 +8311,10 @@ p:not(:last-child),
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 2;
+}
+
+#ramadan-overlay .article .ramadan-cards .r-cards .content {
+  width: 75%;
 }
 
 #ramadan-overlay .article .ramadan-cards .r-cards .content h6 {
@@ -8351,6 +8355,9 @@ p:not(:last-child),
     width: 100%;
     margin-right: 0;
     margin-bottom: 24px;
+  }
+  #ramadan-overlay .article .ramadan-cards .r-cards .content {
+    width: 100%;
   }
 }
 
