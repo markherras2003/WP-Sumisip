@@ -77,39 +77,71 @@
 
   </div>
 
+<?php 
+
+$arg = array(
+    'post_type' => 'post',
+    'showposts'=>3,
+    'post_status' => 'publish',
+     'tax_query' => array(
+      'relation' => 'OR',
+        array(
+            'taxonomy' => 'featured',
+            'field'    => 'slug',
+            'terms'    => array( 'Ramadan2020'),
+        ),
+        array(
+            'taxonomy' => 'category',
+            'field'    => 'slug',
+            'terms'    => array( 'Ramadan2020'),
+        ),
+    ),
+
+);     
+
+
+$featured = new \WP_Query($arg);
+
+?>
+
   <section class="article">
         <div class="global-wrapper">
             <div class="ramadan-cards">
+
+            <?php 
+                while($featured->have_posts()): $featured->the_post(); 
+                global $dynamic_featured_image;
+
+            ?>
               <div class="r-cards">
-                <div class="img-wrap">
-                <img src="<?= get_template_directory_uri(); ?>/assets/images/ramadan/r-1.jpg" alt="">
-                </div>
+                <?php 
+                  $featured_images = $dynamic_featured_image->get_featured_images(get_the_ID());
+                  $key=0;
+                  foreach($featured_images as $featured_image) {
+                      $key=$key+1;
+                      if($key===1) { ?>
+                              <div class="img-wrap"">
+                                  <img src="<?= $featured_image['full']; ?>">
+                              </div>
+                      <?php  }?>           
+                  <?php } 
+                          if($key===0) { ?>
+                            <div class="img-wrap"">
+                          <img src="<?= get_template_directory_uri(); ?>/assets/images/no-available.png">  
+                          </div>  
+                  <?php   }
+                ?>
                 <div class="content">
-                  <h6>Ramadan Kareem Ramadan Kareem</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos repellendus excepturi velit impedit reprehenderit?</p>
-                  <a href="">Read more</a>
+                  <h6><a href="<?= get_permalink(); ?>"><?= get_the_title(); ?></a></h6>
+                  <?= the_excerpt(); ?>
+                  <a href="<?= get_permalink(); ?>">Read More</a>
                 </div>
               </div>
-              <div class="r-cards">
-                <div class="img-wrap">
-                <img src="<?= get_template_directory_uri(); ?>/assets/images/ramadan/r-2.jpg" alt="">
-                </div>
-                <div class="content">
-                  <h6>Ramadan Kareem</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos repellendus excepturi velit impedit reprehenderit?</p>
-                  <a href="">Read more</a>
-                </div>
-              </div>
-              <div class="r-cards">
-                <div class="img-wrap">
-                <img src="<?= get_template_directory_uri(); ?>/assets/images/ramadan/r3.jpg" alt="">
-                </div>
-                <div class="content">
-                  <h6>Ramadan Kareem</h6>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos repellendus excepturi velit impedit reprehenderit?</p>
-                  <a href="">Read more</a>
-                </div>
-              </div>
+
+              <?php endwhile;
+               wp_reset_postdata();
+              ?>
+
             </div>
         </div>
       </section>
