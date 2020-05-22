@@ -1759,6 +1759,18 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
   width: 36%;
 }
 
+@media (max-width: 576px) {
+  .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-media-wrap .cff-photo {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-media-wrap .cff-lightbox-link {
+    position: relative;
+  }
+}
+
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper {
   width: 60%;
 }
@@ -1782,6 +1794,12 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-post-text .cff-text br {
   display: none;
+}
+
+@media (max-width: 576px) {
+  .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper {
+    width: 71%;
+  }
 }
 
 .mega-menu .mega-menu-group.holo-heading ul {

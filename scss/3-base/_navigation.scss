@@ -584,6 +584,15 @@ nav {
                             .cff-media-wrap {
                                 .cff-photo {
                                     width: 36%;
+
+                                    @include sm{
+                                        width: 25%;
+                                    }
+                                }
+                                .cff-lightbox-link{
+                                    @include md{
+                                        position: relative;
+                                    }
                                 }
                             }
 
@@ -610,6 +619,10 @@ nav {
                                             display: none;
                                         }
                                     }
+                                }
+
+                                @include sm{
+                                    width: 71%;
                                 }
                             }
                         }
