@@ -41,7 +41,7 @@
 
       <div class="mubarak-inline">
         <div class="group-a">
-          <img src="<?= get_template_directory_uri(); ?>/assets/images/ramadan/main-group-a.svg" alt="">
+          <img src="<?= get_template_directory_uri(); ?>/assets/images/ramadan/main-group-1u.svg" alt="">
         </div>
 
         <div class="group-b">
