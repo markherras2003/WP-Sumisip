@@ -1787,14 +1787,11 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 }
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-post-text {
-  -webkit-line-clamp: 3 !important;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
   margin: 0;
 }
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-post-text .cff-text {
-  display: initial;
+  display: block;
   font-size: 13px;
   -webkit-line-clamp: 3 !important;
   -webkit-box-orient: vertical;
