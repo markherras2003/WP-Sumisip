@@ -59,20 +59,26 @@
   </div>
 
   <div class="copy global-wrapper">
-    <p>The Local Government Unit of Sumisip is in solidarity with our Muslim brothers and sisters around the world
-      in
-      celebrating the holy month of Ramadan welcoming it with love, peace, spirit of oneness and hope amidst the
-      COVID-19 pandemic. While we will not be able to spend this month side-by-side, we hope to keep our sense of
-      community alive as much we can during this ever- changing and uncertain time.</p>
+    <p>Assalāmu alaykum wa rahmatullahi ta’ala wa barakatuhu!
+       As this blessed month of Ramadan ends, the Local Government of Sumisip is in solidarity 
+       in celebrating the Eid’l Fitr with peace, love, spirit of oneness and hope.</p>
     <p>
-      Let us continue to offer dua’a to end this health crisis. Let us practice our faith at home. May Allah (swt)
-      protect and guide us all, and give us strength to overcome the adversities brought by the health
-      crisis. Ramadan
-      Mubarak!
+    While we celebrate it differently from the past eids, let us consider this eid not any less
+    special than the eids we celebrated. We thank you for remaining steadfast with us amidst
+    the COVID-19 pandemic. Alhamdulillāh.
+    </p>
+    <p>
+    We may not be able to celebrate this pious day together,  let us, in spirit, pray together for 
+    this pandemic to end. Let us stay home to secure our safety and celebrate this special with 
+    our family, for verily, Allah loves those who are cautious.
+    </p>
+    <p>
+    Taqabbala Allah minna wa minkum.
+    May Allah accept from us, and from you. 
     </p>
 
     <p class="tags">
-      #Ramadan1141 #Ramadan2020 #Sumisip2020
+      Eid Mubarak! May this blessed day bring us happiness and prosperity.
     </p>
 
   </div>
