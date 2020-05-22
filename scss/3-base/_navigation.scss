@@ -574,42 +574,37 @@ nav {
                 #cff {
                     .cff-posts-wrap {
                         .cff-item {
-                            padding-bottom: 8px;
+                            border: none!important;
+                            padding-bottom: 0;
+
                             .cff-meta-wrap {
-                                .cff-view-comments-wrap {
-                                    display: none;
-                                }
-
-                                .cff-post-links {
-                                    display: flex;
-                                    height: auto;
-                                    width: 100%;
-                                    justify-content: space-between;
-
-                                    .cff-viewpost-facebook {
-                                        height: 24px;
-                                    }
-
-                                    .cff-share-container {
-                                        height: 24px;
-                                        display: flex;
-                                    }
-                                }
+                                display: none;  
                             }
-                            .cff-text-wrapper{
+                            // .cff-media-wrap{
+                            //     .cff-photo{
+                                    
+                            //     }
+                            // }
 
-                                .cff-author{
+                            .cff-text-wrapper {
+
+                                .cff-author {
                                     margin: 0;
                                     display: none;
                                 }
-                                .cff-post-text{
-                                    margin:0;
 
-                                    // .cff-text{
-                                    //     display: none;
-                                    // }
+                                .cff-post-text {
+                                    margin: 0;
+
+                                    .cff-text {
+                                        font-size: 13px;
+
+                                        br {
+                                            display: none;
+                                        }
+                                    }
                                 }
-                                }
+                            }
                         }
                     }
                 }

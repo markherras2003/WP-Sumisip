@@ -101,7 +101,7 @@ textarea {
 
 .button,
 button, nav .branding-wrapper .branding-body, nav .event-nav-list, .nav-menu-wrapper, .full-height, .quarter-height, .upper-hero-grid .hero-preview, .history-section, .history-section .timeline .timeline-control-left,
-.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .pagination, .page-404 .global-wrapper, .event-group, .fbfeed-container .cff-wrapper .cff-load-more, #covid-overlay .news-section-container .cff-wrapper .cff-load-more {
+.history-section .timeline .timeline-control-right, .programs-section, .programs-section .program-boxes .program-box .svg-wrapper, .post-hero-section, .post-hero-section .post-hero-wrapper, .post-hero-section .post-hero-wrapper .post-categories, .post-body-section .global-wrapper .post-main-body .post-social-media, .post-body-section .global-wrapper .post-main-body .post-social-media .social-wrapper, .search-sidebar, .search-sidebar .search-icon-wrapper, .pagination, .page-404 .global-wrapper, .event-group, .cff-wrapper .cff-load-more, #covid-overlay .news-section-container .cff-wrapper .cff-load-more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1747,33 +1747,12 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 }
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item {
-  padding-bottom: 8px;
+  border: none !important;
+  padding-bottom: 0;
 }
 
-.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-meta-wrap .cff-view-comments-wrap {
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-meta-wrap {
   display: none;
-}
-
-.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-meta-wrap .cff-post-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: auto;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-meta-wrap .cff-post-links .cff-viewpost-facebook {
-  height: 24px;
-}
-
-.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-meta-wrap .cff-post-links .cff-share-container {
-  height: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-author {
@@ -1783,6 +1762,14 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-post-text {
   margin: 0;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-post-text .cff-text {
+  font-size: 13px;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-post-text .cff-text br {
+  display: none;
 }
 
 .mega-menu .mega-menu-group.holo-heading ul {
@@ -7929,7 +7916,7 @@ p:not(:last-child),
   width: 100%;
 }
 
-.fbfeed-container .cff-wrapper #cff {
+.cff-wrapper #cff {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7939,28 +7926,28 @@ p:not(:last-child),
           flex-direction: column;
 }
 
-.fbfeed-container .cff-wrapper #cff .cff-posts-wrap .cff-item {
+.cff-wrapper #cff .cff-posts-wrap .cff-item {
   position: relative;
   margin-bottom: 0 !important;
   border-radius: 12px !important;
 }
 
 @media (max-width: 768px) {
-  .fbfeed-container .cff-wrapper #cff .cff-posts-wrap .cff-item:not(:last-child) {
+  .cff-wrapper #cff .cff-posts-wrap .cff-item:not(:last-child) {
     margin-bottom: 40px;
   }
 }
 
-.fbfeed-container .cff-wrapper #cff .cff-posts-wrap .cff-shadow {
+.cff-wrapper #cff .cff-posts-wrap .cff-shadow {
   -webkit-box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
           box-shadow: 0px 15px 60px 0px rgba(53, 53, 53, 0.06);
 }
 
-.fbfeed-container .cff-wrapper #cff .cff-item {
+.cff-wrapper #cff .cff-item {
   margin-bottom: 0;
 }
 
-.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap {
+.cff-wrapper #cff .cff-item .cff-meta-wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -webkit-box;
@@ -7974,42 +7961,42 @@ p:not(:last-child),
           justify-content: space-between;
 }
 
-.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-post-links {
+.cff-wrapper #cff .cff-item .cff-meta-wrap .cff-post-links {
   margin: 0;
 }
 
-.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments {
+.cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments {
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   padding: 0;
 }
 
-.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments ul li {
+.cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments ul li {
   margin-right: 0 !important;
   margin: 0 4px;
 }
 
-.fbfeed-container .cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments ul li span {
+.cff-wrapper #cff .cff-item .cff-meta-wrap .cff-view-comments-wrap .cff-view-comments ul li span {
   margin: 0 4px;
 }
 
 @media (max-width: 768px) {
-  .fbfeed-container .cff-wrapper #cff .cff-item {
+  .cff-wrapper #cff .cff-item {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-.fbfeed-container .cff-wrapper #cff.cff-masonry {
+.cff-wrapper #cff.cff-masonry {
   margin-bottom: 0;
 }
 
-.fbfeed-container .cff-wrapper #cff.cff-masonry.cff-item {
+.cff-wrapper #cff.cff-masonry.cff-item {
   margin-bottom: 0;
 }
 
-.fbfeed-container .cff-wrapper .cff-load-more {
+.cff-wrapper .cff-load-more {
   height: 40px;
   padding: 0 24px;
   font-weight: 500;
@@ -8033,15 +8020,13 @@ p:not(:last-child),
 }
 
 @media (max-width: 768px) {
-  .fbfeed-container .cff-wrapper .cff-load-more {
+  .cff-wrapper .cff-load-more {
     bottom: 0;
   }
 }
 
 @media (max-width: 768px) {
-  .fbfeed-container {
-    padding: 80px 20px;
-  }
+  padding: 80px 20px;
 }
 
 /* Custom Directory */
