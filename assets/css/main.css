@@ -1761,7 +1761,13 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 
 @media (max-width: 576px) {
   .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-media-wrap .cff-photo {
-    width: 25%;
+    width: 24%;
+  }
+}
+
+@media (max-width: 376px) {
+  .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-media-wrap .cff-photo {
+    width: 27%;
   }
 }
 
@@ -1798,7 +1804,13 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 
 @media (max-width: 576px) {
   .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper {
-    width: 71%;
+    width: 72%;
+  }
+}
+
+@media (max-width: 376px) {
+  .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper {
+    width: 68%;
   }
 }
 

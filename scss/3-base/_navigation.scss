@@ -586,7 +586,11 @@ nav {
                                     width: 36%;
 
                                     @include sm{
-                                        width: 25%;
+                                        width: 24%;
+                                    }
+
+                                    @include xs{
+                                        width: 27%;
                                     }
                                 }
                                 .cff-lightbox-link{
@@ -622,7 +626,11 @@ nav {
                                 }
 
                                 @include sm{
-                                    width: 71%;
+                                    width: 72%;
+                                }
+
+                                @include xs{
+                                    width: 68%;
                                 }
                             }
                         }
