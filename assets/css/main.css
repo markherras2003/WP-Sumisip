@@ -8336,18 +8336,21 @@ p:not(:last-child),
 }
 
 @media (max-width: 576px) {
-  #ramadan-overlay .article .ramadan-cards {
+  #ramadan-overlay .article .ramadan-cards .r-cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  #ramadan-overlay .article .ramadan-cards .r-cards {
     width: 100%;
   }
   #ramadan-overlay .article .ramadan-cards .r-cards:not(:last-child) {
     margin-right: 0;
     margin-bottom: 40px;
+  }
+  #ramadan-overlay .article .ramadan-cards .r-cards .img-wrap {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
   }
 }
 
