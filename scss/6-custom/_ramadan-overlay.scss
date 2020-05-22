@@ -168,21 +168,24 @@
 
     .ramadan-cards {
       display: flex;
+      flex-direction: column;
       margin-bottom: $size-5;
 
       .r-cards {
-        width: calc(33.33% - 16px);
+        display: flex;
+        // width: calc(33.33% - 16px);
         flex-grow: 1;
 
         &:not(:last-child) {
-          margin-right: 24px;
+          margin-bottom: 24px;
         }
 
         .img-wrap {
           position: relative;
-          width: 100%;
+          width: 30%;
           height: 150px;
-          margin-bottom: 24px;
+          margin-right: 24px;
+          // margin-bottom: 24px;
 
           img {
             height: 100%;
@@ -207,6 +210,10 @@
           
           h6 {
             margin-bottom: 8px;
+
+            a{
+              color: #589DD2;
+            }
           }
 
           p {

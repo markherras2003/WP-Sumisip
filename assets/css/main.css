@@ -8268,25 +8268,31 @@ p:not(:last-child),
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 40px;
 }
 
 #ramadan-overlay .article .ramadan-cards .r-cards {
-  width: calc(33.33% - 16px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
 #ramadan-overlay .article .ramadan-cards .r-cards:not(:last-child) {
-  margin-right: 24px;
+  margin-bottom: 24px;
 }
 
 #ramadan-overlay .article .ramadan-cards .r-cards .img-wrap {
   position: relative;
-  width: 100%;
+  width: 30%;
   height: 150px;
-  margin-bottom: 24px;
+  margin-right: 24px;
 }
 
 #ramadan-overlay .article .ramadan-cards .r-cards .img-wrap img {
@@ -8309,6 +8315,10 @@ p:not(:last-child),
 
 #ramadan-overlay .article .ramadan-cards .r-cards .content h6 {
   margin-bottom: 8px;
+}
+
+#ramadan-overlay .article .ramadan-cards .r-cards .content h6 a {
+  color: #589DD2;
 }
 
 #ramadan-overlay .article .ramadan-cards .r-cards .content p {
