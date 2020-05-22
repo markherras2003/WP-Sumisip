@@ -17,12 +17,27 @@
                     position: relative;
                     margin-bottom: 0 !important;
                     border-radius: 12px!important;
-                    
     
                     @include md {
     
                         &:not(:last-child) {
                             margin-bottom: 40px;
+                        }
+                    }
+
+                    @include sm{
+                        display: flex;
+                        flex-direction: column;
+    
+                        .cff-text-wrapper{
+                            width: 100%;
+                            margin-bottom: 24px;
+                        }
+        
+                        .cff-media-wrap{
+                            .cff-photo {
+                                width: 100%;
+                            }
                         }
                     }
                 }
@@ -34,6 +49,7 @@
     
             .cff-item {
                 margin-bottom: 0;
+            
     
                 .cff-meta-wrap {
                     flex-wrap: wrap;
@@ -64,20 +80,13 @@
                         }
                     }
                 }
-                // .cff-text-wrapper{
-                //     .cff-post-text{
-                //         .cff-text{
-                //             br{
-                //                 // display: none;
-                //             }
-                //         }
-                //     }
-                // }
+
     
                 @include md {
                     margin-left: 0;
                     margin-right: 0;
                 }
+
             }
     
             &.cff-masonry {
