@@ -23,9 +23,11 @@ add_action ('wp_loaded', 'redirect_hook');
 function redirect_hook() {
 	$server_req = $_SERVER['REQUEST_URI'];
 	if(
-        !(strpos($server_req, 'wp-json') !== false ) ||
         strpos($_SERVER["HTTP_USER_AGENT"], "facebookexternalhit/") !== false ||
         strpos($_SERVER["HTTP_USER_AGENT"], "Facebot")
+    )  return;
+	if(
+        !(strpos($server_req, 'wp-json') !== false )
     ){
 		if( !isset($_COOKIE['action']) ) {
 			setcookie('action', 'landing' ,time()+43200);
