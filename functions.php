@@ -24,7 +24,7 @@ function redirect_hook() {
 	$server_req = $_SERVER['REQUEST_URI'];
 	if(
         strpos($_SERVER["HTTP_USER_AGENT"], "facebookexternalhit/") !== false ||
-        strpos($_SERVER["HTTP_USER_AGENT"], "Facebot")
+        strpos($_SERVER["HTTP_USER_AGENT"], "Facebot") !== false
     )  return;
 	if(
         !(strpos($server_req, 'wp-json') !== false )
