@@ -621,6 +621,15 @@ nav {
                                         left: 0;
                                         top: 0;
                                         max-width: 36%;
+                                        height: 70%;
+
+                                        @include sm{
+                                            max-width: 24%;
+                                        }
+    
+                                        @include xs{
+                                            max-width: 27%;
+                                        }
                                     }
 
                                     .cff-text-link {

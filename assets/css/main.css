@@ -1800,6 +1800,19 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
   left: 0;
   top: 0;
   max-width: 36%;
+  height: 70%;
+}
+
+@media (max-width: 576px) {
+  .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-shared-link .cff-link {
+    max-width: 24%;
+  }
+}
+
+@media (max-width: 376px) {
+  .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-shared-link .cff-link {
+    max-width: 27%;
+  }
 }
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-shared-link .cff-text-link {
