@@ -1750,6 +1750,11 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
   position: relative;
   border: none !important;
   padding-bottom: 0;
+  padding: 0;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item:not(:first-child) {
+  margin-top: 20px;
 }
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-meta-wrap {
@@ -1793,7 +1798,7 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-shared-link .cff-link {
   position: absolute;
   left: 0;
-  top: 24px;
+  top: 0;
   max-width: 36%;
 }
 

@@ -577,6 +577,11 @@ nav {
                             position: relative;
                             border: none !important;
                             padding-bottom: 0;
+                            padding: 0;
+                            
+                            &:not(:first-child){
+                                margin-top: 20px;
+                            }
 
                             .cff-meta-wrap {
                                 display: none;
@@ -614,7 +619,7 @@ nav {
                                     .cff-link{
                                         position: absolute;
                                         left: 0;
-                                        top: 24px;
+                                        top: 0;
                                         max-width: 36%;
                                     }
 
