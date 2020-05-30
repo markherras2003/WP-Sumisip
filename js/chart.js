@@ -235,7 +235,7 @@ $(document).ready(function ($) {
       datasets: [
         {
           label: '',
-          data: [0, 0, 40, 4, 0],
+          data: [0, 0, 40, 4, 2],
           backgroundColor: ['transparent'],
           borderColor: 'white',
           borderWidth: 3,

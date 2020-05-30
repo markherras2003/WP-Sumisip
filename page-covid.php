@@ -98,7 +98,7 @@
                         </div>
                         <div class="total-case">
                             <span class="total">PUMs in Sumisip</span>
-                            <h4>43</h4>
+                            <h4>2</h4>
                         </div>
                     </div>
 
