@@ -1747,6 +1747,7 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 }
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item {
+  position: relative;
   border: none !important;
   padding-bottom: 0;
 }
@@ -1779,6 +1780,33 @@ nav.plum .nav-item:hover, nav.plum .nav-item.active {
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper {
   width: 60%;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-shared-link {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-shared-link .cff-link {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  max-width: 36%;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-shared-link .cff-text-link {
+  width: 100%;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-shared-link .cff-text-link .cff-link-title a {
+  font-weight: 100;
+}
+
+.mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-shared-link .cff-text-link .cff-post-desc {
+  display: none;
 }
 
 .mega-menu .mega-menu-group.mini-box .cff-wrapper #cff .cff-posts-wrap .cff-item .cff-text-wrapper .cff-author {

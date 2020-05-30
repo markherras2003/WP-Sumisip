@@ -574,6 +574,7 @@ nav {
                 #cff {
                     .cff-posts-wrap {
                         .cff-item {
+                            position: relative;
                             border: none !important;
                             padding-bottom: 0;
 
@@ -602,6 +603,33 @@ nav {
 
                             .cff-text-wrapper {
                                 width: 60%;
+
+                                .cff-shared-link{
+                                    width: 100%;
+                                    padding: 0;
+                                    margin: 0;
+                                    background: transparent;
+                                    border: none;
+
+                                    .cff-link{
+                                        position: absolute;
+                                        left: 0;
+                                        top: 24px;
+                                        max-width: 36%;
+                                    }
+
+                                    .cff-text-link {
+                                        width: 100%;
+                                        .cff-link-title{
+                                            a{
+                                                font-weight: 100;
+                                            }
+                                        }
+                                        .cff-post-desc{
+                                            display: none;
+                                        }
+                                    }
+                                }
 
                                 .cff-author {
                                     margin: 0;
