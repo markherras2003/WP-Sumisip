@@ -865,6 +865,33 @@ array(
 
 
 
+
+		/* =============== Jwplayer Settings ====================== */
+		array(
+			'title' => __('Site Meta Tag', 'textdomain_code'),
+			'name' => 'meta_tag',
+			'icon' => 'font-awesome:fa-play-circle-o',
+			'controls' => array(
+			
+					// Start Video Player Logo
+					array(
+						'type' => 'textbox',
+						'name' => 'meta_tag_input',
+						'label' => __('Meta Tag', 'textdomain_code'),
+						'description' => __('Set your Meta Tag', 'textdomain_code'),
+						'default' => 'Sumisip , Best Of Sumisip',
+					),
+				// End Video Player Logo
+				
+			
+			
+			)),
+			
+			
+			/* =============== Menu - Social Media Settings ====================== */
+
+
+
 	
 
 
